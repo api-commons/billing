@@ -1,0 +1,15 @@
+provider: upward-financial
+apis_io: https://apis.io/providers/upward-financial/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/upward-financial-openapi.json#GET /v2/bill-pay/bills/
+    - openapi/_original/upward-financial-openapi.json#GET /v2/bill-pay/bills/{external_id}/
+    - openapi/_original/upward-financial-openapi.json#POST /v2/bill-pay/bills/

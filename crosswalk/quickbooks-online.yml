@@ -1,0 +1,13 @@
+provider: quickbooks-online
+apis_io: https://apis.io/providers/quickbooks-online/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/quickbooks-online-openapi.yml#GET /v3/company/{realmId}/invoice/{invoiceId}
+    - openapi/_original/quickbooks-online-openapi.yml#POST /v3/company/{realmId}/invoice

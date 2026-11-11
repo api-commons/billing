@@ -1,0 +1,41 @@
+provider: clio
+apis_io: https://apis.io/providers/clio/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    properties:
+      id: id
+      status: state
+      due_date: due_at
+      number: number
+      created_at: created_at
+      currency: currency
+      issued_at: issued_at
+      description: memo
+      tax: total_tax
+      updated_at: updated_at
+      amount_due: balance
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/clio-openapi.json#DELETE /bills/{id}.json
+    - openapi/_original/clio-openapi.json#GET /bills.json
+    - openapi/_original/clio-openapi.json#GET /bills/{id}.json
+    - openapi/_original/clio-openapi.json#PATCH /bills/{id}.json
+  credit_note:
+    path_segment:
+    - credit_memos
+    properties:
+      id: id
+      total: amount
+      description: description
+      created_at: created_at
+      updated_at: updated_at
+      date: date
+      voided_at: voided_at
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/clio-openapi.json#GET /credit_memos.json
+    - openapi/_original/clio-openapi.json#GET /credit_memos/{id}.json

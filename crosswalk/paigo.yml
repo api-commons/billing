@@ -1,0 +1,24 @@
+provider: paigo
+apis_io: https://apis.io/providers/paigo/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    - invoice
+    properties:
+      id: invoiceId
+      status: invoiceStatus
+      currency: currency
+      line_items:
+      - lineItems
+      - items
+      customer_id: customerId
+      issued_at: invoiceDate
+      tax: taxAmount
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/paigo-paigo-api-openapi.yml#GET /invoices/{invoiceId}
+    - openapi/_original/paigo-paigo-api-openapi.yml#GET /webhooks/invoice
+    - openapi/_original/paigo-paigo-api-openapi.yml#POST /invoices

@@ -1,0 +1,14 @@
+provider: donately
+apis_io: https://apis.io/providers/donately/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/donately-openapi.yml#DELETE /subscriptions/{id}
+    - openapi/_original/donately-openapi.yml#GET /subscriptions
+    - openapi/_original/donately-openapi.yml#GET /subscriptions/{id}

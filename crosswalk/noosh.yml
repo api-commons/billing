@@ -1,0 +1,25 @@
+provider: noosh
+apis_io: https://apis.io/providers/noosh/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: invoice_id
+      status: status
+      number:
+      - invoice_number
+      - reference_number
+      currency: currency
+      line_items: items
+      issued_at: invoice_date
+      total: grand_total
+      description: comments
+      tax: tax
+      metadata: custom_fields
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/noosh-openapi.json#GET /v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}
+    - openapi/_original/noosh-openapi.yml#GET /v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}

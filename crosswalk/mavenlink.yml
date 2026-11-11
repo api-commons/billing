@@ -1,0 +1,17 @@
+provider: mavenlink
+apis_io: https://apis.io/providers/mavenlink/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      issued_at: invoice_date
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/mavenlink-openapi-original.yml#DELETE /invoices/{id}
+    - openapi/_original/mavenlink-openapi-original.yml#GET /invoices
+    - openapi/_original/mavenlink-openapi-original.yml#GET /invoices/{id}
+    - openapi/_original/mavenlink-openapi-original.yml#POST /invoices
+    - openapi/_original/mavenlink-openapi-original.yml#PUT /invoices/{id}

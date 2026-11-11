@@ -1,0 +1,28 @@
+provider: ordergroove
+apis_io: https://apis.io/providers/ordergroove/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      customer_id: customer_id
+      plan_id: product_id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/ordergroove-openapi.yml#GET /subscriptions/
+    - openapi/_original/ordergroove-openapi.yml#GET /subscriptions/{public_id}/
+    - openapi/_original/ordergroove-openapi.yml#PUT /subscriptions/{public_id}/
+  plan:
+    path_segment:
+    - products
+    properties:
+      id: id
+      amount: price
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/ordergroove-openapi.yml#GET /products/
+    - openapi/_original/ordergroove-openapi.yml#GET /products/{id}/
+    - openapi/_original/ordergroove-openapi.yml#PUT /products/{id}/

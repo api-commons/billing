@@ -1,0 +1,19 @@
+provider: orange-business
+apis_io: https://apis.io/providers/orange-business/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      started_at: startsAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/orange-business-geofencing-openapi.yml#DELETE /subscriptions/{subscriptionId}
+    - openapi/_original/orange-business-geofencing-openapi.yml#GET /subscriptions
+    - openapi/_original/orange-business-geofencing-openapi.yml#GET /subscriptions/{subscriptionId}
+    - openapi/_original/orange-business-geofencing-openapi.yml#POST /subscriptions
+    - openapi/_original/orange-business-live-objects-openapi.json#GET /api/v1/networks/cellular/subscriptions/{subscriptionId}

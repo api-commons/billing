@@ -1,0 +1,30 @@
+provider: samcart
+apis_io: https://apis.io/providers/samcart/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      customer_id: customer_id
+      plan_id: product_id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/samcart-openapi.yml#GET /subscriptions
+    - openapi/_original/samcart-openapi.yml#GET /subscriptions/{subscription_id}
+  plan:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      created_at: created_at
+      amount: price
+      currency: currency
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/samcart-openapi.yml#GET /products
+    - openapi/_original/samcart-openapi.yml#GET /products/{product_id}

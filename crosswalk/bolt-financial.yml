@@ -1,0 +1,18 @@
+provider: bolt-financial
+apis_io: https://apis.io/providers/bolt-financial/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      created_at: created_at
+      plan_id: plan
+      metadata: metadata
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/bolt-financial-bolt-api-openapi.yml#GET /v1/subscriptions
+    - openapi/_original/bolt-financial-bolt-api-openapi.yml#GET /v1/subscriptions/{subscription_id}

@@ -1,0 +1,13 @@
+provider: clockodo
+apis_io: https://apis.io/providers/clockodo/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    properties:
+      canceled_at: cancel_date
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/clockodo-openapi.yml#GET /v2/subscription

@@ -1,0 +1,12 @@
+provider: hipay
+apis_io: https://apis.io/providers/hipay/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/marketplace.yaml#GET /marketplace/invoice/{reference}.{_format}

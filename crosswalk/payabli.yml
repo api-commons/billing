@@ -1,0 +1,49 @@
+provider: payabli
+apis_io: https://apis.io/providers/payabli/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    - invoices
+    - bills
+    properties:
+      id: invoiceId
+      status: invoiceStatus
+      number: invoiceNumber
+      created_at: createdAt
+      line_items: items
+      customer_id:
+      - customerId
+      - Customer
+      issued_at: invoiceDate
+      description: notes
+      tax: tax
+      metadata: AdditionalData
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/payabli-api-reference-openapi.json#DELETE /Invoice/{idInvoice}
+    - openapi/_original/payabli-api-reference-openapi.json#GET /Invoice/{idInvoice}
+    - openapi/_original/payabli-api-reference-openapi.json#GET /Query/bills/{entry}
+    - openapi/_original/payabli-api-reference-openapi.json#GET /Query/invoices/{entry}
+    - openapi/_original/payabli-api-reference-openapi.json#POST /Invoice/{entry}
+  subscription:
+    path_segment:
+    - subscription
+    - subscriptions
+    properties:
+      created_at: CreatedAt
+      customer_id:
+      - Customer
+      - customerId
+      plan_id: PlanId
+      updated_at: LastUpdated
+      canceled_at: EndDate
+      started_at: StartDate
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/payabli-api-reference-openapi.json#DELETE /Subscription/{subId}
+    - openapi/_original/payabli-api-reference-openapi.json#GET /Query/subscriptions/{entry}
+    - openapi/_original/payabli-api-reference-openapi.json#GET /Subscription/{subId}
+    - openapi/_original/payabli-api-reference-openapi.json#PUT /Subscription/{subId}

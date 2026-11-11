@@ -1,0 +1,47 @@
+provider: romit
+apis_io: https://apis.io/providers/romit/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      due_date: dueDate
+      issued_at: invoiceDate
+      total: amount
+      description:
+      - description
+      - note
+      - memo
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/romit-openapi.yml#GET /invoice
+    - openapi/_original/romit-openapi.yml#GET /invoice/{id}
+    - openapi/_original/romit-openapi.yml#POST /invoice
+    - openapi/_original/romit-openapi.yml#PUT /invoice/{id}
+  subscription:
+    path_segment:
+    - subscription
+    properties:
+      plan_id: planId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/romit-openapi.yml#GET /subscription
+    - openapi/_original/romit-openapi.yml#GET /subscription/{id}
+    - openapi/_original/romit-openapi.yml#POST /subscription
+    - openapi/_original/romit-openapi.yml#PUT /subscription/{id}
+  plan:
+    path_segment:
+    - plan
+    properties:
+      name: name
+      description: memo
+      amount: amount
+      billing_interval: interval
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/romit-openapi.yml#GET /plan
+    - openapi/_original/romit-openapi.yml#GET /plan/{id}
+    - openapi/_original/romit-openapi.yml#POST /plan
+    - openapi/_original/romit-openapi.yml#PUT /plan/{id}

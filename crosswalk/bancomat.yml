@@ -1,0 +1,41 @@
+provider: bancomat
+apis_io: https://apis.io/providers/bancomat/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      number: number
+      currency: currency
+      line_items: items
+      issued_at: date
+      total: amount
+      description: description
+      tax: tax
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#DELETE /{tenantID}/invoices/{fingerprint}
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/invoices
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/invoices/{fingerprint}
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#PATCH /{tenantID}/invoices/{fingerprint}
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#POST /{tenantID}/invoices
+  credit_note:
+    path_segment:
+    - creditnotes
+    properties:
+      total: amount
+      currency: currency
+      number: number
+      reason: type
+      invoice_id: invoice
+      date: date
+      items: items
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/bancomat-flowpay-api-v2-openapi.json#DELETE /creditNotes/{fingerprint}
+    - openapi/_original/bancomat-flowpay-api-v2-openapi.json#GET /creditNotes
+    - openapi/_original/bancomat-flowpay-api-v2-openapi.json#GET /creditNotes/{fingerprint}
+    - openapi/_original/bancomat-flowpay-api-v2-openapi.json#POST /creditNotes

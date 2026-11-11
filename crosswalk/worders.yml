@@ -1,0 +1,20 @@
+provider: worders
+apis_io: https://apis.io/providers/worders/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      status: status
+      due_date: payment_due_date
+      number: invoice_number
+      created_at: created_at
+      line_items: items
+      customer_id: customer
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/worders-api-openapi-original.yml#GET /V1/invoices
+    - openapi/_original/worders-api-openapi-original.yml#GET /V1/invoices/{id}

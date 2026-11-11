@@ -1,0 +1,21 @@
+provider: collectly
+apis_io: https://apis.io/providers/collectly/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      customer_id: client_id
+      started_at: start_date
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/collectly-partners1-openapi.yml#DELETE /practices/{practice_id}/patients/{patient_id}/subscriptions/{subscriptions}
+    - openapi/_original/collectly-partners1-openapi.yml#GET /practices/{practice_id}/patients/{patient_id}/subscriptions
+    - openapi/_original/collectly-partners1-openapi.yml#GET /practices/{practice_id}/patients/{patient_id}/subscriptions/{subscriptions}
+    - openapi/_original/collectly-partners1-openapi.yml#PATCH /practices/{practice_id}/patients/{patient_id}/subscriptions/{subscriptions}
+    - openapi/_original/collectly-partners1-openapi.yml#POST /practices/{practice_id}/patients/{patient_id}/subscriptions

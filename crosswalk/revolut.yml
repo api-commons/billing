@@ -1,0 +1,22 @@
+provider: revolut
+apis_io: https://apis.io/providers/revolut/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: state
+      created_at: created_at
+      customer_id: customer_id
+      plan_id: plan_id
+      updated_at: updated_at
+      started_at: start_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/revolut-merchant-openapi.yaml#GET /api/subscriptions
+    - openapi/_original/revolut-merchant-openapi.yaml#GET /api/subscriptions/{subscription_id}
+    - openapi/_original/revolut-merchant-openapi.yaml#PATCH /api/subscriptions/{subscription_id}
+    - openapi/_original/revolut-merchant-openapi.yaml#POST /api/subscriptions

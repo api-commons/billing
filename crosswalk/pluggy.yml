@@ -1,0 +1,16 @@
+provider: pluggy
+apis_io: https://apis.io/providers/pluggy/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    properties:
+      id: id
+      due_date: dueDate
+      total: totalAmount
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/pluggy-api.json#GET /bills
+    - openapi/_original/pluggy-api.json#GET /bills/{id}

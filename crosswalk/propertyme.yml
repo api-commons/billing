@@ -1,0 +1,12 @@
+provider: propertyme
+apis_io: https://apis.io/providers/propertyme/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/propertyme-openapi.json#POST /v1/bills

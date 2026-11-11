@@ -1,0 +1,17 @@
+provider: bread-financial
+apis_io: https://apis.io/providers/bread-financial/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    properties:
+      name: name
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bread-webhook-openapi.json#DELETE /api/webhook/subscription/{name}
+    - openapi/_original/bread-webhook-openapi.json#GET /api/webhook/subscription
+    - openapi/_original/bread-webhook-openapi.json#GET /api/webhook/subscription/{name}
+    - openapi/_original/bread-webhook-openapi.json#PATCH /api/webhook/subscription/{name}
+    - openapi/_original/bread-webhook-openapi.json#POST /api/webhook/subscription

@@ -1,0 +1,17 @@
+provider: guntab
+apis_io: https://apis.io/providers/guntab/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/guntab-openapi.yml#GET /invoices/{id}
+    - openapi/_original/guntab-openapi.yml#POST /invoices

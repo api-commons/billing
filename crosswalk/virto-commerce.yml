@@ -1,0 +1,57 @@
+provider: virto-commerce
+apis_io: https://apis.io/providers/virto-commerce/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/virto-commerce-orders-openapi.json#GET /api/order/customerOrders/invoice/{orderNumber}
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      created_at: createdDate
+      updated_at: modifiedDate
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/virto-commerce-event-bus-api-openapi.yml#DELETE /api/eventbus/subscriptions/{name}
+    - openapi/_original/virto-commerce-event-bus-api-openapi.yml#GET /api/eventbus/subscriptions/{name}
+    - openapi/_original/virto-commerce-event-bus-api-openapi.yml#POST /api/eventbus/subscriptions
+    - openapi/_original/virto-commerce-event-bus-api-openapi.yml#PUT /api/eventbus/subscriptions
+    - openapi/_original/virto-commerce-event-bus-openapi.json#DELETE /api/eventbus/subscriptions/{name}
+  price:
+    path_segment:
+    - prices
+    properties:
+      plan_id:
+      - productId
+      - product
+      currency: currency
+      id: id
+      created_at: createdDate
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/virto-commerce-pricing-openapi.json#GET /api/products/{productId}/prices
+    - openapi/_original/virto-commerce-pricing-openapi.json#PATCH /api/products/prices/{id}
+    - openapi/_original/virto-commerce-pricing-openapi.json#PUT /api/products/prices
+    - openapi/_original/virto-commerce-pricing-openapi.json#PUT /api/products/{productId}/prices
+  coupon:
+    path_segment:
+    - coupons
+    properties:
+      code: code
+      id: id
+      created_at: createdDate
+      expires_at: expirationDate
+      updated_at: modifiedDate
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/virto-commerce-cart-openapi.json#DELETE /api/carts/{cartId}/coupons/{couponCode}
+    - openapi/_original/virto-commerce-cart-openapi.json#POST /api/carts/{cartId}/coupons/{couponCode}
+    - openapi/_original/virto-commerce-marketing-openapi.json#GET /api/marketing/promotions/coupons/{id}

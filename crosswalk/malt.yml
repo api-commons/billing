@@ -1,0 +1,19 @@
+provider: malt
+apis_io: https://apis.io/providers/malt/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      created_at: creationDate
+      customer_id: customer
+      tax: taxes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/malt-exposed-apis-openapi.yml#GET /freelancer/invoices
+    - openapi/_original/malt-exposed-apis-openapi.yml#GET /freelancer/invoices/{id}
+    - openapi/_original/malt-unified-exposed-apis-openapi.json#GET /freelancer/invoices
+    - openapi/_original/malt-unified-exposed-apis-openapi.json#GET /freelancer/invoices/{id}

@@ -1,0 +1,108 @@
+provider: lago
+apis_io: https://apis.io/providers/lago/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      status: status
+      due_date: payment_due_date
+      number: number
+      created_at: created_at
+      currency: currency
+      customer_id: customer
+      updated_at: updated_at
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/lago-openapi.yml#DELETE /invoices/{lago_id}
+    - openapi/_original/lago-openapi.yml#GET /customers/{external_customer_id}/invoices
+    - openapi/_original/lago-openapi.yml#GET /invoices
+    - openapi/_original/lago-openapi.yml#GET /invoices/{lago_id}
+    - openapi/_original/lago-openapi.yml#POST /invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      status: status
+      created_at: created_at
+      plan_id: plan_code
+      canceled_at: canceled_at
+      started_at:
+      - started_at
+      - activated_at
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/lago-openapi.yml#DELETE /subscriptions/{external_id}
+    - openapi/_original/lago-openapi.yml#GET /customers/{external_customer_id}/subscriptions
+    - openapi/_original/lago-openapi.yml#GET /subscriptions
+    - openapi/_original/lago-openapi.yml#GET /subscriptions/{external_id}
+    - openapi/_original/lago-openapi.yml#POST /subscriptions
+  plan:
+    path_segment:
+    - plans
+    properties:
+      name: name
+      description: description
+      created_at: created_at
+      billing_interval: interval
+      metadata: metadata
+      code: code
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/lago-openapi.yml#DELETE /plans/{code}
+    - openapi/_original/lago-openapi.yml#GET /plans
+    - openapi/_original/lago-openapi.yml#GET /plans/{code}
+    - openapi/_original/lago-openapi.yml#POST /plans
+    - openapi/_original/lago-openapi.yml#PUT /plans/{code}
+  credit_note:
+    path_segment:
+    - credit_notes
+    properties:
+      status: state
+      description: description
+      currency: currency
+      created_at: created_at
+      customer_id: customer
+      updated_at: updated_at
+      number: number
+      reason:
+      - reason
+      - type
+      invoice_id: invoice_id
+      metadata: metadata
+      items: items
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/lago-openapi.yml#GET /credit_notes
+    - openapi/_original/lago-openapi.yml#GET /credit_notes/{lago_id}
+    - openapi/_original/lago-openapi.yml#GET /customers/{external_customer_id}/credit_notes
+    - openapi/_original/lago-openapi.yml#POST /credit_notes
+    - openapi/_original/lago-openapi.yml#PUT /credit_notes/{lago_id}
+  coupon:
+    path_segment:
+    - coupons
+    properties:
+      code:
+      - name
+      - code
+      created_at: created_at
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/lago-openapi.yml#DELETE /coupons/{code}
+    - openapi/_original/lago-openapi.yml#GET /coupons
+    - openapi/_original/lago-openapi.yml#GET /coupons/{code}
+    - openapi/_original/lago-openapi.yml#POST /coupons
+    - openapi/_original/lago-openapi.yml#PUT /coupons/{code}
+  usage_record:
+    path_segment:
+    - usage
+    properties:
+      quantity: units
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/lago-openapi.yml#GET /analytics/usage

@@ -1,0 +1,42 @@
+provider: chargedesk
+apis_io: https://apis.io/providers/chargedesk/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id:
+      - id
+      - subscription_id
+      status: status
+      customer_id: customer_id
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/chargedesk-rest-api-openapi.yml#GET /subscriptions
+    - openapi/_original/chargedesk-rest-api-openapi.yml#GET /subscriptions/{subscription_id}
+    - openapi/_original/chargedesk-rest-api-openapi.yml#POST /subscriptions
+    - openapi/_original/chargedesk-rest-api-openapi.yml#POST /subscriptions/{subscription_id}
+  plan:
+    path_segment:
+    - products
+    - plans
+    properties:
+      id: id
+      name: name
+      description: description
+      is_active: status
+      amount: amount
+      currency: currency
+      billing_interval: interval
+      metadata: metadata
+      product_id: product_id
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/chargedesk-rest-api-openapi.yml#GET /products
+    - openapi/_original/chargedesk-rest-api-openapi.yml#GET /products/{product_id}
+    - openapi/_original/chargedesk-rest-api-openapi.yml#POST /gateway/subscriptions/{subscription_id}/plans
+    - openapi/_original/chargedesk-rest-api-openapi.yml#POST /products
+    - openapi/_original/chargedesk-rest-api-openapi.yml#POST /products/{product_id}

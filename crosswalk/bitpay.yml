@@ -1,0 +1,27 @@
+provider: bitpay
+apis_io: https://apis.io/providers/bitpay/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    - invoices
+    properties:
+      id:
+      - id
+      - guid
+      status:
+      - status
+      - state
+      due_date: dueDate
+      number: number
+      currency: currency
+      line_items: items
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openapi.yml#GET /bills
+    - openapi/_original/openapi.yml#GET /bills/{billId}
+    - openapi/_original/openapi.yml#GET /invoices
+    - openapi/_original/openapi.yml#GET /invoices/{invoiceId}
+    - openapi/_original/openapi.yml#POST /bills

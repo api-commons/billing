@@ -1,0 +1,16 @@
+provider: tradify
+apis_io: https://apis.io/providers/tradify/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      number: number
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/tradify-openapi.yml#GET /invoices
+    - openapi/_original/tradify-openapi.yml#POST /invoices

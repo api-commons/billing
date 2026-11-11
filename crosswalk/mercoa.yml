@@ -1,0 +1,17 @@
+provider: mercoa
+apis_io: https://apis.io/providers/mercoa/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    - invoices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/mercoa-openapi.yml#DELETE /invoice/{invoiceId}
+    - openapi/_original/mercoa-openapi.yml#GET /invoice/{invoiceId}
+    - openapi/_original/mercoa-openapi.yml#GET /invoices
+    - openapi/_original/mercoa-openapi.yml#POST /invoice
+    - openapi/_original/mercoa-openapi.yml#POST /invoice/{invoiceId}

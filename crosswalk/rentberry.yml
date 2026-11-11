@@ -1,0 +1,23 @@
+provider: rentberry
+apis_io: https://apis.io/providers/rentberry/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/rentberry-openapi.json#GET /v{version}/subscription
+    - openapi/_original/rentberry-openapi.json#POST /v{version}/subscription
+    - openapi/_original/rentberry-openapi.yml#GET /v{version}/subscription
+    - openapi/_original/rentberry-openapi.yml#POST /v{version}/subscription
+  price:
+    path_segment:
+    - price
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/rentberry-openapi.json#GET /v{version}/user/feature/price/{currency}
+    - openapi/_original/rentberry-openapi.yml#GET /v{version}/user/feature/price/{currency}

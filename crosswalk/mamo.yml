@@ -1,0 +1,28 @@
+provider: mamo
+apis_io: https://apis.io/providers/mamo/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      customer_id: customer
+      total: amount
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/mamo-openapi.yml#POST /invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      canceled_at: end_date
+      started_at: start_date
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/mamo-openapi.yml#DELETE /subscriptions/{subscriptionId}
+    - openapi/_original/mamo-openapi.yml#POST /subscriptions

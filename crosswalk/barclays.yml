@@ -1,0 +1,16 @@
+provider: barclays
+apis_io: https://apis.io/providers/barclays/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: subscriptionId
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/barclays-payments-openapi.json#GET /cards/accounts/{extAccountId}/payments/subscriptions
+    - openapi/_original/barclays-payments-openapi.json#PATCH /cards/accounts/{extAccountId}/payments/subscriptions/{subscriptionId}
+    - openapi/_original/barclays-payments-openapi.json#POST /cards/accounts/{extAccountId}/payments/subscriptions

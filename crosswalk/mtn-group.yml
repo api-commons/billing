@@ -1,0 +1,49 @@
+provider: mtn-group
+apis_io: https://apis.io/providers/mtn-group/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    - subscriptions
+    properties:
+      id: subscriptionId
+      status:
+      - subscriptionStatus
+      - status
+      customer_id: customerId
+      canceled_at: endDate
+      started_at: startDate
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/mtn-group-mtn-sms-interface.yml#DELETE /messages/sms/outbound/{senderAddress}/subscription/{subscriptionId}
+    - openapi/_original/mtn-group-mtn-sms-interface.yml#POST /messages/sms/outbound/{senderAddress}/subscription
+    - openapi/_original/mtn-group-mtn-subscription-api-v2.yml#DELETE /customers/{customerId}/subscriptions
+    - openapi/_original/mtn-group-mtn-subscription-api-v2.yml#DELETE /customers/{customerId}/subscriptions/{subscriptionId}
+    - openapi/_original/mtn-group-mtn-subscription-api-v2.yml#GET /customers/list/subscriptions
+  plan:
+    path_segment:
+    - plans
+    - products
+    - product
+    properties:
+      id: planId
+      amount: amount
+      product_id: productId
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/mtn-group-mtn-customer-plans-api-v2.yml#GET /customers/{customerId}/plans
+    - openapi/_original/mtn-group-mtn-customer-plans-api-v2.yml#GET /customers/{customerId}/plans/{productCode}
+    - openapi/_original/mtn-group-mtn-customer-plans-api-v2.yml#PATCH /customers/{customerId}/plans
+    - openapi/_original/mtn-group-mtn-customer-plans-api-v2.yml#POST /customers/{customerId}/plans
+    - openapi/_original/mtn-group-mtn-product-offering-api-v2.yml#GET /products/{customerId}
+  usage_record:
+    path_segment:
+    - usage
+    properties:
+      timestamp: usageDate
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/mtn-group-tmf-usage-management-tmf635.yml#GET /usage/{id}
+    - openapi/_original/mtn-group-usage-management.yml#GET /usage/{id}

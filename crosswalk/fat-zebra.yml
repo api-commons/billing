@@ -1,0 +1,13 @@
+provider: fat-zebra
+apis_io: https://apis.io/providers/fat-zebra/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fat-zebra-gateway.json#GET /invoices/{reference}
+    - openapi/_original/fat-zebra-gateway.json#PUT /invoices

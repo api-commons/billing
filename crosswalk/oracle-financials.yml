@@ -1,0 +1,15 @@
+provider: oracle-financials
+apis_io: https://apis.io/providers/oracle-financials/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      line_items: items
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/oracle-financial-applications-payables-api-openapi.yml#GET /invoices
+    - openapi/_original/oracle-financial-applications-payables-api-openapi.yml#GET /invoices/{InvoiceId}
+    - openapi/_original/oracle-financial-applications-payables-api-openapi.yml#POST /invoices

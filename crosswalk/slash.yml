@@ -1,0 +1,16 @@
+provider: slash
+apis_io: https://apis.io/providers/slash/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      customer_id: accountId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/slash-openapi-original.json#GET /invoice
+    - openapi/_original/slash-openapi-original.json#GET /invoice/{invoiceId}
+    - openapi/_original/slash-openapi-original.json#PATCH /invoice/{invoiceId}
+    - openapi/_original/slash-openapi-original.json#POST /invoice

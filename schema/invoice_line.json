@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/billing/main/schema/invoice_line.json",
+  "title": "Invoice Line",
+  "description": "The common invoice_line in Billing and Invoicing, distilled from 14 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.714,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "description",
+        "notes",
+        "note",
+        "comment"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.571,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "id",
+        "@id"
+      ]
+    },
+    "quantity": {
+      "type": "number",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.571,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "quantity"
+      ]
+    },
+    "unit_price": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.357,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "unitPrice",
+        "unitAmount",
+        "unit_price"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.357,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "updatedAt",
+        "updated_at",
+        "updated"
+      ],
+      "format": "date-time"
+    },
+    "amount": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.286,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "amount",
+        "totalAmount"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.286,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at"
+      ],
+      "format": "date-time"
+    },
+    "metadata": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.286,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "custom_fields",
+        "metadata",
+        "attributes",
+        "customFields"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.286,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "type",
+        "@type"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "currency"
+      ]
+    },
+    "due_date": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "due_date",
+        "dueDate"
+      ]
+    },
+    "number": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "number"
+      ]
+    },
+    "tax": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "tax"
+      ]
+    },
+    "tax_rate": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "taxRate"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "billing",
+    "concept": "invoice_line",
+    "providers": 14,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

@@ -1,0 +1,33 @@
+provider: pinch-payments
+apis_io: https://apis.io/providers/pinch-payments/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      plan_id: planId
+      metadata: metadata
+      started_at: startDate
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/pinch-payments-core.yml#DELETE /subscriptions/{id}
+    - openapi/_original/pinch-payments-core.yml#GET /subscriptions
+    - openapi/_original/pinch-payments-core.yml#GET /subscriptions/{id}
+    - openapi/_original/pinch-payments-core.yml#POST /subscriptions
+  plan:
+    path_segment:
+    - plans
+    properties:
+      id: id
+      name: name
+      metadata: metadata
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/pinch-payments-core.yml#DELETE /plans/{id}
+    - openapi/_original/pinch-payments-core.yml#GET /plans
+    - openapi/_original/pinch-payments-core.yml#GET /plans/{id}
+    - openapi/_original/pinch-payments-core.yml#POST /plans

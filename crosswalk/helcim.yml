@@ -1,0 +1,27 @@
+provider: helcim
+apis_io: https://apis.io/providers/helcim/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: invoiceId
+      status: status
+      number: invoiceNumber
+      created_at: dateCreated
+      currency: currency
+      line_items: lineItems
+      customer_id: customerId
+      issued_at: dateIssued
+      total: amount
+      description: notes
+      tax: tax
+      amount_due: amountDue
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/helcim-api.json#GET /invoices
+    - openapi/_original/helcim-api.json#GET /invoices/{invoiceId}
+    - openapi/_original/helcim-api.json#POST /invoices
+    - openapi/_original/helcim-api.json#PUT /invoices/{invoiceId}

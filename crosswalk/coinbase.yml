@@ -1,0 +1,33 @@
+provider: coinbase
+apis_io: https://apis.io/providers/coinbase/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      description: memo
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/coinbase-commerce-openapi.yml#GET /invoices
+    - openapi/_original/coinbase-commerce-openapi.yml#GET /invoices/{invoice_id}
+    - openapi/_original/coinbase-commerce-openapi.yml#POST /invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: subscriptionId
+      created_at: createdAt
+      metadata: metadata
+      updated_at: updatedAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/coinbase-openapi.yml#DELETE /v2/data/webhooks/subscriptions/{subscriptionId}
+    - openapi/_original/coinbase-openapi.yml#GET /v2/data/webhooks/subscriptions
+    - openapi/_original/coinbase-openapi.yml#GET /v2/data/webhooks/subscriptions/{subscriptionId}
+    - openapi/_original/coinbase-openapi.yml#POST /v2/data/webhooks/subscriptions
+    - openapi/_original/coinbase-openapi.yml#PUT /v2/data/webhooks/subscriptions/{subscriptionId}

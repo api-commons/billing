@@ -1,0 +1,15 @@
+provider: pagopa
+apis_io: https://apis.io/providers/pagopa/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/pagopa-pari-ecommerce-openapi.yml#POST /initiatives/{initiativeId}/transactions/{transactionId}/invoice
+    - openapi/_original/pagopa-pari-ecommerce-openapi.yml#POST /transactions/{transactionId}/invoice
+    - openapi/_original/pari-merchants-ecommerce.yml#POST /initiatives/{initiativeId}/transactions/{transactionId}/invoice
+    - openapi/_original/pari-merchants-ecommerce.yml#POST /transactions/{transactionId}/invoice

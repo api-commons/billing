@@ -1,0 +1,28 @@
+provider: qubiqle
+apis_io: https://apis.io/providers/qubiqle/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      due_date: due_date
+      number:
+      - invoice_number
+      - number
+      created_at: created_at
+      currency: currency
+      line_items: items
+      issued_at: invoice_date
+      total: total_amount
+      description: notes
+      tax: total_tax
+      metadata: custom_fields
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/qubiqle-openapi-original.json#GET /invoices
+    - openapi/_original/qubiqle-openapi-original.json#GET /invoices/{id}
+    - openapi/_original/qubiqle-openapi-original.json#PATCH /invoices/{id}

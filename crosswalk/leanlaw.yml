@@ -1,0 +1,19 @@
+provider: leanlaw
+apis_io: https://apis.io/providers/leanlaw/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: invoiceId
+      due_date: dueDate
+      number: invoiceNumber
+      customer_id: clientId
+      issued_at: invoiceDate
+      total: amount
+      amount_due: balance
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/leanlaw-api-openapi.json#GET /v2/invoices

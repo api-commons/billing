@@ -1,0 +1,13 @@
+provider: lightspeed
+apis_io: https://apis.io/providers/lightspeed/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lightspeed-x-series-openapi.json#GET /partner/billing/subscriptions
+    - openapi/_original/lightspeed-x-series-openapi.json#GET /partner/billing/subscriptions/{subscription_id}

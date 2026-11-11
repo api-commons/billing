@@ -1,0 +1,52 @@
+provider: apiable
+apis_io: https://apis.io/providers/apiable/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      created_at: created
+      plan_id: plan
+      updated_at: updated
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/apiable-platform-api-openapi.json#DELETE /api/subscriptions/{id}
+    - openapi/_original/apiable-platform-api-openapi.json#GET /api/subscriptions
+    - openapi/_original/apiable-platform-api-openapi.json#GET /api/subscriptions/{id}
+    - openapi/_original/apiable-platform-api-openapi.json#PATCH /api/subscriptions/{id}
+    - openapi/_original/apiable-platform-api-openapi.json#POST /api/subscriptions
+  plan:
+    path_segment:
+    - products
+    - plans
+    properties:
+      id: id
+      name:
+      - name
+      - title
+      description: description
+      created_at: created
+      is_active: active
+      updated_at: updated
+      code: slug
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/apiable-platform-api-openapi.json#GET /api/plans
+    - openapi/_original/apiable-platform-api-openapi.json#GET /api/plans/{id}
+    - openapi/_original/apiable-platform-api-openapi.json#GET /api/products
+    - openapi/_original/apiable-platform-api-openapi.json#GET /api/products/{id}
+  usage_record:
+    path_segment:
+    - usage
+    properties:
+      quantity: quantity
+      subscription_id: subscriptionId
+      timestamp: timestamp
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/apiable-platform-api-openapi.json#POST /api/subscriptions/usage

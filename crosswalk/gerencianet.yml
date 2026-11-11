@@ -1,0 +1,25 @@
+provider: gerencianet
+apis_io: https://apis.io/providers/gerencianet/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/efi-cobrancas-openapi.yml#GET /subscription/{id}
+    - openapi/_original/efi-cobrancas-openapi.yml#POST /plan/{id}/subscription
+    - openapi/_original/efi-cobrancas-openapi.yml#PUT /subscription/{id}
+  plan:
+    path_segment:
+    - plan
+    - plans
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/efi-cobrancas-openapi.yml#DELETE /plan/{id}
+    - openapi/_original/efi-cobrancas-openapi.yml#GET /plans
+    - openapi/_original/efi-cobrancas-openapi.yml#POST /plan
+    - openapi/_original/efi-cobrancas-openapi.yml#PUT /plan/{id}

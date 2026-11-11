@@ -1,0 +1,19 @@
+provider: workist
+apis_io: https://apis.io/providers/workist/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/workist-integrations-openapi-original.yml#DELETE /invoices/{id}
+    - openapi/_original/workist-integrations-openapi-original.yml#GET /invoices
+    - openapi/_original/workist-integrations-openapi-original.yml#GET /invoices/{id}
+    - openapi/_original/workist-integrations-openapi-original.yml#POST /invoices

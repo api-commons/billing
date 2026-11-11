@@ -1,0 +1,20 @@
+provider: xendit
+apis_io: https://apis.io/providers/xendit/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      created_at: created
+      currency: currency
+      total: amount
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/xendit-openapi.yml#GET /v2/invoices
+    - openapi/_original/xendit-openapi.yml#GET /v2/invoices/{invoice_id}
+    - openapi/_original/xendit-openapi.yml#POST /v2/invoices

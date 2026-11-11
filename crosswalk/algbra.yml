@@ -1,0 +1,17 @@
+provider: algbra
+apis_io: https://apis.io/providers/algbra/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: state
+      customer_id: customerId
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/investments/subscriptions
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/investments/subscriptions/{subscriptionId}
+    - openapi/_original/algbra-openapi.json#POST /v1/partner/investments/subscriptions

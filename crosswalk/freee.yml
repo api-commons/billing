@@ -1,0 +1,18 @@
+provider: freee
+apis_io: https://apis.io/providers/freee/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: invoice_status
+      number: invoice_number
+      issued_at: issue_date
+      total: total_amount
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/freee-openapi.yml#GET /api/1/invoices
+    - openapi/_original/freee-openapi.yml#GET /api/1/invoices/{id}

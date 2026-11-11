@@ -1,0 +1,159 @@
+provider: chargebee
+apis_io: https://apis.io/providers/chargebee/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      due_date: due_date
+      created_at: created_at
+      currency: currency_code
+      line_items: line_items
+      customer_id: customer_id
+      issued_at: date
+      description: notes
+      tax:
+      - tax
+      - taxes
+      updated_at: updated_at
+      amount_due: amount_due
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chargebee-openapi.json#GET /customers/{customer-id}/invoices
+    - openapi/_original/chargebee-openapi.json#GET /invoices
+    - openapi/_original/chargebee-openapi.json#GET /invoices/{invoice-id}
+    - openapi/_original/chargebee-openapi.json#GET /subscriptions/{subscription-id}/invoices
+    - openapi/_original/chargebee-openapi.json#POST /exports/invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      customer_id: customer
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chargebee-openapi.json#GET /customers/{customer-id}/subscriptions
+    - openapi/_original/chargebee-openapi.json#GET /subscriptions
+    - openapi/_original/chargebee-openapi.json#GET /subscriptions/{subscription-id}
+    - openapi/_original/chargebee-openapi.json#POST /customers/{customer-id}/subscriptions
+    - openapi/_original/chargebee-openapi.json#POST /exports/subscriptions
+  plan:
+    path_segment:
+    - plans
+    - item_families
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: created_at
+      is_active: status
+      amount: price
+      currency: currency_code
+      billing_interval: period
+      metadata:
+      - meta_data
+      - metadata
+      updated_at: updated_at
+      code: sku
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chargebee-openapi.json#GET /item_families
+    - openapi/_original/chargebee-openapi.json#GET /item_families/{item-family-id}
+    - openapi/_original/chargebee-openapi.json#GET /plans
+    - openapi/_original/chargebee-openapi.json#GET /plans/{plan-id}
+    - openapi/_original/chargebee-openapi.json#GET /products
+  price:
+    path_segment:
+    - item_prices
+    properties:
+      plan_id: item_id
+      currency: currency_code
+      id: id
+      pricing_model: pricing_model
+      billing_interval: period
+      created_at: created_at
+      metadata: metadata
+      name: name
+      status: status
+      tiers: tiers
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chargebee-openapi.json#GET /item_prices
+    - openapi/_original/chargebee-openapi.json#GET /item_prices/{item-price-id}
+    - openapi/_original/chargebee-openapi.json#POST /exports/item_prices
+    - openapi/_original/chargebee-openapi.json#POST /item_prices
+    - openapi/_original/chargebee-openapi.json#POST /item_prices/{item-price-id}
+  credit_note:
+    path_segment:
+    - credit_notes
+    properties:
+      id: id
+      status: status
+      description: notes
+      currency: currency_code
+      created_at: created_at
+      customer_id: customer_id
+      updated_at: updated_at
+      reason:
+      - type
+      - reason_code
+      invoice_id:
+      - invoice
+      - reference_invoice_id
+      date: date
+      voided_at: voided_at
+      line_items: line_items
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/chargebee-openapi.json#GET /credit_notes
+    - openapi/_original/chargebee-openapi.json#GET /credit_notes/{credit-note-id}
+    - openapi/_original/chargebee-openapi.json#GET /customers/{customer-id}/credit_notes
+    - openapi/_original/chargebee-openapi.json#POST /credit_notes
+    - openapi/_original/chargebee-openapi.json#POST /exports/credit_notes
+  coupon:
+    path_segment:
+    - coupons
+    - discounts
+    properties:
+      code: name
+      id: id
+      created_at: created_at
+      max_redemptions: max_redemptions
+      expires_at: valid_till
+      amount_off: discount_amount
+      updated_at: updated_at
+      percent_off: discount_percentage
+      status: status
+      currency: currency_code
+      discount_type: discount_type
+      duration: duration_type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chargebee-openapi.json#GET /coupons
+    - openapi/_original/chargebee-openapi.json#GET /coupons/{coupon-id}
+    - openapi/_original/chargebee-openapi.json#GET /subscriptions/{subscription-id}/discounts
+    - openapi/_original/chargebee-openapi.json#POST /coupons
+    - openapi/_original/chargebee-openapi.json#POST /coupons/{coupon-id}
+  usage_record:
+    path_segment:
+    - usages
+    properties:
+      id: id
+      quantity: quantity
+      subscription_id: subscription_id
+      created_at: created_at
+      description: note
+      timestamp: usage_date
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chargebee-openapi.json#GET /subscriptions/{subscription-id}/usages
+    - openapi/_original/chargebee-openapi.json#GET /usages
+    - openapi/_original/chargebee-openapi.json#POST /subscriptions/{subscription-id}/usages

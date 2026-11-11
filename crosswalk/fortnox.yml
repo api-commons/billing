@@ -1,0 +1,20 @@
+provider: fortnox
+apis_io: https://apis.io/providers/fortnox/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      due_date: DueDate
+      number: DocumentNumber
+      currency: Currency
+      issued_at: InvoiceDate
+      amount_due: Balance
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/fortnox-openapi.yml#GET /invoices
+    - openapi/_original/fortnox-openapi.yml#GET /invoices/{DocumentNumber}
+    - openapi/_original/fortnox-openapi.yml#POST /invoices
+    - openapi/_original/fortnox-openapi.yml#PUT /invoices/{DocumentNumber}

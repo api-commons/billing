@@ -1,0 +1,24 @@
+provider: payt
+apis_io: https://apis.io/providers/payt/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      due_date: due_date
+      number: invoice_number
+      currency: currency_code
+      line_items: invoice_lines
+      issued_at: invoice_date
+      total: total_amount
+      description: description
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/payt-openapi-original.json#GET /v1/invoices
+    - openapi/_original/payt-openapi-original.json#GET /v1/invoices/{id}
+    - openapi/_original/payt-openapi-original.json#PATCH /v1/invoices
+    - openapi/_original/payt-openapi-original.json#POST /v1/invoices

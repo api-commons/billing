@@ -1,0 +1,18 @@
+provider: midtrans
+apis_io: https://apis.io/providers/midtrans/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      metadata: metadata
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/midtrans-openapi.yml#GET /v1/subscriptions/{subscription_id}
+    - openapi/_original/midtrans-openapi.yml#PATCH /v1/subscriptions/{subscription_id}
+    - openapi/_original/midtrans-openapi.yml#POST /v1/subscriptions

@@ -1,0 +1,25 @@
+provider: ticketspice
+apis_io: https://apis.io/providers/ticketspice/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/ticketspice-openapi.yml#GET /search/subscriptions
+    - openapi/_original/ticketspice-openapi.yml#GET /search/subscriptions/{id}
+  coupon:
+    path_segment:
+    - coupons
+    properties:
+      code: code
+      discount_type: discountType
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/ticketspice-openapi.yml#DELETE /coupons/{couponID}
+    - openapi/_original/ticketspice-openapi.yml#GET /coupons/{couponID}
+    - openapi/_original/ticketspice-openapi.yml#POST /coupons
+    - openapi/_original/ticketspice-openapi.yml#PUT /coupons/{couponID}

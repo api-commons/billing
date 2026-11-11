@@ -1,0 +1,27 @@
+provider: hitpay
+apis_io: https://apis.io/providers/hitpay/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      due_date: due_date
+      number: invoice_number
+      created_at: created_at
+      currency: currency
+      line_items: products
+      customer_id:
+      - customer
+      - customer_id
+      issued_at: invoice_date
+      total: amount
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/hitpay-openapi.json#DELETE /v1/invoices/{invoice_id}
+    - openapi/_original/hitpay-openapi.json#GET /v1/invoices
+    - openapi/_original/hitpay-openapi.json#POST /v1/invoices
+    - openapi/_original/hitpay-openapi.json#PUT /v1/invoices/{invoice_id}

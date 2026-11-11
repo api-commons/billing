@@ -1,0 +1,20 @@
+provider: light
+apis_io: https://apis.io/providers/light/
+context: billing
+generated: '2026-11-10'
+concepts:
+  credit_note:
+    path_segment:
+    - credit-notes
+    properties:
+      total: amount
+      description: description
+      currency: currency
+      number: documentNumber
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/light-openapi-original.json#GET /v1/credit-notes
+    - openapi/_original/light-openapi-original.json#GET /v1/credit-notes/{creditNoteId}
+    - openapi/_original/light-openapi-original.json#GET /v1/invoice-payables/{invoicePayableId}/credit-notes
+    - openapi/_original/light-openapi-original.json#PATCH /v1/credit-notes/{creditNoteId}
+    - openapi/_original/light-openapi-original.json#POST /v1/credit-notes

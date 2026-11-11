@@ -1,0 +1,16 @@
+provider: vibes-platform
+apis_io: https://apis.io/providers/vibes-platform/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vibes-platform-api-openapi.json#DELETE /companies/{company_key}/mobiledb/persons/external/{external_person_id}/subscriptions/{subscription_list_id}
+    - openapi/_original/vibes-platform-api-openapi.json#DELETE /companies/{company_key}/mobiledb/persons/{person_key}/subscriptions/{subscription_list_id}
+    - openapi/_original/vibes-platform-api-openapi.json#GET /companies/{company_key}/mobiledb/persons/external/{external_person_id}/subscriptions
+    - openapi/_original/vibes-platform-api-openapi.json#GET /companies/{company_key}/mobiledb/persons/external/{external_person_id}/subscriptions/{subscription_list_id}
+    - openapi/_original/vibes-platform-api-openapi.json#GET /companies/{company_key}/mobiledb/persons/{person_key}/subscriptions

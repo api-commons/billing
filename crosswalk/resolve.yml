@@ -1,0 +1,46 @@
+provider: resolve
+apis_io: https://apis.io/providers/resolve/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      due_date: due_at
+      number: number
+      created_at: created_at
+      line_items: line_items
+      customer_id: customer_id
+      total: amount
+      description: notes
+      updated_at: updated_at
+      amount_due: amount_due
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/resolve-merchant-api-openapi.yaml#DELETE /invoices/{invoice_id}
+    - openapi/_original/resolve-merchant-api-openapi.yaml#GET /invoices
+    - openapi/_original/resolve-merchant-api-openapi.yaml#GET /invoices/{invoice_id}
+    - openapi/_original/resolve-merchant-api-openapi.yaml#POST /invoices
+    - openapi/_original/resolve-merchant-api-openapi.yaml#PUT /invoices/{invoice_id}
+  credit_note:
+    path_segment:
+    - credit-notes
+    properties:
+      id: id
+      status: status
+      total: amount
+      customer_id: customer_id
+      number: number
+      reason: reason_code
+      invoice_id: invoice_id
+      voided_at: voided_at
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/resolve-merchant-api-openapi.yaml#GET /credit-notes
+    - openapi/_original/resolve-merchant-api-openapi.yaml#GET /credit-notes/{credit_note_id}
+    - openapi/_original/resolve-merchant-api-openapi.yaml#POST /credit-notes
+    - openapi/_original/resolve-partners-api-openapi.yaml#GET /credit-notes
+    - openapi/_original/resolve-partners-api-openapi.yaml#GET /credit-notes/{credit_note_id}

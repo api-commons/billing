@@ -1,0 +1,26 @@
+provider: billingengine
+apis_io: https://apis.io/providers/billingengine/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      due_date: due_date
+      number: number
+      currency: currency
+      line_items: items
+      customer_id:
+      - customer
+      - customer_id
+      issued_at: date
+      tax: tax_amount
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/billingengine-openapi.json#GET /invoices
+    - openapi/_original/billingengine-openapi.json#GET /invoices/{id}
+    - openapi/_original/billingengine-openapi.json#GET /invoices/{id}.xml
+    - openapi/_original/billingengine-openapi.json#PATCH /invoices/{id}
+    - openapi/_original/billingengine-openapi.json#POST /invoices

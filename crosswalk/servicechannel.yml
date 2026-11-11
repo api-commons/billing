@@ -1,0 +1,27 @@
+provider: servicechannel
+apis_io: https://apis.io/providers/servicechannel/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: Id
+      status: Status
+      number:
+      - InvoiceNumber
+      - Number
+      currency: Currency
+      customer_id: SubscriberId
+      issued_at: InvoiceDate
+      total: InvoiceTotal
+      description:
+      - Description
+      - Comments
+      updated_at: UpdatedDate
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/servicechannel-service-automation-openapi-original.json#GET /invoices/{invoiceId}
+    - openapi/_original/servicechannel-service-automation-openapi-original.json#GET /odata/invoices
+    - openapi/_original/servicechannel-service-automation-openapi-original.json#POST /invoices

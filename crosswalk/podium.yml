@@ -1,0 +1,21 @@
+provider: podium
+apis_io: https://apis.io/providers/podium/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      status: status
+      number: invoiceNumber
+      created_at: createdAt
+      line_items: lineItems
+      total: amount
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/podium-payments-openapi-original.json#GET /v4/invoices
+    - openapi/_original/podium-payments-openapi-original.json#GET /v4/invoices/{uid}
+    - openapi/_original/podium-payments-openapi-original.json#POST /v4/invoices
+    - openapi/_original/podium-payments-openapi.yml#GET /v4/invoices
+    - openapi/_original/podium-payments-openapi.yml#GET /v4/invoices/{uid}

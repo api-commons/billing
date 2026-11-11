@@ -1,0 +1,18 @@
+provider: citi
+apis_io: https://apis.io/providers/citi/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    - subscription
+    properties:
+      id: subscriptionId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/account-notifications-api.yaml#POST /v1/crdr/subscription
+    - openapi/_original/citi-vcaeventssubscriptions-openapi.yaml#DELETE /vca/v2/events/subscriptions/{subscriptionId}
+    - openapi/_original/citi-vcaeventssubscriptions-openapi.yaml#GET /vca/v2/events/subscriptions/{subscriptionId}
+    - openapi/_original/citi-vcaeventssubscriptions-openapi.yaml#POST /vca/v2/events/subscriptions
+    - openapi/_original/citi-vcaeventssubscriptions-openapi.yaml#PUT /vca/v2/events/subscriptions/{subscriptionId}

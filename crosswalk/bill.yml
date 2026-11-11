@@ -1,0 +1,28 @@
+provider: bill
+apis_io: https://apis.io/providers/bill/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    - invoices
+    properties:
+      id: id
+      due_date: dueDate
+      number: invoiceNumber
+      created_at: createdTime
+      currency: currency
+      customer_id: customerId
+      issued_at: invoiceDate
+      total: amount
+      description: description
+      updated_at: updatedTime
+      amount_due: amountDue
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/bill-openapi.yml#GET /bills
+    - openapi/_original/bill-openapi.yml#GET /bills/{billId}
+    - openapi/_original/bill-openapi.yml#GET /invoices
+    - openapi/_original/bill-openapi.yml#GET /invoices/{invoiceId}
+    - openapi/_original/bill-openapi.yml#PATCH /bills/{billId}

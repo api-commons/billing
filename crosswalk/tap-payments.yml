@@ -1,0 +1,21 @@
+provider: tap-payments
+apis_io: https://apis.io/providers/tap-payments/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      currency: currency
+      customer_id: customer
+      total: amount
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/tap-payments-openapi.yml#GET /invoices
+    - openapi/_original/tap-payments-openapi.yml#GET /invoices/{invoice_id}
+    - openapi/_original/tap-payments-openapi.yml#POST /invoices
+    - openapi/_original/tap-payments-openapi.yml#PUT /invoices/{invoice_id}

@@ -1,0 +1,16 @@
+provider: suger
+apis_io: https://apis.io/providers/suger/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      id: id
+      status: status
+      customer_id: buyerID
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/suger-openapi.yml#GET /org/{orgId}/invoice
+    - openapi/_original/suger-openapi.yml#GET /org/{orgId}/invoice/{invoiceId}

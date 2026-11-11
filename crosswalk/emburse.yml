@@ -1,0 +1,20 @@
+provider: emburse
+apis_io: https://apis.io/providers/emburse/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/emburse-enterprise-invoice-openapi.yml#PUT /v1/invoice-api/invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/emburse-enterprise-person-openapi.yml#GET /v2/persons/{person-unique-id}/subscriptions
+    - openapi/_original/emburse-enterprise-person-openapi.yml#POST /v2/persons/{person-unique-id}/subscriptions/{subscription-type}

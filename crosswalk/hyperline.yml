@@ -1,0 +1,60 @@
+provider: hyperline
+apis_io: https://apis.io/providers/hyperline/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      currency: currency
+      customer_id: customer_id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/hyperline-openapi.yml#GET /invoices
+    - openapi/_original/hyperline-openapi.yml#GET /invoices/{id}
+    - openapi/_original/hyperline-openapi.yml#PATCH /invoices/{id}
+    - openapi/_original/hyperline-openapi.yml#POST /invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      customer_id: customer_id
+      started_at: start_date
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/hyperline-openapi.yml#GET /subscriptions
+    - openapi/_original/hyperline-openapi.yml#GET /subscriptions/{id}
+    - openapi/_original/hyperline-openapi.yml#PATCH /subscriptions/{id}
+    - openapi/_original/hyperline-openapi.yml#POST /subscriptions
+  plan:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      currency: currency
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/hyperline-openapi.yml#GET /products
+    - openapi/_original/hyperline-openapi.yml#GET /products/{id}
+    - openapi/_original/hyperline-openapi.yml#PATCH /products/{id}
+    - openapi/_original/hyperline-openapi.yml#POST /products
+  credit_note:
+    path_segment:
+    - credit-notes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/hyperline-openapi.yml#POST /invoices/{id}/credit-notes
+  usage_record:
+    path_segment:
+    - usage
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/hyperline-openapi.yml#GET /customers/{id}/usage/{aggregatorId}

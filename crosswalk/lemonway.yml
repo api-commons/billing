@@ -1,0 +1,26 @@
+provider: lemonway
+apis_io: https://apis.io/providers/lemonway/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    properties:
+      id:
+      - id
+      - subscriptionId
+      status: status
+      customer_id: accountId
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/lemonway-directkit-api-2-0-openapi.yml#POST /v2/moneyins/card/{cardid}/subscription
+  plan:
+    path_segment:
+    - plans
+    properties:
+      id: id
+      description: description
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/lemonway-directkit-api-2-0-openapi.yml#GET /v2/moneyins/buynowpaylater/plans

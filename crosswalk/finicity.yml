@@ -1,0 +1,12 @@
+provider: finicity
+apis_io: https://apis.io/providers/finicity/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#DELETE /aggregation/v1/customers/{customerId}/subscriptions/{subscriptionId}

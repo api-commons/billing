@@ -1,0 +1,15 @@
+provider: gocardless
+apis_io: https://apis.io/providers/gocardless/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/gocardless-openapi.yml#GET /subscriptions
+    - openapi/_original/gocardless-openapi.yml#GET /subscriptions/{id}
+    - openapi/_original/gocardless-openapi.yml#POST /subscriptions
+    - openapi/_original/gocardless-openapi.yml#PUT /subscriptions/{id}

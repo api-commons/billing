@@ -1,0 +1,49 @@
+provider: tinvio-com
+apis_io: https://apis.io/providers/tinvio-com/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    - invoices
+    properties:
+      status: status
+      due_date: dueDate
+      currency: currency
+      line_items: lineItems
+      updated_at: updated
+      metadata:
+      - customFields
+      - attributes
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/tinvio-com-openapi-original.yaml#DELETE /api/v1/bills/{resourceId}
+    - openapi/_original/tinvio-com-openapi-original.yaml#DELETE /api/v1/invoices/{resourceId}
+    - openapi/_original/tinvio-com-openapi-original.yaml#DELETE /api/v1/scheduled/bills/{resourceId}
+    - openapi/_original/tinvio-com-openapi-original.yaml#DELETE /api/v1/scheduled/invoices/{resourceId}
+    - openapi/_original/tinvio-com-openapi-original.yaml#GET /api/v1/bills
+  invoice_line:
+    path_segment:
+    - line-items
+    properties:
+      updated_at: updated
+      metadata: attributes
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/tinvio-com-openapi-original.yaml#POST /api/v1/quick-fix/invoices/line-items
+    - openapi/_original/tinvio-com-openapi.yml#POST /api/v1/quick-fix/invoices/line-items
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      status: status
+      canceled_at: endDate
+      started_at: startDate
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/tinvio-com-openapi-original.yaml#DELETE /api/v1/scheduled/subscriptions/{resourceId}
+    - openapi/_original/tinvio-com-openapi-original.yaml#GET /api/v1/scheduled/subscriptions
+    - openapi/_original/tinvio-com-openapi-original.yaml#GET /api/v1/scheduled/subscriptions/{resourceId}
+    - openapi/_original/tinvio-com-openapi-original.yaml#POST /api/v1/scheduled/subscriptions
+    - openapi/_original/tinvio-com-openapi-original.yaml#PUT /api/v1/scheduled/subscriptions/{resourceId}

@@ -1,0 +1,14 @@
+provider: spinwheel
+apis_io: https://apis.io/providers/spinwheel/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/spinwheel-openapi.yml#DELETE /v1/users/{userId}/creditProfile/equifax/subscriptions
+    - openapi/_original/spinwheel-openapi.yml#GET /v1/users/{userId}/creditProfile/equifax/subscriptions
+    - openapi/_original/spinwheel-openapi.yml#POST /v1/users/{userId}/creditProfile/equifax/subscriptions

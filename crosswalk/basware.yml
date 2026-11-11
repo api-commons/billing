@@ -1,0 +1,16 @@
+provider: basware
+apis_io: https://apis.io/providers/basware/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      status: status
+      updated_at: lastUpdated
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/basware-push-notification-openapi.json#DELETE /v1/subscriptions
+    - openapi/_original/basware-push-notification-openapi.json#GET /v1/subscriptions
+    - openapi/_original/basware-push-notification-openapi.json#POST /v1/subscriptions

@@ -1,0 +1,21 @@
+provider: lightning-labs
+apis_io: https://apis.io/providers/lightning-labs/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    - invoice
+    properties:
+      status:
+      - state
+      - status
+      created_at: creation_date
+      description: memo
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/lightning-labs-openapi.json#DELETE /v1/invoices
+    - openapi/_original/lightning-labs-openapi.json#GET /v1/invoice/{r_hash_str}
+    - openapi/_original/lightning-labs-openapi.json#GET /v1/invoices
+    - openapi/_original/lightning-labs-openapi.json#POST /v1/invoices

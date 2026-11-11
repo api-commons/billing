@@ -1,0 +1,19 @@
+provider: ready2order
+apis_io: https://apis.io/providers/ready2order/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      id: invoice_id
+      number: invoice_number
+      line_items: items
+      customer_id: customer_id
+      total: invoice_total
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/ready2order-openapi-original.json#GET /document/invoice
+    - openapi/_original/ready2order-openapi-original.json#GET /document/invoice/{id}
+    - openapi/_original/ready2order-openapi-original.json#POST /document/invoice

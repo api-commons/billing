@@ -1,0 +1,55 @@
+provider: xero
+apis_io: https://apis.io/providers/xero/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/xero-accounting-openapi.yml#GET /Invoices
+    - openapi/_original/xero-accounting-openapi.yml#GET /Invoices/{InvoiceID}
+    - openapi/_original/xero-accounting-openapi.yml#POST /Invoices
+    - openapi/_original/xero-accounting-openapi.yml#POST /Invoices/{InvoiceID}
+    - openapi/_original/xero-accounting-openapi.yml#PUT /Invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      canceled_at: endDate
+      started_at: startDate
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/xero-app-store-openapi.yml#GET /subscriptions/{subscriptionId}
+  credit_note:
+    path_segment:
+    - creditnotes
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/xero-accounting-openapi.yml#GET /CreditNotes
+    - openapi/_original/xero-accounting-openapi.yml#GET /CreditNotes/{CreditNoteID}
+    - openapi/_original/xero-accounting-openapi.yml#POST /CreditNotes
+    - openapi/_original/xero-accounting-openapi.yml#POST /CreditNotes/{CreditNoteID}
+    - openapi/_original/xero-accounting-openapi.yml#PUT /CreditNotes
+  usage_record:
+    path_segment:
+    - usage-records
+    properties:
+      id: usageRecordId
+      quantity: quantity
+      subscription_id:
+      - subscriptionId
+      - subscriptionItemId
+      timestamp:
+      - recordedAt
+      - timestamp
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/xero-app-store-openapi.yml#GET /subscriptions/{subscriptionId}/usage-records
+    - openapi/_original/xero-app-store-openapi.yml#POST /subscriptions/{subscriptionId}/items/{subscriptionItemId}/usage-records
+    - openapi/_original/xero-app-store-openapi.yml#PUT /subscriptions/{subscriptionId}/items/{subscriptionItemId}/usage-records/{usageRecordId}

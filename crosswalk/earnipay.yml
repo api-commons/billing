@@ -1,0 +1,21 @@
+provider: earnipay
+apis_io: https://apis.io/providers/earnipay/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      due_date: dueDate
+      line_items: items
+      customer_id: customerId
+      issued_at: issueDate
+      description: notes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/earnipay-e-invoicing-openapi-original.json#DELETE /v1/invoices/{id}
+    - openapi/_original/earnipay-e-invoicing-openapi-original.json#GET /v1/invoices
+    - openapi/_original/earnipay-e-invoicing-openapi-original.json#GET /v1/invoices/{id}
+    - openapi/_original/earnipay-e-invoicing-openapi-original.json#PATCH /v1/invoices/{id}
+    - openapi/_original/earnipay-e-invoicing-openapi-original.json#POST /v1/invoices

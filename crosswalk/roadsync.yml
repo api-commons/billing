@@ -1,0 +1,27 @@
+provider: roadsync
+apis_io: https://apis.io/providers/roadsync/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      id: id
+      status: status
+      number: invoiceNumber
+      created_at: createdAt
+      line_items: lineItems
+      customer_id:
+      - customer
+      - customerId
+      total: amount
+      description:
+      - comments
+      - description
+      updated_at: updatedAt
+      metadata: customFields
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/roadsync-client-api-openapi.json#DELETE /invoice/{invoiceId}
+    - openapi/_original/roadsync-client-api-openapi.json#GET /invoice/{invoiceId}

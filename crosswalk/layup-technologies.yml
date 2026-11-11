@@ -1,0 +1,25 @@
+provider: layup-technologies
+apis_io: https://apis.io/providers/layup-technologies/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    - invoice
+    properties:
+      id:
+      - _id
+      - invoiceId
+      - id
+      status: status
+      created_at: createdAt
+      total: totalAmount
+      tax: vatAmount
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/layup-technologies-openapi-original.json#GET /v1/invoices
+    - openapi/_original/layup-technologies-openapi-original.json#GET /v1/invoices/{id}
+    - openapi/_original/layup-technologies-openapi-original.json#POST /v1/invoices
+    - openapi/_original/layup-technologies-openapi-original.json#PUT /v1/invoice/{id}
+    - openapi/_original/layup-technologies-openapi-original.json#PUT /v1/invoices

@@ -1,0 +1,24 @@
+provider: beehiiv
+apis_io: https://apis.io/providers/beehiiv/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id:
+      - id
+      - subscription_id
+      status: status
+      created_at:
+      - created
+      - created_at
+      metadata: custom_fields
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/beehiiv-openapi.yml#DELETE /publications/{publicationId}/subscriptions/{subscriptionId}
+    - openapi/_original/beehiiv-openapi.yml#GET /publications/{publicationId}/newsletter_lists/{newsletterListId}/subscriptions
+    - openapi/_original/beehiiv-openapi.yml#GET /publications/{publicationId}/newsletter_lists/{newsletterListId}/subscriptions/{newsletterListSubscriptionId}
+    - openapi/_original/beehiiv-openapi.yml#GET /publications/{publicationId}/subscriptions
+    - openapi/_original/beehiiv-openapi.yml#GET /publications/{publicationId}/subscriptions/{subscriptionId}

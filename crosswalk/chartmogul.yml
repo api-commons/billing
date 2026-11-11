@@ -1,0 +1,45 @@
+provider: chartmogul
+apis_io: https://apis.io/providers/chartmogul/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: uuid
+      due_date: due_date
+      currency: currency
+      line_items: line_items
+      issued_at: date
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/chartmogul-openapi.yml#DELETE /invoices/{uuid}
+    - openapi/_original/chartmogul-openapi.yml#GET /customers/{uuid}/invoices
+    - openapi/_original/chartmogul-openapi.yml#GET /invoices
+    - openapi/_original/chartmogul-openapi.yml#GET /invoices/{uuid}
+    - openapi/_original/chartmogul-openapi.yml#PATCH /invoices/{uuid}
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: uuid
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/chartmogul-openapi.yml#GET /customers/{uuid}/subscriptions
+  plan:
+    path_segment:
+    - plans
+    properties:
+      id: uuid
+      name: name
+      billing_interval: interval_unit
+      code: external_id
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/chartmogul-openapi.yml#DELETE /plans/{uuid}
+    - openapi/_original/chartmogul-openapi.yml#GET /plans
+    - openapi/_original/chartmogul-openapi.yml#GET /plans/{uuid}
+    - openapi/_original/chartmogul-openapi.yml#PATCH /plans/{uuid}
+    - openapi/_original/chartmogul-openapi.yml#POST /plans

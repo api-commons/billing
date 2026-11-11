@@ -1,0 +1,27 @@
+provider: zoho-invoice
+apis_io: https://apis.io/providers/zoho-invoice/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/zoho-invoice-openapi.yml#DELETE /invoices/{invoice_id}
+    - openapi/_original/zoho-invoice-openapi.yml#GET /invoices
+    - openapi/_original/zoho-invoice-openapi.yml#GET /invoices/{invoice_id}
+    - openapi/_original/zoho-invoice-openapi.yml#POST /invoices
+    - openapi/_original/zoho-invoice-openapi.yml#PUT /invoices/{invoice_id}
+  credit_note:
+    path_segment:
+    - credit-notes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/zoho-invoice-openapi.yml#DELETE /credit-notes/{creditnote_id}
+    - openapi/_original/zoho-invoice-openapi.yml#GET /credit-notes
+    - openapi/_original/zoho-invoice-openapi.yml#GET /credit-notes/{creditnote_id}
+    - openapi/_original/zoho-invoice-openapi.yml#POST /credit-notes
+    - openapi/_original/zoho-invoice-openapi.yml#PUT /credit-notes/{creditnote_id}

@@ -1,0 +1,37 @@
+provider: asaas
+apis_io: https://apis.io/providers/asaas/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      number: number
+      customer_id: customer
+      tax: taxes
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/asaas-asaas-openapi.yml#GET /v3/invoices
+    - openapi/_original/asaas-asaas-openapi.yml#GET /v3/invoices/{id}
+    - openapi/_original/asaas-asaas-openapi.yml#GET /v3/subscriptions/{id}/invoices
+    - openapi/_original/asaas-asaas-openapi.yml#POST /v3/invoices
+    - openapi/_original/asaas-asaas-openapi.yml#PUT /v3/invoices/{id}
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      created_at: dateCreated
+      customer_id: customer
+      canceled_at: endDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/asaas-asaas-openapi.yml#DELETE /v3/subscriptions/{id}
+    - openapi/_original/asaas-asaas-openapi.yml#GET /v3/subscriptions
+    - openapi/_original/asaas-asaas-openapi.yml#GET /v3/subscriptions/{id}
+    - openapi/_original/asaas-asaas-openapi.yml#POST /v3/subscriptions
+    - openapi/_original/asaas-asaas-openapi.yml#POST /v3/subscriptions/

@@ -1,0 +1,49 @@
+provider: fastspring
+apis_io: https://apis.io/providers/fastspring/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fastspring-openapi.yml#GET /invoices/{invoice_id}
+    - openapi/_original/fastspring-openapi.yml#POST /invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fastspring-openapi.yml#GET /subscriptions
+    - openapi/_original/fastspring-openapi.yml#GET /subscriptions/{subscription_id}
+    - openapi/_original/fastspring-openapi.yml#PATCH /subscriptions/{subscription_id}
+  plan:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fastspring-openapi.yml#DELETE /products/{product_path}
+    - openapi/_original/fastspring-openapi.yml#GET /products
+    - openapi/_original/fastspring-openapi.yml#GET /products/{product_path}
+    - openapi/_original/fastspring-openapi.yml#POST /products
+  price:
+    path_segment:
+    - prices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fastspring-openapi.yml#GET /products/{product_path}/prices
+  coupon:
+    path_segment:
+    - coupons
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fastspring-openapi.yml#DELETE /coupons/{coupon_id}
+    - openapi/_original/fastspring-openapi.yml#GET /coupons
+    - openapi/_original/fastspring-openapi.yml#GET /coupons/{coupon_id}
+    - openapi/_original/fastspring-openapi.yml#POST /coupons/{coupon_id}

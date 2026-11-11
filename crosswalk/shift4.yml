@@ -1,0 +1,15 @@
+provider: shift4
+apis_io: https://apis.io/providers/shift4/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      customer_id: customer
+      total: amount
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/shift4-payment-api.yml#DELETE /transactions/invoice
+    - openapi/_original/shift4-payment-api.yml#GET /transactions/invoice

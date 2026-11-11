@@ -1,0 +1,24 @@
+provider: quaderno
+apis_io: https://apis.io/providers/quaderno/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: state
+      number: number
+      currency: currency
+      customer_id: contact_id
+      issued_at: issue_date
+      description: notes
+      tax: taxes
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/quaderno-openapi.yml#DELETE /invoices/{id}.json
+    - openapi/_original/quaderno-openapi.yml#GET /invoices.json
+    - openapi/_original/quaderno-openapi.yml#GET /invoices/{id}.json
+    - openapi/_original/quaderno-openapi.yml#POST /invoices.json
+    - openapi/_original/quaderno-openapi.yml#PUT /invoices/{id}.json

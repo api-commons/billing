@@ -1,0 +1,20 @@
+provider: servicefusion
+apis_io: https://apis.io/providers/servicefusion/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      number: number
+      created_at: created_at
+      line_items: line_items
+      amount_due: balance_due
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/servicefusion-openapi.yml#GET /invoices
+    - openapi/_original/servicefusion-openapi.yml#GET /invoices/{id}
+    - openapi/_original/servicefusion-openapi.yml#POST /invoices

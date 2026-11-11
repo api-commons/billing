@@ -1,0 +1,15 @@
+provider: now-payments
+apis_io: https://apis.io/providers/now-payments/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/openapi.yml#POST /invoice

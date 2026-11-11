@@ -1,0 +1,17 @@
+provider: stark-bank
+apis_io: https://apis.io/providers/stark-bank/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      status: status
+      total: amount
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/stark-bank-openapi-original.yml#GET /v2/invoice
+    - openapi/_original/stark-bank-openapi-original.yml#GET /v2/invoice/{id}
+    - openapi/_original/stark-bank-openapi-original.yml#PATCH /v2/invoice/{id}
+    - openapi/_original/stark-bank-openapi-original.yml#POST /v2/invoice

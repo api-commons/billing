@@ -1,0 +1,13 @@
+provider: pin-payments
+apis_io: https://apis.io/providers/pin-payments/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/pin-payments-openapi.yaml#DELETE /customers/{customer_token}/subscriptions/{sub_token}
+    - openapi/_original/pin-payments-openapi.yaml#GET /customers/{customer_token}/subscriptions

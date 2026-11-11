@@ -1,0 +1,71 @@
+provider: curlec
+apis_io: https://apis.io/providers/curlec/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    - bills
+    properties:
+      id: id
+      status: status
+      number: invoice_number
+      created_at: created_at
+      currency: currency
+      line_items:
+      - items
+      - line_items
+      customer_id:
+      - customer_id
+      - customer
+      issued_at: issued_at
+      total: amount
+      description:
+      - description
+      - comment
+      - notes
+      tax:
+      - tax_amount
+      - taxes
+      amount_due: amount_due
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/curlec-razorpay-openapi.json#DELETE /bills/{bill_id}
+    - openapi/_original/curlec-razorpay-openapi.json#DELETE /invoices/{id}
+    - openapi/_original/curlec-razorpay-openapi.json#GET /invoices
+    - openapi/_original/curlec-razorpay-openapi.json#GET /invoices/{id}
+    - openapi/_original/curlec-razorpay-openapi.json#PATCH /bills/{bill_id}
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      plan_id: plan_id
+      canceled_at: ended_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/curlec-razorpay-openapi.json#GET /subscriptions
+    - openapi/_original/curlec-razorpay-openapi.json#GET /subscriptions/{id}
+    - openapi/_original/curlec-razorpay-openapi.json#PATCH /subscriptions/{id}
+    - openapi/_original/curlec-razorpay-openapi.json#POST /subscriptions
+  plan:
+    path_segment:
+    - plans
+    - products
+    properties:
+      id: id
+      description: notes
+      created_at: created_at
+      billing_interval:
+      - interval
+      - period
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/curlec-razorpay-openapi.json#GET /plans
+    - openapi/_original/curlec-razorpay-openapi.json#GET /plans/{id}
+    - openapi/_original/curlec-razorpay-openapi.json#GET /v2/accounts/{account_id}/products/{product_id}
+    - openapi/_original/curlec-razorpay-openapi.json#PATCH /v2/accounts/{account_id}/products/{product_id}
+    - openapi/_original/curlec-razorpay-openapi.json#POST /plans

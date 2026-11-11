@@ -1,0 +1,27 @@
+provider: neon-commerce
+apis_io: https://apis.io/providers/neon-commerce/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      customer_id: accountId
+      plan_id: price
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/neon-commerce-subscriptions-openapi.yml#GET /subscriptions/{subscriptionId}
+    - openapi/_original/neon-commerce-subscriptions-openapi.yml#POST /subscriptions
+  price:
+    path_segment:
+    - prices
+    properties:
+      currency: currency
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/neon-commerce-checkout-openapi.yml#GET /prices
+    - openapi/_original/neon-commerce-storefront-openapi.yml#GET /storefront/prices

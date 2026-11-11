@@ -1,0 +1,22 @@
+provider: keap
+apis_io: https://apis.io/providers/keap/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      customer_id: contact_id
+      plan_id: product_id
+      metadata: custom_fields
+      canceled_at: end_date
+      started_at: start_date
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/products/{product_id}/subscriptions/{subscription_plan_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/products/{product_id}/subscriptions
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/products/{product_id}/subscriptions/{subscription_plan_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/subscriptions
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/subscriptions/{subscription_id}

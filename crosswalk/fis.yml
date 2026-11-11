@@ -1,0 +1,43 @@
+provider: fis
+apis_io: https://apis.io/providers/fis/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    - invoices
+    properties:
+      id: id
+      status: status
+      due_date: dueDate
+      number: invoiceNumber
+      currency: currency
+      line_items: lines
+      total: totalAmount
+      description: memo
+      tax: taxAmount
+      amount_due: amountDue
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#DELETE /v2/accounting/bills/{id}
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#DELETE /v2/accounting/invoices/{id}
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /bills
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /invoices
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /reports/bills
+  credit_note:
+    path_segment:
+    - creditnotes
+    properties:
+      id: id
+      status: status
+      total: totalAmount
+      currency: currency
+      reason: memo
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /bills/creditNotes
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /invoices/creditNotes
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /v2/accounting/bills/creditNotes
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /v2/accounting/invoices/creditNotes
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#POST /bills/creditNotes

@@ -1,0 +1,20 @@
+provider: causa-prima
+apis_io: https://apis.io/providers/causa-prima/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: invoice_id
+      due_date: due_date
+      number: invoice_number
+      currency: currency
+      line_items: line_items
+      issued_at: issue_date
+      description: notes
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/causa-prima-scribo-openapi.json#GET /api/v1/invoices/{id}
+    - openapi/_original/causa-prima-scribo-openapi.json#POST /api/v1/invoices

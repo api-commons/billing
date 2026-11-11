@@ -1,0 +1,26 @@
+provider: agree-com
+apis_io: https://apis.io/providers/agree-com/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      due_date: due_at
+      line_items: line_items
+      customer_id:
+      - customer
+      - customer_id
+      - contact_id
+      total: amount
+      description: memo
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/agree-com-api-openapi-original.json#DELETE /api/v1/invoices/{id}
+    - openapi/_original/agree-com-api-openapi-original.json#GET /api/v1/invoices
+    - openapi/_original/agree-com-api-openapi-original.json#GET /api/v1/invoices/{id}
+    - openapi/_original/agree-com-api-openapi-original.json#GET /api/v1/reports/recovery/aging/invoices
+    - openapi/_original/agree-com-api-openapi-original.json#PATCH /api/v1/invoices/{id}

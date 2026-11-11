@@ -1,0 +1,747 @@
+openapi: 3.1.0
+info:
+  title: Billing and Invoicing (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Billing and Invoicing interface, distilled from the harvested OpenAPI of 837 providers
+    in the APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /invoices/{invoice_id}:
+    parameters:
+    - $ref: '#/components/parameters/invoice_id'
+    get:
+      operationId: getInvoice
+      summary: Get an invoice
+      tags:
+      - Invoices
+      x-commons-tier: core
+      x-commons-share: 0.847
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id001
+                $ref: '#/components/schemas/Invoice'
+    patch:
+      operationId: updateInvoice
+      summary: Update an invoice
+      tags:
+      - Invoices
+      x-commons-tier: extended
+      x-commons-share: 0.448
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+    delete:
+      operationId: deleteInvoice
+      summary: Delete an invoice
+      tags:
+      - Invoices
+      x-commons-tier: extended
+      x-commons-share: 0.29
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+  /invoices:
+    get:
+      operationId: listInvoices
+      summary: List invoices
+      tags:
+      - Invoices
+      x-commons-tier: core
+      x-commons-share: 0.842
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id001
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createInvoice
+      summary: Create an invoice
+      tags:
+      - Invoices
+      x-commons-tier: core
+      x-commons-share: 0.656
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /invoices/{invoice_id}/lines:
+    parameters:
+    - $ref: '#/components/parameters/invoice_id'
+    get:
+      operationId: listInvoiceLines
+      summary: List lines
+      tags:
+      - Invoice Lines
+      x-commons-tier: core
+      x-commons-share: 0.625
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/InvoiceLine'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createInvoiceLine
+      summary: Create an invoice line
+      tags:
+      - Invoice Lines
+      x-commons-tier: extended
+      x-commons-share: 0.438
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /invoices/{invoice_id}/lines/{invoice_line_id}:
+    parameters:
+    - $ref: '#/components/parameters/invoice_id'
+    - $ref: '#/components/parameters/invoice_line_id'
+    delete:
+      operationId: deleteInvoiceLine
+      summary: Delete an invoice line
+      tags:
+      - Invoice Lines
+      x-commons-tier: extended
+      x-commons-share: 0.25
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    get:
+      operationId: getInvoiceLine
+      summary: Get an invoice line
+      tags:
+      - Invoice Lines
+      x-commons-tier: extended
+      x-commons-share: 0.25
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+  /subscriptions:
+    get:
+      operationId: listSubscriptions
+      summary: List subscriptions
+      tags:
+      - Subscriptions
+      x-commons-tier: core
+      x-commons-share: 0.825
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Subscription'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createSubscription
+      summary: Create a subscription
+      tags:
+      - Subscriptions
+      x-commons-tier: core
+      x-commons-share: 0.715
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /subscriptions/{subscription_id}:
+    parameters:
+    - $ref: '#/components/parameters/subscription_id'
+    get:
+      operationId: getSubscription
+      summary: Get a subscription
+      tags:
+      - Subscriptions
+      x-commons-tier: core
+      x-commons-share: 0.759
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateSubscription
+      summary: Update a subscription
+      tags:
+      - Subscriptions
+      x-commons-tier: core
+      x-commons-share: 0.504
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+    delete:
+      operationId: deleteSubscription
+      summary: Delete a subscription
+      tags:
+      - Subscriptions
+      x-commons-tier: extended
+      x-commons-share: 0.423
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+  /plans:
+    get:
+      operationId: listPlans
+      summary: List plans
+      tags:
+      - Plans
+      x-commons-tier: core
+      x-commons-share: 0.965
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/Plan'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createPlan
+      summary: Create a plan
+      tags:
+      - Plans
+      x-commons-tier: core
+      x-commons-share: 0.772
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /plans/{plan_id}:
+    parameters:
+    - $ref: '#/components/parameters/plan_id'
+    get:
+      operationId: getPlan
+      summary: Get a plan
+      tags:
+      - Plans
+      x-commons-tier: core
+      x-commons-share: 0.895
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    patch:
+      operationId: updatePlan
+      summary: Update a plan
+      tags:
+      - Plans
+      x-commons-tier: core
+      x-commons-share: 0.632
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+    delete:
+      operationId: deletePlan
+      summary: Delete a plan
+      tags:
+      - Plans
+      x-commons-tier: extended
+      x-commons-share: 0.474
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+  /prices:
+    get:
+      operationId: listPrices
+      summary: List prices
+      tags:
+      - Prices
+      x-commons-tier: core
+      x-commons-share: 0.812
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id005
+                  $ref: '#/components/schemas/Price'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createPrice
+      summary: Create a price
+      tags:
+      - Prices
+      x-commons-tier: core
+      x-commons-share: 0.562
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /prices/{price_id}:
+    parameters:
+    - $ref: '#/components/parameters/price_id'
+    get:
+      operationId: getPrice
+      summary: Get a price
+      tags:
+      - Prices
+      x-commons-tier: core
+      x-commons-share: 0.5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    patch:
+      operationId: updatePrice
+      summary: Update a price
+      tags:
+      - Prices
+      x-commons-tier: extended
+      x-commons-share: 0.25
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /credit-notes:
+    get:
+      operationId: listCreditNotes
+      summary: List credit notes
+      tags:
+      - Credit Notes
+      x-commons-tier: core
+      x-commons-share: 0.862
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id006
+                  $ref: '#/components/schemas/CreditNote'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createCreditNote
+      summary: Create a credit note
+      tags:
+      - Credit Notes
+      x-commons-tier: core
+      x-commons-share: 0.759
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+  /credit-notes/{credit_note_id}:
+    parameters:
+    - $ref: '#/components/parameters/credit_note_id'
+    get:
+      operationId: getCreditNote
+      summary: Get a credit note
+      tags:
+      - Credit Notes
+      x-commons-tier: core
+      x-commons-share: 0.862
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+    patch:
+      operationId: updateCreditNote
+      summary: Update a credit note
+      tags:
+      - Credit Notes
+      x-commons-tier: extended
+      x-commons-share: 0.379
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+    delete:
+      operationId: deleteCreditNote
+      summary: Delete a credit note
+      tags:
+      - Credit Notes
+      x-commons-tier: extended
+      x-commons-share: 0.345
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+  /coupons:
+    get:
+      operationId: listCoupons
+      summary: List coupons
+      tags:
+      - Coupons
+      x-commons-tier: core
+      x-commons-share: 0.885
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id007
+                  $ref: '#/components/schemas/Coupon'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createCoupon
+      summary: Create a coupon
+      tags:
+      - Coupons
+      x-commons-tier: core
+      x-commons-share: 0.692
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id007
+  /coupons/{coupon_id}:
+    parameters:
+    - $ref: '#/components/parameters/coupon_id'
+    get:
+      operationId: getCoupon
+      summary: Get a coupon
+      tags:
+      - Coupons
+      x-commons-tier: core
+      x-commons-share: 0.731
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+    delete:
+      operationId: deleteCoupon
+      summary: Delete a coupon
+      tags:
+      - Coupons
+      x-commons-tier: core
+      x-commons-share: 0.5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+    patch:
+      operationId: updateCoupon
+      summary: Update a coupon
+      tags:
+      - Coupons
+      x-commons-tier: extended
+      x-commons-share: 0.385
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id007
+  /usage-records:
+    get:
+      operationId: listUsageRecords
+      summary: List usage records
+      tags:
+      - Usage Records
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id008
+                  $ref: '#/components/schemas/UsageRecord'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createUsageRecord
+      summary: Create an usage record
+      tags:
+      - Usage Records
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id008
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id008
+  /usage-records/{usage_record_id}:
+    parameters:
+    - $ref: '#/components/parameters/usage_record_id'
+    get:
+      operationId: getUsageRecord
+      summary: Get an usage record
+      tags:
+      - Usage Records
+      x-commons-tier: extended
+      x-commons-share: 0.35
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id008
+components:
+  schemas:
+    Invoice:
+      $ref: ./schema/invoice.json
+    InvoiceLine:
+      $ref: ./schema/invoice_line.json
+    Subscription:
+      $ref: ./schema/subscription.json
+    Plan:
+      $ref: ./schema/plan.json
+    Price:
+      $ref: ./schema/price.json
+    CreditNote:
+      $ref: ./schema/credit_note.json
+    Coupon:
+      $ref: ./schema/coupon.json
+    UsageRecord:
+      $ref: ./schema/usage_record.json
+  parameters:
+    invoice_id:
+      name: invoice_id
+      in: path
+      required: true
+      schema:
+        type: string
+    invoice_line_id:
+      name: invoice_line_id
+      in: path
+      required: true
+      schema:
+        type: string
+    subscription_id:
+      name: subscription_id
+      in: path
+      required: true
+      schema:
+        type: string
+    plan_id:
+      name: plan_id
+      in: path
+      required: true
+      schema:
+        type: string
+    price_id:
+      name: price_id
+      in: path
+      required: true
+      schema:
+        type: string
+    credit_note_id:
+      name: credit_note_id
+      in: path
+      required: true
+      schema:
+        type: string
+    coupon_id:
+      name: coupon_id
+      in: path
+      required: true
+      schema:
+        type: string
+    usage_record_id:
+      name: usage_record_id
+      in: path
+      required: true
+      schema:
+        type: string

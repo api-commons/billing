@@ -1,0 +1,15 @@
+provider: wordline
+apis_io: https://apis.io/providers/wordline/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#DELETE /issuers/{issuerId}/subscriptions/{subscriptionReference}
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/subscriptions/{subscriptionReference}
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#POST /issuers/{issuerId}/subscriptions
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#PUT /issuers/{issuerId}/subscriptions/{subscriptionReference}

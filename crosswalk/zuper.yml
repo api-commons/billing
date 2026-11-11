@@ -1,0 +1,22 @@
+provider: zuper
+apis_io: https://apis.io/providers/zuper/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      due_date: due_date
+      line_items: line_items
+      customer_id: customer
+      issued_at: invoice_date
+      description: description
+      metadata: custom_fields
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/zuper-rest-api-openapi.yml#DELETE /invoice/{invoice_uid}
+    - openapi/_original/zuper-rest-api-openapi.yml#GET /invoice
+    - openapi/_original/zuper-rest-api-openapi.yml#GET /invoice/{invoice_uid}
+    - openapi/_original/zuper-rest-api-openapi.yml#POST /invoice
+    - openapi/_original/zuper-rest-api-openapi.yml#PUT /invoice/{invoice_uid}

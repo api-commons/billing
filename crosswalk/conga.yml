@@ -1,0 +1,28 @@
+provider: conga
+apis_io: https://apis.io/providers/conga/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: Id
+      due_date: DueDate
+      created_at: CreatedDate
+      currency: Currency
+      issued_at: InvoiceDate
+      total: TotalAmount
+      tax: Tax
+      updated_at: ModifiedDate
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/conga-invoice-management.json#GET /invoices/{id}
+    - openapi/_original/conga-invoice-management.json#GET /request-results/{id}/invoices
+  credit_note:
+    path_segment:
+    - creditmemos
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/conga-invoice-management.json#GET /creditmemos/{id}

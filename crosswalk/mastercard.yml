@@ -1,0 +1,15 @@
+provider: mastercard
+apis_io: https://apis.io/providers/mastercard/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      customer_id:
+      - customer
+      - account
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/mastercard-automatic-billing-updater-api-openapi.yml#POST /subscriptions

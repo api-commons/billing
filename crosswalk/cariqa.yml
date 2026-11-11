@@ -1,0 +1,14 @@
+provider: cariqa
+apis_io: https://apis.io/providers/cariqa/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      currency: currency
+      issued_at: date
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cariqa-openapi-original.yml#GET /api/v1/users/{user_id}/invoices/

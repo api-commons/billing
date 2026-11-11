@@ -1,0 +1,32 @@
+provider: ios
+apis_io: https://apis.io/providers/ios/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/app-store-connect-openapi.json#DELETE /v1/subscriptions/{id}
+    - openapi/_original/app-store-connect-openapi.json#GET /v1/subscriptionGroups/{id}/relationships/subscriptions
+    - openapi/_original/app-store-connect-openapi.json#GET /v1/subscriptionGroups/{id}/subscriptions
+    - openapi/_original/app-store-connect-openapi.json#GET /v1/subscriptions/{id}
+    - openapi/_original/app-store-connect-openapi.json#PATCH /v1/subscriptions/{id}
+  price:
+    path_segment:
+    - prices
+    properties:
+      id: id
+      pricing_model: type
+      metadata: attributes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/app-store-connect-openapi.json#DELETE /v1/subscriptions/{id}/relationships/prices
+    - openapi/_original/app-store-connect-openapi.json#GET /v1/inAppPurchaseOfferCodes/{id}/prices
+    - openapi/_original/app-store-connect-openapi.json#GET /v1/inAppPurchaseOfferCodes/{id}/relationships/prices
+    - openapi/_original/app-store-connect-openapi.json#GET /v1/subscriptionOfferCodes/{id}/prices
+    - openapi/_original/app-store-connect-openapi.json#GET /v1/subscriptionOfferCodes/{id}/relationships/prices

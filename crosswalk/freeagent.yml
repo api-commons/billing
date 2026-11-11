@@ -1,0 +1,16 @@
+provider: freeagent
+apis_io: https://apis.io/providers/freeagent/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/freeagent-openapi.yml#DELETE /invoices/{id}
+    - openapi/_original/freeagent-openapi.yml#GET /invoices
+    - openapi/_original/freeagent-openapi.yml#GET /invoices/{id}
+    - openapi/_original/freeagent-openapi.yml#POST /invoices
+    - openapi/_original/freeagent-openapi.yml#PUT /invoices/{id}

@@ -1,0 +1,16 @@
+provider: holded
+apis_io: https://apis.io/providers/holded/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/holded-openapi.yml#DELETE /invoicing/v1/documents/invoice/{documentId}
+    - openapi/_original/holded-openapi.yml#GET /invoicing/v1/documents/invoice
+    - openapi/_original/holded-openapi.yml#GET /invoicing/v1/documents/invoice/{documentId}
+    - openapi/_original/holded-openapi.yml#POST /invoicing/v1/documents/invoice
+    - openapi/_original/holded-openapi.yml#PUT /invoicing/v1/documents/invoice/{documentId}

@@ -1,0 +1,12 @@
+provider: smartrr
+apis_io: https://apis.io/providers/smartrr/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/smartrr-openapi.yml#GET /vendor/purchase-state/{shopifySubscriptionId}/bills

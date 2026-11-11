@@ -1,0 +1,66 @@
+aid: common-billing
+name: Billing and Invoicing
+type: Common
+description: 'The common Billing and Invoicing vocabulary, distilled from the harvested OpenAPI of 837 providers
+  in APIs.io: shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common
+  names to each provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Billing
+- Invoicing
+- Invoices
+- E-Invoicing
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/billing/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-billing:billing
+  name: Common Billing and Invoicing Interface
+  description: The Billing and Invoicing interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/billing
+  tags:
+  - Billing
+  - Invoicing
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/billing/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/billing/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/billing/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: invoice
+    url: https://raw.githubusercontent.com/api-commons/billing/main/schema/invoice.json
+  - type: JSONSchema
+    name: invoice_line
+    url: https://raw.githubusercontent.com/api-commons/billing/main/schema/invoice_line.json
+  - type: JSONSchema
+    name: subscription
+    url: https://raw.githubusercontent.com/api-commons/billing/main/schema/subscription.json
+  - type: JSONSchema
+    name: plan
+    url: https://raw.githubusercontent.com/api-commons/billing/main/schema/plan.json
+  - type: JSONSchema
+    name: price
+    url: https://raw.githubusercontent.com/api-commons/billing/main/schema/price.json
+  - type: JSONSchema
+    name: credit_note
+    url: https://raw.githubusercontent.com/api-commons/billing/main/schema/credit_note.json
+  - type: JSONSchema
+    name: coupon
+    url: https://raw.githubusercontent.com/api-commons/billing/main/schema/coupon.json
+  - type: JSONSchema
+    name: usage_record
+    url: https://raw.githubusercontent.com/api-commons/billing/main/schema/usage_record.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/billing/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

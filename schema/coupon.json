@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/billing/main/schema/coupon.json",
+  "title": "Coupon",
+  "description": "The common coupon in Billing and Invoicing, distilled from 19 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.895,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "code",
+        "name",
+        "coupon_code",
+        "couponCode",
+        "Code"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.684,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "id",
+        "uuid",
+        "coupon_id",
+        "_id"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.579,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "createdOn",
+        "created_time",
+        "date_created",
+        "createdTime",
+        "created_date",
+        "created"
+      ],
+      "format": "date-time"
+    },
+    "max_redemptions": {
+      "type": "integer",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.579,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "max_redemptions",
+        "maxRedemptions",
+        "usage_limit",
+        "max_uses",
+        "MaxRedemptions"
+      ]
+    },
+    "expires_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.474,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "expires_at",
+        "expirationDate",
+        "valid_till",
+        "expiry_date",
+        "ExpiryDate",
+        "expiration_date",
+        "redeem_by"
+      ],
+      "format": "date-time"
+    },
+    "amount_off": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.421,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "amount",
+        "discount_amount",
+        "discountAmount",
+        "amount_off"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.368,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "updated_time",
+        "updatedTime",
+        "updated_date",
+        "modifiedDate"
+      ],
+      "format": "date-time"
+    },
+    "percent_off": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.316,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "percentage",
+        "discount_percent",
+        "discount_percentage",
+        "percent",
+        "percent_off"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.316,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "status",
+        "Status"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.263,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "currency",
+        "currency_code",
+        "Currency"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.263,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "type"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.211,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "description",
+        "Description"
+      ]
+    },
+    "discount_type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.211,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "discount_type",
+        "discountType"
+      ]
+    },
+    "duration": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.211,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "duration",
+        "duration_in_months",
+        "duration_type"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "billing",
+    "concept": "coupon",
+    "providers": 19,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

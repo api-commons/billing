@@ -1,0 +1,37 @@
+provider: amcs-group
+apis_io: https://apis.io/providers/amcs-group/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      status: status
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/amcs-group-erp-openapi-original.json#GET /accounting/invoices
+    - openapi/_original/amcs-group-erp-openapi-original.json#GET /accounting/invoices/{guid}
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      status: status
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/amcs-group-erp-openapi-original.json#GET /lists/subscriptions
+    - openapi/_original/amcs-group-erp-openapi-original.json#GET /lists/subscriptions/{guid}
+  credit_note:
+    path_segment:
+    - creditnotes
+    properties:
+      id: GUID
+      status: status
+      total: Amount
+      description: Notes
+      number: CreditNoteNumber
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/amcs-group-erp-openapi-original.json#GET /accounting/creditNotes
+    - openapi/_original/amcs-group-erp-openapi-original.json#GET /accounting/creditNotes/{guid}
+    - openapi/_original/amcs-group-erp-openapi-original.json#POST /accounting/creditNotes

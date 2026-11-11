@@ -1,0 +1,40 @@
+provider: paystack
+apis_io: https://apis.io/providers/paystack/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    properties:
+      status: status
+      customer_id: customer
+      plan_id: plan
+      started_at: start_date
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/paystack-openapi-original.yml#GET /subscription
+    - openapi/_original/paystack-openapi-original.yml#GET /subscription/{code}
+    - openapi/_original/paystack-openapi-original.yml#POST /subscription
+    - openapi/_original/paystack-subscriptions-openapi.yml#GET /subscription
+    - openapi/_original/paystack-subscriptions-openapi.yml#GET /subscription/{code}
+  plan:
+    path_segment:
+    - product
+    - plan
+    properties:
+      name: name
+      description: description
+      is_active: status
+      amount:
+      - amount
+      - price
+      currency: currency
+      billing_interval: interval
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/paystack-openapi-original.yml#DELETE /product/{id}
+    - openapi/_original/paystack-openapi-original.yml#GET /plan
+    - openapi/_original/paystack-openapi-original.yml#GET /plan/{code}
+    - openapi/_original/paystack-openapi-original.yml#GET /product
+    - openapi/_original/paystack-openapi-original.yml#GET /product/{id}

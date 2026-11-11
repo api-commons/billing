@@ -1,0 +1,25 @@
+provider: coupa
+apis_io: https://apis.io/providers/coupa/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      number: invoice-number
+      created_at: created-at
+      currency: currency
+      line_items: invoice-lines
+      issued_at: invoice-date
+      description: comments
+      tax: tax-amount
+      updated_at: updated-at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/coupa-core-api-openapi.yml#GET /invoices
+    - openapi/_original/coupa-core-api-openapi.yml#GET /invoices/{id}
+    - openapi/_original/coupa-core-api-openapi.yml#POST /invoices
+    - openapi/_original/coupa-core-api-openapi.yml#PUT /invoices/{id}

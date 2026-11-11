@@ -1,0 +1,22 @@
+provider: sibill
+apis_io: https://apis.io/providers/sibill/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      id: id
+      status: status
+      number: number
+      created_at:
+      - created_at
+      - creation_date
+      description: notes
+      tax: vat_amount
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/sibill-openapi-original.json#GET /api/v1/companies/{company_id}/documents/{document_id}/invoice
+    - openapi/_original/sibill-openapi-original.json#POST /api/v1/companies/{company_id}/documents/invoice

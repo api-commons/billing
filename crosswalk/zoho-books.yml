@@ -1,0 +1,16 @@
+provider: zoho-books
+apis_io: https://apis.io/providers/zoho-books/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/zoho-books-openapi.yml#DELETE /invoices/{invoice_id}
+    - openapi/_original/zoho-books-openapi.yml#GET /invoices
+    - openapi/_original/zoho-books-openapi.yml#GET /invoices/{invoice_id}
+    - openapi/_original/zoho-books-openapi.yml#POST /invoices
+    - openapi/_original/zoho-books-openapi.yml#PUT /invoices/{invoice_id}

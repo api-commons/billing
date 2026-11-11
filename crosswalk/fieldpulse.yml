@@ -1,0 +1,16 @@
+provider: fieldpulse
+apis_io: https://apis.io/providers/fieldpulse/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fieldpulse-api-openapi-original.json#DELETE /invoices/{invoiceId}
+    - openapi/_original/fieldpulse-api-openapi-original.json#GET /invoices
+    - openapi/_original/fieldpulse-api-openapi-original.json#GET /invoices/{invoiceId}
+    - openapi/_original/fieldpulse-api-openapi-original.json#POST /invoices
+    - openapi/_original/fieldpulse-api-openapi-original.json#PUT /invoices/{invoiceId}

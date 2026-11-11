@@ -1,0 +1,40 @@
+provider: cm-com
+apis_io: https://apis.io/providers/cm-com/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      canceled_at: endDate
+      started_at: startDate
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cm-com-email-gateway-api-v1-openapi.yml#GET /email/suppression/v1/accounts/{logicalAccountId}/subscriptions
+    - openapi/_original/cm-com-email-gateway-api-v1-openapi.yml#POST /email/suppression/v1/accounts/{logicalAccountId}/subscriptions
+  plan:
+    path_segment:
+    - products
+    - plans
+    - plan
+    properties:
+      id:
+      - uuid
+      - id
+      name: name
+      description: description
+      created_at: created_at
+      is_active:
+      - isActive
+      - status
+      amount: price
+      code: externalId
+      product_id: product_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cm-com-live-entrance-management-v1-openapi.yml#DELETE /entrance/v1.0/organisations/{organisationUuid}/plans/{entrancePlanUuid}
+    - openapi/_original/cm-com-live-entrance-management-v1-openapi.yml#DELETE /entrance/v1.0/organisations/{organisationUuid}/products/{productUuid}
+    - openapi/_original/cm-com-live-entrance-management-v1-openapi.yml#GET /entrance/v1.0/organisations/{organisationUuid}/events/{eventUuid}/plans
+    - openapi/_original/cm-com-live-entrance-management-v1-openapi.yml#GET /entrance/v1.0/organisations/{organisationUuid}/events/{eventUuid}/products
+    - openapi/_original/cm-com-live-entrance-management-v1-openapi.yml#GET /entrance/v1.0/organisations/{organisationUuid}/plans

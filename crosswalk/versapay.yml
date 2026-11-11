@@ -1,0 +1,21 @@
+provider: versapay
+apis_io: https://apis.io/providers/versapay/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      status: status
+      due_date: due_date
+      number:
+      - number
+      - display_number
+      currency: currency
+      issued_at: date
+      total: amount
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/versapay-api-reference.json#GET /api/exports/invoice/{number_or_id}
+    - openapi/_original/versapay-api-reference.json#POST /api/imports/invoice

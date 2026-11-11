@@ -1,0 +1,25 @@
+provider: yokoy
+apis_io: https://apis.io/providers/yokoy/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      due_date: dueDate
+      number: invoiceNumber
+      created_at: created
+      currency: currency
+      line_items: lineItems
+      issued_at: date
+      tax: taxAmount
+      updated_at: lastModified
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/yokoy-openapi-original.json#GET /legal-entities/{legalEntityId}/invoices
+    - openapi/_original/yokoy-openapi-original.json#GET /legal-entities/{legalEntityId}/invoices/{invoiceId}
+    - openapi/_original/yokoy-openapi-original.json#PATCH /legal-entities/{legalEntityId}/invoices/{invoiceId}
+    - openapi/_original/yokoy-openapi-original.json#POST /legal-entities/{legalEntityId}/invoices

@@ -1,0 +1,18 @@
+provider: float-financial
+apis_io: https://apis.io/providers/float-financial/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    properties:
+      status: status
+      line_items: items
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/float-financial-openapi.json#GET /v1/bills
+    - openapi/_original/float-financial-openapi.json#GET /v1/bills/{bill_id}
+    - openapi/_original/float-financial-openapi.json#PATCH /v1/bills
+    - openapi/_original/float-financial-openapi.json#PATCH /v1/bills/{bill_id}
+    - openapi/_original/float-financial-openapi.yml#GET /v1/bills

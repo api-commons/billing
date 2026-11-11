@@ -1,0 +1,12 @@
+provider: africastalking
+apis_io: https://apis.io/providers/africastalking/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/africastalking-openapi.yml#GET /subscription

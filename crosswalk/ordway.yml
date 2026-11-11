@@ -1,0 +1,100 @@
+provider: ordway
+apis_io: https://apis.io/providers/ordway/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: invoice_id
+      status: status
+      due_date: due_date
+      created_at: created_date
+      currency: currency
+      customer_id: customer_id
+      issued_at: invoice_date
+      description:
+      - notes
+      - description
+      updated_at: updated_date
+      amount_due: balance
+      metadata: custom_fields
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /invoices
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /invoices/{id}
+    - openapi/_original/ordway-rest-api-openapi.yml#POST /invoices
+    - openapi/_original/ordway-rest-api-openapi.yml#PUT /invoices/{id}
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: subscription_id
+      status: status
+      created_at: created_date
+      customer_id: customer_id
+      plan_id: product_id
+      metadata: custom_fields
+      updated_at: updated_date
+      canceled_at: cancellation_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /subscriptions
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /subscriptions/{id}
+    - openapi/_original/ordway-rest-api-openapi.yml#POST /subscriptions
+    - openapi/_original/ordway-rest-api-openapi.yml#PUT /subscriptions/{id}
+  plan:
+    path_segment:
+    - products
+    - plans
+    properties:
+      id: plan_id
+      name: name
+      description: description
+      created_at: created_date
+      is_active: status
+      amount: price
+      currency: currency
+      metadata: custom_fields
+      updated_at: updated_date
+      code: sku
+      product_id: product_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /plans
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /plans/{id}
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /products
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /products/{id}
+    - openapi/_original/ordway-rest-api-openapi.yml#POST /plans
+  coupon:
+    path_segment:
+    - coupons
+    properties:
+      code: code
+      id: coupon_id
+      created_at: created_date
+      max_redemptions: usage_limit
+      expires_at: expiration_date
+      updated_at: updated_date
+      status: status
+      discount_type: discount_type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /coupons
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /coupons/{id}
+  usage_record:
+    path_segment:
+    - usages
+    properties:
+      quantity: quantity
+      subscription_id: subscription_id
+      created_at: created_date
+      description: description
+      customer_id: customer_id
+      updated_at: updated_date
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /usages
+    - openapi/_original/ordway-rest-api-openapi.yml#GET /usages/{id}
+    - openapi/_original/ordway-rest-api-openapi.yml#POST /usages

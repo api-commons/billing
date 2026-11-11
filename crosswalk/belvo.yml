@@ -1,0 +1,30 @@
+provider: belvo
+apis_io: https://apis.io/providers/belvo/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    - bills
+    properties:
+      id: id
+      status: status
+      due_date: due_date
+      created_at: created_at
+      currency: currency
+      customer_id: account
+      issued_at:
+      - invoice_date
+      - issue_date
+      total: total_amount
+      tax:
+      - tax_amount
+      - vat_amount
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/belvo-openapi.json#DELETE /api/bills/{id}/
+    - openapi/_original/belvo-openapi.json#DELETE /api/cl/invoices/{id}/
+    - openapi/_original/belvo-openapi.json#DELETE /api/invoices/{id}/
+    - openapi/_original/belvo-openapi.json#GET /api/bills/
+    - openapi/_original/belvo-openapi.json#GET /api/bills/{id}/

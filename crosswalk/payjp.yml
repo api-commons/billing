@@ -1,0 +1,31 @@
+provider: payjp
+apis_io: https://apis.io/providers/payjp/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      created_at: created
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/payjp-openapi.yml#DELETE /subscriptions/{id}
+    - openapi/_original/payjp-openapi.yml#GET /subscriptions
+    - openapi/_original/payjp-openapi.yml#GET /subscriptions/{id}
+    - openapi/_original/payjp-openapi.yml#POST /subscriptions
+    - openapi/_original/payjp-openapi.yml#POST /subscriptions/{id}
+  plan:
+    path_segment:
+    - plans
+    properties:
+      id: id
+      created_at: created
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/payjp-openapi.yml#DELETE /plans/{id}
+    - openapi/_original/payjp-openapi.yml#GET /plans
+    - openapi/_original/payjp-openapi.yml#GET /plans/{id}
+    - openapi/_original/payjp-openapi.yml#POST /plans
+    - openapi/_original/payjp-openapi.yml#POST /plans/{id}

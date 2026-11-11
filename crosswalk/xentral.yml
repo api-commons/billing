@@ -1,0 +1,76 @@
+provider: xentral
+apis_io: https://apis.io/providers/xentral/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      number:
+      - number
+      - documentNumber
+      created_at: createdAt
+      currency: currency
+      line_items: lineItems
+      customer_id: customer
+      issued_at:
+      - date
+      - documentDate
+      tax: tax
+      updated_at: updatedAt
+      metadata: customFields
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/xentral-api-openapi-original.json#GET /api/v1/invoices
+    - openapi/_original/xentral-api-openapi-original.json#GET /api/v1/invoices/{id}
+    - openapi/_original/xentral-api-openapi-original.json#PATCH /api/v1/invoices/{id}
+    - openapi/_original/xentral-api-openapi-original.json#POST /api/v1/accounting/datev/xmlExport/invoices
+    - openapi/_original/xentral-api-openapi-original.json#POST /api/v1/invoices
+  invoice_line:
+    path_segment:
+    - lineitems
+    properties:
+      description: description
+      id: id
+      quantity: quantity
+      updated_at: updatedAt
+      created_at: createdAt
+      metadata: customFields
+      type: type
+      number: number
+      tax_rate: taxRate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/xentral-documents-api-openapi-original.json#DELETE /api/v3/invoices/{id}/lineItems/{lineItemId}
+    - openapi/_original/xentral-documents-api-openapi-original.json#GET /api/v3/invoices/{id}/lineItems/{lineItemId}
+    - openapi/_original/xentral-documents-api-openapi-original.json#PATCH /api/v3/invoices/{id}/lineItems/{lineItemId}
+    - openapi/_original/xentral-documents-api-openapi-original.json#POST /api/v3/invoices/{id}/lineItems
+  credit_note:
+    path_segment:
+    - creditnotes
+    properties:
+      id: id
+      status: status
+      total: amount
+      description: description
+      currency: currency
+      created_at: createdAt
+      customer_id: customer
+      updated_at: updatedAt
+      number:
+      - number
+      - documentNumber
+      invoice_id: invoice
+      date: date
+      metadata: customFields
+      line_items: lineItems
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/xentral-api-openapi-original.json#GET /api/v1/creditNotes
+    - openapi/_original/xentral-api-openapi-original.json#GET /api/v1/creditNotes/{id}
+    - openapi/_original/xentral-api-openapi-original.json#PATCH /api/v1/creditNotes/{id}
+    - openapi/_original/xentral-api-openapi-original.json#POST /api/v1/accounting/datev/xmlExport/creditNotes
+    - openapi/_original/xentral-api-openapi-original.json#POST /api/v1/creditNotes

@@ -1,0 +1,28 @@
+provider: clickfunnels
+apis_io: https://apis.io/providers/clickfunnels/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      due_date: due_at
+      number: invoice_number
+      created_at: created_at
+      currency: currency
+      line_items: line_items
+      issued_at: issued_at
+      total: total_amount
+      tax: tax_amount
+      updated_at: updated_at
+      amount_due: due_amount
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/clickfunnels-openapi.json#GET /orders/invoices/{id}
+    - openapi/_original/clickfunnels-openapi.json#GET /orders/{order_id}/invoices
+    - openapi/_original/clickfunnels-openapi.json#GET /workspaces/{workspace_id}/orders/invoices
+    - openapi/_original/clickfunnels-openapi.json#POST /orders/{order_id}/invoices
+    - openapi/_original/clickfunnels-openapi.json#PUT /orders/invoices/{id}

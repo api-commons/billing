@@ -1,0 +1,21 @@
+provider: gridx
+apis_io: https://apis.io/providers/gridx/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/gridx-openapi.yml#DELETE /subscriptions
+    - openapi/_original/gridx-openapi.yml#GET /subscriptions
+    - openapi/_original/gridx-openapi.yml#POST /subscriptions
+  usage_record:
+    path_segment:
+    - usage
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/gridx-openapi.yml#GET /customer/usage

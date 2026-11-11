@@ -1,0 +1,28 @@
+provider: cobot
+apis_io: https://apis.io/providers/cobot/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/cobot-api2-openapi.yml#GET /invoices/{id}
+    - openapi/_original/cobot-api2-openapi.yml#GET /spaces/{spaceId}/invoices
+    - openapi/_original/cobot-api2-openapi.yml#POST /invoices
+  subscription:
+    path_segment:
+    - subscription
+    - subscriptions
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/cobot-api2-openapi.yml#GET /spaces/{spaceId}/subscription
+    - openapi/_original/cobot-api2-openapi.yml#GET /spaces/{spaceId}/subscriptions
+    - openapi/_original/cobot-api2-openapi.yml#PUT /spaces/{spaceId}/subscription

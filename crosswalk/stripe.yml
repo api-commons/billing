@@ -1,0 +1,173 @@
+provider: stripe
+apis_io: https://apis.io/providers/stripe/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      due_date: due_date
+      number: number
+      created_at: created
+      currency: currency
+      line_items: lines
+      customer_id: customer
+      description: description
+      tax: tax
+      amount_due:
+      - amount_due
+      - amount_remaining
+      metadata:
+      - custom_fields
+      - metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/invoice-openapi-original.yml#DELETE /v1/invoices/{invoice}
+    - openapi/_original/invoice-openapi-original.yml#GET /v1/invoices
+    - openapi/_original/invoice-openapi-original.yml#GET /v1/invoices/{invoice}
+    - openapi/_original/invoice-openapi-original.yml#POST /v1/invoices
+    - openapi/_original/invoice-openapi-original.yml#POST /v1/invoices/{invoice}
+  invoice_line:
+    path_segment:
+    - lines
+    properties:
+      description: description
+      id: id
+      quantity: quantity
+      amount: amount
+      metadata: metadata
+      type: type
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/invoice-openapi-original.yml#GET /v1/invoices/upcoming/lines
+    - openapi/_original/invoice-openapi-original.yml#GET /v1/invoices/{invoice}/lines
+    - openapi/_original/invoice-openapi-original.yml#POST /v1/invoices/{invoice}/lines/{line_item_id}
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      created_at: created
+      customer_id: customer
+      metadata: metadata
+      canceled_at:
+      - canceled_at
+      - ended_at
+      started_at: start_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/customers-openapi-original.yml#DELETE /v1/customers/{customer}/subscriptions/{subscription_exposed_id}
+    - openapi/_original/customers-openapi-original.yml#GET /v1/customers/{customer}/subscriptions
+    - openapi/_original/customers-openapi-original.yml#GET /v1/customers/{customer}/subscriptions/{subscription_exposed_id}
+    - openapi/_original/customers-openapi-original.yml#POST /v1/customers/{customer}/subscriptions
+    - openapi/_original/customers-openapi-original.yml#POST /v1/customers/{customer}/subscriptions/{subscription_exposed_id}
+  plan:
+    path_segment:
+    - plans
+    - products
+    properties:
+      id: id
+      name: name
+      created_at: created
+      is_active: active
+      amount: amount
+      currency: currency
+      billing_interval: interval
+      metadata: metadata
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/climate-openapi-original.yml#GET /v1/climate/products
+    - openapi/_original/climate-openapi-original.yml#GET /v1/climate/products/{product}
+    - openapi/_original/plans-openapi-original.yml#DELETE /v1/plans/{plan}
+    - openapi/_original/plans-openapi-original.yml#GET /v1/plans
+    - openapi/_original/plans-openapi-original.yml#GET /v1/plans/{plan}
+  price:
+    path_segment:
+    - prices
+    properties:
+      plan_id: product
+      currency: currency
+      id: id
+      pricing_model:
+      - billing_scheme
+      - tiers_mode
+      - type
+      billing_interval: recurring
+      created_at: created
+      metadata: metadata
+      amount: unit_amount
+      tax_behavior: tax_behavior
+      tiers: tiers
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/prices-openapi-original.yml#GET /v1/prices
+    - openapi/_original/prices-openapi-original.yml#GET /v1/prices/{price}
+    - openapi/_original/prices-openapi-original.yml#POST /v1/prices
+    - openapi/_original/prices-openapi-original.yml#POST /v1/prices/{price}
+  credit_note:
+    path_segment:
+    - credit_notes
+    properties:
+      id: id
+      status: status
+      total: amount
+      currency: currency
+      created_at: created
+      customer_id: customer
+      number: number
+      reason:
+      - memo
+      - reason
+      - type
+      invoice_id: invoice
+      metadata: metadata
+      voided_at: voided_at
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/credit-notes-openapi-original.yml#GET /v1/credit_notes
+    - openapi/_original/credit-notes-openapi-original.yml#GET /v1/credit_notes/{id}
+    - openapi/_original/credit-notes-openapi-original.yml#POST /v1/credit_notes
+    - openapi/_original/credit-notes-openapi-original.yml#POST /v1/credit_notes/{id}
+  coupon:
+    path_segment:
+    - coupons
+    - promotion_codes
+    properties:
+      code:
+      - name
+      - code
+      id: id
+      created_at: created
+      max_redemptions: max_redemptions
+      expires_at:
+      - redeem_by
+      - expires_at
+      amount_off: amount_off
+      percent_off: percent_off
+      currency: currency
+      duration:
+      - duration
+      - duration_in_months
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/coupons-openapi-original.yml#DELETE /v1/coupons/{coupon}
+    - openapi/_original/coupons-openapi-original.yml#GET /v1/coupons
+    - openapi/_original/coupons-openapi-original.yml#GET /v1/coupons/{coupon}
+    - openapi/_original/coupons-openapi-original.yml#POST /v1/coupons
+    - openapi/_original/coupons-openapi-original.yml#POST /v1/coupons/{coupon}
+  usage_record:
+    path_segment:
+    - usage_records
+    properties:
+      id: id
+      quantity: quantity
+      subscription_id: subscription_item
+      timestamp: timestamp
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/stripe-subscription-api-openapi.yml#POST /v1/subscription_items/{subscription_item}/usage_records

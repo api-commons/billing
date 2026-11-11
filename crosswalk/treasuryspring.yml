@@ -1,0 +1,12 @@
+provider: treasuryspring
+apis_io: https://apis.io/providers/treasuryspring/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/treasuryspring-openapi-original.json#GET /subscription

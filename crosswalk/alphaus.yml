@@ -1,0 +1,20 @@
+provider: alphaus
+apis_io: https://apis.io/providers/alphaus/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    properties:
+      customer_id: customerId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/alphaus-blueapi-openapi-original.json#POST /v1/members/aws/subscription
+  price:
+    path_segment:
+    - pricing
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/alphaus-blueapi-openapi-original.json#POST /v0/{vendor}/pricing

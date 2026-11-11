@@ -1,0 +1,63 @@
+provider: vicai
+apis_io: https://apis.io/providers/vicai/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    - bills
+    properties:
+      id: id
+      status: status
+      due_date:
+      - dueDate
+      - due_date
+      currency: currency
+      line_items:
+      - lineItems
+      - line_items
+      issued_at:
+      - issueDate
+      - issue_date
+      total:
+      - totalAmount
+      - total_amount
+      description: description
+      updated_at: updated_at
+      metadata: customFields
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/vicai-openapi-original.json#DELETE /v0/invoices/{id}
+    - openapi/_original/vicai-openapi-original.json#DELETE /v2/invoices/{id}
+    - openapi/_original/vicai-openapi-original.json#GET /v0/invoices
+    - openapi/_original/vicai-openapi-original.json#GET /v0/invoices/{id}
+    - openapi/_original/vicai-openapi-original.json#GET /v2/companies/{company_id}/invoices
+  invoice_line:
+    path_segment:
+    - lineitems
+    properties:
+      description:
+      - description
+      - comment
+      unit_price: unitPrice
+      amount: amount
+      number: number
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/vicai-openapi-original.json#GET /v0/invoices/{id}/lineItems
+  subscription:
+    path_segment:
+    - subscriptions
+    - subscription
+    properties:
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/vicai-openapi-original.json#DELETE /v0/subscription
+    - openapi/_original/vicai-openapi-original.json#DELETE /v2/companies/{company_id}/subscriptions/{id}
+    - openapi/_original/vicai-openapi-original.json#GET /v0/subscription
+    - openapi/_original/vicai-openapi-original.json#GET /v2/companies/{company_id}/subscriptions
+    - openapi/_original/vicai-openapi-original.json#GET /v2/companies/{company_id}/subscriptions/{id}

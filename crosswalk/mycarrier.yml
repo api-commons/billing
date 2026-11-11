@@ -1,0 +1,23 @@
+provider: mycarrier
+apis_io: https://apis.io/providers/mycarrier/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    - invoice
+    properties:
+      id: recordId
+      number:
+      - referenceNumber
+      - invoiceNumber
+      line_items: lineItems
+      description: notes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/mycarrier-freightaudit-api-openapi.json#DELETE /api/v3/invoices/{id}
+    - openapi/_original/mycarrier-freightaudit-api-openapi.json#GET /api/FreightAudit/Invoice/{recordId}
+    - openapi/_original/mycarrier-freightaudit-api-openapi.json#GET /api/v3/invoices/{id}
+    - openapi/_original/mycarrier-freightaudit-api-openapi.json#POST /api/v2/import/invoices
+    - openapi/_original/mycarrier-freightaudit-api-openapi.json#PUT /api/FreightAudit/Invoice/{recordId}

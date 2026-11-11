@@ -1,0 +1,65 @@
+provider: pax8
+apis_io: https://apis.io/providers/pax8/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      due_date: dueDate
+      currency: currencyCode
+      issued_at: invoiceDate
+      amount_due: balance
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/pax8-partner-endpoints-openapi.json#GET /invoices
+    - openapi/_original/pax8-partner-endpoints-openapi.json#GET /invoices/{invoiceId}
+  invoice_line:
+    path_segment:
+    - items
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/pax8-partner-endpoints-openapi.json#GET /invoices/{invoiceId}/items
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      created_at: createdDate
+      plan_id:
+      - productId
+      - price
+      updated_at: updatedDate
+      canceled_at: endDate
+      started_at: startDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pax8-partner-endpoints-openapi.json#DELETE /subscriptions/{subscriptionId}
+    - openapi/_original/pax8-partner-endpoints-openapi.json#GET /subscriptions
+    - openapi/_original/pax8-partner-endpoints-openapi.json#GET /subscriptions/{subscriptionId}
+    - openapi/_original/pax8-partner-endpoints-openapi.json#PUT /subscriptions/{subscriptionId}
+  plan:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      code: sku
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/pax8-partner-endpoints-openapi.json#GET /products
+    - openapi/_original/pax8-partner-endpoints-openapi.json#GET /products/{productId}
+  price:
+    path_segment:
+    - pricing
+    properties:
+      plan_id: productId
+      pricing_model: type
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/pax8-partner-endpoints-openapi.json#GET /products/{productId}/pricing

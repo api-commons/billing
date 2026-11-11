@@ -1,0 +1,19 @@
+provider: verifone
+apis_io: https://apis.io/providers/verifone/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      created_at: createdAt
+      plan_id: planId
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/paypal-ecommerce-api.json#GET /subscriptions/{id}
+    - openapi/_original/paypal-ecommerce-api.json#PATCH /subscriptions/{id}
+    - openapi/_original/paypal-ecommerce-api.json#POST /subscriptions

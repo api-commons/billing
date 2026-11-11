@@ -1,0 +1,19 @@
+provider: opply
+apis_io: https://apis.io/providers/opply/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    - invoice
+    properties:
+      due_date: payment_due_date
+      number: number
+      currency: currency
+      line_items: products
+      total: total_price
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/opply-openapi-original.yml#GET /api/v1/app-orders/brand/grouped-statements/{uuid}/invoices/
+    - openapi/_original/opply-openapi-original.yml#GET /api/v1/orders/brand/{order_uuid}/invoice/

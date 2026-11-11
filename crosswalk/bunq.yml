@@ -1,0 +1,21 @@
+provider: bunq
+apis_io: https://apis.io/providers/bunq/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      id: id
+      status: status
+      number: invoice_number
+      created_at: created
+      issued_at: invoice_date
+      updated_at: updated
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/bunq-openapi.json#GET /user/{userID}/invoice
+    - openapi/_original/bunq-openapi.json#GET /user/{userID}/invoice/{itemId}
+    - openapi/_original/bunq-openapi.json#GET /user/{userID}/monetary-account/{monetary-accountID}/invoice
+    - openapi/_original/bunq-openapi.json#GET /user/{userID}/monetary-account/{monetary-accountID}/invoice/{itemId}

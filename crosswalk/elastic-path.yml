@@ -1,0 +1,17 @@
+provider: elastic-path
+apis_io: https://apis.io/providers/elastic-path/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/subscriptions.yaml#GET /v2/subscriptions/invoices
+    - openapi/_original/subscriptions.yaml#GET /v2/subscriptions/invoices/{invoice_uuid}
+    - openapi/_original/subscriptions.yaml#GET /v2/subscriptions/subscriptions/{subscription_uuid}/invoices
+    - openapi/_original/subscriptions.yaml#GET /v2/subscriptions/subscriptions/{subscription_uuid}/invoices/{invoice_uuid}

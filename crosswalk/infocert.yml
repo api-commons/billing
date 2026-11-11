@@ -1,0 +1,15 @@
+provider: infocert
+apis_io: https://apis.io/providers/infocert/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/infocert-legalinvoice-openapi.yml#GET /documents/invoices/{invoiceId}
+    - openapi/_original/infocert-legalinvoice-openapi.yml#POST /documents/invoices
+    - openapi/_original/infocert-legalinvoice-openapi_2.yml#GET /documents/invoices/{invoiceId}
+    - openapi/_original/infocert-legalinvoice-openapi_2.yml#POST /documents/invoices

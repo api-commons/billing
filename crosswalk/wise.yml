@@ -1,0 +1,19 @@
+provider: wise
+apis_io: https://apis.io/providers/wise/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      created_at: created_at
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/wise-platform-openapi.yml#DELETE /v3/applications/{clientKey}/subscriptions/{subscriptionId}
+    - openapi/_original/wise-platform-openapi.yml#DELETE /v3/profiles/{profileId}/subscriptions/{subscriptionId}
+    - openapi/_original/wise-platform-openapi.yml#GET /v3/applications/{clientKey}/subscriptions
+    - openapi/_original/wise-platform-openapi.yml#GET /v3/applications/{clientKey}/subscriptions/{subscriptionId}
+    - openapi/_original/wise-platform-openapi.yml#GET /v3/profiles/{profileId}/subscriptions

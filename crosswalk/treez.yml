@@ -1,0 +1,21 @@
+provider: treez
+apis_io: https://apis.io/providers/treez/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      id: id
+      status: status
+      due_date: due_date
+      created_at: created_date
+      description: note
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/treez-dispensary-openapi.json#GET /{dispensary}/invoice/{id}
+    - openapi/_original/treez-dispensary-openapi.json#PATCH /{dispensary}/invoice
+    - openapi/_original/treez-dispensary-openapi.json#POST /{dispensary}/invoice
+    - openapi/_original/treez-dispensary-openapi.json#PUT /{dispensary}/invoice
+    - openapi/_original/treez-dispensary.json#GET /{dispensary}/invoice/{id}

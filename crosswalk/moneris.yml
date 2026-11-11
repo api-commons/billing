@@ -1,0 +1,30 @@
+provider: moneris
+apis_io: https://apis.io/providers/moneris/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: subscriptionId
+      status: subscriptionStatus
+      created_at: createdAt
+      customer_id:
+      - customerId
+      - customerReference
+      updated_at: modifiedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/moneris-unified-api-openapi.json#GET /subscriptions
+    - openapi/_original/moneris-unified-api-openapi.json#GET /subscriptions/{subscription-id}
+    - openapi/_original/moneris-unified-api-openapi.json#PATCH /subscriptions/{subscription-id}
+    - openapi/_original/moneris-unified-api-openapi.json#POST /subscriptions
+  plan:
+    path_segment:
+    - plans
+    properties:
+      amount: amount
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/moneris-unified-api-openapi.json#POST /installments/plans

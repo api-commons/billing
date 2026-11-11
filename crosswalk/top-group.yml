@@ -1,0 +1,18 @@
+provider: top-group
+apis_io: https://apis.io/providers/top-group/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: subscription_id
+      status: status
+      customer_id: account_id
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/top-group-tonapi-openapi.yml#GET /v2/accounts/{account_id}/subscriptions
+    - openapi/_original/top-group-tonapi-webhooks-openapi.yml#GET /webhooks/{webhook_id}/account-tx/subscriptions
+    - openapi/_original/top-group-tonapi-webhooks-openapi.yml#GET /webhooks/{webhook_id}/msg-opcode/subscriptions

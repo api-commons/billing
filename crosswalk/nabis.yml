@@ -1,0 +1,19 @@
+provider: nabis
+apis_io: https://apis.io/providers/nabis/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    - invoices
+    properties:
+      id: id
+      due_date: dueDate
+      line_items: lineItems
+      tax: tax
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/nabis-platform-api-v1-openapi.json#GET /invoices
+    - openapi/_original/nabis-platform-api-v2-openapi.yml#GET /v2/invoice
+    - openapi/_original/nabis-platform-api-v2-openapi.yml#GET /v2/ny/invoice

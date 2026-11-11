@@ -1,0 +1,21 @@
+provider: pointcheckout
+apis_io: https://apis.io/providers/pointcheckout/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    properties:
+      id: id
+      status: status
+      customer_id:
+      - customer
+      - customerId
+      canceled_at: endDate
+      started_at: startDate
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/pointcheckout-merchant-api-openapi.yml#GET /subscription
+    - openapi/_original/pointcheckout-merchant-api-openapi.yml#GET /subscription/{subscriptionId}
+    - openapi/_original/pointcheckout-merchant-api-openapi.yml#POST /subscription

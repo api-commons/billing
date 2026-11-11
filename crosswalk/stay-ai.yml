@@ -1,0 +1,20 @@
+provider: stay-ai
+apis_io: https://apis.io/providers/stay-ai/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/stay-ai-openapi.yml#GET /subscriptions
+    - openapi/_original/stay-ai-openapi.yml#GET /subscriptions/{subscriptionId}
+  plan:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/stay-ai-openapi.yml#GET /products/{productId}

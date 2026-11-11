@@ -1,0 +1,1563 @@
+context: billing
+generated: '2026-11-10'
+adopters:
+- provider: 1fort
+  apis_io: https://apis.io/providers/1fort/
+  crosswalk: crosswalk/1fort.yml
+  concepts:
+  - invoice
+- provider: actionstep
+  apis_io: https://apis.io/providers/actionstep/
+  crosswalk: crosswalk/actionstep.yml
+  concepts:
+  - invoice
+- provider: africastalking
+  apis_io: https://apis.io/providers/africastalking/
+  crosswalk: crosswalk/africastalking.yml
+  concepts:
+  - subscription
+- provider: aghanim
+  apis_io: https://apis.io/providers/aghanim/
+  crosswalk: crosswalk/aghanim.yml
+  concepts:
+  - coupon
+  - subscription
+- provider: agicap
+  apis_io: https://apis.io/providers/agicap/
+  crosswalk: crosswalk/agicap.yml
+  concepts:
+  - invoice
+- provider: agree-com
+  apis_io: https://apis.io/providers/agree-com/
+  crosswalk: crosswalk/agree-com.yml
+  concepts:
+  - invoice
+- provider: alayacare
+  apis_io: https://apis.io/providers/alayacare/
+  crosswalk: crosswalk/alayacare.yml
+  concepts:
+  - invoice
+- provider: algbra
+  apis_io: https://apis.io/providers/algbra/
+  crosswalk: crosswalk/algbra.yml
+  concepts:
+  - subscription
+- provider: algovoi-co-uk
+  apis_io: https://apis.io/providers/algovoi-co-uk/
+  crosswalk: crosswalk/algovoi-co-uk.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: alphaus
+  apis_io: https://apis.io/providers/alphaus/
+  crosswalk: crosswalk/alphaus.yml
+  concepts:
+  - price
+  - subscription
+- provider: amcs-group
+  apis_io: https://apis.io/providers/amcs-group/
+  crosswalk: crosswalk/amcs-group.yml
+  concepts:
+  - credit_note
+  - invoice
+  - subscription
+- provider: amdocs
+  apis_io: https://apis.io/providers/amdocs/
+  crosswalk: crosswalk/amdocs.yml
+  concepts:
+  - invoice
+  - plan
+  - subscription
+- provider: apiable
+  apis_io: https://apis.io/providers/apiable/
+  crosswalk: crosswalk/apiable.yml
+  concepts:
+  - plan
+  - subscription
+  - usage_record
+- provider: appdirect
+  apis_io: https://apis.io/providers/appdirect/
+  crosswalk: crosswalk/appdirect.yml
+  concepts:
+  - coupon
+  - invoice
+  - plan
+  - subscription
+  - usage_record
+- provider: aqueduct
+  apis_io: https://apis.io/providers/aqueduct/
+  crosswalk: crosswalk/aqueduct.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: ariba
+  apis_io: https://apis.io/providers/ariba/
+  crosswalk: crosswalk/ariba.yml
+  concepts:
+  - invoice
+- provider: asaas
+  apis_io: https://apis.io/providers/asaas/
+  crosswalk: crosswalk/asaas.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: ascend
+  apis_io: https://apis.io/providers/ascend/
+  crosswalk: crosswalk/ascend.yml
+  concepts:
+  - invoice
+- provider: bancomat
+  apis_io: https://apis.io/providers/bancomat/
+  crosswalk: crosswalk/bancomat.yml
+  concepts:
+  - credit_note
+  - invoice
+- provider: barclays
+  apis_io: https://apis.io/providers/barclays/
+  crosswalk: crosswalk/barclays.yml
+  concepts:
+  - subscription
+- provider: basware
+  apis_io: https://apis.io/providers/basware/
+  crosswalk: crosswalk/basware.yml
+  concepts:
+  - subscription
+- provider: beehiiv
+  apis_io: https://apis.io/providers/beehiiv/
+  crosswalk: crosswalk/beehiiv.yml
+  concepts:
+  - subscription
+- provider: belvo
+  apis_io: https://apis.io/providers/belvo/
+  crosswalk: crosswalk/belvo.yml
+  concepts:
+  - invoice
+- provider: bigcommerce
+  apis_io: https://apis.io/providers/bigcommerce/
+  crosswalk: crosswalk/bigcommerce.yml
+  concepts:
+  - coupon
+  - subscription
+- provider: bill
+  apis_io: https://apis.io/providers/bill/
+  crosswalk: crosswalk/bill.yml
+  concepts:
+  - invoice
+- provider: billingengine
+  apis_io: https://apis.io/providers/billingengine/
+  crosswalk: crosswalk/billingengine.yml
+  concepts:
+  - invoice
+- provider: bitpay
+  apis_io: https://apis.io/providers/bitpay/
+  crosswalk: crosswalk/bitpay.yml
+  concepts:
+  - invoice
+- provider: blackbaud
+  apis_io: https://apis.io/providers/blackbaud/
+  crosswalk: crosswalk/blackbaud.yml
+  concepts:
+  - credit_note
+  - invoice
+  - invoice_line
+  - subscription
+- provider: blng
+  apis_io: https://apis.io/providers/blng/
+  crosswalk: crosswalk/blng.yml
+  concepts:
+  - plan
+  - subscription
+- provider: block
+  apis_io: https://apis.io/providers/block/
+  crosswalk: crosswalk/block.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: bokio
+  apis_io: https://apis.io/providers/bokio/
+  crosswalk: crosswalk/bokio.yml
+  concepts:
+  - credit_note
+  - invoice
+  - invoice_line
+- provider: bolt-financial
+  apis_io: https://apis.io/providers/bolt-financial/
+  crosswalk: crosswalk/bolt-financial.yml
+  concepts:
+  - subscription
+- provider: braintree
+  apis_io: https://apis.io/providers/braintree/
+  crosswalk: crosswalk/braintree.yml
+  concepts:
+  - coupon
+  - plan
+  - subscription
+- provider: bread-financial
+  apis_io: https://apis.io/providers/bread-financial/
+  crosswalk: crosswalk/bread-financial.yml
+  concepts:
+  - subscription
+- provider: btcpay
+  apis_io: https://apis.io/providers/btcpay/
+  crosswalk: crosswalk/btcpay.yml
+  concepts:
+  - invoice
+- provider: btg-pactual
+  apis_io: https://apis.io/providers/btg-pactual/
+  crosswalk: crosswalk/btg-pactual.yml
+  concepts:
+  - invoice
+- provider: bud-co
+  apis_io: https://apis.io/providers/bud-co/
+  crosswalk: crosswalk/bud-co.yml
+  concepts:
+  - subscription
+- provider: bunq
+  apis_io: https://apis.io/providers/bunq/
+  crosswalk: crosswalk/bunq.yml
+  concepts:
+  - invoice
+- provider: cacheflow
+  apis_io: https://apis.io/providers/cacheflow/
+  crosswalk: crosswalk/cacheflow.yml
+  concepts:
+  - invoice
+- provider: cadana
+  apis_io: https://apis.io/providers/cadana/
+  crosswalk: crosswalk/cadana.yml
+  concepts:
+  - invoice
+- provider: campfire
+  apis_io: https://apis.io/providers/campfire/
+  crosswalk: crosswalk/campfire.yml
+  concepts:
+  - invoice
+  - subscription
+  - usage_record
+- provider: capchase
+  apis_io: https://apis.io/providers/capchase/
+  crosswalk: crosswalk/capchase.yml
+  concepts:
+  - subscription
+- provider: cariqa
+  apis_io: https://apis.io/providers/cariqa/
+  crosswalk: crosswalk/cariqa.yml
+  concepts:
+  - invoice
+- provider: causa-prima
+  apis_io: https://apis.io/providers/causa-prima/
+  crosswalk: crosswalk/causa-prima.yml
+  concepts:
+  - invoice
+- provider: chargebee
+  apis_io: https://apis.io/providers/chargebee/
+  crosswalk: crosswalk/chargebee.yml
+  concepts:
+  - coupon
+  - credit_note
+  - invoice
+  - plan
+  - price
+  - subscription
+  - usage_record
+- provider: chargedesk
+  apis_io: https://apis.io/providers/chargedesk/
+  crosswalk: crosswalk/chargedesk.yml
+  concepts:
+  - plan
+  - subscription
+- provider: chartmogul
+  apis_io: https://apis.io/providers/chartmogul/
+  crosswalk: crosswalk/chartmogul.yml
+  concepts:
+  - invoice
+  - plan
+  - subscription
+- provider: citi
+  apis_io: https://apis.io/providers/citi/
+  crosswalk: crosswalk/citi.yml
+  concepts:
+  - subscription
+- provider: clickfunnels
+  apis_io: https://apis.io/providers/clickfunnels/
+  crosswalk: crosswalk/clickfunnels.yml
+  concepts:
+  - invoice
+- provider: clio
+  apis_io: https://apis.io/providers/clio/
+  crosswalk: crosswalk/clio.yml
+  concepts:
+  - credit_note
+  - invoice
+- provider: clockify
+  apis_io: https://apis.io/providers/clockify/
+  crosswalk: crosswalk/clockify.yml
+  concepts:
+  - invoice
+  - invoice_line
+- provider: clockodo
+  apis_io: https://apis.io/providers/clockodo/
+  crosswalk: crosswalk/clockodo.yml
+  concepts:
+  - subscription
+- provider: cm-com
+  apis_io: https://apis.io/providers/cm-com/
+  crosswalk: crosswalk/cm-com.yml
+  concepts:
+  - plan
+  - subscription
+- provider: cobot
+  apis_io: https://apis.io/providers/cobot/
+  crosswalk: crosswalk/cobot.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: coinbase
+  apis_io: https://apis.io/providers/coinbase/
+  crosswalk: crosswalk/coinbase.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: coinflow
+  apis_io: https://apis.io/providers/coinflow/
+  crosswalk: crosswalk/coinflow.yml
+  concepts:
+  - plan
+  - subscription
+- provider: collectly
+  apis_io: https://apis.io/providers/collectly/
+  crosswalk: crosswalk/collectly.yml
+  concepts:
+  - subscription
+- provider: conekta
+  apis_io: https://apis.io/providers/conekta/
+  crosswalk: crosswalk/conekta.yml
+  concepts:
+  - plan
+  - subscription
+- provider: conga
+  apis_io: https://apis.io/providers/conga/
+  crosswalk: crosswalk/conga.yml
+  concepts:
+  - credit_note
+  - invoice
+- provider: coupa
+  apis_io: https://apis.io/providers/coupa/
+  crosswalk: crosswalk/coupa.yml
+  concepts:
+  - invoice
+- provider: creem
+  apis_io: https://apis.io/providers/creem/
+  crosswalk: crosswalk/creem.yml
+  concepts:
+  - coupon
+  - plan
+  - subscription
+- provider: culqi
+  apis_io: https://apis.io/providers/culqi/
+  crosswalk: crosswalk/culqi.yml
+  concepts:
+  - plan
+  - subscription
+- provider: curlec
+  apis_io: https://apis.io/providers/curlec/
+  crosswalk: crosswalk/curlec.yml
+  concepts:
+  - invoice
+  - plan
+  - subscription
+- provider: cybersource
+  apis_io: https://apis.io/providers/cybersource/
+  crosswalk: crosswalk/cybersource.yml
+  concepts:
+  - invoice
+  - plan
+  - subscription
+- provider: dealhub
+  apis_io: https://apis.io/providers/dealhub/
+  crosswalk: crosswalk/dealhub.yml
+  concepts:
+  - coupon
+  - credit_note
+  - invoice
+  - plan
+  - subscription
+  - usage_record
+- provider: digitail
+  apis_io: https://apis.io/providers/digitail/
+  crosswalk: crosswalk/digitail.yml
+  concepts:
+  - credit_note
+  - invoice
+- provider: dodo-payments
+  apis_io: https://apis.io/providers/dodo-payments/
+  crosswalk: crosswalk/dodo-payments.yml
+  concepts:
+  - coupon
+  - invoice
+  - plan
+  - subscription
+- provider: donately
+  apis_io: https://apis.io/providers/donately/
+  crosswalk: crosswalk/donately.yml
+  concepts:
+  - subscription
+- provider: drippay
+  apis_io: https://apis.io/providers/drippay/
+  crosswalk: crosswalk/drippay.yml
+  concepts:
+  - coupon
+  - credit_note
+  - invoice
+  - invoice_line
+  - subscription
+  - usage_record
+- provider: duck-creek
+  apis_io: https://apis.io/providers/duck-creek/
+  crosswalk: crosswalk/duck-creek.yml
+  concepts:
+  - invoice
+- provider: earnipay
+  apis_io: https://apis.io/providers/earnipay/
+  crosswalk: crosswalk/earnipay.yml
+  concepts:
+  - invoice
+- provider: eci-solutions
+  apis_io: https://apis.io/providers/eci-solutions/
+  crosswalk: crosswalk/eci-solutions.yml
+  concepts:
+  - invoice
+- provider: elastic-path
+  apis_io: https://apis.io/providers/elastic-path/
+  crosswalk: crosswalk/elastic-path.yml
+  concepts:
+  - invoice
+- provider: emburse
+  apis_io: https://apis.io/providers/emburse/
+  crosswalk: crosswalk/emburse.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: euronet
+  apis_io: https://apis.io/providers/euronet/
+  crosswalk: crosswalk/euronet.yml
+  concepts:
+  - invoice
+- provider: everhour
+  apis_io: https://apis.io/providers/everhour/
+  crosswalk: crosswalk/everhour.yml
+  concepts:
+  - invoice
+- provider: evervault
+  apis_io: https://apis.io/providers/evervault/
+  crosswalk: crosswalk/evervault.yml
+  concepts:
+  - subscription
+- provider: fastspring
+  apis_io: https://apis.io/providers/fastspring/
+  crosswalk: crosswalk/fastspring.yml
+  concepts:
+  - coupon
+  - invoice
+  - plan
+  - price
+  - subscription
+- provider: fat-zebra
+  apis_io: https://apis.io/providers/fat-zebra/
+  crosswalk: crosswalk/fat-zebra.yml
+  concepts:
+  - invoice
+- provider: fieldpulse
+  apis_io: https://apis.io/providers/fieldpulse/
+  crosswalk: crosswalk/fieldpulse.yml
+  concepts:
+  - invoice
+- provider: finicity
+  apis_io: https://apis.io/providers/finicity/
+  crosswalk: crosswalk/finicity.yml
+  concepts:
+  - subscription
+- provider: fis
+  apis_io: https://apis.io/providers/fis/
+  crosswalk: crosswalk/fis.yml
+  concepts:
+  - credit_note
+  - invoice
+- provider: flipdish
+  apis_io: https://apis.io/providers/flipdish/
+  crosswalk: crosswalk/flipdish.yml
+  concepts:
+  - coupon
+  - invoice
+  - subscription
+  - usage_record
+- provider: float-financial
+  apis_io: https://apis.io/providers/float-financial/
+  crosswalk: crosswalk/float-financial.yml
+  concepts:
+  - invoice
+- provider: flowaccount
+  apis_io: https://apis.io/providers/flowaccount/
+  crosswalk: crosswalk/flowaccount.yml
+  concepts:
+  - credit_note
+- provider: form3
+  apis_io: https://apis.io/providers/form3/
+  crosswalk: crosswalk/form3.yml
+  concepts:
+  - subscription
+- provider: fortnox
+  apis_io: https://apis.io/providers/fortnox/
+  crosswalk: crosswalk/fortnox.yml
+  concepts:
+  - invoice
+- provider: freeagent
+  apis_io: https://apis.io/providers/freeagent/
+  crosswalk: crosswalk/freeagent.yml
+  concepts:
+  - invoice
+- provider: freee
+  apis_io: https://apis.io/providers/freee/
+  crosswalk: crosswalk/freee.yml
+  concepts:
+  - invoice
+- provider: gerencianet
+  apis_io: https://apis.io/providers/gerencianet/
+  crosswalk: crosswalk/gerencianet.yml
+  concepts:
+  - plan
+  - subscription
+- provider: gingr
+  apis_io: https://apis.io/providers/gingr/
+  crosswalk: crosswalk/gingr.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: gocardless
+  apis_io: https://apis.io/providers/gocardless/
+  crosswalk: crosswalk/gocardless.yml
+  concepts:
+  - subscription
+- provider: greenhelix-net
+  apis_io: https://apis.io/providers/greenhelix-net/
+  crosswalk: crosswalk/greenhelix-net.yml
+  concepts:
+  - coupon
+  - subscription
+  - usage_record
+- provider: gridx
+  apis_io: https://apis.io/providers/gridx/
+  crosswalk: crosswalk/gridx.yml
+  concepts:
+  - subscription
+  - usage_record
+- provider: guntab
+  apis_io: https://apis.io/providers/guntab/
+  crosswalk: crosswalk/guntab.yml
+  concepts:
+  - invoice
+- provider: harvest
+  apis_io: https://apis.io/providers/harvest/
+  crosswalk: crosswalk/harvest.yml
+  concepts:
+  - invoice
+- provider: helcim
+  apis_io: https://apis.io/providers/helcim/
+  crosswalk: crosswalk/helcim.yml
+  concepts:
+  - invoice
+- provider: hevn-inc
+  apis_io: https://apis.io/providers/hevn-inc/
+  crosswalk: crosswalk/hevn-inc.yml
+  concepts:
+  - invoice
+- provider: hipay
+  apis_io: https://apis.io/providers/hipay/
+  crosswalk: crosswalk/hipay.yml
+  concepts:
+  - invoice
+- provider: hitpay
+  apis_io: https://apis.io/providers/hitpay/
+  crosswalk: crosswalk/hitpay.yml
+  concepts:
+  - invoice
+- provider: holded
+  apis_io: https://apis.io/providers/holded/
+  crosswalk: crosswalk/holded.yml
+  concepts:
+  - invoice
+- provider: housecall-pro
+  apis_io: https://apis.io/providers/housecall-pro/
+  crosswalk: crosswalk/housecall-pro.yml
+  concepts:
+  - invoice
+- provider: hubflo
+  apis_io: https://apis.io/providers/hubflo/
+  crosswalk: crosswalk/hubflo.yml
+  concepts:
+  - invoice
+  - invoice_line
+- provider: hyperline
+  apis_io: https://apis.io/providers/hyperline/
+  crosswalk: crosswalk/hyperline.yml
+  concepts:
+  - credit_note
+  - invoice
+  - plan
+  - subscription
+  - usage_record
+- provider: infocert
+  apis_io: https://apis.io/providers/infocert/
+  crosswalk: crosswalk/infocert.yml
+  concepts:
+  - invoice
+- provider: innago
+  apis_io: https://apis.io/providers/innago/
+  crosswalk: crosswalk/innago.yml
+  concepts:
+  - invoice
+- provider: insforge
+  apis_io: https://apis.io/providers/insforge/
+  crosswalk: crosswalk/insforge.yml
+  concepts:
+  - plan
+  - price
+  - subscription
+- provider: intuit
+  apis_io: https://apis.io/providers/intuit/
+  crosswalk: crosswalk/intuit.yml
+  concepts:
+  - invoice
+- provider: invoiced
+  apis_io: https://apis.io/providers/invoiced/
+  crosswalk: crosswalk/invoiced.yml
+  concepts:
+  - credit_note
+  - invoice
+  - plan
+  - subscription
+- provider: ios
+  apis_io: https://apis.io/providers/ios/
+  crosswalk: crosswalk/ios.yml
+  concepts:
+  - price
+  - subscription
+- provider: iugu
+  apis_io: https://apis.io/providers/iugu/
+  crosswalk: crosswalk/iugu.yml
+  concepts:
+  - invoice
+  - plan
+  - subscription
+- provider: joinslash-com
+  apis_io: https://apis.io/providers/joinslash-com/
+  crosswalk: crosswalk/joinslash-com.yml
+  concepts:
+  - invoice
+- provider: keap
+  apis_io: https://apis.io/providers/keap/
+  crosswalk: crosswalk/keap.yml
+  concepts:
+  - subscription
+- provider: komoju
+  apis_io: https://apis.io/providers/komoju/
+  crosswalk: crosswalk/komoju.yml
+  concepts:
+  - subscription
+- provider: lago
+  apis_io: https://apis.io/providers/lago/
+  crosswalk: crosswalk/lago.yml
+  concepts:
+  - coupon
+  - credit_note
+  - invoice
+  - plan
+  - subscription
+  - usage_record
+- provider: layup-technologies
+  apis_io: https://apis.io/providers/layup-technologies/
+  crosswalk: crosswalk/layup-technologies.yml
+  concepts:
+  - invoice
+- provider: leanlaw
+  apis_io: https://apis.io/providers/leanlaw/
+  crosswalk: crosswalk/leanlaw.yml
+  concepts:
+  - invoice
+- provider: lemonway
+  apis_io: https://apis.io/providers/lemonway/
+  crosswalk: crosswalk/lemonway.yml
+  concepts:
+  - plan
+  - subscription
+- provider: lexoffice
+  apis_io: https://apis.io/providers/lexoffice/
+  crosswalk: crosswalk/lexoffice.yml
+  concepts:
+  - credit_note
+  - invoice
+- provider: light
+  apis_io: https://apis.io/providers/light/
+  crosswalk: crosswalk/light.yml
+  concepts:
+  - credit_note
+- provider: lightning-labs
+  apis_io: https://apis.io/providers/lightning-labs/
+  crosswalk: crosswalk/lightning-labs.yml
+  concepts:
+  - invoice
+- provider: lightspeed
+  apis_io: https://apis.io/providers/lightspeed/
+  crosswalk: crosswalk/lightspeed.yml
+  concepts:
+  - subscription
+- provider: m3ter
+  apis_io: https://apis.io/providers/m3ter/
+  crosswalk: crosswalk/m3ter.yml
+  concepts:
+  - invoice
+- provider: malt
+  apis_io: https://apis.io/providers/malt/
+  crosswalk: crosswalk/malt.yml
+  concepts:
+  - invoice
+- provider: mamo
+  apis_io: https://apis.io/providers/mamo/
+  crosswalk: crosswalk/mamo.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: mastercard
+  apis_io: https://apis.io/providers/mastercard/
+  crosswalk: crosswalk/mastercard.yml
+  concepts:
+  - subscription
+- provider: mavenlink
+  apis_io: https://apis.io/providers/mavenlink/
+  crosswalk: crosswalk/mavenlink.yml
+  concepts:
+  - invoice
+- provider: mercoa
+  apis_io: https://apis.io/providers/mercoa/
+  crosswalk: crosswalk/mercoa.yml
+  concepts:
+  - invoice
+- provider: method-financial
+  apis_io: https://apis.io/providers/method-financial/
+  crosswalk: crosswalk/method-financial.yml
+  concepts:
+  - subscription
+- provider: metronome
+  apis_io: https://apis.io/providers/metronome/
+  crosswalk: crosswalk/metronome.yml
+  concepts:
+  - invoice
+- provider: midtrans
+  apis_io: https://apis.io/providers/midtrans/
+  crosswalk: crosswalk/midtrans.yml
+  concepts:
+  - subscription
+- provider: mighty-networks
+  apis_io: https://apis.io/providers/mighty-networks/
+  crosswalk: crosswalk/mighty-networks.yml
+  concepts:
+  - plan
+  - subscription
+- provider: modern-treasury
+  apis_io: https://apis.io/providers/modern-treasury/
+  crosswalk: crosswalk/modern-treasury.yml
+  concepts:
+  - invoice
+- provider: moesif
+  apis_io: https://apis.io/providers/moesif/
+  crosswalk: crosswalk/moesif.yml
+  concepts:
+  - plan
+  - price
+  - subscription
+- provider: moneris
+  apis_io: https://apis.io/providers/moneris/
+  crosswalk: crosswalk/moneris.yml
+  concepts:
+  - plan
+  - subscription
+- provider: monetizenow
+  apis_io: https://apis.io/providers/monetizenow/
+  crosswalk: crosswalk/monetizenow.yml
+  concepts:
+  - credit_note
+  - invoice
+  - plan
+  - subscription
+- provider: monite
+  apis_io: https://apis.io/providers/monite/
+  crosswalk: crosswalk/monite.yml
+  concepts:
+  - credit_note
+- provider: monoova
+  apis_io: https://apis.io/providers/monoova/
+  crosswalk: crosswalk/monoova.yml
+  concepts:
+  - subscription
+- provider: mtn-group
+  apis_io: https://apis.io/providers/mtn-group/
+  crosswalk: crosswalk/mtn-group.yml
+  concepts:
+  - plan
+  - subscription
+  - usage_record
+- provider: mvmnt
+  apis_io: https://apis.io/providers/mvmnt/
+  crosswalk: crosswalk/mvmnt.yml
+  concepts:
+  - credit_note
+  - invoice
+- provider: mycarrier
+  apis_io: https://apis.io/providers/mycarrier/
+  crosswalk: crosswalk/mycarrier.yml
+  concepts:
+  - invoice
+- provider: nabis
+  apis_io: https://apis.io/providers/nabis/
+  crosswalk: crosswalk/nabis.yml
+  concepts:
+  - invoice
+- provider: narmi
+  apis_io: https://apis.io/providers/narmi/
+  crosswalk: crosswalk/narmi.yml
+  concepts:
+  - subscription
+- provider: neon-commerce
+  apis_io: https://apis.io/providers/neon-commerce/
+  crosswalk: crosswalk/neon-commerce.yml
+  concepts:
+  - price
+  - subscription
+- provider: niural
+  apis_io: https://apis.io/providers/niural/
+  crosswalk: crosswalk/niural.yml
+  concepts:
+  - invoice
+- provider: nomos
+  apis_io: https://apis.io/providers/nomos/
+  crosswalk: crosswalk/nomos.yml
+  concepts:
+  - invoice
+  - plan
+  - price
+  - subscription
+  - usage_record
+- provider: noosh
+  apis_io: https://apis.io/providers/noosh/
+  crosswalk: crosswalk/noosh.yml
+  concepts:
+  - invoice
+- provider: notch-financial
+  apis_io: https://apis.io/providers/notch-financial/
+  crosswalk: crosswalk/notch-financial.yml
+  concepts:
+  - invoice
+- provider: now-payments
+  apis_io: https://apis.io/providers/now-payments/
+  crosswalk: crosswalk/now-payments.yml
+  concepts:
+  - invoice
+- provider: octane
+  apis_io: https://apis.io/providers/octane/
+  crosswalk: crosswalk/octane.yml
+  concepts:
+  - invoice
+- provider: openmeter
+  apis_io: https://apis.io/providers/openmeter/
+  crosswalk: crosswalk/openmeter.yml
+  concepts:
+  - invoice
+- provider: openpay
+  apis_io: https://apis.io/providers/openpay/
+  crosswalk: crosswalk/openpay.yml
+  concepts:
+  - plan
+  - subscription
+- provider: opply
+  apis_io: https://apis.io/providers/opply/
+  crosswalk: crosswalk/opply.yml
+  concepts:
+  - invoice
+- provider: oracle-financials
+  apis_io: https://apis.io/providers/oracle-financials/
+  crosswalk: crosswalk/oracle-financials.yml
+  concepts:
+  - invoice
+- provider: orange-business
+  apis_io: https://apis.io/providers/orange-business/
+  crosswalk: crosswalk/orange-business.yml
+  concepts:
+  - subscription
+- provider: orb-billing
+  apis_io: https://apis.io/providers/orb-billing/
+  crosswalk: crosswalk/orb-billing.yml
+  concepts:
+  - coupon
+  - invoice
+  - plan
+  - price
+  - subscription
+  - usage_record
+- provider: ordergroove
+  apis_io: https://apis.io/providers/ordergroove/
+  crosswalk: crosswalk/ordergroove.yml
+  concepts:
+  - plan
+  - subscription
+- provider: ordway
+  apis_io: https://apis.io/providers/ordway/
+  crosswalk: crosswalk/ordway.yml
+  concepts:
+  - coupon
+  - invoice
+  - plan
+  - subscription
+  - usage_record
+- provider: orion-advisor-solutions
+  apis_io: https://apis.io/providers/orion-advisor-solutions/
+  crosswalk: crosswalk/orion-advisor-solutions.yml
+  concepts:
+  - invoice
+  - plan
+  - price
+  - subscription
+- provider: ottimate
+  apis_io: https://apis.io/providers/ottimate/
+  crosswalk: crosswalk/ottimate.yml
+  concepts:
+  - invoice
+- provider: overflow
+  apis_io: https://apis.io/providers/overflow/
+  crosswalk: crosswalk/overflow.yml
+  concepts:
+  - subscription
+- provider: p2flux-api
+  apis_io: https://apis.io/providers/p2flux-api/
+  crosswalk: crosswalk/p2flux-api.yml
+  concepts:
+  - subscription
+- provider: paddle
+  apis_io: https://apis.io/providers/paddle/
+  crosswalk: crosswalk/paddle.yml
+  concepts:
+  - coupon
+  - invoice
+  - plan
+  - price
+  - subscription
+- provider: pagarme
+  apis_io: https://apis.io/providers/pagarme/
+  crosswalk: crosswalk/pagarme.yml
+  concepts:
+  - invoice
+  - plan
+  - subscription
+- provider: pagbank
+  apis_io: https://apis.io/providers/pagbank/
+  crosswalk: crosswalk/pagbank.yml
+  concepts:
+  - coupon
+  - invoice
+  - plan
+  - subscription
+- provider: pagopa
+  apis_io: https://apis.io/providers/pagopa/
+  crosswalk: crosswalk/pagopa.yml
+  concepts:
+  - invoice
+- provider: pagseguro
+  apis_io: https://apis.io/providers/pagseguro/
+  crosswalk: crosswalk/pagseguro.yml
+  concepts:
+  - coupon
+  - invoice
+  - plan
+  - subscription
+- provider: paid
+  apis_io: https://apis.io/providers/paid/
+  crosswalk: crosswalk/paid.yml
+  concepts:
+  - invoice
+  - invoice_line
+- provider: paigo
+  apis_io: https://apis.io/providers/paigo/
+  crosswalk: crosswalk/paigo.yml
+  concepts:
+  - invoice
+- provider: pax8
+  apis_io: https://apis.io/providers/pax8/
+  crosswalk: crosswalk/pax8.yml
+  concepts:
+  - invoice
+  - invoice_line
+  - plan
+  - price
+  - subscription
+- provider: payabli
+  apis_io: https://apis.io/providers/payabli/
+  crosswalk: crosswalk/payabli.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: payjp
+  apis_io: https://apis.io/providers/payjp/
+  crosswalk: crosswalk/payjp.yml
+  concepts:
+  - plan
+  - subscription
+- provider: paypal
+  apis_io: https://apis.io/providers/paypal/
+  crosswalk: crosswalk/paypal.yml
+  concepts:
+  - invoice
+  - plan
+  - subscription
+- provider: payrix
+  apis_io: https://apis.io/providers/payrix/
+  crosswalk: crosswalk/payrix.yml
+  concepts:
+  - invoice
+  - plan
+  - subscription
+- provider: paystack
+  apis_io: https://apis.io/providers/paystack/
+  crosswalk: crosswalk/paystack.yml
+  concepts:
+  - plan
+  - subscription
+- provider: payt
+  apis_io: https://apis.io/providers/payt/
+  crosswalk: crosswalk/payt.yml
+  concepts:
+  - invoice
+- provider: perk
+  apis_io: https://apis.io/providers/perk/
+  crosswalk: crosswalk/perk.yml
+  concepts:
+  - invoice
+  - invoice_line
+- provider: pin-payments
+  apis_io: https://apis.io/providers/pin-payments/
+  crosswalk: crosswalk/pin-payments.yml
+  concepts:
+  - subscription
+- provider: pinch-payments
+  apis_io: https://apis.io/providers/pinch-payments/
+  crosswalk: crosswalk/pinch-payments.yml
+  concepts:
+  - plan
+  - subscription
+- provider: plug
+  apis_io: https://apis.io/providers/plug/
+  crosswalk: crosswalk/plug.yml
+  concepts:
+  - subscription
+- provider: pluggy
+  apis_io: https://apis.io/providers/pluggy/
+  crosswalk: crosswalk/pluggy.yml
+  concepts:
+  - invoice
+- provider: podium
+  apis_io: https://apis.io/providers/podium/
+  crosswalk: crosswalk/podium.yml
+  concepts:
+  - invoice
+- provider: pointcheckout
+  apis_io: https://apis.io/providers/pointcheckout/
+  crosswalk: crosswalk/pointcheckout.yml
+  concepts:
+  - subscription
+- provider: polar-sh
+  apis_io: https://apis.io/providers/polar-sh/
+  crosswalk: crosswalk/polar-sh.yml
+  concepts:
+  - invoice
+  - plan
+  - subscription
+- provider: practicepanther
+  apis_io: https://apis.io/providers/practicepanther/
+  crosswalk: crosswalk/practicepanther.yml
+  concepts:
+  - invoice
+- provider: processout
+  apis_io: https://apis.io/providers/processout/
+  crosswalk: crosswalk/processout.yml
+  concepts:
+  - invoice
+- provider: propertyme
+  apis_io: https://apis.io/providers/propertyme/
+  crosswalk: crosswalk/propertyme.yml
+  concepts:
+  - invoice
+- provider: quaderno
+  apis_io: https://apis.io/providers/quaderno/
+  crosswalk: crosswalk/quaderno.yml
+  concepts:
+  - invoice
+- provider: qubiqle
+  apis_io: https://apis.io/providers/qubiqle/
+  crosswalk: crosswalk/qubiqle.yml
+  concepts:
+  - invoice
+- provider: quickbooks-online
+  apis_io: https://apis.io/providers/quickbooks-online/
+  crosswalk: crosswalk/quickbooks-online.yml
+  concepts:
+  - invoice
+- provider: raiffeisen-ru
+  apis_io: https://apis.io/providers/raiffeisen-ru/
+  crosswalk: crosswalk/raiffeisen-ru.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: ready2order
+  apis_io: https://apis.io/providers/ready2order/
+  crosswalk: crosswalk/ready2order.yml
+  concepts:
+  - invoice
+- provider: recharge-payments
+  apis_io: https://apis.io/providers/recharge-payments/
+  crosswalk: crosswalk/recharge-payments.yml
+  concepts:
+  - coupon
+  - plan
+  - subscription
+- provider: red-hat-satellite
+  apis_io: https://apis.io/providers/red-hat-satellite/
+  crosswalk: crosswalk/red-hat-satellite.yml
+  concepts:
+  - subscription
+- provider: rentberry
+  apis_io: https://apis.io/providers/rentberry/
+  crosswalk: crosswalk/rentberry.yml
+  concepts:
+  - price
+  - subscription
+- provider: resolve
+  apis_io: https://apis.io/providers/resolve/
+  crosswalk: crosswalk/resolve.yml
+  concepts:
+  - credit_note
+  - invoice
+- provider: revolut
+  apis_io: https://apis.io/providers/revolut/
+  crosswalk: crosswalk/revolut.yml
+  concepts:
+  - subscription
+- provider: rhel
+  apis_io: https://apis.io/providers/rhel/
+  crosswalk: crosswalk/rhel.yml
+  concepts:
+  - subscription
+- provider: rillet
+  apis_io: https://apis.io/providers/rillet/
+  crosswalk: crosswalk/rillet.yml
+  concepts:
+  - credit_note
+  - invoice
+- provider: ripple-labs
+  apis_io: https://apis.io/providers/ripple-labs/
+  crosswalk: crosswalk/ripple-labs.yml
+  concepts:
+  - subscription
+- provider: roadsync
+  apis_io: https://apis.io/providers/roadsync/
+  crosswalk: crosswalk/roadsync.yml
+  concepts:
+  - invoice
+- provider: romit
+  apis_io: https://apis.io/providers/romit/
+  crosswalk: crosswalk/romit.yml
+  concepts:
+  - invoice
+  - plan
+  - subscription
+- provider: rye
+  apis_io: https://apis.io/providers/rye/
+  crosswalk: crosswalk/rye.yml
+  concepts:
+  - subscription
+- provider: samcart
+  apis_io: https://apis.io/providers/samcart/
+  crosswalk: crosswalk/samcart.yml
+  concepts:
+  - plan
+  - subscription
+- provider: sap-brim-billing-and-revenue-innovation-management
+  apis_io: https://apis.io/providers/sap-brim-billing-and-revenue-innovation-management/
+  crosswalk: crosswalk/sap-brim-billing-and-revenue-innovation-management.yml
+  concepts:
+  - plan
+  - subscription
+- provider: schematic
+  apis_io: https://apis.io/providers/schematic/
+  crosswalk: crosswalk/schematic.yml
+  concepts:
+  - invoice
+- provider: servicechannel
+  apis_io: https://apis.io/providers/servicechannel/
+  crosswalk: crosswalk/servicechannel.yml
+  concepts:
+  - invoice
+- provider: servicefusion
+  apis_io: https://apis.io/providers/servicefusion/
+  crosswalk: crosswalk/servicefusion.yml
+  concepts:
+  - invoice
+- provider: sevdesk
+  apis_io: https://apis.io/providers/sevdesk/
+  crosswalk: crosswalk/sevdesk.yml
+  concepts:
+  - invoice
+- provider: shift4
+  apis_io: https://apis.io/providers/shift4/
+  crosswalk: crosswalk/shift4.yml
+  concepts:
+  - invoice
+- provider: shift4-payments
+  apis_io: https://apis.io/providers/shift4-payments/
+  crosswalk: crosswalk/shift4-payments.yml
+  concepts:
+  - plan
+  - subscription
+- provider: sibill
+  apis_io: https://apis.io/providers/sibill/
+  crosswalk: crosswalk/sibill.yml
+  concepts:
+  - invoice
+- provider: skimmer-pool
+  apis_io: https://apis.io/providers/skimmer-pool/
+  crosswalk: crosswalk/skimmer-pool.yml
+  concepts:
+  - invoice
+- provider: slash
+  apis_io: https://apis.io/providers/slash/
+  crosswalk: crosswalk/slash.yml
+  concepts:
+  - invoice
+- provider: smartrr
+  apis_io: https://apis.io/providers/smartrr/
+  crosswalk: crosswalk/smartrr.yml
+  concepts:
+  - invoice
+- provider: smokeball
+  apis_io: https://apis.io/providers/smokeball/
+  crosswalk: crosswalk/smokeball.yml
+  concepts:
+  - invoice
+  - subscription
+  - usage_record
+- provider: socotra
+  apis_io: https://apis.io/providers/socotra/
+  crosswalk: crosswalk/socotra.yml
+  concepts:
+  - invoice
+- provider: soldo
+  apis_io: https://apis.io/providers/soldo/
+  crosswalk: crosswalk/soldo.yml
+  concepts:
+  - subscription
+- provider: soldo-software-and-services
+  apis_io: https://apis.io/providers/soldo-software-and-services/
+  crosswalk: crosswalk/soldo-software-and-services.yml
+  concepts:
+  - subscription
+- provider: solvimon
+  apis_io: https://apis.io/providers/solvimon/
+  crosswalk: crosswalk/solvimon.yml
+  concepts:
+  - invoice
+  - invoice_line
+- provider: spinwheel
+  apis_io: https://apis.io/providers/spinwheel/
+  crosswalk: crosswalk/spinwheel.yml
+  concepts:
+  - subscription
+- provider: square
+  apis_io: https://apis.io/providers/square/
+  crosswalk: crosswalk/square.yml
+  concepts:
+  - invoice
+  - subscription
+- provider: stark-bank
+  apis_io: https://apis.io/providers/stark-bank/
+  crosswalk: crosswalk/stark-bank.yml
+  concepts:
+  - invoice
+- provider: stax
+  apis_io: https://apis.io/providers/stax/
+  crosswalk: crosswalk/stax.yml
+  concepts:
+  - invoice
+- provider: stay-ai
+  apis_io: https://apis.io/providers/stay-ai/
+  crosswalk: crosswalk/stay-ai.yml
+  concepts:
+  - plan
+  - subscription
+- provider: stigg
+  apis_io: https://apis.io/providers/stigg/
+  crosswalk: crosswalk/stigg.yml
+  concepts:
+  - coupon
+  - subscription
+  - usage_record
+- provider: stripe
+  apis_io: https://apis.io/providers/stripe/
+  crosswalk: crosswalk/stripe.yml
+  concepts:
+  - coupon
+  - credit_note
+  - invoice
+  - invoice_line
+  - plan
+  - price
+  - subscription
+  - usage_record
+- provider: suger
+  apis_io: https://apis.io/providers/suger/
+  crosswalk: crosswalk/suger.yml
+  concepts:
+  - invoice
+- provider: swell-io
+  apis_io: https://apis.io/providers/swell-io/
+  crosswalk: crosswalk/swell-io.yml
+  concepts:
+  - coupon
+  - invoice
+  - subscription
+- provider: synctera
+  apis_io: https://apis.io/providers/synctera/
+  crosswalk: crosswalk/synctera.yml
+  concepts:
+  - subscription
+- provider: syntage
+  apis_io: https://apis.io/providers/syntage/
+  crosswalk: crosswalk/syntage.yml
+  concepts:
+  - credit_note
+  - invoice
+  - invoice_line
+- provider: tabs-platform
+  apis_io: https://apis.io/providers/tabs-platform/
+  crosswalk: crosswalk/tabs-platform.yml
+  concepts:
+  - invoice
+- provider: tap-payments
+  apis_io: https://apis.io/providers/tap-payments/
+  crosswalk: crosswalk/tap-payments.yml
+  concepts:
+  - invoice
+- provider: td-bank
+  apis_io: https://apis.io/providers/td-bank/
+  crosswalk: crosswalk/td-bank.yml
+  concepts:
+  - subscription
+- provider: teachworks
+  apis_io: https://apis.io/providers/teachworks/
+  crosswalk: crosswalk/teachworks.yml
+  concepts:
+  - invoice
+- provider: ticketspice
+  apis_io: https://apis.io/providers/ticketspice/
+  crosswalk: crosswalk/ticketspice.yml
+  concepts:
+  - coupon
+  - subscription
+- provider: tinvio-com
+  apis_io: https://apis.io/providers/tinvio-com/
+  crosswalk: crosswalk/tinvio-com.yml
+  concepts:
+  - invoice
+  - invoice_line
+  - subscription
+- provider: togai
+  apis_io: https://apis.io/providers/togai/
+  crosswalk: crosswalk/togai.yml
+  concepts:
+  - invoice
+- provider: top-group
+  apis_io: https://apis.io/providers/top-group/
+  crosswalk: crosswalk/top-group.yml
+  concepts:
+  - subscription
+- provider: tradify
+  apis_io: https://apis.io/providers/tradify/
+  crosswalk: crosswalk/tradify.yml
+  concepts:
+  - invoice
+- provider: travelperk
+  apis_io: https://apis.io/providers/travelperk/
+  crosswalk: crosswalk/travelperk.yml
+  concepts:
+  - invoice
+  - invoice_line
+- provider: treasuryspring
+  apis_io: https://apis.io/providers/treasuryspring/
+  crosswalk: crosswalk/treasuryspring.yml
+  concepts:
+  - subscription
+- provider: treez
+  apis_io: https://apis.io/providers/treez/
+  crosswalk: crosswalk/treez.yml
+  concepts:
+  - invoice
+- provider: tutorcruncher
+  apis_io: https://apis.io/providers/tutorcruncher/
+  crosswalk: crosswalk/tutorcruncher.yml
+  concepts:
+  - invoice
+- provider: upward-financial
+  apis_io: https://apis.io/providers/upward-financial/
+  crosswalk: crosswalk/upward-financial.yml
+  concepts:
+  - invoice
+- provider: veem
+  apis_io: https://apis.io/providers/veem/
+  crosswalk: crosswalk/veem.yml
+  concepts:
+  - invoice
+- provider: verifone
+  apis_io: https://apis.io/providers/verifone/
+  crosswalk: crosswalk/verifone.yml
+  concepts:
+  - subscription
+- provider: versapay
+  apis_io: https://apis.io/providers/versapay/
+  crosswalk: crosswalk/versapay.yml
+  concepts:
+  - invoice
+- provider: vibes-platform
+  apis_io: https://apis.io/providers/vibes-platform/
+  crosswalk: crosswalk/vibes-platform.yml
+  concepts:
+  - subscription
+- provider: vicai
+  apis_io: https://apis.io/providers/vicai/
+  crosswalk: crosswalk/vicai.yml
+  concepts:
+  - invoice
+  - invoice_line
+  - subscription
+- provider: virto-commerce
+  apis_io: https://apis.io/providers/virto-commerce/
+  crosswalk: crosswalk/virto-commerce.yml
+  concepts:
+  - coupon
+  - invoice
+  - price
+  - subscription
+- provider: visa-acceptance
+  apis_io: https://apis.io/providers/visa-acceptance/
+  crosswalk: crosswalk/visa-acceptance.yml
+  concepts:
+  - invoice
+- provider: visma
+  apis_io: https://apis.io/providers/visma/
+  crosswalk: crosswalk/visma.yml
+  concepts:
+  - invoice
+- provider: vivenu
+  apis_io: https://apis.io/providers/vivenu/
+  crosswalk: crosswalk/vivenu.yml
+  concepts:
+  - coupon
+  - credit_note
+  - invoice
+  - plan
+  - subscription
+- provider: vtex
+  apis_io: https://apis.io/providers/vtex/
+  crosswalk: crosswalk/vtex.yml
+  concepts:
+  - coupon
+  - invoice
+  - plan
+  - price
+  - subscription
+- provider: wingspan
+  apis_io: https://apis.io/providers/wingspan/
+  crosswalk: crosswalk/wingspan.yml
+  concepts:
+  - invoice
+- provider: wise
+  apis_io: https://apis.io/providers/wise/
+  crosswalk: crosswalk/wise.yml
+  concepts:
+  - subscription
+- provider: worders
+  apis_io: https://apis.io/providers/worders/
+  crosswalk: crosswalk/worders.yml
+  concepts:
+  - invoice
+- provider: wordline
+  apis_io: https://apis.io/providers/wordline/
+  crosswalk: crosswalk/wordline.yml
+  concepts:
+  - subscription
+- provider: workist
+  apis_io: https://apis.io/providers/workist/
+  crosswalk: crosswalk/workist.yml
+  concepts:
+  - invoice
+- provider: xendit
+  apis_io: https://apis.io/providers/xendit/
+  crosswalk: crosswalk/xendit.yml
+  concepts:
+  - invoice
+- provider: xentral
+  apis_io: https://apis.io/providers/xentral/
+  crosswalk: crosswalk/xentral.yml
+  concepts:
+  - credit_note
+  - invoice
+  - invoice_line
+- provider: xero
+  apis_io: https://apis.io/providers/xero/
+  crosswalk: crosswalk/xero.yml
+  concepts:
+  - credit_note
+  - invoice
+  - subscription
+  - usage_record
+- provider: xero-accounting
+  apis_io: https://apis.io/providers/xero-accounting/
+  crosswalk: crosswalk/xero-accounting.yml
+  concepts:
+  - invoice
+- provider: yokoy
+  apis_io: https://apis.io/providers/yokoy/
+  crosswalk: crosswalk/yokoy.yml
+  concepts:
+  - invoice
+- provider: zoho-books
+  apis_io: https://apis.io/providers/zoho-books/
+  crosswalk: crosswalk/zoho-books.yml
+  concepts:
+  - invoice
+- provider: zoho-invoice
+  apis_io: https://apis.io/providers/zoho-invoice/
+  crosswalk: crosswalk/zoho-invoice.yml
+  concepts:
+  - credit_note
+  - invoice
+- provider: zuora
+  apis_io: https://apis.io/providers/zuora/
+  crosswalk: crosswalk/zuora.yml
+  concepts:
+  - credit_note
+  - invoice
+  - invoice_line
+  - plan
+  - subscription
+  - usage_record
+- provider: zuper
+  apis_io: https://apis.io/providers/zuper/
+  crosswalk: crosswalk/zuper.yml
+  concepts:
+  - invoice

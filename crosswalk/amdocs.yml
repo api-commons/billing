@@ -1,0 +1,47 @@
+provider: amdocs
+apis_io: https://apis.io/providers/amdocs/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: invoiceId
+      status: status
+      due_date: dueDate
+      number: invoiceNumber
+      currency: currency
+      line_items: lineItems
+      customer_id: customerId
+      issued_at: invoiceDate
+      total: totalAmount
+      tax: taxAmount
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/amdocs-connectx-openapi.yml#GET /v1/customers/{customerId}/invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: subscriptionId
+      status: status
+      customer_id: customerId
+      plan_id: productId
+      canceled_at: endDate
+      started_at: startDate
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/amdocs-connectx-openapi.yml#GET /v1/customers/{customerId}/subscriptions
+    - openapi/_original/amdocs-connectx-openapi.yml#POST /v1/customers/{customerId}/subscriptions
+  plan:
+    path_segment:
+    - products
+    properties:
+      description: description
+      is_active: status
+      currency: currency
+      product_id: productId
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/amdocs-connectx-openapi.yml#GET /v1/products

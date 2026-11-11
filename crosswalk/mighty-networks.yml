@@ -1,0 +1,33 @@
+provider: mighty-networks
+apis_io: https://apis.io/providers/mighty-networks/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      created_at: created_at
+      plan_id: plan
+      updated_at: updated_at
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/mighty-networks-admin-api-openapi.json#DELETE /admin/v1/networks/{network_id}/subscriptions/{id}
+    - openapi/_original/mighty-networks-admin-api-openapi.json#GET /admin/v1/networks/{network_id}/subscriptions
+    - openapi/_original/mighty-networks-admin-api-openapi.json#GET /admin/v1/networks/{network_id}/subscriptions/{id}
+  plan:
+    path_segment:
+    - plans
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: created_at
+      is_active: status
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mighty-networks-admin-api-openapi.json#DELETE /admin/v1/networks/{network_id}/plans/{id}/
+    - openapi/_original/mighty-networks-admin-api-openapi.json#GET /admin/v1/networks/{network_id}/members/{member_id}/plans
+    - openapi/_original/mighty-networks-admin-api-openapi.json#GET /admin/v1/networks/{network_id}/plans
+    - openapi/_original/mighty-networks-admin-api-openapi.json#GET /admin/v1/networks/{network_id}/plans/{id}/

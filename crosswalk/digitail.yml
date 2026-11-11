@@ -1,0 +1,40 @@
+provider: digitail
+apis_io: https://apis.io/providers/digitail/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      number: number
+      created_at: created_at
+      issued_at: date
+      updated_at: updated_at
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/digitail-openapi.json#GET /api/v1/invoices
+    - openapi/_original/digitail-openapi.json#GET /api/v1/invoices/{id}
+  credit_note:
+    path_segment:
+    - credit-notes
+    properties:
+      id: id
+      status: status
+      total: amount
+      description: description
+      created_at: created_at
+      customer_id: customer_id
+      updated_at: updated_at
+      number: number
+      reason:
+      - type
+      - reason
+      date: date
+      voided_at: voided_at
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/digitail-openapi.json#GET /api/v1/credit-notes
+    - openapi/_original/digitail-openapi.json#GET /api/v1/credit-notes/{id}
+    - openapi/_original/digitail-openapi.json#POST /api/v1/credit-notes

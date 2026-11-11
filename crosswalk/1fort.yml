@@ -1,0 +1,21 @@
+provider: 1fort
+apis_io: https://apis.io/providers/1fort/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    - invoice
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      issued_at: issue_date
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/1fort-openapi-original.yml#GET /broker/{broker_pk}/clients/{client_pk}/quotes/{id}/invoices
+    - openapi/_original/1fort-openapi-original.yml#GET /checkout/invoices
+    - openapi/_original/1fort-openapi-original.yml#GET /v2/broker/agent/profiles/{profile_pk}/invoices
+    - openapi/_original/1fort-openapi-original.yml#GET /v2/broker/agent/profiles/{profile_pk}/invoices/{id}
+    - openapi/_original/1fort-openapi-original.yml#PATCH /v2/broker/agent/profiles/{profile_pk}/invoices/{id}

@@ -1,0 +1,13 @@
+provider: teachworks
+apis_io: https://apis.io/providers/teachworks/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/teachworks-openapi.yml#GET /invoices
+    - openapi/_original/teachworks-openapi.yml#GET /invoices/{id}

@@ -1,0 +1,13 @@
+provider: skimmer-pool
+apis_io: https://apis.io/providers/skimmer-pool/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/skimmer-pool-openapi.yml#GET /Invoices
+    - openapi/_original/skimmer-pool-openapi.yml#GET /Invoices/{id}

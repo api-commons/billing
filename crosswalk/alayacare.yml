@@ -1,0 +1,23 @@
+provider: alayacare
+apis_io: https://apis.io/providers/alayacare/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      number: invoice_number
+      line_items: invoice_items
+      customer_id: client_id
+      issued_at: invoice_date
+      tax: taxes
+      updated_at: updated_at
+      amount_due: balance
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/alayacare-accounting-openapi.yml#GET /billing/cycles/{billing_period_id}/invoices
+    - openapi/_original/alayacare-accounting-openapi.yml#GET /billing/cycles/{billing_period_id}/invoices/{invoice_id}
+    - openapi/_original/alayacare-accounting-openapi.yml#GET /billing/periods/{billing_period_id}/invoices

@@ -1,0 +1,16 @@
+provider: harvest
+apis_io: https://apis.io/providers/harvest/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/harvest-openapi.yml#DELETE /invoices/{invoice_id}
+    - openapi/_original/harvest-openapi.yml#GET /invoices
+    - openapi/_original/harvest-openapi.yml#GET /invoices/{invoice_id}
+    - openapi/_original/harvest-openapi.yml#PATCH /invoices/{invoice_id}
+    - openapi/_original/harvest-openapi.yml#POST /invoices

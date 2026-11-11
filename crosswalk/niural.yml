@@ -1,0 +1,22 @@
+provider: niural
+apis_io: https://apis.io/providers/niural/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: invoice_id
+      status: status
+      due_date: due_date
+      currency: currency
+      line_items: invoice_items
+      total:
+      - total_amount
+      - amount
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/niural-public-api-openapi.yml#GET /invoices
+    - openapi/_original/niural-public-api-openapi.yml#GET /invoices/{invoice-id}
+    - openapi/_original/niural-public-api-openapi.yml#POST /invoices

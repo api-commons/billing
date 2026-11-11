@@ -1,0 +1,101 @@
+provider: appdirect
+apis_io: https://apis.io/providers/appdirect/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id:
+      - invoiceId
+      - id
+      status: status
+      due_date: dueDate
+      number:
+      - referenceNumber
+      - number
+      created_at:
+      - creationDate
+      - createdAt
+      currency: currency
+      line_items: invoiceLines
+      description: description
+      amount_due: amountDue
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /billing/v1/companies/{companyId}/invoices
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /billing/v1/companies/{companyId}/users/{userId}/invoices
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /billing/v1/invoices
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /billing/v1/invoices/{invoiceNumber}
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /billing/v1/orders/{orderId}/invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    - subscription
+    properties:
+      id:
+      - id
+      - uuid
+      status: status
+      created_at:
+      - createdOn
+      - creationDate
+      - createdAt
+      metadata: metadata
+      updated_at: updatedAt
+      canceled_at:
+      - endDate
+      - cancelledAt
+      name: label
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appdirect-companies-openapi-original.yml#DELETE /appReseller/v1/subscriptions/{subscriptionId}
+    - openapi/_original/appdirect-companies-openapi-original.yml#DELETE /billing/v1/subscriptions/{subscriptionId}
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /appReseller/v1/subscriptions
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /appReseller/v1/subscriptions/{subscriptionId}
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /billing/v1/companies/{companyId}/subscriptions
+  plan:
+    path_segment:
+    - products
+    properties:
+      id:
+      - id
+      - uuid
+      name: name
+      description: description
+      updated_at: lastModified
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /marketplace/v1/products/{applicationId}
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /marketplace/v1/vendors/{vendorUuid}/products
+  coupon:
+    path_segment:
+    - discounts
+    properties:
+      code: code
+      id:
+      - id
+      - uuid
+      created_at: createdOn
+      max_redemptions: maxRedemptions
+      expires_at: expirationDate
+      percent_off: percentage
+      type: type
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appdirect-companies-openapi-original.yml#DELETE /channel/v1/discounts/{discountId}
+    - openapi/_original/appdirect-companies-openapi-original.yml#DELETE /v3/checkout/shoppingCarts/{shoppingCartId}/discounts/{discountCode}
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /channel/v1/discounts
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /channel/v1/discounts/{discountId}
+    - openapi/_original/appdirect-companies-openapi-original.yml#POST /channel/v1/discounts
+  usage_record:
+    path_segment:
+    - usage
+    properties:
+      customer_id: account
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/appdirect-companies-openapi-original.yml#POST /integration/v1/billing/usage
+    - openapi/_original/appdirect-companies-openapi-original.yml#POST /integration/v2/billing/usage

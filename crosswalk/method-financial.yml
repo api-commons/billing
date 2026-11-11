@@ -1,0 +1,21 @@
+provider: method-financial
+apis_io: https://apis.io/providers/method-financial/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      updated_at: updated_at
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/method-financial-openapi-original.yml#DELETE /accounts/{accountId}/subscriptions/{subId}
+    - openapi/_original/method-financial-openapi-original.yml#DELETE /entities/{entityId}/subscriptions/{subId}
+    - openapi/_original/method-financial-openapi-original.yml#GET /accounts/{accountId}/subscriptions
+    - openapi/_original/method-financial-openapi-original.yml#GET /accounts/{accountId}/subscriptions/{subId}
+    - openapi/_original/method-financial-openapi-original.yml#GET /entities/{entityId}/subscriptions

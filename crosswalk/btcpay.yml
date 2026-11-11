@@ -1,0 +1,25 @@
+provider: btcpay
+apis_io: https://apis.io/providers/btcpay/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      created_at: createdTime
+      currency: currency
+      total: amount
+      description: description
+      metadata:
+      - metadata
+      - additionalData
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/btcpay-openapi.json#DELETE /api/v1/invoices/{invoiceId}
+    - openapi/_original/btcpay-openapi.json#GET /api/v1/invoices/{invoiceId}
+    - openapi/_original/btcpay-openapi.json#GET /api/v1/server/lightning/{cryptoCode}/invoices
+    - openapi/_original/btcpay-openapi.json#GET /api/v1/server/lightning/{cryptoCode}/invoices/{id}
+    - openapi/_original/btcpay-openapi.json#GET /api/v1/stores/{storeId}/invoices

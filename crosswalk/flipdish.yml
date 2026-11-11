@@ -1,0 +1,49 @@
+provider: flipdish
+apis_io: https://apis.io/providers/flipdish/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/flipdish-payments-openapi.json#GET /api/v1.0/{appId}/invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: SubscriptionId
+      status: Status
+      canceled_at: CancellationDate
+      name: Name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/flipdish-payments-openapi.json#GET /api/v1.0/{appId}/subscriptions
+    - openapi/_original/flipdish-payments-openapi.json#GET /api/v1.0/{appId}/subscriptions/{subscriptionId}
+    - openapi/_original/flipdish-platform-openapi.json#DELETE /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}
+    - openapi/_original/flipdish-platform-openapi.json#GET /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions
+    - openapi/_original/flipdish-platform-openapi.json#POST /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions
+  coupon:
+    path_segment:
+    - vouchers
+    properties:
+      code: Code
+      max_redemptions: MaxRedemptions
+      expires_at: ExpiryDate
+      status: Status
+      currency: Currency
+      description: Description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/flipdish-marketing-openapi.json#GET /api/v1.0/vouchers/{voucherId}
+    - openapi/_original/flipdish-marketing-openapi.json#POST /api/v1.0/vouchers/{appId}
+    - openapi/_original/flipdish-marketing-openapi.json#POST /api/v1.0/vouchers/{voucherId}
+  usage_record:
+    path_segment:
+    - usage
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/flipdish-marketing-openapi.json#POST /api/v1.0/{appId}/vouchers/{voucherId}/usage

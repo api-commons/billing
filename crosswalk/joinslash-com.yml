@@ -1,0 +1,16 @@
+provider: joinslash-com
+apis_io: https://apis.io/providers/joinslash-com/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      customer_id: accountId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/joinslash-com.json#GET /invoice
+    - openapi/_original/joinslash-com.json#GET /invoice/{invoiceId}
+    - openapi/_original/joinslash-com.json#PATCH /invoice/{invoiceId}
+    - openapi/_original/joinslash-com.json#POST /invoice

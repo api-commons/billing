@@ -1,0 +1,71 @@
+provider: orion-advisor-solutions
+apis_io: https://apis.io/providers/orion-advisor-solutions/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    - invoices
+    properties:
+      id: id
+      number: invoiceNumber
+      created_at: createdDate
+      customer_id: clientId
+      amount_due: balanceDue
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Billing/Bills
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Billing/Bills/{key}
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Billing/Invoices
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Billing/Invoices/{key}
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Portfolio/Clients/{key}/Bills
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: subscriptionId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Reporting/Fuse/Notifications/Subscriptions
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#PUT /v1/Reporting/Fuse/Notifications/Subscriptions
+  plan:
+    path_segment:
+    - products
+    - product
+    - plans
+    properties:
+      id:
+      - id
+      - planId
+      name: name
+      description:
+      - comment
+      - notes
+      created_at: createdDate
+      is_active:
+      - isActive
+      - status
+      amount: price
+      code: externalId
+      product_id: productId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#DELETE /v1/Portfolio/SecurityClassification/Global/Products/{classificationMethodId}
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#DELETE /v1/Portfolio/SecurityClassification/Local/Products/{classificationMethodId}
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Billing/Products
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Billing/Products/{key}
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Confirm/Alternative/ExpectedReturn/Products/{productKey}
+  price:
+    path_segment:
+    - prices
+    - price
+    properties:
+      plan_id: productId
+      name: name
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Global/Products/Prices
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Portfolio/Assets/{key}/Price
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Portfolio/Assets/{key}/Price/{asOfDate}
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#POST /v1/Global/Products/Prices

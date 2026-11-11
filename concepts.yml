@@ -1,0 +1,160 @@
+# The billing bounded context: what a customer is charged, on what plan, and the documents
+# that say so. See ../schema-commons for the method; the only judgement is in this file.
+#
+# Cohort decision: "Medical Billing" and "Revenue Cycle Management" (healthcare claims),
+# "Smart Metering" (utility meters), "Pricing" (price-data feeds) and "Invoice Financing"
+# (lending against invoices) are NOT used. Payments IS used: processors bill too (Stripe
+# Billing, PayPal and Square invoicing), and a processor's invoices and subscriptions are
+# billing. Plans, prices, coupons and usage still `require: [subscription]`.
+context: billing
+name: Billing and Invoicing
+tags: [Billing, Invoicing, Invoices, E-Invoicing, Invoice Management, Invoice Automation,
+       Subscription, Subscriptions, Subscription Management, Subscription Billing,
+       Recurring Billing, Usage-Based Billing, Usage-Based Pricing, Accounts Receivable,
+       API Monetization, Payments]
+
+envelope: [_links, _pagination, _results, data, success, errors, warnings, count, total, page, meta, links,
+           value, results, next, previous, has_more, message, status_code, ids, next_page, previous_page,
+           page_info, cursor, total_count, per_page, total_pages, current_page, object, url, livemode]
+
+common_fields:
+  id: [uuid, guid, object_id, record_id]
+  created_at: [created, created_date, created_time, date_created, create_time, creation_date, created_on]
+  updated_at: [updated, updated_date, modified_at, last_modified, date_modified, update_time, modified_date, updated_time, last_updated]
+  metadata: [meta_data, custom_fields, custom, attributes, properties, additional_data, cf]
+  currency: [currency_code, currency_iso_code, iso_currency_code]
+  status: [state, invoice_status, subscription_status]
+  customer_id: [customer, account_id, account, client_id, contact_id, subscriber_id, buyer_id, customer_reference, billing_account_id]
+  description: [memo, notes, note, comment, comments]
+  name: [title, display_name, label]
+
+concepts:
+  invoice:
+    segments: [invoices, invoice, bills!vendors|suppliers]
+    aliases:
+      number: [invoice_number, document_number, invoice_no, reference_number, display_number]
+      total: [amount, total_amount, amount_due_total, grand_total, total_price, invoice_total, amount_total]
+      subtotal: [sub_total, subtotal_amount, net_amount, total_excluding_tax, total_ex_tax]
+      tax: [tax_amount, total_tax, tax_total, taxes, vat_amount]
+      amount_due: [balance, balance_due, amount_remaining, outstanding_amount, due_amount]
+      amount_paid: [paid_amount, payments_total, total_paid]
+      due_date: [due_at, due_on, payment_due_date, date_due]
+      issued_at: [invoice_date, issue_date, date, issued_on, document_date, finalized_at, date_issued]
+      paid_at: [paid_date, payment_date, date_paid]
+      line_items: [lines, items, invoice_lines, invoice_items, line_items_list, products]
+      subscription_id: [subscription]
+      pdf_url: [invoice_pdf, pdf, pdf_link, download_url, hosted_invoice_url, public_url]
+  invoice_line:
+    under: [invoices, invoice]
+    path: /invoices/{invoice_id}/lines
+    segments: [lines, line_items, line-items, lineitems, items, invoice_lines, invoice_items]
+    aliases:
+      quantity: [qty, units]
+      unit_price: [price, unit_amount, rate, amount_per_unit]
+      amount: [total, line_total, total_amount, net_amount]
+      price_id: [price, plan_id, item_price_id]
+      product_id: [product, item_id]
+  subscription:
+    segments: [subscriptions, subscription]
+    aliases:
+      plan_id: [plan, plan_code, price_id, price, product_id, item_price_id]
+      current_period_start: [period_start, current_term_start, billing_period_start, current_period_started_at]
+      current_period_end: [period_end, current_term_end, billing_period_end, next_billing_at, next_billing_date, renewal_date, next_renewal_at]
+      started_at: [start_date, activated_at, starts_at, start]
+      canceled_at: [cancelled_at, cancel_date, cancellation_date, ended_at, end_date, ends_at]
+      trial_end: [trial_ends_at, trial_end_date, trial_end_at]
+      quantity: [qty, seats, units]
+      billing_interval: [interval, billing_period, billing_cycle, frequency, period, renewal_interval]
+      items: [subscription_items, line_items, plans, components, add_ons, addons]
+  plan:
+    segments: [plans, plan, products, product, item_families, packages]
+    requires: [subscription]
+    aliases:
+      code: [plan_code, handle, slug, key, external_id, sku]
+      amount: [price, unit_amount, price_in_cents, amount_in_cents, recurring_price]
+      billing_interval: [interval, billing_period, period, frequency, interval_unit, billing_cycle]
+      trial_period_days: [trial_days, trial_period, trial_length, free_trial_days]
+      is_active: [active, status, enabled, archived]
+  price:
+    # Prices only count at a provider that also bills subscriptions -- elsewhere /prices is a
+    # market-data feed or a product catalog.
+    requires: [subscription]
+    # /rates is not used: reviewed, it was FX, tax and hourly rates at every provider.
+    segments: [prices, price, item_prices, item-prices, price_plans, price-plans, pricing]
+    aliases:
+      amount: [unit_amount, price, unit_price, amount_in_cents, value]
+      billing_interval: [interval, recurring, billing_period, period, frequency]
+      plan_id: [plan, product, product_id, item_id]
+      pricing_model: [billing_scheme, model, pricing_type, charge_model, type, tiers_mode]
+      tiers: [price_tiers, tier, bands]
+  credit_note:
+    segments: [credit_notes, credit-notes, creditnotes, credit_memos, credit-memos, creditmemos]
+    aliases:
+      number: [credit_note_number, document_number, reference_number]
+      invoice_id: [invoice, reference_invoice_id, original_invoice_id]
+      total: [amount, total_amount, grand_total]
+      reason: [reason_code, type, memo]
+  coupon:
+    segments: [coupons, coupon, discounts, promotion_codes, promotion-codes, promo_codes, vouchers]
+    requires: [subscription]
+    aliases:
+      code: [coupon_code, promo_code, promotion_code, name]
+      percent_off: [percentage, discount_percentage, percent, discount_percent]
+      amount_off: [discount_amount, amount, fixed_amount]
+      duration: [duration_type, apply_till, validity, duration_in_months]
+      expires_at: [redeem_by, valid_till, end_date, expiry_date, expiration_date]
+      max_redemptions: [redemption_limit, usage_limit, max_uses]
+  usage_record:
+    # A bare /events is almost always a webhook-notification feed (Chargebee, Paddle,
+    # GoCardless, Coinbase...) -- reviewed: 38 of the matches -- so events count only beneath
+    # a usage or metering path. This costs Lago, whose usage really is POST /events.
+    segments: [usage, usages, usage_records, usage-records, usagerecords, meter_events, meter-events,
+               "events@usage|meters|meter|metering|billable_metrics"]
+    requires: [subscription]
+    aliases:
+      quantity: [value, amount, units, usage, count]
+      subscription_id: [subscription, subscription_item, subscription_item_id]
+      metric: [meter, meter_id, event_name, billable_metric_code, feature_id, code]
+      timestamp: [occurred_at, recorded_at, usage_date, event_time, time]
+
+# Reviewed by hand: providers counted through /products, /discounts or /pricing that do not
+# bill. A billing product (Paddle, Polar, Creem, Dodo, Recharge, Zuora, SamCart, Pax8) stays.
+exclude:
+  plan:
+    bigcommerce: commerce catalog products
+    swell-io: commerce catalog products
+    virto-commerce: commerce catalog products
+    flipdish: restaurant menu items
+    lightspeed: retail consignment products
+    keap: commerce products
+    blackbaud: fundraising products
+    verifone: payment-terminal products
+    coinbase: trading products
+    barclays: bank account products (open banking)
+    bud-co: spending-insight categories
+    method-financial: bank account products
+    synctera: bank account products
+    alphaus: cloud-cost products
+    aqueduct: data-pipeline products
+    campfire: accounting revenue-recognition items
+    cobot: coworking-space products
+  price:
+    dealhub: CPQ quote pricing for a deal, not a subscription price
+    greenhelix-net: a public pricing page payload
+  coupon:
+    lightspeed: restaurant menu discounts
+    cm-com: event-ticket discount codes
+
+# One company, several catalog listings (scripts/duplicates.py, confirmed by hand).
+duplicates:
+  keap: [infusionsoft]
+  method-financial: [methodfi]
+  finix: [finix-payments]
+  billie: [billieio]
+  mesh: [mesh-connect]
+shared_specs:
+  open-banking-uk: [aib-group-uk, bank-of-ireland-uk, bank-of-scotland, coventry-building-society,
+                    first-direct, gb-bank, halifax, lloyds-banking-group, metro-bank, mettle,
+                    monument-bank, santander-uk, secure-trust-bank, shawbrook-bank,
+                    skipton-building-society, starling-bank, tsb-bank, virgin-money-uk, chase-uk,
+                    coutts, cynergy-bank, hampden-and-co, investec, kroo, tandem-bank]

@@ -1,0 +1,32 @@
+provider: visma
+apis_io: https://apis.io/providers/visma/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      status: status
+      due_date: dueDate
+      number: referenceNumber
+      line_items: invoiceLines
+      customer_id:
+      - customer
+      - account
+      issued_at:
+      - documentDate
+      - date
+      total: amount
+      description:
+      - note
+      - description
+      tax: vatAmount
+      amount_due: balance
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#GET /v1/customer/{customerNumber}/invoice
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#GET /v1/supplier/{supplierNumber}/invoice
+    - openapi/_original/visma-net-erp-service-api-openapi-original.json#GET /v1/customer/{customerNumber}/invoice
+    - openapi/_original/visma-net-erp-service-api-openapi-original.json#GET /v1/supplier/{supplierNumber}/invoice

@@ -1,0 +1,12 @@
+provider: bud-co
+apis_io: https://apis.io/providers/bud-co/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bud-platform-openapi.yml#GET /v1/subscriptions

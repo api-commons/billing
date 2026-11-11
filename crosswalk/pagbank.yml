@@ -1,0 +1,42 @@
+provider: pagbank
+apis_io: https://apis.io/providers/pagbank/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/pagseguro-invoices-api-openapi.yml#GET /invoices/{id}
+    - openapi/_original/pagseguro-invoices-api-openapi.yml#GET /subscriptions/{id}/invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/pagseguro-subscriptions-api-openapi.yml#GET /subscriptions
+    - openapi/_original/pagseguro-subscriptions-api-openapi.yml#GET /subscriptions/{id}
+    - openapi/_original/pagseguro-subscriptions-api-openapi.yml#POST /subscriptions
+    - openapi/_original/pagseguro-subscriptions-api-openapi.yml#PUT /subscriptions/{id}
+  plan:
+    path_segment:
+    - plans
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/pagseguro-plans-api-openapi.yml#GET /plans
+    - openapi/_original/pagseguro-plans-api-openapi.yml#GET /plans/{id}
+    - openapi/_original/pagseguro-plans-api-openapi.yml#POST /plans
+    - openapi/_original/pagseguro-plans-api-openapi.yml#PUT /plans/{id}
+  coupon:
+    path_segment:
+    - coupons
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/pagseguro-coupons-api-openapi.yml#GET /coupons
+    - openapi/_original/pagseguro-coupons-api-openapi.yml#GET /coupons/{id}
+    - openapi/_original/pagseguro-coupons-api-openapi.yml#POST /coupons

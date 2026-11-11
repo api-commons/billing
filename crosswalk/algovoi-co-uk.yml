@@ -1,0 +1,39 @@
+provider: algovoi-co-uk
+apis_io: https://apis.io/providers/algovoi-co-uk/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+      due_date: due_at
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/algovoi-co-uk-gateway-openapi.json#GET /v1/recurr/me/invoices
+    - openapi/_original/algovoi-co-uk-gateway-openapi.json#GET /v1/subscriptions/{subscription_id}/invoices
+    - openapi/_original/algovoi-co-uk-gateway-openapi.yml#GET /v1/recurr/me/invoices
+    - openapi/_original/algovoi-co-uk-gateway-openapi.yml#GET /v1/subscriptions/{subscription_id}/invoices
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      customer_id:
+      - customer_id
+      - customer
+      metadata: metadata
+      canceled_at: cancelled_at
+      started_at: starts_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/algovoi-co-uk-gateway-openapi.json#GET /v1/recurr/me/subscriptions
+    - openapi/_original/algovoi-co-uk-gateway-openapi.json#GET /v1/recurr/me/subscriptions/{subscription_id}
+    - openapi/_original/algovoi-co-uk-gateway-openapi.json#GET /v1/subscriptions
+    - openapi/_original/algovoi-co-uk-gateway-openapi.json#GET /v1/subscriptions/{subscription_id}
+    - openapi/_original/algovoi-co-uk-gateway-openapi.json#PATCH /v1/subscriptions/{subscription_id}

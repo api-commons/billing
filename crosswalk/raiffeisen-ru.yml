@@ -1,0 +1,34 @@
+provider: raiffeisen-ru
+apis_io: https://apis.io/providers/raiffeisen-ru/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - bills
+    properties:
+      id: id
+      status: status
+      number: number
+      created_at: createdOn
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/raiffeisen-ru-invoices-openapi.yml#DELETE /v4/bills
+    - openapi/_original/raiffeisen-ru-invoices-openapi.yml#GET /v4/bills
+    - openapi/_original/raiffeisen-ru-invoices-openapi.yml#GET /v4/bills/{billId}
+    - openapi/_original/raiffeisen-ru-invoices-openapi.yml#POST /v4/bills
+    - openapi/_original/raiffeisen-ru-invoices-openapi.yml#PUT /v4/bills/{billId}
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      customer_id: customer
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/raiffeisen-ru-raif-pay-payment-form-openapi.json#DELETE /v2/merchants/{publicId}/subscriptions/{id}
+    - openapi/_original/raiffeisen-ru-raif-pay-payment-form-openapi.json#GET /v1/merchants/{publicId}/subscriptions/{id}
+    - openapi/_original/raiffeisen-ru-raif-pay-payment-form-openapi.json#PATCH /v1/merchants/{publicId}/subscriptions/{id}
+    - openapi/_original/raiffeisen-ru-raif-pay-payment-form-openapi.yml#DELETE /v2/merchants/{publicId}/subscriptions/{id}
+    - openapi/_original/raiffeisen-ru-raif-pay-payment-form-openapi.yml#GET /v1/merchants/{publicId}/subscriptions/{id}

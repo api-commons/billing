@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/billing/main/schema/credit_note.json",
+  "title": "Credit Note",
+  "description": "The common credit_note in Billing and Invoicing, distilled from 25 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.68,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "id",
+        "GUID",
+        "record_id",
+        "@id"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.64,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "status",
+        "state"
+      ]
+    },
+    "total": {
+      "type": "number",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.64,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "amount",
+        "totalAmount",
+        "Amount"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.56,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "description",
+        "notes",
+        "Notes",
+        "comment"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.52,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "currency",
+        "currency_code",
+        "currencyCode"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.48,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "createdDate",
+        "createdOn",
+        "created"
+      ],
+      "format": "date-time"
+    },
+    "customer_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.48,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "customer",
+        "customer_id",
+        "accountId",
+        "customerId"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.48,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "updatedDate",
+        "date_modified"
+      ],
+      "format": "date-time"
+    },
+    "number": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.44,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "number",
+        "documentNumber",
+        "CreditNoteNumber"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "type",
+        "reason",
+        "reason_code",
+        "memo",
+        "@type",
+        "reasonCode"
+      ]
+    },
+    "invoice_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.36,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "invoice",
+        "invoice_id",
+        "invoiceId",
+        "reference_invoice_id"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.28,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "date"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.28,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "metadata",
+        "customFields",
+        "custom_fields"
+      ]
+    },
+    "voided_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.24,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "voided_at",
+        "voidedAt"
+      ],
+      "format": "date-time"
+    },
+    "items": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "items"
+      ]
+    },
+    "line_items": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "lineItems",
+        "line_items"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "billing",
+    "concept": "credit_note",
+    "providers": 25,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

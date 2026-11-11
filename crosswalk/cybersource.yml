@@ -1,0 +1,44 @@
+provider: cybersource
+apis_io: https://apis.io/providers/cybersource/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/openapi.json#GET /invoicing/v2/invoices
+    - openapi/_original/openapi.json#GET /invoicing/v2/invoices/{id}
+    - openapi/_original/openapi.json#POST /invoicing/v2/invoices
+    - openapi/_original/openapi.json#PUT /invoicing/v2/invoices/{id}
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/openapi.json#GET /rbs/v1/subscriptions
+    - openapi/_original/openapi.json#GET /rbs/v1/subscriptions/{id}
+    - openapi/_original/openapi.json#PATCH /rbs/v1/subscriptions/{id}
+    - openapi/_original/openapi.json#POST /rbs/v1/subscriptions
+  plan:
+    path_segment:
+    - plans
+    - products
+    properties:
+      id: id
+      is_active: status
+      product_id: productId
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/openapi.json#DELETE /rbs/v1/plans/{id}
+    - openapi/_original/openapi.json#GET /notification-subscriptions/v2/products/{organizationId}
+    - openapi/_original/openapi.json#GET /rbs/v1/plans
+    - openapi/_original/openapi.json#GET /rbs/v1/plans/{id}
+    - openapi/_original/openapi.json#PATCH /rbs/v1/plans/{id}

@@ -1,0 +1,57 @@
+provider: campfire
+apis_io: https://apis.io/providers/campfire/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      id: id
+      status: status
+      due_date: due_date
+      number: invoice_number
+      created_at: created_at
+      currency: currency
+      line_items: lines
+      customer_id: customer
+      issued_at: invoice_date
+      total: total_amount
+      amount_due: amount_due
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/campfire-openapi-original.json#DELETE /coa/api/v1/invoice/{id}/
+    - openapi/_original/campfire-openapi-original.json#GET /coa/api/v1/invoice/
+    - openapi/_original/campfire-openapi-original.json#GET /coa/api/v1/invoice/{id}/
+    - openapi/_original/campfire-openapi-original.json#PATCH /coa/api/v1/invoice/{id}/
+    - openapi/_original/campfire-openapi-original.json#POST /coa/api/v1/invoice/
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      created_at: created_at
+      customer_id: customer
+      canceled_at: end_date
+      started_at: start_date
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/campfire-openapi-original.json#DELETE /rr/api/v1/contracts/{contract_id}/subscriptions/{id}
+    - openapi/_original/campfire-openapi-original.json#GET /rr/api/v1/contracts/{contract_id}/subscriptions
+    - openapi/_original/campfire-openapi-original.json#GET /rr/api/v1/contracts/{contract_id}/subscriptions/{id}
+    - openapi/_original/campfire-openapi-original.json#PATCH /rr/api/v1/contracts/{contract_id}/subscriptions/{id}
+    - openapi/_original/campfire-openapi-original.json#POST /rr/api/v1/contracts/{contract_id}/subscriptions
+  usage_record:
+    path_segment:
+    - usage
+    properties:
+      id: id
+      created_at: created_at
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/campfire-openapi-original.json#DELETE /rr/api/v1/contracts/{contract_id}/usage/{id}
+    - openapi/_original/campfire-openapi-original.json#GET /rr/api/v1/contracts/{contract_id}/usage
+    - openapi/_original/campfire-openapi-original.json#GET /rr/api/v1/contracts/{contract_id}/usage/{id}
+    - openapi/_original/campfire-openapi-original.json#PATCH /rr/api/v1/contracts/{contract_id}/usage/{id}
+    - openapi/_original/campfire-openapi-original.json#POST /rr/api/v1/contracts/{contract_id}/usage

@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/billing/main/schema/usage_record.json",
+  "title": "Usage Record",
+  "description": "The common usage_record in Billing and Invoicing, distilled from 17 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.529,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "id",
+        "usageRecordId",
+        "Id"
+      ]
+    },
+    "quantity": {
+      "type": "integer",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.529,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "quantity",
+        "units",
+        "amount",
+        "Quantity"
+      ]
+    },
+    "subscription_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.412,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "subscriptionId",
+        "subscription_id",
+        "subscription_item",
+        "subscriptionItemId",
+        "SubscriptionId"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.353,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created_date",
+        "createdDate",
+        "CreatedDate"
+      ],
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.353,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "description",
+        "note",
+        "Description"
+      ]
+    },
+    "timestamp": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.353,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "timestamp",
+        "usage_date",
+        "usageDate",
+        "recordedAt"
+      ]
+    },
+    "customer_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.294,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "customerId",
+        "account",
+        "customer",
+        "customer_id",
+        "AccountId"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.235,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "updated_at",
+        "updated_date",
+        "updatedDate",
+        "UpdatedDate"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "billing",
+    "concept": "usage_record",
+    "providers": 17,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

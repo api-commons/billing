@@ -1,0 +1,13 @@
+provider: rye
+apis_io: https://apis.io/providers/rye/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/rye-checkout-intents-openapi-original.yml#GET /api/v1/products/subscriptions

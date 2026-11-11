@@ -1,0 +1,25 @@
+provider: travelperk
+apis_io: https://apis.io/providers/travelperk/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      status: status
+      currency: currency
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/travelperk-openapi.yml#GET /invoices
+    - openapi/_original/travelperk-openapi.yml#GET /invoices/{serial_number}
+  invoice_line:
+    path_segment:
+    - lines
+    properties:
+      quantity: quantity
+      unit_price: unit_price
+      tax: tax
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/travelperk-openapi.yml#GET /invoices/lines

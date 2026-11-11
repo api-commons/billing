@@ -1,0 +1,25 @@
+provider: gingr
+apis_io: https://apis.io/providers/gingr/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/gingr-openapi.json#GET /v1/invoices
+    - openapi/_original/gingr-openapi.json#GET /v1/invoices/{invoiceId}
+    - openapi/_original/gingr-openapi.json#POST /v1/payments/invoices/{invoiceId}
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/gingr-openapi.json#GET /v1/parents/subscriptions/{subscriptionId}

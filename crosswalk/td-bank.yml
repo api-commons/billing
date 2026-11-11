@@ -1,0 +1,12 @@
+provider: td-bank
+apis_io: https://apis.io/providers/td-bank/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/td-bank-apps-management-api-openapi.yml#GET /apps/{appId}/subscriptions

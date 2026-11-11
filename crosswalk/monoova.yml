@@ -1,0 +1,18 @@
+provider: monoova
+apis_io: https://apis.io/providers/monoova/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscription
+    properties:
+      id: subscriptionId
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/monoova-cc.yml#DELETE /au/core/notification-v1/Subscription/{subscriptionId}
+    - openapi/_original/monoova-cc.yml#GET /au/core/notification-v1/Subscription/{subscriptionId}
+    - openapi/_original/monoova-cc.yml#POST /au/core/notification-v1/Subscription
+    - openapi/_original/monoova-cc.yml#PUT /au/core/notification-v1/Subscription/{subscriptionId}
+    - openapi/_original/monoova-payto.yml#DELETE /au/core/notification-v1/Subscription/{subscriptionId}

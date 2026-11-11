@@ -1,0 +1,21 @@
+provider: red-hat-satellite
+apis_io: https://apis.io/providers/red-hat-satellite/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id:
+      - id
+      - subscription_id
+      created_at: created_at
+      plan_id: product_id
+      updated_at: updated_at
+      canceled_at: end_date
+      started_at: start_date
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/red-hat-satellite-api.yml#GET /katello/api/v2/organizations/{organization_id}/subscriptions

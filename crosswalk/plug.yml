@@ -1,0 +1,23 @@
+provider: plug
+apis_io: https://apis.io/providers/plug/
+context: billing
+generated: '2026-11-10'
+concepts:
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      status: status
+      created_at: createdAt
+      customer_id:
+      - clientId
+      - customerId
+      updated_at: updatedAt
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/plug-openapi-original.yml#GET /v1/subscriptions
+    - openapi/_original/plug-openapi-original.yml#GET /v1/subscriptions/{id}
+    - openapi/_original/plug-openapi-original.yml#POST /v1/subscriptions
+    - openapi/_original/plug-openapi-original.yml#PUT /v1/subscriptions/{id}

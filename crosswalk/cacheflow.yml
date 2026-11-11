@@ -1,0 +1,37 @@
+provider: cacheflow
+apis_io: https://apis.io/providers/cacheflow/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    - invoice
+    properties:
+      id:
+      - id
+      - invoiceId
+      status:
+      - status
+      - invoiceStatus
+      due_date: dueDate
+      number: invoiceNumber
+      created_at: createdAt
+      currency: currency
+      issued_at:
+      - issueDate
+      - invoiceDate
+      total: amount
+      tax: taxAmount
+      updated_at: updatedAt
+      amount_due:
+      - balance
+      - amountDue
+      metadata: additionalData
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cacheflow-api-openapi.yml#GET /api/latest/data/customers/{id}/invoices
+    - openapi/_original/cacheflow-api-openapi.yml#GET /api/latest/data/invoices
+    - openapi/_original/cacheflow-api-openapi.yml#GET /api/latest/data/invoices/{id}
+    - openapi/_original/cacheflow-api-openapi.yml#PATCH /api/latest/data/invoices/{id}
+    - openapi/_original/cacheflow-api-openapi.yml#POST /api/latest/data/billing-schedules/{id}/invoice

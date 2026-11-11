@@ -1,0 +1,18 @@
+provider: intuit
+apis_io: https://apis.io/providers/intuit/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoice
+    properties:
+      id: Id
+      due_date: DueDate
+      amount_due: Balance
+      metadata: MetaData
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/quickbooks-accounting.yml#GET /invoice/{invoiceId}
+    - openapi/_original/quickbooks-accounting.yml#POST /invoice
+    - openapi/_original/quickbooks-accounting.yml#POST /invoice/{invoiceId}

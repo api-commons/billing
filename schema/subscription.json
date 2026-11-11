@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/billing/main/schema/subscription.json",
+  "title": "Subscription",
+  "description": "The common subscription in Billing and Invoicing, distilled from 123 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.78,
+      "x-commons-providers": 96,
+      "x-commons-spellings": [
+        "id",
+        "subscriptionId",
+        "subscription_id",
+        "uuid",
+        "SubscriptionId",
+        "_id"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.626,
+      "x-commons-providers": 77,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "subscriptionStatus",
+        "Status"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.52,
+      "x-commons-providers": 64,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "creation_date",
+        "createdDate",
+        "createdOn",
+        "creationDate",
+        "dateCreated"
+      ],
+      "format": "date-time"
+    },
+    "customer_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.439,
+      "x-commons-providers": 54,
+      "x-commons-spellings": [
+        "customer_id",
+        "customer",
+        "customerId",
+        "accountId",
+        "account",
+        "account_id",
+        "buyer_id",
+        "client_id"
+      ]
+    },
+    "plan_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 41,
+      "x-commons-spellings": [
+        "plan",
+        "plan_id",
+        "product_id",
+        "planId",
+        "price",
+        "productId",
+        "planCode",
+        "plan_code"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.285,
+      "x-commons-providers": 35,
+      "x-commons-spellings": [
+        "metadata",
+        "attributes",
+        "custom_fields",
+        "customFields"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.285,
+      "x-commons-providers": 35,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "modifiedAt",
+        "updated",
+        "lastUpdated",
+        "updated_date",
+        "updatedDate",
+        "LastUpdated"
+      ],
+      "format": "date-time"
+    },
+    "canceled_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.276,
+      "x-commons-providers": 34,
+      "x-commons-spellings": [
+        "endDate",
+        "canceledAt",
+        "end_date",
+        "canceled_at",
+        "ended_at",
+        "endedAt",
+        "cancelled_at",
+        "cancelledAt"
+      ],
+      "format": "date-time"
+    },
+    "started_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.268,
+      "x-commons-providers": 33,
+      "x-commons-spellings": [
+        "start_date",
+        "startDate",
+        "start",
+        "starts_at",
+        "started_at",
+        "activated_at",
+        "startsAt",
+        "StartDate"
+      ],
+      "format": "date-time"
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.203,
+      "x-commons-providers": 25,
+      "x-commons-spellings": [
+        "name",
+        "label",
+        "Name",
+        "title"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "billing",
+    "concept": "subscription",
+    "providers": 123,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}
