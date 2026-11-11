@@ -14,7 +14,7 @@ concepts:
       line_items: items
       customer_id: customer
       description: description
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/worders-api-openapi-original.yml#GET /V1/invoices
     - openapi/_original/worders-api-openapi-original.yml#GET /V1/invoices/{id}

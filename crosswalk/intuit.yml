@@ -11,7 +11,7 @@ concepts:
       due_date: DueDate
       amount_due: Balance
       metadata: MetaData
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/quickbooks-accounting.yml#GET /invoice/{invoiceId}
     - openapi/_original/quickbooks-accounting.yml#POST /invoice

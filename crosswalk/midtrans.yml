@@ -10,6 +10,7 @@ concepts:
       id: id
       status: status
       metadata: metadata
+      currency: currency
       name: name
     core_coverage: 0.667
     evidence:

@@ -12,15 +12,22 @@ concepts:
       currency: currencyCode
       issued_at: invoiceDate
       amount_due: balance
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/pax8-partner-endpoints-openapi.json#GET /invoices
     - openapi/_original/pax8-partner-endpoints-openapi.json#GET /invoices/{invoiceId}
   invoice_line:
     path_segment:
     - items
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      description: description
+      id: id
+      quantity: quantity
+      type: type
+      currency: currencyCode
+      price_id: price
+      purchase_order_number: purchaseOrderNumber
+    core_coverage: 1.0
     evidence:
     - openapi/_original/pax8-partner-endpoints-openapi.json#GET /invoices/{invoiceId}/items
   subscription:
@@ -36,6 +43,7 @@ concepts:
       updated_at: updatedDate
       canceled_at: endDate
       started_at: startDate
+      currency: currencyCode
     core_coverage: 1.0
     evidence:
     - openapi/_original/pax8-partner-endpoints-openapi.json#DELETE /subscriptions/{subscriptionId}
@@ -50,7 +58,7 @@ concepts:
       name: name
       description: description
       code: sku
-    core_coverage: 0.6
+    core_coverage: 0.5
     evidence:
     - openapi/_original/pax8-partner-endpoints-openapi.json#GET /products
     - openapi/_original/pax8-partner-endpoints-openapi.json#GET /products/{productId}

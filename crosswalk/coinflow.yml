@@ -22,7 +22,7 @@ concepts:
       amount: amount
       billing_interval: interval
       code: code
-    core_coverage: 0.8
+    core_coverage: 0.833
     evidence:
     - openapi/_original/coinflow-openapi-original.json#DELETE /merchant/subscription/plans/{planId}
     - openapi/_original/coinflow-openapi-original.json#GET /merchant/subscription/plans

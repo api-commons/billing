@@ -6,8 +6,7 @@ concepts:
   invoice:
     path_segment:
     - invoices
-    properties:
-      line_items: items
+    properties: {}
     core_coverage: 0.0
     evidence:
     - openapi/_original/oracle-financial-applications-payables-api-openapi.yml#GET /invoices

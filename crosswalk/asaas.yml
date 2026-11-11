@@ -12,7 +12,7 @@ concepts:
       number: number
       customer_id: customer
       tax: taxes
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/asaas-asaas-openapi.yml#GET /v3/invoices
     - openapi/_original/asaas-asaas-openapi.yml#GET /v3/invoices/{id}

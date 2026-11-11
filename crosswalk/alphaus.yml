@@ -14,7 +14,8 @@ concepts:
   price:
     path_segment:
     - pricing
-    properties: {}
+    properties:
+      unit: unit
     core_coverage: 0.0
     evidence:
     - openapi/_original/alphaus-blueapi-openapi-original.json#POST /v0/{vendor}/pricing

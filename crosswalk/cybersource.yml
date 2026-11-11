@@ -9,7 +9,8 @@ concepts:
     properties:
       id: id
       status: status
-    core_coverage: 0.667
+      created_at: createdDate
+    core_coverage: 0.5
     evidence:
     - openapi/_original/openapi.json#GET /invoicing/v2/invoices
     - openapi/_original/openapi.json#GET /invoicing/v2/invoices/{id}
@@ -33,9 +34,10 @@ concepts:
     - products
     properties:
       id: id
+      name: displayName
       is_active: status
-      product_id: productId
-    core_coverage: 0.4
+      billing_interval: frequency
+    core_coverage: 0.5
     evidence:
     - openapi/_original/openapi.json#DELETE /rbs/v1/plans/{id}
     - openapi/_original/openapi.json#GET /notification-subscriptions/v2/products/{organizationId}

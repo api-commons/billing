@@ -8,8 +8,7 @@ concepts:
     - subscription
     properties:
       id: subscriptionId
-      status: status
-    core_coverage: 0.667
+    core_coverage: 0.333
     evidence:
     - openapi/_original/monoova-cc.yml#DELETE /au/core/notification-v1/Subscription/{subscriptionId}
     - openapi/_original/monoova-cc.yml#GET /au/core/notification-v1/Subscription/{subscriptionId}

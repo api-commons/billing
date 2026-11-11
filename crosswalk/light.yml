@@ -11,7 +11,7 @@ concepts:
       description: description
       currency: currency
       number: documentNumber
-    core_coverage: 0.6
+    core_coverage: 0.375
     evidence:
     - openapi/_original/light-openapi-original.json#GET /v1/credit-notes
     - openapi/_original/light-openapi-original.json#GET /v1/credit-notes/{creditNoteId}

@@ -8,6 +8,6 @@ concepts:
     - invoices
     properties:
       status: status
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/xe-mass-payments-api-openapi.json#GET /invoices/{transactionId}

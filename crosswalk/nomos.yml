@@ -10,9 +10,9 @@ concepts:
       id: id
       status: status
       number: invoice_number
-      customer_id: customer
       issued_at: issued_at
-    core_coverage: 0.667
+      customer_id: customer
+    core_coverage: 0.75
     evidence:
     - openapi/_original/nomos-openapi-original.json#GET /invoices
     - openapi/_original/nomos-openapi-original.json#GET /invoices/{id}
@@ -44,7 +44,8 @@ concepts:
       amount: price
       currency: currency
       code: slug
-    core_coverage: 0.8
+      type: type
+    core_coverage: 0.833
     evidence:
     - openapi/_original/nomos-openapi-original.json#GET /plans
     - openapi/_original/nomos-openapi-original.json#GET /plans/{id}
@@ -54,6 +55,7 @@ concepts:
     properties:
       currency: currency
       billing_interval: period
+      unit: unit
     core_coverage: 0.25
     evidence:
     - openapi/_original/nomos-openapi-original.json#GET /subscriptions/{id}/prices

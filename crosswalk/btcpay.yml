@@ -16,7 +16,7 @@ concepts:
       metadata:
       - metadata
       - additionalData
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/btcpay-openapi.json#DELETE /api/v1/invoices/{invoiceId}
     - openapi/_original/btcpay-openapi.json#GET /api/v1/invoices/{invoiceId}

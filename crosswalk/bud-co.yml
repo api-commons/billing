@@ -6,7 +6,8 @@ concepts:
   subscription:
     path_segment:
     - subscriptions
-    properties: {}
+    properties:
+      customer_id: account_id
     core_coverage: 0.0
     evidence:
     - openapi/_original/bud-platform-openapi.yml#GET /v1/subscriptions

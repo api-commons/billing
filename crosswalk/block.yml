@@ -14,7 +14,7 @@ concepts:
       description: description
       updated_at: updated_at
       metadata: custom_fields
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/block-openapi.json#DELETE /v2/invoices/{invoice_id}
     - openapi/_original/block-openapi.json#GET /v2/invoices

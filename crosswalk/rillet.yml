@@ -13,8 +13,8 @@ concepts:
       due_date: due_date
       number: invoice_number
       line_items: items
-      customer_id: customer_id
       issued_at: invoice_date
+      customer_id: customer_id
       total: amount
       description:
       - memo
@@ -38,7 +38,7 @@ concepts:
       customer_id: customer_id
       updated_at: updated_at
       items: items
-    core_coverage: 0.6
+    core_coverage: 0.625
     evidence:
     - openapi/_original/rillet-accounting-api-openapi.json#DELETE /credit-memos/{credit_memo_id}
     - openapi/_original/rillet-accounting-api-openapi.json#GET /credit-memos

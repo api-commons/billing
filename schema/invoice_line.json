@@ -8,8 +8,8 @@
     "description": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.714,
-      "x-commons-providers": 10,
+      "x-commons-share": 0.857,
+      "x-commons-providers": 12,
       "x-commons-spellings": [
         "description",
         "notes",
@@ -20,8 +20,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.571,
-      "x-commons-providers": 8,
+      "x-commons-share": 0.714,
+      "x-commons-providers": 10,
       "x-commons-spellings": [
         "id",
         "@id"
@@ -30,8 +30,8 @@
     "quantity": {
       "type": "number",
       "x-commons-tier": "core",
-      "x-commons-share": 0.571,
-      "x-commons-providers": 8,
+      "x-commons-share": 0.714,
+      "x-commons-providers": 10,
       "x-commons-spellings": [
         "quantity"
       ]
@@ -39,25 +39,23 @@
     "unit_price": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.357,
-      "x-commons-providers": 5,
+      "x-commons-share": 0.429,
+      "x-commons-providers": 6,
       "x-commons-spellings": [
         "unitPrice",
         "unitAmount",
         "unit_price"
       ]
     },
-    "updated_at": {
+    "type": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.357,
       "x-commons-providers": 5,
       "x-commons-spellings": [
-        "updatedAt",
-        "updated_at",
-        "updated"
-      ],
-      "format": "date-time"
+        "type",
+        "@type"
+      ]
     },
     "amount": {
       "type": "integer",
@@ -80,6 +78,16 @@
       ],
       "format": "date-time"
     },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.286,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "currency",
+        "currencyCode"
+      ]
+    },
     "metadata": {
       "type": "array",
       "x-commons-tier": "extended",
@@ -92,23 +100,24 @@
         "customFields"
       ]
     },
-    "type": {
+    "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.286,
       "x-commons-providers": 4,
       "x-commons-spellings": [
-        "type",
-        "@type"
-      ]
+        "updatedAt",
+        "updated_at"
+      ],
+      "format": "date-time"
     },
-    "currency": {
-      "type": "string",
+    "balance": {
+      "type": "number",
       "x-commons-tier": "extended",
       "x-commons-share": 0.214,
       "x-commons-providers": 3,
       "x-commons-spellings": [
-        "currency"
+        "balance"
       ]
     },
     "due_date": {
@@ -121,6 +130,15 @@
         "dueDate"
       ]
     },
+    "item_type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "itemType"
+      ]
+    },
     "number": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -128,6 +146,25 @@
       "x-commons-providers": 3,
       "x-commons-spellings": [
         "number"
+      ]
+    },
+    "price_id": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "price"
+      ]
+    },
+    "purchase_order_number": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "purchaseOrderNumber",
+        "purchase_order_number"
       ]
     },
     "tax": {

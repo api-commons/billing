@@ -12,7 +12,7 @@ concepts:
       created_at: createdAt
       line_items: lineItems
       total: amount
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/podium-payments-openapi-original.json#GET /v4/invoices
     - openapi/_original/podium-payments-openapi-original.json#GET /v4/invoices/{uid}

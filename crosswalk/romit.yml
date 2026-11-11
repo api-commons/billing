@@ -14,7 +14,7 @@ concepts:
       - description
       - note
       - memo
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/romit-openapi.yml#GET /invoice
     - openapi/_original/romit-openapi.yml#GET /invoice/{id}
@@ -39,7 +39,7 @@ concepts:
       description: memo
       amount: amount
       billing_interval: interval
-    core_coverage: 0.4
+    core_coverage: 0.5
     evidence:
     - openapi/_original/romit-openapi.yml#GET /plan
     - openapi/_original/romit-openapi.yml#GET /plan/{id}

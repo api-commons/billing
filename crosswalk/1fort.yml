@@ -12,7 +12,7 @@ concepts:
       status: status
       created_at: created_at
       issued_at: issue_date
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/1fort-openapi-original.yml#GET /broker/{broker_pk}/clients/{client_pk}/quotes/{id}/invoices
     - openapi/_original/1fort-openapi-original.yml#GET /checkout/invoices

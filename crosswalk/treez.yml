@@ -12,7 +12,7 @@ concepts:
       due_date: due_date
       created_at: created_date
       description: note
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/treez-dispensary-openapi.json#GET /{dispensary}/invoice/{id}
     - openapi/_original/treez-dispensary-openapi.json#PATCH /{dispensary}/invoice

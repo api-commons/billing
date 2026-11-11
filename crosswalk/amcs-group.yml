@@ -7,8 +7,14 @@ concepts:
     path_segment:
     - invoices
     properties:
+      id: GUID
       status: status
-    core_coverage: 0.333
+      due_date: DueDate
+      number: InvoiceNumber
+      issued_at: InvoiceDate
+      total: Amount
+      description: Notes
+    core_coverage: 1.0
     evidence:
     - openapi/_original/amcs-group-erp-openapi-original.json#GET /accounting/invoices
     - openapi/_original/amcs-group-erp-openapi-original.json#GET /accounting/invoices/{guid}
@@ -16,8 +22,9 @@ concepts:
     path_segment:
     - subscriptions
     properties:
+      id: GUID
       status: status
-    core_coverage: 0.333
+    core_coverage: 0.667
     evidence:
     - openapi/_original/amcs-group-erp-openapi-original.json#GET /lists/subscriptions
     - openapi/_original/amcs-group-erp-openapi-original.json#GET /lists/subscriptions/{guid}
@@ -26,11 +33,11 @@ concepts:
     - creditnotes
     properties:
       id: GUID
-      status: status
       total: Amount
+      status: status
       description: Notes
       number: CreditNoteNumber
-    core_coverage: 0.8
+    core_coverage: 0.5
     evidence:
     - openapi/_original/amcs-group-erp-openapi-original.json#GET /accounting/creditNotes
     - openapi/_original/amcs-group-erp-openapi-original.json#GET /accounting/creditNotes/{guid}

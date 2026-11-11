@@ -10,7 +10,7 @@ concepts:
       id: id
       due_date: dueDate
       total: totalAmount
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/pluggy-api.json#GET /bills
     - openapi/_original/pluggy-api.json#GET /bills/{id}

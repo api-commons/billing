@@ -16,12 +16,13 @@ concepts:
       created_at: createdDate
       currency: currency
       line_items: invoiceItems
-      customer_id: accountId
       issued_at: invoiceDate
+      customer_id: accountId
       total: amount
       description:
       - comments
       - comment
+      - description
       tax: taxAmount
       updated_at: updatedDate
       amount_due: balance
@@ -35,8 +36,15 @@ concepts:
   invoice_line:
     path_segment:
     - items
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      description: description
+      id: id
+      quantity: quantity
+      unit_price: unitPrice
+      balance: balance
+      item_type: itemType
+      purchase_order_number: purchaseOrderNumber
+    core_coverage: 1.0
     evidence:
     - openapi/_original/zuora-v1-openapi.yml#GET /v1/invoices/{invoiceKey}/items
   subscription:
@@ -48,8 +56,12 @@ concepts:
       - subscriptionId
       - id
       status: status
+      created_at: createdDate
       customer_id: accountId
-    core_coverage: 0.667
+      metadata: customFields
+      updated_at: updatedDate
+      currency: currency
+    core_coverage: 1.0
     evidence:
     - openapi/_original/zuora-v1-openapi.yml#GET /v1/orders/subscription/{subscriptionNumber}
     - openapi/_original/zuora-v1-openapi.yml#GET /v1/subscriptions/{subscription-key}
@@ -74,7 +86,7 @@ concepts:
       code:
       - sku
       - SKU
-    core_coverage: 0.8
+    core_coverage: 0.667
     evidence:
     - openapi/_original/zuora-v1-openapi.yml#DELETE /v1/object/product/{id}
     - openapi/_original/zuora-v1-openapi.yml#GET /v1/catalog/products
@@ -86,8 +98,8 @@ concepts:
     - creditmemos
     properties:
       id: id
-      status: status
       total: amount
+      status: status
       description: comment
       currency: currency
       created_at: createdDate
@@ -113,9 +125,9 @@ concepts:
       - id
       quantity: Quantity
       subscription_id: SubscriptionId
-      customer_id: AccountId
-      created_at: CreatedDate
       description: Description
+      created_at: CreatedDate
+      customer_id: AccountId
       updated_at: UpdatedDate
     core_coverage: 1.0
     evidence:

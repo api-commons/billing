@@ -17,10 +17,10 @@
       ]
     },
     "quantity": {
-      "type": "integer",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.474,
-      "x-commons-providers": 9,
+      "type": "number",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.579,
+      "x-commons-providers": 11,
       "x-commons-spellings": [
         "quantity",
         "units",
@@ -41,19 +41,15 @@
         "SubscriptionId"
       ]
     },
-    "customer_id": {
+    "description": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.368,
       "x-commons-providers": 7,
       "x-commons-spellings": [
-        "customerId",
-        "customer_id",
-        "account",
-        "customer",
-        "account_id",
-        "accountId",
-        "AccountId"
+        "description",
+        "note",
+        "Description"
       ]
     },
     "timestamp": {
@@ -82,15 +78,18 @@
       ],
       "format": "date-time"
     },
-    "description": {
+    "customer_id": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.316,
       "x-commons-providers": 6,
       "x-commons-spellings": [
-        "description",
-        "note",
-        "Description"
+        "customerId",
+        "customer_id",
+        "customer",
+        "account_id",
+        "accountId",
+        "AccountId"
       ]
     },
     "updated_at": {

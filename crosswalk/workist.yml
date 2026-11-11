@@ -11,7 +11,7 @@ concepts:
       status: status
       created_at: created_at
       updated_at: updated_at
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/workist-integrations-openapi-original.yml#DELETE /invoices/{id}
     - openapi/_original/workist-integrations-openapi-original.yml#GET /invoices

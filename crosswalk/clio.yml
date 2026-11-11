@@ -35,7 +35,7 @@ concepts:
       updated_at: updated_at
       date: date
       voided_at: voided_at
-    core_coverage: 0.6
+    core_coverage: 0.625
     evidence:
     - openapi/_original/clio-openapi.json#GET /credit_memos.json
     - openapi/_original/clio-openapi.json#GET /credit_memos/{id}.json

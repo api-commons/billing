@@ -13,7 +13,7 @@ concepts:
       currency: currency
       line_items: products
       total: total_price
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/opply-openapi-original.yml#GET /api/v1/app-orders/brand/grouped-statements/{uuid}/invoices/
     - openapi/_original/opply-openapi-original.yml#GET /api/v1/orders/brand/{order_uuid}/invoice/

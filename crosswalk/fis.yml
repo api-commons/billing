@@ -30,11 +30,12 @@ concepts:
     - creditnotes
     properties:
       id: id
-      status: status
       total: totalAmount
+      status: status
+      description: description
       currency: currency
       reason: memo
-    core_coverage: 0.8
+    core_coverage: 0.625
     evidence:
     - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /bills/creditNotes
     - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /invoices/creditNotes

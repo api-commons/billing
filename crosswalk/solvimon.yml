@@ -12,11 +12,11 @@ concepts:
       due_date: due_date
       number: invoice_number
       created_at: created_at
+      issued_at: invoice_date
       customer_id:
       - customer_id
       - customer_reference
       - customer
-      issued_at: invoice_date
       description: notes
       updated_at: updated_at
       metadata: custom_fields
@@ -32,11 +32,12 @@ concepts:
     properties:
       description: notes
       id: id
-      updated_at: updated_at
+      type: type
       created_at: created_at
       metadata: custom_fields
-      type: type
+      updated_at: updated_at
       due_date: due_date
+      purchase_order_number: purchase_order_number
     core_coverage: 0.667
     evidence:
     - openapi/_original/solvimon-transaction-api-openapi.yml#DELETE /v{version}/invoices/{resourceId}/lines/{invoiceLineResourceId}

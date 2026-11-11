@@ -8,22 +8,24 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.79,
-      "x-commons-providers": 98,
+      "x-commons-share": 0.815,
+      "x-commons-providers": 101,
       "x-commons-spellings": [
         "id",
         "subscriptionId",
         "subscription_id",
         "uuid",
+        "GUID",
         "SubscriptionId",
+        "Id",
         "_id"
       ]
     },
     "status": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.621,
-      "x-commons-providers": 77,
+      "x-commons-share": 0.637,
+      "x-commons-providers": 79,
       "x-commons-spellings": [
         "status",
         "state",
@@ -34,8 +36,8 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.516,
-      "x-commons-providers": 64,
+      "x-commons-share": 0.532,
+      "x-commons-providers": 66,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -51,14 +53,14 @@
     "customer_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.444,
-      "x-commons-providers": 55,
+      "x-commons-share": 0.452,
+      "x-commons-providers": 56,
       "x-commons-spellings": [
         "customer_id",
         "customer",
         "customerId",
-        "accountId",
         "account_id",
+        "accountId",
         "account",
         "buyer_id",
         "client_id"
@@ -67,8 +69,8 @@
     "plan_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.339,
-      "x-commons-providers": 42,
+      "x-commons-share": 0.347,
+      "x-commons-providers": 43,
       "x-commons-spellings": [
         "plan",
         "plan_id",
@@ -83,28 +85,29 @@
     "metadata": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.29,
-      "x-commons-providers": 36,
+      "x-commons-share": 0.306,
+      "x-commons-providers": 38,
       "x-commons-spellings": [
         "metadata",
         "attributes",
         "custom_fields",
-        "customFields"
+        "customFields",
+        "meta_data"
       ]
     },
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.282,
-      "x-commons-providers": 35,
+      "x-commons-share": 0.306,
+      "x-commons-providers": 38,
       "x-commons-spellings": [
         "updated_at",
         "updatedAt",
         "modifiedAt",
+        "updatedDate",
         "updated",
         "lastUpdated",
         "updated_date",
-        "updatedDate",
         "LastUpdated"
       ],
       "format": "date-time"
@@ -112,16 +115,16 @@
     "canceled_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.274,
-      "x-commons-providers": 34,
+      "x-commons-share": 0.29,
+      "x-commons-providers": 36,
       "x-commons-spellings": [
         "endDate",
         "canceledAt",
         "end_date",
         "canceled_at",
+        "cancelled_at",
         "ended_at",
         "endedAt",
-        "cancelled_at",
         "cancelledAt"
       ],
       "format": "date-time"
@@ -129,30 +132,58 @@
     "started_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.274,
-      "x-commons-providers": 34,
+      "x-commons-share": 0.29,
+      "x-commons-providers": 36,
       "x-commons-spellings": [
         "start_date",
         "startDate",
         "started_at",
+        "activated_at",
         "start",
         "starts_at",
-        "activated_at",
         "startsAt",
         "StartDate"
       ],
       "format": "date-time"
     },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.21,
+      "x-commons-providers": 26,
+      "x-commons-spellings": [
+        "currency",
+        "currencyCode",
+        "currency_code",
+        "Currency"
+      ]
+    },
     "name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.218,
-      "x-commons-providers": 27,
+      "x-commons-share": 0.21,
+      "x-commons-providers": 26,
       "x-commons-spellings": [
         "name",
         "label",
         "Name",
         "title"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.202,
+      "x-commons-providers": 25,
+      "x-commons-spellings": [
+        "items",
+        "addons",
+        "plans",
+        "add_ons",
+        "subscription_items",
+        "components",
+        "subscriptionItems",
+        "addOns"
       ]
     }
   },

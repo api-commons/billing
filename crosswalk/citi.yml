@@ -7,9 +7,8 @@ concepts:
     path_segment:
     - subscriptions
     - subscription
-    properties:
-      id: subscriptionId
-    core_coverage: 0.333
+    properties: {}
+    core_coverage: 0.0
     evidence:
     - openapi/_original/account-notifications-api.yaml#POST /v1/crdr/subscription
     - openapi/_original/citi-vcaeventssubscriptions-openapi.yaml#DELETE /vca/v2/events/subscriptions/{subscriptionId}

@@ -11,7 +11,7 @@ concepts:
       status: status
       created_at: created_at
       description: memo
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/coinbase-commerce-openapi.yml#GET /invoices
     - openapi/_original/coinbase-commerce-openapi.yml#GET /invoices/{invoice_id}

@@ -27,7 +27,7 @@ concepts:
       id: id
       name: title
       created_at: created_at
-    core_coverage: 0.6
+    core_coverage: 0.5
     evidence:
     - openapi/_original/recharge-payments-openapi.yml#DELETE /products/{id}
     - openapi/_original/recharge-payments-openapi.yml#GET /products

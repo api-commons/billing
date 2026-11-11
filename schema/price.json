@@ -5,20 +5,6 @@
   "description": "The common price in Billing and Invoicing, distilled from 15 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
-    "plan_id": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.667,
-      "x-commons-providers": 10,
-      "x-commons-spellings": [
-        "productId",
-        "item_id",
-        "product",
-        "plan_id",
-        "product_id",
-        "itemId"
-      ]
-    },
     "id": {
       "type": "string",
       "x-commons-tier": "core",
@@ -27,6 +13,19 @@
       "x-commons-spellings": [
         "id",
         "priceId"
+      ]
+    },
+    "plan_id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.6,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "productId",
+        "item_id",
+        "plan_id",
+        "product_id",
+        "product"
       ]
     },
     "currency": {
@@ -130,6 +129,15 @@
       "x-commons-providers": 3,
       "x-commons-spellings": [
         "tiers"
+      ]
+    },
+    "unit": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "unit"
       ]
     }
   },

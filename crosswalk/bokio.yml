@@ -32,6 +32,7 @@ concepts:
       id: id
       quantity: quantity
       unit_price: unitPrice
+      item_type: itemType
       tax_rate: taxRate
     core_coverage: 1.0
     evidence:
@@ -41,12 +42,12 @@ concepts:
     - credit-notes
     properties:
       id: id
-      status: status
       total: totalAmount
+      status: status
       currency: currency
       metadata: metadata
       line_items: lineItems
-    core_coverage: 0.8
+    core_coverage: 0.5
     evidence:
     - openapi/_original/bokio-company-api-openapi.yml#DELETE /companies/{companyId}/credit-notes/{creditNoteId}
     - openapi/_original/bokio-company-api-openapi.yml#GET /companies/{companyId}/credit-notes

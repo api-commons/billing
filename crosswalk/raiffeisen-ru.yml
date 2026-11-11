@@ -11,7 +11,7 @@ concepts:
       status: status
       number: number
       created_at: createdOn
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/raiffeisen-ru-invoices-openapi.yml#DELETE /v4/bills
     - openapi/_original/raiffeisen-ru-invoices-openapi.yml#GET /v4/bills

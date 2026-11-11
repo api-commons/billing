@@ -31,7 +31,7 @@ concepts:
       name: name
       is_active: status
       metadata: metadata
-    core_coverage: 0.6
+    core_coverage: 0.5
     evidence:
     - openapi/_original/blng-billing-swagger.yaml#GET /billing/products
     - openapi/_original/blng-journey-api-openapi.yml#GET /design/journeys/{journeyId}/plans

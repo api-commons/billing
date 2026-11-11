@@ -13,7 +13,7 @@ concepts:
       customer_id: customer
       total: amount
       description: description
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/tap-payments-openapi.yml#GET /invoices
     - openapi/_original/tap-payments-openapi.yml#GET /invoices/{invoice_id}

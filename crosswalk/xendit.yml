@@ -13,7 +13,7 @@ concepts:
       currency: currency
       total: amount
       description: description
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/xendit-openapi.yml#GET /v2/invoices
     - openapi/_original/xendit-openapi.yml#GET /v2/invoices/{invoice_id}

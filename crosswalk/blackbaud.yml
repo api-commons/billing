@@ -14,8 +14,8 @@ concepts:
       status: status
       due_date: due_date
       number: invoice_number
-      customer_id: client_id
       issued_at: invoice_date
+      customer_id: client_id
       total: amount
       description: description
       tax: tax_amount
@@ -39,6 +39,7 @@ concepts:
       - notes
       - description
       id: id
+      balance: balance
       due_date: due_date
     core_coverage: 0.667
     evidence:
@@ -60,14 +61,14 @@ concepts:
     - creditmemos
     properties:
       id: record_id
-      status: status
       total: amount
+      status: status
       description: description
       updated_at: date_modified
       number: number
       date: date
       metadata: custom_fields
-    core_coverage: 0.8
+    core_coverage: 0.625
     evidence:
     - openapi/_original/blackbaud-accounts-payable-api-openapi.yml#DELETE /creditmemos/{credit_memo_id}
     - openapi/_original/blackbaud-accounts-payable-api-openapi.yml#GET /creditmemos

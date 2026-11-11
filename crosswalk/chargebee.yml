@@ -13,15 +13,15 @@ concepts:
       created_at: created_at
       currency: currency_code
       line_items: line_items
-      customer_id: customer_id
       issued_at: date
+      customer_id: customer_id
       description: notes
       tax:
       - tax
       - taxes
       updated_at: updated_at
       amount_due: amount_due
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/chargebee-openapi.json#GET /customers/{customer-id}/invoices
     - openapi/_original/chargebee-openapi.json#GET /invoices
@@ -32,10 +32,26 @@ concepts:
     path_segment:
     - subscriptions
     properties:
-      id: id
+      id:
+      - id
+      - subscription_id
       status: status
       created_at: created_at
-      customer_id: customer
+      customer_id:
+      - customer
+      - customer_id
+      plan_id: plan_id
+      metadata: meta_data
+      updated_at: updated_at
+      canceled_at: cancelled_at
+      started_at:
+      - start_date
+      - started_at
+      - activated_at
+      currency: currency_code
+      items:
+      - subscription_items
+      - addons
     core_coverage: 1.0
     evidence:
     - openapi/_original/chargebee-openapi.json#GET /customers/{customer-id}/subscriptions
@@ -56,10 +72,10 @@ concepts:
       is_active: status
       amount: price
       currency: currency_code
+      billing_interval: period
       metadata:
       - meta_data
       - metadata
-      billing_interval: period
       updated_at: updated_at
       code: sku
     core_coverage: 1.0
@@ -73,8 +89,8 @@ concepts:
     path_segment:
     - item_prices
     properties:
-      plan_id: item_id
       id: id
+      plan_id: item_id
       currency: currency_code
       pricing_model: pricing_model
       metadata: metadata
@@ -105,12 +121,12 @@ concepts:
       - type
       - reason_code
       invoice_id:
-      - invoice
       - reference_invoice_id
+      - invoice
       date: date
       voided_at: voided_at
       line_items: line_items
-    core_coverage: 0.8
+    core_coverage: 0.875
     evidence:
     - openapi/_original/chargebee-openapi.json#GET /credit_notes
     - openapi/_original/chargebee-openapi.json#GET /credit_notes/{credit-note-id}
@@ -123,17 +139,26 @@ concepts:
     - discounts
     properties:
       code: name
-      id: id
+      id:
+      - id
+      - coupon_id
       created_at: created_at
       max_redemptions: max_redemptions
       expires_at: valid_till
-      amount_off: discount_amount
+      amount_off:
+      - amount
+      - discount_amount
       updated_at: updated_at
-      percent_off: discount_percentage
+      percent_off:
+      - percentage
+      - discount_percentage
       status: status
+      type: type
       currency: currency_code
       discount_type: discount_type
-      duration: duration_type
+      duration:
+      - duration_type
+      - apply_till
     core_coverage: 1.0
     evidence:
     - openapi/_original/chargebee-openapi.json#GET /coupons
@@ -148,9 +173,9 @@ concepts:
       id: id
       quantity: quantity
       subscription_id: subscription_id
+      description: note
       timestamp: usage_date
       created_at: created_at
-      description: note
       updated_at: updated_at
     core_coverage: 1.0
     evidence:

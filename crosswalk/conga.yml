@@ -15,7 +15,7 @@ concepts:
       total: TotalAmount
       tax: Tax
       updated_at: ModifiedDate
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/conga-invoice-management.json#GET /invoices/{id}
     - openapi/_original/conga-invoice-management.json#GET /request-results/{id}/invoices

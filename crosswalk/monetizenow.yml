@@ -32,6 +32,7 @@ concepts:
     properties:
       id: id
       customer_id: account
+      items: subscriptionItems
     core_coverage: 0.333
     evidence:
     - openapi/_original/monetizenow-openapi.json#GET /api/accounts/{accountId}/subscriptions
@@ -48,7 +49,7 @@ concepts:
       is_active: status
       metadata: customFields
       code: sku
-    core_coverage: 0.8
+    core_coverage: 0.667
     evidence:
     - openapi/_original/monetizenow-openapi.json#GET /api/products
     - openapi/_original/monetizenow-openapi.json#GET /api/products/{productId}
@@ -59,8 +60,8 @@ concepts:
     - creditnotes
     properties:
       id: id
-      status: status
       total: amount
+      status: status
       description: description
       currency: currency
       customer_id: accountId
@@ -69,7 +70,7 @@ concepts:
       - invoiceId
       - invoice
       metadata: customFields
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/monetizenow-openapi.json#GET /api/accounts/{accountId}/creditNotes
     - openapi/_original/monetizenow-openapi.json#GET /api/creditNotes/{creditNoteId}
@@ -81,9 +82,9 @@ concepts:
     properties:
       id: id
       subscription_id: subscriptionId
-      customer_id: accountId
       timestamp: timestamp
-    core_coverage: 1.0
+      customer_id: accountId
+    core_coverage: 0.5
     evidence:
     - openapi/_original/monetizenow-openapi.json#GET /usage/events
     - openapi/_original/monetizenow-openapi.json#POST /usage/events

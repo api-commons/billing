@@ -10,6 +10,7 @@ concepts:
       id: id
       status: state
       customer_id: customerId
+      currency: currencyCode
     core_coverage: 0.667
     evidence:
     - openapi/_original/algbra-openapi.json#GET /v1/partner/investments/subscriptions

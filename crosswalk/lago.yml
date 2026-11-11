@@ -7,6 +7,7 @@ concepts:
     path_segment:
     - invoices
     properties:
+      id: id
       status: status
       due_date: payment_due_date
       number: number
@@ -15,7 +16,7 @@ concepts:
       customer_id: customer
       updated_at: updated_at
       metadata: metadata
-    core_coverage: 0.667
+    core_coverage: 1.0
     evidence:
     - openapi/_original/lago-openapi.yml#DELETE /invoices/{lago_id}
     - openapi/_original/lago-openapi.yml#GET /customers/{external_customer_id}/invoices
@@ -48,10 +49,10 @@ concepts:
       name: name
       description: description
       created_at: created_at
-      metadata: metadata
       billing_interval: interval
+      metadata: metadata
       code: code
-    core_coverage: 0.6
+    core_coverage: 0.5
     evidence:
     - openapi/_original/lago-openapi.yml#DELETE /plans/{code}
     - openapi/_original/lago-openapi.yml#GET /plans
@@ -75,7 +76,7 @@ concepts:
       invoice_id: invoice_id
       metadata: metadata
       items: items
-    core_coverage: 0.6
+    core_coverage: 0.75
     evidence:
     - openapi/_original/lago-openapi.yml#GET /credit_notes
     - openapi/_original/lago-openapi.yml#GET /credit_notes/{lago_id}
@@ -103,6 +104,6 @@ concepts:
     - usage
     properties:
       quantity: units
-    core_coverage: 0.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/lago-openapi.yml#GET /analytics/usage

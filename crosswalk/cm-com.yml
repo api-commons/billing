@@ -7,9 +7,12 @@ concepts:
     path_segment:
     - subscriptions
     properties:
+      id: id
+      created_at: createdAt
+      updated_at: modifiedAt
       canceled_at: endDate
       started_at: startDate
-    core_coverage: 0.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/cm-com-email-gateway-api-v1-openapi.yml#GET /email/suppression/v1/accounts/{logicalAccountId}/subscriptions
     - openapi/_original/cm-com-email-gateway-api-v1-openapi.yml#POST /email/suppression/v1/accounts/{logicalAccountId}/subscriptions

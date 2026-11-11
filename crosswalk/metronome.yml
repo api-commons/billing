@@ -11,10 +11,10 @@ concepts:
       status: status
       created_at: created_at
       line_items: line_items
-      customer_id: customer_id
       issued_at: issued_at
+      customer_id: customer_id
       metadata: custom_fields
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/metronome-openapi.json#GET /v1/customers/{customer_id}/invoices
     - openapi/_original/metronome-openapi.json#GET /v1/customers/{customer_id}/invoices/{invoice_id}

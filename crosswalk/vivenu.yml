@@ -13,7 +13,7 @@ concepts:
       currency: currency
       line_items: items
       updated_at: updatedAt
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/vivenu-openapi-original.json#GET /api/invoices
     - openapi/_original/vivenu-openapi-original.json#GET /api/invoices/{id}
@@ -30,7 +30,9 @@ concepts:
       plan_id: planId
       metadata: attributes
       canceled_at: canceledAt
+      currency: currency
       name: name
+      items: items
     core_coverage: 0.667
     evidence:
     - openapi/_original/vivenu-openapi-original.json#GET /api/customers/me/subscriptions
@@ -55,7 +57,8 @@ concepts:
       billing_interval: billingCycle
       updated_at: updatedAt
       code: slug
-    core_coverage: 1.0
+      type: type
+    core_coverage: 0.833
     evidence:
     - openapi/_original/vivenu-openapi-original.json#DELETE /api/products/{id}
     - openapi/_original/vivenu-openapi-original.json#GET /api/packages
@@ -65,8 +68,15 @@ concepts:
   credit_note:
     path_segment:
     - credit-notes
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: _id
+      total: amount
+      currency: currency
+      created_at: createdAt
+      customer_id: customerId
+      updated_at: updatedAt
+      items: items
+    core_coverage: 0.75
     evidence:
     - openapi/_original/vivenu-openapi-original.json#GET /api/credit-notes
   coupon:

@@ -12,6 +12,6 @@ concepts:
       due_date: dueDate
       currency: currency
       issued_at: invoiceDate
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/actionstep-bills-openapi.yml#GET /bills

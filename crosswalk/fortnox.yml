@@ -12,7 +12,7 @@ concepts:
       currency: Currency
       issued_at: InvoiceDate
       amount_due: Balance
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/fortnox-openapi.yml#GET /invoices
     - openapi/_original/fortnox-openapi.yml#GET /invoices/{DocumentNumber}

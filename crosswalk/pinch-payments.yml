@@ -25,7 +25,7 @@ concepts:
       id: id
       name: name
       metadata: metadata
-    core_coverage: 0.4
+    core_coverage: 0.333
     evidence:
     - openapi/_original/pinch-payments-core.yml#DELETE /plans/{id}
     - openapi/_original/pinch-payments-core.yml#GET /plans

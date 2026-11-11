@@ -9,10 +9,10 @@ concepts:
     properties:
       due_date: dueDate
       line_items: items
-      customer_id: customerId
       issued_at: issueDate
+      customer_id: customerId
       description: notes
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/earnipay-e-invoicing-openapi-original.json#DELETE /v1/invoices/{id}
     - openapi/_original/earnipay-e-invoicing-openapi-original.json#GET /v1/invoices

@@ -11,6 +11,7 @@ concepts:
       status: status
       customer_id: customer_id
       plan_id: product_id
+      currency: currency
     core_coverage: 0.667
     evidence:
     - openapi/_original/samcart-openapi.yml#GET /subscriptions
@@ -24,7 +25,8 @@ concepts:
       created_at: created_at
       amount: price
       currency: currency
-    core_coverage: 0.6
+      type: type
+    core_coverage: 0.667
     evidence:
     - openapi/_original/samcart-openapi.yml#GET /products
     - openapi/_original/samcart-openapi.yml#GET /products/{product_id}

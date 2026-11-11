@@ -14,12 +14,12 @@ concepts:
       created_at: created_at
       currency: currency
       line_items: line_items
-      customer_id:
-      - customer
-      - customer_id
       issued_at:
       - issued_at
       - invoice_date
+      customer_id:
+      - customer
+      - customer_id
       description: memo
       amount_due: amount_due
     core_coverage: 1.0
@@ -60,7 +60,7 @@ concepts:
       is_active: status
       currency: currency
       metadata: metadata
-    core_coverage: 1.0
+    core_coverage: 0.833
     evidence:
     - openapi/_original/orb-billing-openapi.yml#GET /plans
     - openapi/_original/orb-billing-openapi.yml#GET /plans/{plan_id}
@@ -70,8 +70,8 @@ concepts:
     path_segment:
     - prices
     properties:
-      plan_id: item_id
       id: id
+      plan_id: item_id
       currency: currency
       created_at: created_at
       name: name
@@ -94,7 +94,8 @@ concepts:
   usage_record:
     path_segment:
     - usage
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      quantity: quantity
+    core_coverage: 0.5
     evidence:
     - openapi/_original/orb-billing-openapi.yml#GET /subscriptions/{subscription_id}/usage

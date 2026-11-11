@@ -13,13 +13,13 @@ concepts:
       created_at: dateCreated
       currency: currency
       line_items: lineItems
-      customer_id: customerId
       issued_at: dateIssued
+      customer_id: customerId
       total: amount
       description: notes
       tax: tax
       amount_due: amountDue
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/helcim-api.json#GET /invoices
     - openapi/_original/helcim-api.json#GET /invoices/{invoiceId}

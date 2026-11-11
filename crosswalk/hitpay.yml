@@ -13,13 +13,13 @@ concepts:
       created_at: created_at
       currency: currency
       line_items: products
+      issued_at: invoice_date
       customer_id:
       - customer
       - customer_id
-      issued_at: invoice_date
       total: amount
       updated_at: updated_at
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/hitpay-openapi.json#DELETE /v1/invoices/{invoice_id}
     - openapi/_original/hitpay-openapi.json#GET /v1/invoices

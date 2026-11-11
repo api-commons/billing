@@ -29,7 +29,7 @@ concepts:
       is_active: status
       amount: amount
       currency: currency
-    core_coverage: 0.8
+    core_coverage: 0.833
     evidence:
     - openapi/_original/openpay-openapi.yml#DELETE /{merchant_id}/plans/{plan_id}
     - openapi/_original/openpay-openapi.yml#GET /{merchant_id}/plans

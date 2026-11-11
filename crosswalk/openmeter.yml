@@ -12,6 +12,6 @@ concepts:
       number: number
       currency: currency
       customer_id: customer
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/openmeter-openapi.yml#GET /api/v1/billing/invoices

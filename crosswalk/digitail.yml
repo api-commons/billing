@@ -12,7 +12,7 @@ concepts:
       created_at: created_at
       issued_at: date
       updated_at: updated_at
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/digitail-openapi.json#GET /api/v1/invoices
     - openapi/_original/digitail-openapi.json#GET /api/v1/invoices/{id}
@@ -21,8 +21,8 @@ concepts:
     - credit-notes
     properties:
       id: id
-      status: status
       total: amount
+      status: status
       description: description
       created_at: created_at
       customer_id: customer_id
@@ -33,7 +33,7 @@ concepts:
       - reason
       date: date
       voided_at: voided_at
-    core_coverage: 0.8
+    core_coverage: 0.875
     evidence:
     - openapi/_original/digitail-openapi.json#GET /api/v1/credit-notes
     - openapi/_original/digitail-openapi.json#GET /api/v1/credit-notes/{id}

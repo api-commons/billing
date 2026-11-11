@@ -6,8 +6,12 @@ concepts:
   subscription:
     path_segment:
     - subscriptions
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      status: state
+      currency: currency
+      items: components
+    core_coverage: 0.667
     evidence:
     - openapi/_original/lightspeed-x-series-openapi.json#GET /partner/billing/subscriptions
     - openapi/_original/lightspeed-x-series-openapi.json#GET /partner/billing/subscriptions/{subscription_id}

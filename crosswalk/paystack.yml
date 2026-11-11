@@ -31,7 +31,7 @@ concepts:
       - price
       currency: currency
       billing_interval: interval
-    core_coverage: 0.6
+    core_coverage: 0.667
     evidence:
     - openapi/_original/paystack-openapi-original.yml#DELETE /product/{id}
     - openapi/_original/paystack-openapi-original.yml#GET /plan

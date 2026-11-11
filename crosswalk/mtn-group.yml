@@ -28,10 +28,16 @@ concepts:
     - products
     - product
     properties:
-      id: planId
+      id:
+      - planId
+      - id
+      name: name
+      description: description
+      is_active: status
       amount: amount
+      type: '@type'
       product_id: productId
-    core_coverage: 0.2
+    core_coverage: 0.833
     evidence:
     - openapi/_original/mtn-group-mtn-customer-plans-api-v2.yml#GET /customers/{customerId}/plans
     - openapi/_original/mtn-group-mtn-customer-plans-api-v2.yml#GET /customers/{customerId}/plans/{productCode}

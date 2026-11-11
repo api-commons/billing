@@ -30,14 +30,14 @@ concepts:
     - credit-notes
     properties:
       id: id
-      status: status
       total: amount
+      status: status
       customer_id: customer_id
       number: number
       reason: reason_code
       invoice_id: invoice_id
       voided_at: voided_at
-    core_coverage: 0.6
+    core_coverage: 0.5
     evidence:
     - openapi/_original/resolve-merchant-api-openapi.yaml#GET /credit-notes
     - openapi/_original/resolve-merchant-api-openapi.yaml#GET /credit-notes/{credit_note_id}

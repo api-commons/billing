@@ -16,14 +16,14 @@ providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| invoice | 184 | 162 | id 76%, status 69%, due_date 53% | invoices 146, invoice 43, bills 21 |
-| invoice_line | 16 | 14 | description 71%, id 57%, quantity 57% | line-items 5, lines 5, lineitems 3, items 3 |
-| subscription | 138 | 124 | id 79%, status 62%, created_at 52% | subscriptions 125, subscription 22 |
-| plan | 59 | 54 | id 89%, name 82%, description 63%, created_at 61%, is_active 50% | plans 42, products 32, product 5, plan 4 |
-| price | 17 | 15 | plan_id 67%, id 60%, currency 53%, pricing_model 53% | prices 13, price 3, pricing 2, item_prices 1 |
-| credit_note | 29 | 25 | id 68%, status 64%, total 64%, description 56%, currency 52% | credit-notes 11, creditnotes 6, credit_notes 5, creditmemos 4 |
+| invoice | 184 | 162 | id 78%, status 70%, due_date 54%, number 51% | invoices 146, invoice 43, bills 21 |
+| invoice_line | 16 | 14 | description 86%, id 71%, quantity 71% | line-items 5, lines 5, lineitems 3, items 3 |
+| subscription | 138 | 124 | id 82%, status 64%, created_at 53% | subscriptions 125, subscription 22 |
+| plan | 59 | 54 | id 91%, name 85%, description 65%, created_at 61%, is_active 52%, amount 50% | plans 42, products 32, product 5, plan 4 |
+| price | 17 | 15 | id 60%, plan_id 60%, currency 53%, pricing_model 53% | prices 13, price 3, pricing 2, item_prices 1 |
+| credit_note | 29 | 25 | id 72%, total 68%, status 64%, description 60%, currency 56%, created_at 52%, customer_id 52%, updated_at 52% | credit-notes 11, creditnotes 6, credit_notes 5, creditmemos 4 |
 | coupon | 27 | 19 | code 90%, id 68%, created_at 58%, max_redemptions 58% | coupons 16, discounts 12, vouchers 2, coupon 2 |
-| usage_record | 22 | 19 | id 58% | usage 15, usages 4, events 1, usage_records 1 |
+| usage_record | 22 | 19 | id 58%, quantity 58% | usage 15, usages 4, events 1, usage_records 1 |
 
 Cohort: 837 providers with harvested OpenAPI, 270 crosswalks. Of the providers exposing a invoice: 66% create, 84% list, 85% fetch, 45% update, 29% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
@@ -33,10 +33,10 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 
 ## What it does not agree on
 
-As in commerce, the money is where the market diverges. An invoice's `status` (69%) and
-`due_date` (53%) are core, but its `total` sits at 40% and its `number` just under half:
-providers split totals into subtotal, tax, amount due and amount paid in different ways.
-A price's `amount` is in only 21% of price resources, because tiered, volume and
+As in commerce, the money is where the market diverges. An invoice's `status` (70%),
+`due_date` (54%) and `number` (51%) are core, but its `total` sits at 41%: providers split
+totals into subtotal, tax, amount due and amount paid in different ways.
+A price's `amount` is in only 20% of price resources, because tiered, volume and
 usage-based pricing replace a single amount with a `pricing_model` and its tiers -- the
 model, not the amount, is what price resources share. And only a third of subscriptions
 reference their plan directly; the rest carry it inside their items.

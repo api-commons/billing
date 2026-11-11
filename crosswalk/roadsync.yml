@@ -21,7 +21,7 @@ concepts:
       - description
       updated_at: updatedAt
       metadata: customFields
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/roadsync-client-api-openapi.json#DELETE /invoice/{invoiceId}
     - openapi/_original/roadsync-client-api-openapi.json#GET /invoice/{invoiceId}

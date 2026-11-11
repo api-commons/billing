@@ -17,7 +17,7 @@ concepts:
       description: comments
       tax: tax-amount
       updated_at: updated-at
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/coupa-core-api-openapi.yml#GET /invoices
     - openapi/_original/coupa-core-api-openapi.yml#GET /invoices/{id}

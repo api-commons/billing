@@ -9,11 +9,11 @@ concepts:
     properties:
       due_date: due_date
       line_items: line_items
-      customer_id: customer
       issued_at: invoice_date
+      customer_id: customer
       description: description
       metadata: custom_fields
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/zuper-rest-api-openapi.yml#DELETE /invoice/{invoice_uid}
     - openapi/_original/zuper-rest-api-openapi.yml#GET /invoice

@@ -12,11 +12,10 @@ concepts:
       due_date: dueDate
       currency: currency
       line_items: lineItems
-      updated_at: updated
       metadata:
       - customFields
       - attributes
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/tinvio-com-openapi-original.yaml#DELETE /api/v1/bills/{resourceId}
     - openapi/_original/tinvio-com-openapi-original.yaml#DELETE /api/v1/invoices/{resourceId}
@@ -27,7 +26,6 @@ concepts:
     path_segment:
     - line-items
     properties:
-      updated_at: updated
       metadata: attributes
     core_coverage: 0.0
     evidence:

@@ -13,7 +13,7 @@ concepts:
       created_at: created
       issued_at: invoice_date
       updated_at: updated
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/bunq-openapi.json#GET /user/{userID}/invoice
     - openapi/_original/bunq-openapi.json#GET /user/{userID}/invoice/{itemId}

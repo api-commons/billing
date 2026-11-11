@@ -6,7 +6,9 @@ concepts:
   subscription:
     path_segment:
     - subscription
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      status: status
+      currency: currency
+    core_coverage: 0.333
     evidence:
     - openapi/_original/treasuryspring-openapi-original.json#GET /subscription

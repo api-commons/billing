@@ -11,12 +11,12 @@ concepts:
       status: status
       number: invoice_number
       line_items: invoice_items
-      customer_id: client_id
       issued_at: invoice_date
+      customer_id: client_id
       tax: taxes
       updated_at: updated_at
       amount_due: balance
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/alayacare-accounting-openapi.yml#GET /billing/cycles/{billing_period_id}/invoices
     - openapi/_original/alayacare-accounting-openapi.yml#GET /billing/cycles/{billing_period_id}/invoices/{invoice_id}

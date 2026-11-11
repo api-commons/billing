@@ -12,12 +12,12 @@ concepts:
       number: number
       currency: currency
       line_items: items
+      issued_at: date
       customer_id:
       - customer
       - customer_id
-      issued_at: date
       tax: tax_amount
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/billingengine-openapi.json#GET /invoices
     - openapi/_original/billingengine-openapi.json#GET /invoices/{id}

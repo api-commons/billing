@@ -8,13 +8,25 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.68,
-      "x-commons-providers": 17,
+      "x-commons-share": 0.72,
+      "x-commons-providers": 18,
       "x-commons-spellings": [
         "id",
         "GUID",
         "record_id",
-        "@id"
+        "@id",
+        "_id"
+      ]
+    },
+    "total": {
+      "type": "number",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.68,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "amount",
+        "totalAmount",
+        "Amount"
       ]
     },
     "status": {
@@ -27,22 +39,11 @@
         "state"
       ]
     },
-    "total": {
-      "type": "number",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.64,
-      "x-commons-providers": 16,
-      "x-commons-spellings": [
-        "amount",
-        "totalAmount",
-        "Amount"
-      ]
-    },
     "description": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.56,
-      "x-commons-providers": 14,
+      "x-commons-share": 0.6,
+      "x-commons-providers": 15,
       "x-commons-spellings": [
         "description",
         "notes",
@@ -53,8 +54,8 @@
     "currency": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.52,
-      "x-commons-providers": 13,
+      "x-commons-share": 0.56,
+      "x-commons-providers": 14,
       "x-commons-spellings": [
         "currency",
         "currency_code",
@@ -63,9 +64,9 @@
     },
     "created_at": {
       "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.48,
-      "x-commons-providers": 12,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.52,
+      "x-commons-providers": 13,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -77,9 +78,9 @@
     },
     "customer_id": {
       "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.48,
-      "x-commons-providers": 12,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.52,
+      "x-commons-providers": 13,
       "x-commons-spellings": [
         "customer",
         "customer_id",
@@ -89,9 +90,9 @@
     },
     "updated_at": {
       "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.48,
-      "x-commons-providers": 12,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.52,
+      "x-commons-providers": 13,
       "x-commons-spellings": [
         "updated_at",
         "updatedAt",
@@ -157,6 +158,15 @@
         "custom_fields"
       ]
     },
+    "items": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.24,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "items"
+      ]
+    },
     "voided_at": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -167,15 +177,6 @@
         "voidedAt"
       ],
       "format": "date-time"
-    },
-    "items": {
-      "type": "array",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.2,
-      "x-commons-providers": 5,
-      "x-commons-spellings": [
-        "items"
-      ]
     },
     "line_items": {
       "type": "array",

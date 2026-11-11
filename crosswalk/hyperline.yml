@@ -11,7 +11,7 @@ concepts:
       status: status
       currency: currency
       customer_id: customer_id
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/hyperline-openapi.yml#GET /invoices
     - openapi/_original/hyperline-openapi.yml#GET /invoices/{id}
@@ -38,7 +38,8 @@ concepts:
       id: id
       name: name
       currency: currency
-    core_coverage: 0.4
+      type: type
+    core_coverage: 0.333
     evidence:
     - openapi/_original/hyperline-openapi.yml#GET /products
     - openapi/_original/hyperline-openapi.yml#GET /products/{id}

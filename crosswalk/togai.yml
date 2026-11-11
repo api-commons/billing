@@ -11,14 +11,15 @@ concepts:
       status: status
       due_date: dueDate
       line_items: lineItems
+      issued_at: invoiceDate
       customer_id:
       - customerId
       - accountId
-      issued_at: invoiceDate
       total: totalAmount
+      description: description
       updated_at: updatedAt
       metadata: metadata
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/togai-openapi.yml#DELETE /invoices/{invoice_id}
     - openapi/_original/togai-openapi.yml#GET /invoices

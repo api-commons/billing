@@ -15,7 +15,7 @@ concepts:
       total: amount
       description: description
       tax: tax
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/bancomat-flowpay-api-v1-openapi.json#DELETE /{tenantID}/invoices/{fingerprint}
     - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/invoices
@@ -33,7 +33,7 @@ concepts:
       invoice_id: invoice
       date: date
       items: items
-    core_coverage: 0.4
+    core_coverage: 0.25
     evidence:
     - openapi/_original/bancomat-flowpay-api-v2-openapi.json#DELETE /creditNotes/{fingerprint}
     - openapi/_original/bancomat-flowpay-api-v2-openapi.json#GET /creditNotes

@@ -22,6 +22,7 @@ concepts:
       status: status
       canceled_at: endDate
       started_at: startDate
+      items: plans
     core_coverage: 0.667
     evidence:
     - openapi/_original/xero-app-store-openapi.yml#GET /subscriptions/{subscriptionId}

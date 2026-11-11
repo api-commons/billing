@@ -10,7 +10,7 @@ concepts:
       id: id
       status: status
       customer_id: buyerID
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/suger-openapi.yml#GET /org/{orgId}/invoice
     - openapi/_original/suger-openapi.yml#GET /org/{orgId}/invoice/{invoiceId}

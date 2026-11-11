@@ -25,8 +25,8 @@
       "x-commons-providers": 13,
       "x-commons-spellings": [
         "id",
-        "uuid",
         "coupon_id",
+        "uuid",
         "_id"
       ]
     },
@@ -126,6 +126,15 @@
         "Status"
       ]
     },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.316,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "type"
+      ]
+    },
     "currency": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -135,15 +144,6 @@
         "currency",
         "currency_code",
         "Currency"
-      ]
-    },
-    "type": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.263,
-      "x-commons-providers": 5,
-      "x-commons-spellings": [
-        "type"
       ]
     },
     "description": {
@@ -174,7 +174,8 @@
       "x-commons-spellings": [
         "duration",
         "duration_in_months",
-        "duration_type"
+        "duration_type",
+        "apply_till"
       ]
     }
   },

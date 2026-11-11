@@ -8,7 +8,7 @@ concepts:
     - bills
     properties:
       id: id
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/upward-financial-openapi.json#GET /v2/bill-pay/bills/
     - openapi/_original/upward-financial-openapi.json#GET /v2/bill-pay/bills/{external_id}/

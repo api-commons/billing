@@ -14,10 +14,10 @@ concepts:
       line_items:
       - lineItems
       - items
-      customer_id: customerId
       issued_at: invoiceDate
+      customer_id: customerId
       tax: taxAmount
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/paigo-paigo-api-openapi.yml#GET /invoices/{invoiceId}
     - openapi/_original/paigo-paigo-api-openapi.yml#GET /webhooks/invoice

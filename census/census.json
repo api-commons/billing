@@ -282,7 +282,55 @@
      "links": "object",
      "extra": "object",
      "errors": "object",
-     "status": "object"
+     "status": "object",
+     "InvoiceNumber": "string",
+     "RelatedCustomerGuid": "string",
+     "CustomerInvoiceNumber": "string",
+     "AccountingPeriodListItem": "object",
+     "InvoiceCycleListItem": "object",
+     "RebateInvoiceCycleListItem": "object",
+     "VATExemptNumber": "string",
+     "OutletListItem": "object",
+     "DepartmentListItem": "object",
+     "IsCash": "boolean",
+     "IsAccepted": "boolean",
+     "IsDebit": "boolean",
+     "IsRebilled": "boolean",
+     "IsTaxAdjustment": "boolean",
+     "IsRequestForPayment": "boolean",
+     "InputDate": "string",
+     "InvoiceDate": "string",
+     "DueDate": "string",
+     "WriteOffReasonListItem": "object",
+     "Amount": "object",
+     "RelatedLocationGuid": "string",
+     "PrintAddress": "object",
+     "RemitAddress": "object",
+     "Notes": "string",
+     "Details": "array",
+     "Batch": "object",
+     "Deallocations": "array",
+     "Allocations": "array",
+     "RelatedOrderGuid": "string",
+     "RelatedWeighingGuid": "string",
+     "RelatedWeighingInGuid": "string",
+     "RelatedWeighingOutGuid": "string",
+     "RelatedJobGuid": "string",
+     "RelatedRouteVisitGuid": "string",
+     "RelatedRouteVisitJobGuid": "string",
+     "RelatedSiteGuid": "string",
+     "RelatedBatchGuid": "string",
+     "RelatedUserGeneratedGuid": "string",
+     "RelatedUserAcceptedByGuid": "string",
+     "RelatedPONumberGuidFilter": "string",
+     "RelatedInvoiceAllocatedToGuidFilter": "string",
+     "RelatedUserDeallocatedByGuidFilter": "string",
+     "ReferenceFilter": "string",
+     "BatchGeneratedTimestampUtcFilter": "string",
+     "BatchAcceptedTimestampUtcFilter": "string",
+     "RelatedBlobHashes": "array",
+     "UnallocatedAmount": "number",
+     "GUID": "string"
     },
     "evidence": [
      "openapi/_original/amcs-group-erp-openapi-original.json#GET /accounting/invoices",
@@ -401,10 +449,6 @@
      "POST collection"
     ],
     "properties": {
-     "totalCount": "integer",
-     "skip": "integer",
-     "limit": "integer",
-     "invoices": "array",
      "invoiceId": "string",
      "invoiceNumber": "string",
      "invoiceDate": "string",
@@ -553,8 +597,11 @@
      "senderVat": "string",
      "substitutedBy": "object",
      "terms": "array",
-     "creditorIban": "string",
-     "debtorIban": "string",
+     "description": "string",
+     "expire": "string",
+     "information": "string",
+     "method": "string",
+     "recurringinfo": "object",
      "page": "integer",
      "pageSize": "integer",
      "total": "integer",
@@ -565,7 +612,6 @@
      "invoice": "string",
      "proforma": "string",
      "creditNotes": "array",
-     "description": "string",
      "quantity": "number",
      "measureUnit": "string",
      "unitPrice": "number",
@@ -717,6 +763,12 @@
      "billLineItems": "array",
      "createdTime": "string",
      "updatedTime": "string",
+     "chartOfAccountId": "string",
+     "departmentId": "string",
+     "locationId": "string",
+     "lineType": "string",
+     "quantity": "number",
+     "unitPrice": "number",
      "customerId": "string",
      "glPostingDate": "string",
      "salesTax": "number",
@@ -931,9 +983,6 @@
      "invoice_payment_detail": "object",
      "adjustment_summary": "object",
      "invoice_amount_before_tax": "number",
-     "invoices": "array",
-     "limit": "integer",
-     "offset": "integer",
      "id": "string",
      "client_id": "string",
      "client_name": "string",
@@ -994,7 +1043,10 @@
      "invoice": "object",
      "idempotency_key": "string",
      "fields_to_clear": "array",
-     "errors": "array"
+     "category": "string",
+     "code": "string",
+     "detail": "string",
+     "field": "string"
     },
     "evidence": [
      "openapi/_original/block-openapi.json#DELETE /v2/invoices/{invoice_id}",
@@ -1168,11 +1220,15 @@
      "partialPayment": "number",
      "installmentConditions": "object",
      "availablePaymentMethods": "array",
-     "operatorIdentification": "string",
-     "customerIdentification": "string",
-     "externalIdentification": "string",
-     "upfrontPaymentAmount": "number",
-     "invoices": "array"
+     "amount": "number",
+     "isAlienatedToBtg": "boolean",
+     "preSignedURL": "string",
+     "invoiceAccessKey": "string",
+     "payeeTaxId": "string",
+     "payerTaxId": "string",
+     "invoiceType": "string",
+     "invoiceProducts": "array",
+     "fileName": "string"
     },
     "evidence": [
      "openapi/_original/btg-pactual-banking-cards-openapi.yml#GET /{companyId}/banking/cards/invoices",
@@ -1535,8 +1591,6 @@
      "POST collection"
     ],
     "properties": {
-     "list": "array",
-     "next_offset": "string",
      "id": "string",
      "customer_id": "string",
      "payment_owner": "string",
@@ -1841,21 +1895,21 @@
      "PUT item"
     ],
     "properties": {
-     "invoices": "array",
-     "total": "integer",
-     "billFrom": "string",
+     "amount": "integer",
+     "balance": "integer",
      "clientId": "string",
+     "clientName": "string",
      "currency": "string",
      "dueDate": "string",
      "id": "string",
      "issuedDate": "string",
      "number": "string",
+     "paid": "integer",
+     "status": "string",
+     "billFrom": "string",
      "timeViewMode": "string",
-     "amount": "integer",
-     "balance": "integer",
      "calculationType": "object",
      "clientAddress": "string",
-     "clientName": "string",
      "companyId": "string",
      "containsImportedExpenses": "boolean",
      "containsImportedTimes": "boolean",
@@ -1863,8 +1917,6 @@
      "discountAmount": "integer",
      "items": "array",
      "note": "string",
-     "paid": "integer",
-     "status": "string",
      "subject": "string",
      "subtotal": "integer",
      "tax": "number",
@@ -2158,15 +2210,14 @@
     ],
     "properties": {
      "_links": "object",
-     "submitTimeUtc": "string",
-     "totalInvoices": "integer",
-     "invoices": "array",
      "id": "string",
      "status": "string",
+     "createdDate": "string",
      "customerInformation": "object",
-     "processingInformation": "object",
      "invoiceInformation": "object",
      "orderInformation": "object",
+     "submitTimeUtc": "string",
+     "processingInformation": "object",
      "merchantDefinedFieldValuesWithDefinition": "array",
      "clientReferenceInformation": "object",
      "merchantDefinedFieldValues": "array",
@@ -2651,10 +2702,17 @@
      "GET collection"
     ],
     "properties": {
-     "NextPage": "string",
-     "Limit": "integer",
-     "TotalRecordCount": "integer",
-     "Data": "array"
+     "InvoiceId": "string",
+     "Number": "string",
+     "Total": "number",
+     "Currency": "string",
+     "Status": "string",
+     "SubscriptionId": "string",
+     "PaidAt": "string",
+     "FinalisedAt": "string",
+     "PdfLink": "string",
+     "HostedUrl": "string",
+     "Overdue": "boolean"
     },
     "evidence": [
      "openapi/_original/flipdish-payments-openapi.json#GET /api/v1.0/{appId}/invoices"
@@ -2705,16 +2763,14 @@
      "PUT item"
     ],
     "properties": {
-     "Invoices": "array",
-     "MetaInformation": "object",
      "DocumentNumber": "string",
      "CustomerNumber": "string",
      "CustomerName": "string",
      "InvoiceDate": "string",
-     "DueDate": "string",
-     "Currency": "string",
      "Total": "number",
      "Balance": "number",
+     "Currency": "string",
+     "DueDate": "string",
      "Booked": "boolean",
      "Cancelled": "boolean",
      "InvoiceRows": "array"
@@ -3161,18 +3217,16 @@
      "POST collection"
     ],
     "properties": {
-     "invoiceShortInfoResponseModel": "array",
-     "pagingModel": "object",
-     "invoiceUid": "string",
-     "tenantUid": "string",
-     "leaseUid": "string",
-     "amount": "number",
-     "item": "string",
-     "dueDate": "string",
      "invoiceNumber": "integer",
+     "invoiceUid": "string",
      "invoiceDueDate": "string",
      "invoiceStatus": "string",
-     "entityType": "string"
+     "amount": "number",
+     "entityType": "string",
+     "tenantUid": "string",
+     "leaseUid": "string",
+     "item": "string",
+     "dueDate": "string"
     },
     "evidence": [
      "openapi/_original/openapi.yml#GET /v1/invoices",
@@ -3567,7 +3621,9 @@
      ],
      "invoice_custom_section": "object",
      "payment_method": "object",
-     "invoice": "object"
+     "id": "string",
+     "key": "string",
+     "value": "string"
     },
     "evidence": [
      "openapi/_original/lago-openapi.yml#DELETE /invoices/{lago_id}",
@@ -3724,9 +3780,6 @@
      "amp_invoice_state": "object",
      "is_blinded": "boolean",
      "blinded_path_config": "object",
-     "invoices": "array",
-     "last_index_offset": "string",
-     "first_index_offset": "string",
      "status": "string"
     },
     "evidence": [
@@ -3790,8 +3843,9 @@
      "dimensions": "object",
      "measures": "object",
      "billDetails": "object",
-     "lineItemTypes": "array",
-     "limit": "integer"
+     "name": "string",
+     "attributes": "array",
+     "filter": "array"
     },
     "evidence": [
      "openapi/_original/m3ter-openapi.json#DELETE /organizations/{orgId}/bills/{id}",
@@ -4059,10 +4113,6 @@
      "PUT item"
     ],
     "properties": {
-     "content": "array",
-     "totalElements": "integer",
-     "totalPages": "integer",
-     "pageable": "object",
      "createdBy": "string",
      "createDate": "string",
      "lastModifiedBy": "string",
@@ -4607,12 +4657,10 @@
      "POST collection"
     ],
     "properties": {
-     "items": "array",
-     "count": "integer",
-     "hasMore": "boolean",
-     "limit": "integer",
-     "offset": "integer",
-     "links": "array"
+     "rel": "string",
+     "href": "string",
+     "name": "string",
+     "kind": "string"
     },
     "evidence": [
      "openapi/_original/oracle-financial-applications-payables-api-openapi.yml#GET /invoices",
@@ -5059,8 +5107,6 @@
      "GET item"
     ],
     "properties": {
-     "content": "array",
-     "page": "object",
      "id": "string",
      "invoiceDate": "string",
      "dueDate": "string",
@@ -5164,8 +5210,86 @@
      "AdditionalData": "object",
      "DocumentsRef": "object",
      "externalPaypointID": "string",
-     "Records": "array",
-     "Summary": "object"
+     "ParentOrgId": "integer",
+     "pageIdentifier": null,
+     "AccountingField1": null,
+     "AccountingField2": null,
+     "BatchNumber": [
+      "string",
+      "null"
+     ],
+     "billApprovals": [
+      "array",
+      "null"
+     ],
+     "BillDate": [
+      "string",
+      "null"
+     ],
+     "BillItems": [
+      "array",
+      "null"
+     ],
+     "BillNumber": [
+      "string",
+      "null"
+     ],
+     "Comments": [
+      "string",
+      "null"
+     ],
+     "CreatedAt": null,
+     "Discount": [
+      "number",
+      "null"
+     ],
+     "DueDate": [
+      "string",
+      "null"
+     ],
+     "EndDate": [
+      "string",
+      "null"
+     ],
+     "EntityID": [
+      "string",
+      "null"
+     ],
+     "Frequency": null,
+     "IdBill": [
+      "integer",
+      "null"
+     ],
+     "LastUpdated": [
+      "string",
+      "null"
+     ],
+     "LotNumber": [
+      "string",
+      "null"
+     ],
+     "Mode": [
+      "integer",
+      "null"
+     ],
+     "NetAmount": [
+      "number",
+      "null"
+     ],
+     "PaymentId": null,
+     "PaymentMethod": null,
+     "Source": [
+      "string",
+      "null"
+     ],
+     "Status": null,
+     "Terms": null,
+     "TotalAmount": [
+      "number",
+      "null"
+     ],
+     "Transaction": null,
+     "Vendor": null
     },
     "evidence": [
      "openapi/_original/payabli-api-reference-openapi.json#DELETE /Invoice/{idInvoice}",
@@ -5342,7 +5466,17 @@
      "count": "integer",
      "errors": "object",
      "warnings": "object",
-     "invoices": "array"
+     "debtor_identifier": "string",
+     "contact_identifier": "string",
+     "payment_condition": "string",
+     "book_amount_total": "string",
+     "book_amount_open": "string",
+     "amount_open": "string",
+     "amount_total": "string",
+     "payment_term": "integer",
+     "document": "object",
+     "ubl_document": "object",
+     "payments": "array"
     },
     "evidence": [
      "openapi/_original/payt-openapi-original.json#GET /v1/invoices",
@@ -5972,8 +6106,6 @@
      "PUT item"
     ],
     "properties": {
-     "invoices": "array",
-     "pagination": "object",
      "id": "string",
      "subsidiary_id": "string",
      "invoice_number": "string",
@@ -6003,7 +6135,6 @@
      "sent_at": "string",
      "bank_account_id": "string",
      "scope": "string",
-     "bills": "array",
      "vendor_id": "string",
      "expense_number": "string",
      "bill_date": "string",
@@ -6293,7 +6424,11 @@
      "balance_due": "number",
      "line_items": "array",
      "created_at": "string",
-     "job_id": "string"
+     "name": "string",
+     "description": "string",
+     "quantity": "number",
+     "unit_price": "number",
+     "taxable": "boolean"
     },
     "evidence": [
      "openapi/_original/servicefusion-openapi.yml#GET /invoices",
@@ -6374,11 +6509,11 @@
      "type": "string",
      "updated_at": "string",
      "vat_amount": "object",
-     "fattura_elettronica_body": "array",
-     "fattura_elettronica_header": "object",
-     "namespace": "string",
-     "sistema_emittente": "string",
-     "versione": "string",
+     "allegati": "array",
+     "dati_beni_servizi": "object",
+     "dati_generali": "object",
+     "dati_pagamento": "array",
+     "dati_veicoli": "object",
      "invoice": "object",
      "xml_url": "string"
     },
@@ -6783,7 +6918,10 @@
      "invoice": "object",
      "idempotency_key": "string",
      "fields_to_clear": "array",
-     "errors": "array"
+     "category": "string",
+     "code": "string",
+     "detail": "string",
+     "field": "string"
     },
     "evidence": [
      "openapi/_original/square-openapi.yml#DELETE /v2/invoices/{invoice_id}",
@@ -7214,8 +7352,8 @@
      "shipping": null,
      "shippingAmount": "number",
      "templateResourceId": "string",
-     "failed": "array",
-     "updated": "array",
+     "error": "string",
+     "errorCode": "string",
      "attributes": null,
      "resourceIds": "array",
      "bill": null,
@@ -7284,6 +7422,10 @@
      "lineItems": "array",
      "applyCredits": "boolean",
      "applyWalletBalance": "boolean",
+     "description": "string",
+     "valuePerQuantity": "number",
+     "quantity": "number",
+     "value": "number",
      "success": "boolean"
     },
     "evidence": [
@@ -7801,8 +7943,6 @@
      "POST collection"
     ],
     "properties": {
-     "invoices": "array",
-     "totalCount": "integer",
      "id": "string",
      "status": "string",
      "invoiceUrl": "string",
@@ -7948,8 +8088,6 @@
      "PUT item"
     ],
     "properties": {
-     "rows": "array",
-     "total": "integer",
      "_id": "string",
      "type": "string",
      "sellerId": "string",
@@ -7960,6 +8098,7 @@
      "no": "string",
      "items": "array",
      "components": "array",
+     "total": "number",
      "discountSum": "number",
      "detailsPerRate": "array",
      "taxItems": "array",
@@ -8528,9 +8667,6 @@
      "POST collection"
     ],
     "properties": {
-     "invoices": "array",
-     "itemsPerPage": "number",
-     "nextCursor": "string",
      "country": "string",
      "created": "string",
      "currency": "string",
@@ -8621,9 +8757,7 @@
      "PUT item"
     ],
     "properties": {
-     "invoices": "array",
      "success": "boolean",
-     "useSingleTransaction": "boolean",
      "accountId": "string",
      "adjustmentAmount": "string",
      "amount": "string",
@@ -8693,6 +8827,33 @@
      "postedById": "string",
      "postedOn": "string",
      "totalTaxExemptAmount": "number",
+     "accountingCode": "string",
+     "adjustmentLiabilityAccountingCode": "string",
+     "adjustmentRevenueAccountingCode": "string",
+     "chargeDate": "string",
+     "chargeName": "string",
+     "contractAssetAccountingCode": "string",
+     "contractLiabilityAccountingCode": "string",
+     "contractRecognizedRevenueAccountingCode": "string",
+     "deferredRevenueAccountingCode": "string",
+     "description": "string",
+     "discountItems": "array",
+     "excludeItemBillingFromRevenueAccounting": "boolean",
+     "itemType": "string",
+     "purchaseOrderNumber": "string",
+     "quantity": "string",
+     "recognizedRevenueAccountingCode": "string",
+     "revRecCode": "string",
+     "revRecTriggerCondition": "string",
+     "revenueRecognitionRuleName": "string",
+     "serviceEndDate": "string",
+     "serviceStartDate": "string",
+     "sku": "string",
+     "taxCode": "string",
+     "taxMode": "string",
+     "unbilledReceivablesAccountingCode": "string",
+     "unitPrice": "string",
+     "uom": "string",
      "jobId": "string",
      "jobStatus": "string"
     },
@@ -8955,8 +9116,38 @@
      "GET collection"
     ],
     "properties": {
-     "content": "array",
-     "page": "object"
+     "id": "string",
+     "purchaseOrderNumber": "string",
+     "type": "string",
+     "companyId": "string",
+     "externalId": "string",
+     "companyName": "string",
+     "startPeriod": "string",
+     "endPeriod": "string",
+     "quantity": "number",
+     "unitOfMeasure": "string",
+     "term": "string",
+     "sku": "string",
+     "description": "string",
+     "details": "string",
+     "rateType": "string",
+     "chargeType": "string",
+     "price": "number",
+     "subTotal": "number",
+     "cost": "number",
+     "costTotal": "number",
+     "offeredBy": "string",
+     "billedByPax8": "boolean",
+     "total": "number",
+     "productId": "string",
+     "productName": "string",
+     "billingFee": "number",
+     "billingFeeRate": "number",
+     "amountDue": "number",
+     "currencyCode": "string",
+     "salesTax": "number",
+     "subscriptionId": "string",
+     "vendorName": "string"
     },
     "evidence": [
      "openapi/_original/pax8-partner-endpoints-openapi.json#GET /invoices/{invoiceId}/items"
@@ -9285,8 +9476,9 @@
      "POST collection"
     ],
     "properties": {
-     "failed": "array",
-     "updated": "array",
+     "error": "string",
+     "errorCode": "string",
+     "resourceId": "string",
      "attributes": null,
      "lineItemResourceIds": "array"
     },
@@ -9449,9 +9641,58 @@
      "GET collection"
     ],
     "properties": {
-     "invoiceItems": "array",
-     "nextPage": "string",
-     "success": "boolean"
+     "accountingCode": "string",
+     "adjustmentLiabilityAccountingCode": "string",
+     "adjustmentRevenueAccountingCode": "string",
+     "appliedToItemId": "string",
+     "availableToCreditAmount": "number",
+     "balance": "string",
+     "bookingReference": "string",
+     "chargeAmount": "string",
+     "chargeDate": "string",
+     "chargeDescription": "string",
+     "chargeId": "string",
+     "chargeName": "string",
+     "chargeType": "string",
+     "contractAssetAccountingCode": "string",
+     "contractLiabilityAccountingCode": "string",
+     "contractRecognizedRevenueAccountingCode": "string",
+     "deferredRevenueAccountingCode": "string",
+     "description": "string",
+     "excludeItemBillingFromRevenueAccounting": "boolean",
+     "id": "string",
+     "invoiceScheduleId": "string",
+     "invoiceScheduleItemId": "string",
+     "itemType": "string",
+     "numberOfDeliveries": null,
+     "processingType": "string",
+     "productName": "string",
+     "productRatePlanChargeId": "string",
+     "purchaseOrderNumber": "string",
+     "quantity": "string",
+     "recognizedRevenueAccountingCode": "string",
+     "revRecCode": "string",
+     "revRecTriggerCondition": "string",
+     "revenueRecognitionRuleName": "string",
+     "serviceEndDate": "string",
+     "serviceStartDate": "string",
+     "sku": "string",
+     "soldToContactId": "string",
+     "soldToContactSnapshotId": "string",
+     "sourceItemType": "string",
+     "subscriptionId": "string",
+     "subscriptionName": "string",
+     "success": "boolean",
+     "taxAmount": "string",
+     "taxCode": "string",
+     "taxMode": "string",
+     "taxationItems": "object",
+     "unbilledReceivablesAccountingCode": "string",
+     "unitOfMeasure": "string",
+     "unitPrice": "number",
+     "IntegrationId__NS": "string",
+     "IntegrationStatus__NS": "string",
+     "SyncDate__NS": "string"
     },
     "evidence": [
      "openapi/_original/zuora-v1-openapi.yml#GET /v1/invoices/{invoiceKey}/items"
@@ -9620,7 +9861,10 @@
      "links": "object",
      "extra": "object",
      "errors": "object",
-     "status": "object"
+     "status": "object",
+     "Description": "string",
+     "IsDeleted": "boolean",
+     "GUID": "string"
     },
     "evidence": [
      "openapi/_original/amcs-group-erp-openapi-original.json#GET /lists/subscriptions",
@@ -9726,16 +9970,14 @@
      "PUT item"
     ],
     "properties": {
-     "page": "object",
-     "content": "array",
      "id": "string",
-     "createdOn": "number",
-     "activeOrder": null,
+     "activeOrder": "object",
      "company": "object",
      "user": "object",
      "applicationName": "string",
      "pendingEventType": "string",
      "status": "string",
+     "createdOn": "number",
      "referenceCode": "string",
      "targetCompanyId": "string",
      "targetUserId": "string",
@@ -10143,7 +10385,10 @@
      "signature_key": "string",
      "updated_at": "string",
      "subscription": "object",
-     "errors": "array"
+     "category": "string",
+     "code": "string",
+     "detail": "string",
+     "field": "string"
     },
     "evidence": [
      "openapi/_original/block-openapi.json#DELETE /v2/webhooks/subscriptions/{subscription_id}",
@@ -10165,8 +10410,6 @@
      "GET item"
     ],
     "properties": {
-     "subscriptions": "array",
-     "pagination": "object",
      "id": "string",
      "created_at": "string",
      "updated_at": "string",
@@ -10272,11 +10515,13 @@
      "GET collection"
     ],
     "properties": {
-     "subscription_type": "string",
-     "period": "string",
-     "categories": "object",
-     "merchant": "object",
-     "transactions": "array"
+     "transaction_id": "string",
+     "account_id": "string",
+     "transaction_description": "string",
+     "provider": "string",
+     "date": "string",
+     "amount": "object",
+     "credit_debit_indicator": "string"
     },
     "evidence": [
      "openapi/_original/bud-platform-openapi.yml#GET /v1/subscriptions"
@@ -10394,19 +10639,112 @@
      "POST item"
     ],
     "properties": {
-     "list": "array",
-     "next_offset": "string",
      "subscription": "object",
      "customer": "object",
      "card": "object",
+     "id": "string",
+     "customer_id": "string",
+     "subscription_id": "string",
+     "date_from": "integer",
+     "date_to": "integer",
+     "unit_amount": "integer",
+     "pricing_model": "string",
+     "quantity": "integer",
+     "amount": "integer",
+     "currency_code": "string",
+     "discount_amount": "integer",
+     "description": "string",
+     "entity_type": "string",
+     "entity_id": "string",
+     "is_voided": "boolean",
+     "voided_at": "integer",
+     "unit_amount_in_decimal": "string",
+     "quantity_in_decimal": "string",
+     "amount_in_decimal": "string",
+     "created_at": "integer",
+     "updated_at": "integer",
+     "is_advance_charge": "boolean",
+     "business_entity_id": "string",
+     "deleted": "boolean",
+     "tiers": "array",
+     "billing_period": "integer",
+     "billing_period_unit": "string",
+     "start_date": "integer",
+     "trial_end": "integer",
+     "remaining_billing_cycles": "integer",
+     "po_number": "string",
+     "auto_collection": "string",
+     "plan_quantity_in_decimal": "string",
+     "plan_unit_price_in_decimal": "string",
+     "status": "string",
+     "trial_start": "integer",
+     "trial_end_action": "string",
+     "current_term_start": "integer",
+     "current_term_end": "integer",
+     "next_billing_at": "integer",
+     "started_at": "integer",
+     "activated_at": "integer",
+     "contract_term_billing_cycle_on_renewal": "integer",
+     "override_relationship": "boolean",
+     "pause_date": "integer",
+     "resume_date": "integer",
+     "cancelled_at": "integer",
+     "cancel_reason": "string",
+     "created_from_ip": "string",
+     "resource_version": "integer",
+     "has_scheduled_advance_invoices": "boolean",
+     "has_scheduled_changes": "boolean",
+     "payment_source_id": "string",
+     "plan_free_quantity_in_decimal": "string",
+     "plan_amount_in_decimal": "string",
+     "cancel_schedule_created_at": "integer",
+     "offline_payment_method": "string",
+     "channel": "string",
+     "net_term_days": "integer",
+     "active_id": "string",
+     "due_invoices_count": "integer",
+     "due_since": "integer",
+     "total_dues": "integer",
+     "mrr": "integer",
+     "arr": "integer",
+     "exchange_rate": "number",
+     "base_currency_code": "string",
+     "coupon": "string",
+     "invoice_notes": "string",
+     "meta_data": "object",
+     "changes_scheduled_at": "integer",
+     "cancel_reason_code": "string",
+     "free_period": "integer",
+     "free_period_unit": "string",
+     "create_pending_invoices": "boolean",
+     "auto_close_invoices": "boolean",
+     "decommissioned": "boolean",
+     "brand_id": "string",
+     "subscription_items": "array",
+     "item_tiers": "array",
+     "charged_items": "array",
+     "coupons": "array",
+     "shipping_address": "object",
+     "referral_info": "object",
+     "billing_override": "object",
+     "contract_term": "object",
+     "discounts": "array",
+     "setup_fee": "integer",
+     "plan_free_quantity": "integer",
+     "charged_event_based_addons": "array",
+     "event_based_addons": "array",
+     "addons": "array",
+     "gift_id": "string",
+     "plan_quantity": "integer",
+     "affiliate_token": "string",
+     "plan_amount": "integer",
+     "plan_id": "string",
+     "plan_unit_price": "integer",
      "invoice": "object",
      "unbilled_charges": "array",
      "credit_notes": "array",
-     "id": "string",
      "operation_type": "string",
      "mime_type": "string",
-     "status": "string",
-     "created_at": "integer",
      "download": "object"
     },
     "evidence": [
@@ -10492,11 +10830,11 @@
      "branchIdentification": "string",
      "fromAmount": "string",
      "toAmount": "string",
-     "subscriptionId": "string",
-     "eventType": "string",
-     "subscriptionName": "string",
-     "active": "boolean",
-     "subscription": "array"
+     "operator": "string",
+     "fieldName": "string",
+     "fieldOperator": "string",
+     "expectedContent": "object",
+     "children": "array"
     },
     "evidence": [
      "openapi/_original/account-notifications-api.yaml#POST /v1/crdr/subscription",
@@ -10545,8 +10883,19 @@
      "POST collection"
     ],
     "properties": {
-     "count": "integer",
-     "unsubscribedEmails": "array",
+     "id": "integer",
+     "sender": "string",
+     "recipient": "string",
+     "createdAt": "string",
+     "modifiedAt": "string",
+     "reason": "string",
+     "emailType": "integer",
+     "unsubscribeType": "integer",
+     "logicalAccount": "string",
+     "domain": "string",
+     "failureCount": "integer",
+     "expirationDate": "string",
+     "messageRequestId": "string",
      "logTimeRangeType": "integer",
      "unsubscribeTypes": "string",
      "startDate": "string",
@@ -10841,17 +11190,15 @@
     ],
     "properties": {
      "_links": "object",
-     "submitTimeUtc": "string",
-     "totalCount": "integer",
-     "subscriptions": "array",
      "id": "string",
-     "status": "string",
+     "planInformation": "object",
      "subscriptionInformation": "object",
      "clientReferenceInformation": "object",
-     "processingInformation": "object",
-     "planInformation": "object",
      "paymentInformation": "object",
      "orderInformation": "object",
+     "submitTimeUtc": "string",
+     "status": "string",
+     "processingInformation": "object",
      "reactivationInformation": "object"
     },
     "evidence": [
@@ -11152,10 +11499,14 @@
      "DefaultPaymentDescription": "string",
      "CancellationRequestDate": "string",
      "CancellationDate": "string",
-     "Page": "integer",
-     "Limit": "integer",
-     "TotalRecordCount": "integer",
-     "Data": "array"
+     "Id": "integer",
+     "OwnerUserId": "integer",
+     "Version": "string",
+     "EventNames": "array",
+     "CallbackUrl": "string",
+     "Enabled": "boolean",
+     "VerifyToken": "string",
+     "Data": "integer"
     },
     "evidence": [
      "openapi/_original/flipdish-payments-openapi.json#GET /api/v1.0/{appId}/subscriptions",
@@ -11322,8 +11673,6 @@
      "POST collection"
     ],
     "properties": {
-     "subscriptions": "array",
-     "next_page_token": "string",
      "id": "string",
      "quantity": "integer",
      "active": "boolean",
@@ -11362,9 +11711,6 @@
      "number_of_cycles": "integer",
      "subscription_plan_index": "integer",
      "url": "string",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
      "credit_card_id": "integer",
      "payment_gateway_id": "integer",
      "use_default_payment_gateway": "boolean",
@@ -11588,10 +11934,6 @@
      "POST collection"
     ],
     "properties": {
-     "subscriptions": "array",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
      "id": "integer",
      "quantity": "integer",
      "active": "boolean",
@@ -11619,7 +11961,6 @@
      "subscription_plan_name": "string",
      "number_of_cycles": "integer",
      "subscription_plan_index": "integer",
-     "next_page_token": "string",
      "last_bill_date": "string",
      "merchant_account_id": "string",
      "payment_method_id": "string",
@@ -11841,9 +12182,17 @@
      "GET item"
     ],
     "properties": {
-     "application_id": "string",
-     "application_name": "string",
-     "partner_subscription_info": "array"
+     "charge_interval": "integer",
+     "charge_interval_unit": "string",
+     "components": "array",
+     "currency": "string",
+     "id": "string",
+     "next_assessment_at": "string",
+     "price_in_cents": "string",
+     "product_family_name": "string",
+     "product_name": "string",
+     "product_price_point_name": "string",
+     "state": "string"
     },
     "evidence": [
      "openapi/_original/lightspeed-x-series-openapi.json#GET /partner/billing/subscriptions",
@@ -11890,11 +12239,13 @@
      "customer": "object",
      "account": "object",
      "id": "string",
-     "name": "string",
-     "subjectType": "string",
-     "subscriberId": "string",
-     "active": "boolean",
-     "specifications": "array"
+     "type": "string",
+     "operator": "string",
+     "fieldMapping": null,
+     "fieldOperator": "string",
+     "expectedContent": "object",
+     "children": "array",
+     "fieldMappingName": "string"
     },
     "evidence": [
      "openapi/_original/mastercard-automatic-billing-updater-api-openapi.yml#POST /subscriptions",
@@ -12148,10 +12499,6 @@
      "GET item"
     ],
     "properties": {
-     "content": "array",
-     "totalElements": "integer",
-     "totalPages": "integer",
-     "pageable": "object",
      "createdBy": "string",
      "createDate": "string",
      "lastModifiedBy": "string",
@@ -12205,9 +12552,7 @@
      "eventName": "string",
      "webHookDetail": "object",
      "isActive": "boolean",
-     "status": "string",
-     "statusDescription": "string",
-     "subscriptionDetails": "array",
+     "notificationType": "string",
      "errors": "string"
     },
     "evidence": [
@@ -12789,8 +13134,6 @@
      "PUT item"
     ],
     "properties": {
-     "content": "array",
-     "page": "object",
      "id": "string",
      "parentSubscriptionId": "string",
      "companyId": "string",
@@ -12879,9 +13222,7 @@
      "customerId": "integer",
      "paymentDetails": "object",
      "scheduleDetails": "object",
-     "setPause": "boolean",
-     "Records": "array",
-     "Summary": "object"
+     "setPause": "boolean"
     },
     "evidence": [
      "openapi/_original/payabli-api-reference-openapi.json#DELETE /Subscription/{subId}",
@@ -13134,11 +13475,6 @@
      "POST collection"
     ],
     "properties": {
-     "page": "integer",
-     "size": "integer",
-     "totalPages": "integer",
-     "totalElements": "integer",
-     "content": "array",
      "id": "string",
      "displayId": "string",
      "description": "string",
@@ -13349,8 +13685,6 @@
      "POST collection"
     ],
     "properties": {
-     "next_page_token": "string",
-     "subscriptions": "array",
      "id": "string",
      "external_reference": "string",
      "state": "string",
@@ -13384,8 +13718,13 @@
      "GET collection"
     ],
     "properties": {
-     "body": "array",
-     "pagination": "object"
+     "id": "string",
+     "subscriptionNumber": "string",
+     "sku": "string",
+     "quantity": "integer",
+     "startDate": "string",
+     "endDate": "string",
+     "status": "string"
     },
     "evidence": [
      "openapi/_original/rhel-subscription-management-openapi.yml#GET /subscriptions"
@@ -13402,8 +13741,6 @@
      "POST collection"
     ],
     "properties": {
-     "filter": "object",
-     "subscriptions": "array",
      "id": "string",
      "webhookId": "string",
      "createdBy": "string",
@@ -13792,7 +14129,10 @@
      "signature_key": "string",
      "updated_at": "string",
      "subscription": "object",
-     "errors": "array"
+     "category": "string",
+     "code": "string",
+     "detail": "string",
+     "field": "string"
     },
     "evidence": [
      "openapi/_original/square-openapi.yml#DELETE /v2/webhooks/subscriptions/{subscription_id}",
@@ -14104,8 +14444,40 @@
      "GET collection"
     ],
     "properties": {
-     "pageInfo": "object",
-     "subscriptions": "array"
+     "amount": "number",
+     "cellCode": "string",
+     "currency": "string",
+     "cutoffDatetime": "string",
+     "entityCode": "string",
+     "holdingUid": [
+      "string",
+      "null"
+     ],
+     "indicationUid": [
+      "string",
+      "null"
+     ],
+     "maturityAction": "string",
+     "maturityDate": "string",
+     "obligorExposureCode": "string",
+     "obligorExposureName": "string",
+     "productCode": "string",
+     "releaserEmail": [
+      "string",
+      "null"
+     ],
+     "signerEmail": [
+      "string",
+      "null"
+     ],
+     "source": "string",
+     "status": "string",
+     "subscriptionDate": "string",
+     "uid": "string",
+     "yield": [
+      "number",
+      "null"
+     ]
     },
     "evidence": [
      "openapi/_original/treasuryspring-openapi-original.json#GET /subscription"
@@ -14255,8 +14627,6 @@
      "PUT item"
     ],
     "properties": {
-     "docs": "array",
-     "total": "integer",
      "_id": "string",
      "sellerId": "string",
      "status": "string",
@@ -14371,9 +14741,11 @@
     ],
     "properties": {
      "subscriptionIdentifier": "object",
-     "cardContractReference": "string",
-     "customerInfo": "object",
-     "services": "array"
+     "contacts": "array",
+     "events": "array",
+     "packet": "string",
+     "serviceType": "string",
+     "subscriptionServiceIdentifier": "object"
     },
     "evidence": [
      "openapi/_original/worldline-card-issuing-api-2.41.1.json#DELETE /issuers/{issuerId}/subscriptions/{subscriptionReference}",
@@ -14417,8 +14789,24 @@
      "processId": "string",
      "reasons": "array",
      "success": "boolean",
-     "nextPage": "string",
-     "orders": "array",
+     "category": "string",
+     "createdBy": "string",
+     "createdDate": "string",
+     "currency": "string",
+     "customFields": "object",
+     "description": "string",
+     "existingAccountNumber": "string",
+     "invoiceScheduleId": "integer",
+     "orderDate": "string",
+     "orderLineItems": "array",
+     "orderNumber": "string",
+     "organizationLabel": "string",
+     "reasonCode": "string",
+     "schedulingOptions": "object",
+     "status": "string",
+     "subscriptions": "array",
+     "updatedBy": "string",
+     "updatedDate": "string",
      "contractedMrr": "number",
      "creditMemoId": "string",
      "invoiceId": "string",
@@ -14475,27 +14863,22 @@
      "accountNumber": "string",
      "billToContact": null,
      "cancelReason": "string",
-     "currency": "string",
      "currentTerm": "integer",
      "currentTermPeriodType": "string",
      "id": "string",
      "invoiceOwnerAccountId": "string",
      "invoiceOwnerAccountName": "string",
      "invoiceOwnerAccountNumber": "string",
-     "invoiceScheduleId": "integer",
      "invoiceTemplateId": "string",
      "invoiceTemplateName": "string",
      "isLatestVersion": "boolean",
      "offers": "array",
-     "orderNumber": "string",
-     "organizationLabel": "string",
      "paymentTerm": "string",
      "ratePlans": "array",
      "revision": "string",
      "sequenceSetId": "string",
      "sequenceSetName": "string",
      "soldToContact": null,
-     "status": "string",
      "statusHistory": "array",
      "subscriptionEndDate": "string",
      "subscriptionStartDate": "string",
@@ -14547,8 +14930,7 @@
      "price": "number",
      "metas": "array",
      "labels": "array",
-     "stock_status": "integer",
-     "menus_products": "object"
+     "stock_status": "integer"
     },
     "evidence": [
      "openapi/_original/2ndkitchen-restaurantservice.yaml#GET /menus/products",
@@ -14828,10 +15210,10 @@
      "POST collection"
     ],
     "properties": {
+     "step": "integer",
+     "action": "string",
+     "description": "string",
      "goal": "string",
-     "steps": "array",
-     "estimated_complexity": "string",
-     "timestamp": "string",
      "constraints": "object"
     },
     "evidence": [
@@ -15135,8 +15517,12 @@
      "totalAvailable": "integer",
      "totalSold": "integer",
      "username": "string",
-     "gates": "array",
-     "product": "object"
+     "description": "string",
+     "filters": "array",
+     "image": "string",
+     "isActive": "boolean",
+     "isPublished": "boolean",
+     "name": "string"
     },
     "evidence": [
      "openapi/_original/bitski-nft-service-openapi-original.json#GET /v1/products",
@@ -15272,9 +15658,30 @@
      "GET collection"
     ],
     "properties": {
-     "success": "boolean",
-     "errorMessage": "string",
-     "response": "array"
+     "id": "integer",
+     "code": "string",
+     "description": "string",
+     "isApproved": "boolean",
+     "decimals": "integer",
+     "isIncomingMarketOpen": "boolean",
+     "isOutgoingMarketOpen": "boolean",
+     "standardQuoteLimitAmount": "number",
+     "preTicketQuoteLimitAmount": "number",
+     "allowsNonStopTrading": "boolean",
+     "incomingStartTime": "string",
+     "incomingEndTime": "string",
+     "outgoingStartTime": "string",
+     "outgoingEndTime": "string",
+     "allowsSameDayDisbursement": "boolean",
+     "sameDayIncomingLimitTime": "string",
+     "sameDayOutgoingLimitTime": "string",
+     "appIconUrl": "string",
+     "symbol": "string",
+     "locale": "string",
+     "openingHours": "string",
+     "incomingDisbursementHours": "string",
+     "outgoingDisbursementHours": "string",
+     "disbursementInstructions": "string"
     },
     "evidence": [
      "openapi/_original/btg-pactual-hubfx-cambio-openapi.yml#GET /{companyTaxId}/cambio/agent/v3/currency/product"
@@ -15515,8 +15922,6 @@
      "POST item"
     ],
     "properties": {
-     "list": "array",
-     "next_offset": "string",
      "id": "string",
      "name": "string",
      "invoice_name": "string",
@@ -15945,8 +16350,13 @@
      "GET collection"
     ],
     "properties": {
-     "products": "array",
-     "pagination": "object"
+     "id": "string",
+     "base_currency": "string",
+     "quote_currency": "string",
+     "base_min_quantity": "string",
+     "base_max_quantity": "string",
+     "base_quantity_increment": "string",
+     "quote_increment": "string"
     },
     "evidence": [
      "openapi/_original/coinbase-prime-openapi.yml#GET /portfolios/{portfolio_id}/products"
@@ -16338,17 +16748,17 @@
     ],
     "properties": {
      "_links": "object",
-     "submitTimeUtc": "string",
-     "totalCount": "integer",
-     "plans": "array",
      "id": "string",
-     "status": "string",
      "planInformation": "object",
      "orderInformation": "object",
+     "submitTimeUtc": "string",
+     "status": "string",
      "processingInformation": "object",
-     "productId": "string",
-     "productName": "string",
-     "eventTypes": "array"
+     "eventName": "string",
+     "displayName": "string",
+     "frequency": "integer",
+     "timeSensitivity": "boolean",
+     "payloadEncryption": "boolean"
     },
     "evidence": [
      "openapi/_original/openapi.json#DELETE /rbs/v1/plans/{id}",
@@ -16425,8 +16835,10 @@
      "sku": "string",
      "productCategoryId": "string",
      "productCategory": "object",
-     "info": "object",
-     "products": "array"
+     "type": "string",
+     "price": "object",
+     "attributes": "array",
+     "bundle_items": "array"
     },
     "evidence": [
      "openapi/_original/dealhub-subskribe-api-openapi.json#DELETE /plans/{planId}",
@@ -16642,8 +17054,11 @@
      "allProducts": "array",
      "eciProducts": "array",
      "id": "integer",
-     "displayname": "string",
-     "integrations": "array"
+     "introductionText": "string",
+     "allowHostedConfigurations": "boolean",
+     "isPublished": "boolean",
+     "masterKeys": "array",
+     "system": "array"
     },
     "evidence": [
      "openapi/_original/eci-solutions-ecommerce-openapi.json#DELETE /api/v1/products/{productId}",
@@ -16890,11 +17305,7 @@
      "Description": "string",
      "Price": "number",
      "ImageFileName": "string",
-     "Alcohol": "boolean",
-     "Page": "integer",
-     "Limit": "integer",
-     "TotalRecordCount": "integer",
-     "Data": "array"
+     "Alcohol": "boolean"
     },
     "evidence": [
      "openapi/_original/flipdish-catalog-openapi.json#GET /api/v1.0/{appId}/catalog/products",
@@ -17407,8 +17818,6 @@
      "POST collection"
     ],
     "properties": {
-     "products": "array",
-     "next_page_token": "string",
      "id": "string",
      "name": "string",
      "price": "object",
@@ -17436,7 +17845,6 @@
      "delivery_description": "string",
      "create_time": "string",
      "update_time": "string",
-     "discounts": "array",
      "criteria": "array",
      "apply_to_commissions": "boolean",
      "product_id": "string",
@@ -17445,14 +17853,12 @@
      "inventory_limit": "integer",
      "out_of_stock_enabled": "boolean",
      "email_for_inventory_notifications": "string",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
-     "sync_token": "string",
      "product_desc": "string",
      "product_name": "string",
+     "product_options": "array",
      "product_price": "number",
      "product_short_desc": "string",
+     "status": "integer",
      "url": "string"
     },
     "evidence": [
@@ -17492,16 +17898,22 @@
      "metadata": "object",
      "syncedAt": "string",
      "idempotencyKey": "string",
-     "product": "object",
-     "prices": "array",
+     "priceId": "string",
+     "currency": "string",
+     "unitAmount": "integer",
+     "unitAmountDecimal": "string",
+     "type": "string",
+     "lookupKey": "string",
+     "billingScheme": "string",
+     "taxBehavior": "string",
+     "recurringInterval": "string",
+     "recurringIntervalCount": "integer",
      "deleted": "boolean",
      "planId": "string",
      "itemId": "string",
      "period": "string",
      "interval": "integer",
      "amount": "integer",
-     "unitAmount": "integer",
-     "currency": "string",
      "notes": "object",
      "providerCreatedAt": "string",
      "item": "object"
@@ -17634,22 +18046,18 @@
      "POST collection"
     ],
     "properties": {
-     "products": "array",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
-     "sync_token": "string",
      "id": "integer",
      "sku": "string",
-     "active": "boolean",
      "url": "string",
+     "status": "integer",
      "product_name": "string",
      "product_desc": "string",
      "product_price": "number",
      "product_short_desc": "string",
      "subscription_only": "boolean",
+     "product_options": "array",
      "subscription_plans": "array",
-     "next_page_token": "string",
+     "active": "boolean",
      "name": "string",
      "price": "object",
      "description": "string",
@@ -17672,7 +18080,6 @@
      "delivery_description": "string",
      "create_time": "string",
      "update_time": "string",
-     "discounts": "array",
      "criteria": "array",
      "apply_to_commissions": "boolean",
      "product_id": "string",
@@ -18269,8 +18676,14 @@
      "GET collection"
     ],
     "properties": {
-     "nextPage": "string",
-     "products": "array"
+     "centralProductId": "string",
+     "latestPrice": "number",
+     "reportByUnit": "string",
+     "taxExempt": "boolean",
+     "companyConceptProductId": "string",
+     "categories": "array",
+     "productName": "string",
+     "itemCount": "number"
     },
     "evidence": [
      "openapi/_original/marginedge-openapi.yml#GET /products"
@@ -18534,11 +18947,24 @@
      "POST collection"
     ],
     "properties": {
-     "installmentPlans": "array",
-     "paymentMethod": "object",
+     "planId": "string",
+     "planIdReference": "string",
+     "planName": "string",
+     "planType": "string",
+     "installmentCount": "integer",
+     "installmentFrequency": "string",
+     "planTermsAndConditions": "array",
+     "installmentPromotionCode": "string",
+     "installmentPromotionId": "string",
+     "firstInstallment": "object",
+     "lastInstallment": "object",
+     "annualPercentageRate": "number",
+     "installmentTotalFee": "object",
+     "totalPlanCost": "object",
      "idempotencyKey": "string",
      "orderId": "string",
-     "amount": "object"
+     "amount": "object",
+     "paymentMethod": null
     },
     "evidence": [
      "openapi/_original/moneris-unified-api-openapi.json#POST /installments/plans"
@@ -18555,10 +18981,6 @@
      "PUT item"
     ],
     "properties": {
-     "content": "array",
-     "totalElements": "integer",
-     "totalPages": "integer",
-     "pageable": "object",
      "createdBy": "string",
      "createDate": "string",
      "lastModifiedBy": "string",
@@ -18733,8 +19155,33 @@
      "music": "object",
      "stream": "object",
      "others": "object",
-     "pagination": "object",
-     "productDetails": "array"
+     "id": "string",
+     "href": "string",
+     "description": "string",
+     "isBundle": "boolean",
+     "isCustomerVisible": "boolean",
+     "name": "string",
+     "orderDate": "string",
+     "productSerialNumber": "string",
+     "startDate": "string",
+     "terminationDate": "string",
+     "agreement": "array",
+     "billingAccount": "object",
+     "place": "array",
+     "productCharacteristic": "array",
+     "productOffering": "object",
+     "productOrderItem": "array",
+     "productPrice": "array",
+     "productRelationship": "array",
+     "productSpecification": "object",
+     "productTerm": "array",
+     "realizingResource": "array",
+     "realizingService": "array",
+     "relatedParty": "array",
+     "status": "string",
+     "@baseType": "string",
+     "@schemaLocation": "string",
+     "@type": "string"
     },
     "evidence": [
      "openapi/_original/mtn-group-mtn-customer-plans-api-v2.yml#GET /customers/{customerId}/plans",
@@ -18861,11 +19308,9 @@
      "POST collection"
     ],
     "properties": {
-     "id": "string",
      "key": "string",
      "name": "string",
-     "currency": "string",
-     "phases": "array"
+     "rateCards": "array"
     },
     "evidence": [
      "openapi/_original/openmeter-openapi.yml#GET /api/v1/plans",
@@ -18924,6 +19369,12 @@
      "net_terms": "integer",
      "prices": "array",
      "created_at": "string",
+     "item_id": "string",
+     "cadence": "string",
+     "model_type": "string",
+     "billable_metric_id": "string",
+     "unit_config": "object",
+     "external_price_id": "string",
      "metadata": "object"
     },
     "evidence": [
@@ -19120,13 +19571,23 @@
      "syncAddress": "boolean",
      "planState": "string",
      "planCustodialAccountNumber": "string",
-     "details": "array",
+     "productCategoryId": "integer",
+     "categoryName": "string",
+     "weight": "number",
+     "productClassId": "integer",
+     "className": "string",
      "assetClassDescription": "string",
      "productCategoryName": "string",
      "aum": "number",
      "advAssetCategoryId": "integer",
      "advAssetCategory": "string",
      "additionalColumns": "array",
+     "productPropertyTypeWeightedId": "integer",
+     "propertyTypeId": "integer",
+     "propertyTypeName": "string",
+     "productRegionWeightedId": "integer",
+     "regionId": "integer",
+     "regionName": "string",
      "securityClassId": "integer",
      "securityClassificationMethodId": "integer",
      "classificationWeight": "number",
@@ -19314,11 +19775,23 @@
      "GET collection"
     ],
     "properties": {
-     "content": "array",
-     "pageNo": "integer",
-     "pageSize": "integer",
-     "totalElements": "integer",
-     "totalPages": "integer"
+     "organizationId": "string",
+     "registrationDate": "string",
+     "status": "string",
+     "model": "string",
+     "productGroup": "string",
+     "category": "string",
+     "brand": "string",
+     "eprelCode": "string",
+     "gtinCode": "string",
+     "productCode": "string",
+     "energyClass": "string",
+     "countryOfProduction": "string",
+     "batchName": "string",
+     "linkEprel": "string",
+     "capacity": "string",
+     "productName": "string",
+     "motivation": "string"
     },
     "evidence": [
      "openapi/_original/pagopa-pari-ecommerce-openapi.yml#GET /initiatives/{initiativeId}/products",
@@ -19407,7 +19880,29 @@
       "number",
       "null"
      ],
-     "attributes": "array"
+     "attributes": "array",
+     "creditsCurrencyId": "string",
+     "amount": "number",
+     "recipient": "string",
+     "isInfiniteTotal": "boolean",
+     "allocationCadence": "string",
+     "creditGrantTiming": "string",
+     "overageUnitPrice": [
+      "number",
+      "null"
+     ],
+     "rolloverAmount": [
+      "number",
+      "null"
+     ],
+     "rolloverDuration": [
+      "number",
+      "null"
+     ],
+     "rolloverDurationUnit": [
+      "string",
+      "null"
+     ]
     },
     "evidence": [
      "openapi/_original/paid-v1.json#DELETE /products/{productId}",
@@ -19490,17 +19985,15 @@
      "GET item"
     ],
     "properties": {
-     "content": "array",
-     "page": "object",
      "id": "string",
      "name": "string",
      "vendorName": "string",
      "shortDescription": "string",
-     "description": "string",
      "sku": "string",
      "vendorSku": "string",
      "altVendorSku": "string",
-     "requiresCommitment": "boolean"
+     "requiresCommitment": "boolean",
+     "description": "string"
     },
     "evidence": [
      "openapi/_original/pax8-partner-endpoints-openapi.json#GET /products",
@@ -19770,7 +20263,12 @@
      "organization_id": "string",
      "prices": "array",
      "benefits": "array",
-     "metadata": "object"
+     "metadata": "object",
+     "amount_type": "string",
+     "price_amount": "integer",
+     "price_currency": "string",
+     "meter_id": "string",
+     "unit_amount": "string"
     },
     "evidence": [
      "openapi/_original/polar-sh-openapi.yml#GET /products/",
@@ -19890,12 +20388,6 @@
      "GET item"
     ],
     "properties": {
-     "content": "array",
-     "totalElements": "integer",
-     "totalPages": "integer",
-     "last": "boolean",
-     "number": "integer",
-     "size": "integer",
      "productId": "integer",
      "productName": "string",
      "global": "boolean",
@@ -20003,8 +20495,6 @@
      "PUT item"
     ],
     "properties": {
-     "products": "array",
-     "pagination": "object",
      "id": "string",
      "name": "string",
      "description": "string",
@@ -20072,8 +20562,6 @@
      "GET item"
     ],
     "properties": {
-     "products": "array",
-     "pagination": "object",
      "id": "string",
      "name": "string",
      "description": "string",
@@ -20352,9 +20840,6 @@
      "POST item"
     ],
     "properties": {
-     "list": "array",
-     "hasMore": "boolean",
-     "totalCount": "integer",
      "id": "string",
      "created": "integer",
      "deleted": "boolean",
@@ -20412,8 +20897,23 @@
      "options": "array",
      "images": "array",
      "image": "object",
-     "intent": "string",
-     "products": "array"
+     "description": "string",
+     "type": "string",
+     "price": "integer",
+     "price_min": "integer",
+     "price_max": "integer",
+     "available": "boolean",
+     "price_varies": "boolean",
+     "compare_at_price": [
+      "integer",
+      "null"
+     ],
+     "compare_at_price_min": "integer",
+     "compare_at_price_max": "integer",
+     "compare_at_price_varies": "boolean",
+     "featured_image": "string",
+     "url": "string",
+     "media": "array"
     },
     "evidence": [
      "openapi/_original/shopify-admin-rest-api-openapi.yml#DELETE /products/{product_id}.json",
@@ -20442,9 +20942,6 @@
      "PUT item"
     ],
     "properties": {
-     "cursor": "string",
-     "pre_cursor": "string",
-     "products": "array",
      "id": "string",
      "title": "string",
      "brief": "string",
@@ -20699,8 +21196,6 @@
      "POST item"
     ],
     "properties": {
-     "pagination": "object",
-     "products": "array",
      "createdOn": "string",
      "description": "string",
      "id": "string",
@@ -20714,9 +21209,9 @@
      "type": "string",
      "url": "string",
      "urlSlug": "string",
-     "variants": "array",
      "digitalGood": "object",
      "pricing": "object",
+     "variants": "array",
      "productAttributeNames": "object",
      "seoData": "object"
     },
@@ -20899,12 +21394,10 @@
      "POST collection"
     ],
     "properties": {
-     "accrual_payout_schedule": "string",
-     "calculation_method": "string",
-     "description": "string",
-     "id": "string",
-     "product_type": "string",
-     "rates": "array",
+     "accrual_period": "string",
+     "rate": "integer",
+     "valid_from": "string",
+     "valid_to": "string",
      "next_page_token": "string",
      "form": "string",
      "active": "boolean",
@@ -20913,6 +21406,7 @@
      "creation_time": "string",
      "digital_wallet_tokenization": "object",
      "end_date": "string",
+     "id": "string",
      "image": "boolean",
      "image_mode": "string",
      "last_modified_time": "string",
@@ -20961,8 +21455,6 @@
      "POST collection"
     ],
     "properties": {
-     "header": "object",
-     "body": "array",
      "packageId": "string",
      "customerId": "string",
      "packageName": "string",
@@ -20973,7 +21465,10 @@
      "name": "string",
      "version": "string",
      "description": "string",
-     "createdDate": "string"
+     "createdDate": "string",
+     "productName": "string",
+     "productGroup": "string",
+     "currency": "string"
     },
     "evidence": [
      "openapi/_original/temenos-enterprise-product-pricing-openapi.yml#GET /packages",
@@ -21237,18 +21732,15 @@
      "POST collection"
     ],
     "properties": {
-     "totalItems": "integer",
-     "totalPages": "integer",
-     "products": "array",
      "id": "string",
      "name": "string",
      "description": "string",
      "type": "string",
      "category": "string",
-     "imageUrl": "string",
-     "homeUrl": "string",
      "createdAt": "string",
-     "updatedAt": "string"
+     "updatedAt": "string",
+     "imageUrl": "string",
+     "homeUrl": "string"
     },
     "evidence": [
      "openapi/_original/paypal-ecommerce-api.json#GET /products",
@@ -21484,8 +21976,6 @@
      "createdAt": "string",
      "updatedAt": "string",
      "variants": "array",
-     "docs": "array",
-     "total": "integer",
      "isFulfillable": "boolean",
      "type": "string",
      "categoryIds": "array",
@@ -21494,12 +21984,6 @@
      "donationSettings": "object",
      "meta": "object",
      "localization": "object",
-     "pricingPolicy": "string",
-     "billingCycle": "object",
-     "paymentSchedules": "array",
-     "renewalPolicy": "object",
-     "paymentPolicy": "object",
-     "requestedConsents": "array",
      "status": "string",
      "customerId": "string",
      "currency": "string",
@@ -21512,6 +21996,12 @@
      "salesChannelId": "string",
      "secret": "string",
      "canceledAt": "string",
+     "pricingPolicy": "string",
+     "billingCycle": "object",
+     "paymentSchedules": "array",
+     "renewalPolicy": "object",
+     "paymentPolicy": "object",
+     "requestedConsents": "array",
      "subscriptionId": "string"
     },
     "evidence": [
@@ -21584,17 +22074,18 @@
      "Score": "integer",
      "CategoryPath": "string",
      "BrandName": "string",
-     "Page": "integer",
-     "Size": "integer",
-     "TotalRows": "integer",
-     "TotalPage": "integer",
-     "Data": "array",
-     "productId": "string",
-     "skuId": "string",
-     "nameComplete": "string",
-     "mainImage": "object",
-     "sellersOffers": "array",
-     "frequencies": "array"
+     "ProductId": "integer",
+     "SkuId": "integer",
+     "SubCollectionId": "integer",
+     "Position": "integer",
+     "ProductName": "string",
+     "SkuImageUrl": "string",
+     "sellerId": "string",
+     "sellerSkuId": "string",
+     "salesChannelOffer": "object",
+     "periodicityAsString": "string",
+     "periodicity": "integer",
+     "interval": "integer"
     },
     "evidence": [
      "openapi/_original/vtex-catalog-api-seller-portal-openapi-original.yml#GET /api/catalog-seller-portal/products/{param}",
@@ -21853,10 +22344,16 @@
      "GET collection"
     ],
     "properties": {
-     "products": "array",
-     "checkout_config": "object",
-     "migration_campaign": null,
-     "offer": null
+     "id": "string",
+     "display_name": "string",
+     "product_description": "string",
+     "type": "string",
+     "web_price": null,
+     "storekit_price": null,
+     "subscription_group_id": "integer",
+     "free_trial_duration": "string",
+     "is_trial_eligible": "boolean",
+     "trial": "object"
     },
     "evidence": [
      "openapi/_original/zerosettle-openapi.json#GET /iap/products"
@@ -21875,9 +22372,6 @@
      "PUT item"
     ],
     "properties": {
-     "nextPage": "string",
-     "products": "array",
-     "success": "boolean",
      "category": "string",
      "description": "string",
      "effectiveEndDate": "string",
@@ -21907,7 +22401,8 @@
      "CreatedById": "string",
      "CreatedDate": "string",
      "UpdatedById": "string",
-     "UpdatedDate": "string"
+     "UpdatedDate": "string",
+     "success": "boolean"
     },
     "evidence": [
      "openapi/_original/zuora-v1-openapi.yml#DELETE /v1/object/product/{id}",
@@ -21940,10 +22435,15 @@
      "POST collection"
     ],
     "properties": {
-     "token": "string",
-     "pricingData": "array",
+     "vendor": "string",
      "service": "string",
+     "regionCode": "string",
+     "sku": "string",
+     "unit": "string",
+     "pricePerUnit": "number",
+     "serviceDetails": "object",
      "region": "string",
+     "token": "string",
      "filters": "object",
      "columns": "array"
     },
@@ -22149,9 +22649,7 @@
      "tiers": "array",
      "tax_detail": "object",
      "tax_providers_fields": "array",
-     "accounting_detail": "object",
-     "list": "array",
-     "next_offset": "string"
+     "accounting_detail": "object"
     },
     "evidence": [
      "openapi/_original/chargebee-openapi.json#GET /item_prices",
@@ -22337,11 +22835,11 @@
      "POST collection"
     ],
     "properties": {
-     "currency": "string",
-     "version": "string",
-     "playbook": "string",
-     "skus": "array",
-     "geo": "string"
+     "id": "string",
+     "sku": "string",
+     "price": "number",
+     "error": "string",
+     "parameters": "array"
     },
     "evidence": [
      "openapi/_original/dealhub-pricing-api-openapi.json#POST /api/v1/products/pricing",
@@ -22428,10 +22926,9 @@
      "POST collection"
     ],
     "properties": {
-     "total": "integer",
-     "page": "integer",
-     "size": "integer",
-     "priced_assets": "array",
+     "type": "string",
+     "asset_info": "object",
+     "price": "object",
      "asset_identifiers": "array"
     },
     "evidence": [
@@ -22448,9 +22945,11 @@
     "properties": {
      "cart_price": "object",
      "total_price": "object",
-     "recipients": "array",
-     "cart": "object",
-     "send_method": "string"
+     "first_name": "string",
+     "last_name": "string",
+     "email": "string",
+     "phone": "string",
+     "mailing_address": "object"
     },
     "evidence": [
      "openapi/_original/goody-openapi.json#POST /v1/order_batches/price"
@@ -22694,9 +23193,10 @@
      "POST collection"
     ],
     "properties": {
-     "totalInCurrency": "string",
-     "itemsWithPrices": "array",
      "id": "string",
+     "priceInCurrencyWithTax": "string",
+     "priceInCurrencyWithoutTax": "string",
+     "taxInCurrency": "string",
      "type": "string",
      "membershipId": "integer"
     },
@@ -22740,8 +23240,7 @@
      "fee": null,
      "usdt_per_ton": "string",
      "quoted_at": "string",
-     "valid_until": "string",
-     "quotes": "array"
+     "valid_until": "string"
     },
     "evidence": [
      "openapi/_original/mystars-faas-openapi.json#GET /v1/pricing",
@@ -22770,8 +23269,7 @@
      "fee": null,
      "usdt_per_ton": "string",
      "quoted_at": "string",
-     "valid_until": "string",
-     "quotes": "array"
+     "valid_until": "string"
     },
     "evidence": [
      "openapi/_original/mystars-faas-fulfilment-api-openapi-original.json#GET /v1/pricing",
@@ -22883,11 +23381,18 @@
      "GET collection"
     ],
     "properties": {
-     "buyer_currency": "string",
-     "shipping_price_in_buyer_currency": "number",
-     "import_fee_price_in_buyer_currency": "integer",
-     "export_fee_price_in_buyer_currency": "number",
-     "line_items": "array"
+     "uuid": "string",
+     "created_at": "string",
+     "modified_at": "string",
+     "product_name": "string",
+     "logo_url": "string",
+     "quantity": "string",
+     "unit_of_measurement": "string",
+     "buyer_tax_rate": "string",
+     "delivery_surcharge_price_in_supplier_currency": "integer",
+     "delivery_surcharge_price_in_buyer_currency": "number",
+     "buyer_unit_price_in_buyer_currency": "number",
+     "buyer_total_price_in_buyer_currency": "number"
     },
     "evidence": [
      "openapi/_original/opply-openapi-original.yml#GET /api/v1/app-orders/admin/{uuid}/pricing/"
@@ -23085,10 +23590,35 @@
      "PUT item"
     ],
     "properties": {
-     "productAttributeId": "string",
-     "name": "string",
-     "pricing": "object",
-     "creditBenefits": "array"
+     "id": "string",
+     "creditsCurrencyId": [
+      "string",
+      "null"
+     ],
+     "amount": "number",
+     "recipient": "string",
+     "isInfiniteTotal": "boolean",
+     "allocationCadence": "string",
+     "creditGrantTiming": [
+      "string",
+      "null"
+     ],
+     "overageUnitPrice": [
+      "number",
+      "null"
+     ],
+     "rolloverAmount": [
+      "number",
+      "null"
+     ],
+     "rolloverDuration": [
+      "number",
+      "null"
+     ],
+     "rolloverDurationUnit": [
+      "string",
+      "null"
+     ]
     },
     "evidence": [
      "openapi/_original/paid-v2.json#GET /pricing/",
@@ -23415,18 +23945,18 @@
      "POST collection"
     ],
     "properties": {
-     "accountId": "string",
-     "accountName": "string",
-     "pricingSchedules": "array",
-     "mode": "string",
+     "id": "string",
      "pricePlanId": "string",
+     "pricePlanName": "string",
+     "pricePlanDetailsOverride": null,
+     "pricingRulesOverride": "array",
+     "startDate": "string",
+     "endDate": "string",
+     "mode": "string",
      "effectiveFrom": "string",
      "effectiveUntil": "string",
-     "pricePlanDetailsOverride": "object",
-     "pricingRulesOverride": "array",
      "retainStartOffsets": "boolean",
      "preActions": "array",
-     "id": "string",
      "name": "string",
      "version": "integer",
      "description": "string",
@@ -23437,9 +23967,12 @@
      "createdAt": "string",
      "updatedAt": "string",
      "type": "string",
-     "pricingSchedule": "array",
-     "migrationMode": "string",
-     "versionsToMigrate": "string",
+     "isOverriden": "boolean",
+     "order": "integer",
+     "invoiceTiming": "string",
+     "condition": "string",
+     "computation": "string",
+     "action": "object",
      "success": "boolean"
     },
     "evidence": [
@@ -23513,8 +24046,6 @@
      "createdBy": "string",
      "modifiedBy": "string",
      "id": "string",
-     "product": null,
-     "prices": "array",
      "value": "object",
      "path": "string",
      "op": "string",
@@ -23538,8 +24069,6 @@
      "PUT collection"
     ],
     "properties": {
-     "Meta": "object",
-     "Data": "array",
      "SalesPriceListId": "string",
      "ArticleId": "string",
      "NetPrice": "number",
@@ -23613,10 +24142,9 @@
      "UtmCampaign": "string",
      "UtmInternalCampaign": "string",
      "email": "string",
-     "itemId": "string",
-     "markup": "integer",
-     "basePrice": "integer",
-     "fixedPrices": "array"
+     "tradePolicyId": "string",
+     "minQuantity": "integer",
+     "dateRange": "object"
     },
     "evidence": [
      "openapi/_original/vtex-checkout-openapi-original.yml#PUT /api/checkout/pub/orderForm/{orderFormId}/items/{itemIndex}/price",
@@ -23822,10 +24350,6 @@
      "POST collection"
     ],
     "properties": {
-     "list": "array",
-     "next_offset": "string",
-     "credit_note": "object",
-     "invoice": "object",
      "id": "string",
      "customer_id": "string",
      "subscription_id": "string",
@@ -23877,6 +24401,8 @@
      "billing_address": "object",
      "einvoice": "object",
      "site_details_at_creation": "object",
+     "credit_note": "object",
+     "invoice": "object",
      "operation_type": "string",
      "mime_type": "string",
      "created_at": "integer",
@@ -23908,9 +24434,10 @@
      "voided_at": "string",
      "created_at": "string",
      "updated_at": "string",
-     "user": "object",
-     "contact": "object",
-     "allocations": "array"
+     "interest": "boolean",
+     "has_online_payment": "boolean",
+     "destroyable": "boolean",
+     "payment_type": "string"
     },
     "evidence": [
      "openapi/_original/clio-openapi.json#GET /credit_memos.json",
@@ -24073,7 +24600,15 @@
      "requestedOn": "string",
      "data": null,
      "passThrough": "object",
-     "customerRef": "object",
+     "description": "string",
+     "unitAmount": "number",
+     "quantity": "number",
+     "discountAmount": "number",
+     "taxRateRef": "object",
+     "inventoryRef": "object",
+     "accountRef": "object",
+     "trackingCategoryRef": null,
+     "customerRef": "string",
      "invoiceCreditNoteNumber": "string"
     },
     "evidence": [
@@ -24419,10 +24954,6 @@
      "POST collection"
     ],
     "properties": {
-     "content": "array",
-     "totalElements": "integer",
-     "totalPages": "integer",
-     "pageable": "object",
      "createdBy": "string",
      "createDate": "string",
      "lastModifiedBy": "string",
@@ -24606,8 +25137,6 @@
      "PUT item"
     ],
     "properties": {
-     "credit_memos": "array",
-     "pagination": "object",
      "id": "string",
      "subsidiary_id": "string",
      "credit_memo_number": "string",
@@ -24731,8 +25260,19 @@
      "GET collection"
     ],
     "properties": {
-     "docs": "array",
-     "total": "integer"
+     "_id": "string",
+     "transactionId": "string",
+     "customerId": "string",
+     "sellerId": "string",
+     "amount": "number",
+     "currency": "string",
+     "secret": "string",
+     "no": "string",
+     "counter": "string",
+     "items": "array",
+     "source": "object",
+     "createdAt": "string",
+     "updatedAt": "string"
     },
     "evidence": [
      "openapi/_original/vivenu-openapi-original.json#GET /api/credit-notes"
@@ -24934,16 +25474,12 @@
      "PUT item"
     ],
     "properties": {
-     "creditmemos": "array",
-     "nextPage": "string",
-     "success": "boolean",
      "accountId": "string",
      "accountNumber": "string",
      "amount": "number",
      "appliedAmount": "number",
      "autoApplyUponPosting": "boolean",
      "billToContactId": "string",
-     "billToContactSnapshotId": "string",
      "cancelledById": "string",
      "cancelledOn": "string",
      "comment": "string",
@@ -24956,7 +25492,6 @@
      "einvoiceFileId": "string",
      "einvoiceStatus": "string",
      "excludeFromAutoApplyRules": "boolean",
-     "excludeItemBillingFromRevenueAccounting": "boolean",
      "id": "string",
      "latestPDFFileId": "string",
      "number": "string",
@@ -24986,11 +25521,13 @@
      "Origin__NS": "string",
      "SyncDate__NS": "string",
      "Transaction__NS": "string",
+     "billToContactSnapshotId": "string",
+     "excludeItemBillingFromRevenueAccounting": "boolean",
+     "success": "boolean",
      "autoPost": "boolean",
      "charges": "array",
      "customRates": "array",
      "effectiveDate": "string",
-     "memos": "array",
      "items": "array",
      "autoApplyToInvoiceUponPosting": "boolean",
      "invoiceId": "string",
@@ -25251,30 +25788,38 @@
      "POST item"
     ],
     "properties": {
-     "list": "array",
-     "next_offset": "string",
      "id": "string",
-     "name": "string",
      "invoice_name": "string",
+     "type": "string",
+     "percentage": "number",
+     "amount": "integer",
+     "quantity": "integer",
+     "currency_code": "string",
+     "duration_type": "string",
+     "period": "integer",
+     "period_unit": "string",
+     "included_in_mrr": "boolean",
+     "apply_on": "string",
+     "item_price_id": "string",
+     "created_at": "integer",
+     "apply_till": "integer",
+     "applied_count": "integer",
+     "coupon_id": "string",
+     "index": "integer",
+     "name": "string",
      "discount_type": "string",
      "discount_percentage": "number",
      "discount_amount": "integer",
      "discount_quantity": "integer",
-     "currency_code": "string",
-     "duration_type": "string",
      "duration_month": "integer",
      "valid_from": "integer",
      "valid_till": "integer",
      "max_redemptions": "integer",
      "status": "string",
      "apply_discount_on": "string",
-     "apply_on": "string",
-     "created_at": "integer",
      "archived_at": "integer",
      "resource_version": "integer",
      "updated_at": "integer",
-     "period": "integer",
-     "period_unit": "string",
      "redemptions": "integer",
      "invoice_notes": "string",
      "meta_data": "object",
@@ -25285,7 +25830,6 @@
      "plan_ids": "array",
      "addon_constraint": "string",
      "plan_constraint": "string",
-     "included_in_mrr": "boolean",
      "addon_ids": "array",
      "operation_type": "string",
      "mime_type": "string",
@@ -25696,14 +26240,11 @@
      "POST collection"
     ],
     "properties": {
-     "Vouchers": "array",
-     "MetaInformation": "object",
-     "VoucherSeries": "string",
-     "VoucherNumber": "integer",
-     "TransactionDate": "string",
+     "Account": "integer",
+     "Debit": "number",
+     "Credit": "number",
      "Description": "string",
-     "Year": "integer",
-     "VoucherRows": "array"
+     "TransactionInformation": "string"
     },
     "evidence": [
      "openapi/_original/fortnox-openapi.yml#GET /vouchers",
@@ -25898,12 +26439,10 @@
      "PUT collection"
     ],
     "properties": {
-     "ExtraInformation": "array",
-     "list": "array",
-     "Page": "integer",
-     "Total": "integer",
-     "PageSize": "integer",
+     "Voucher": "object",
      "Id": "string",
+     "Success": "boolean",
+     "ExtraInformation": "array",
      "UpdateOnExisting": "boolean",
      "SupportingNumber": "integer",
      "VoucherNumber": "string",
@@ -25923,7 +26462,8 @@
      "ReferenceType": "string",
      "Rows": "array",
      "CreatedTime": "string",
-     "ModifiedTime": "string"
+     "ModifiedTime": "string",
+     "Order": "object"
     },
     "evidence": [
      "openapi/_original/northmill-flo-api-swagger.json#GET /v2/stores/{externalStoreId}/vouchers",
@@ -26434,9 +26974,6 @@
      "PUT item"
     ],
     "properties": {
-     "discounts": "array",
-     "hasNextPage": "boolean",
-     "hasPreviousPage": "boolean",
      "criteria": null,
      "id": "string",
      "isLimitedUses": "boolean",
@@ -26644,8 +27181,6 @@
      "POST collection"
     ],
     "properties": {
-     "Meta": "object",
-     "Data": "array",
      "Id": "string",
      "VoucherDate": "string",
      "VoucherText": "string",
@@ -26678,8 +27213,6 @@
      "PUT item"
     ],
     "properties": {
-     "docs": "array",
-     "total": "integer",
      "code": "string",
      "amount": "number",
      "validUntil": "string",
@@ -26691,6 +27224,7 @@
      "origin": "string",
      "createdAt": "string",
      "updatedAt": "string",
+     "balance": "number",
      "couponType": "string",
      "couponSeriesId": "string",
      "_id": "string",
@@ -26838,13 +27372,17 @@
     "properties": {
      "success": "boolean",
      "message": "string",
-     "account": "object",
-     "addonInstance": "object",
-     "item": "array",
-     "idempotencyKey": "string",
-     "requestGroupId": "string",
-     "billable": "boolean",
-     "usages": "array"
+     "customUnit": "string",
+     "description": "string",
+     "price": "number",
+     "quantity": "number",
+     "unit": "string",
+     "eventId": "string",
+     "eventDate": "string",
+     "pricingUnit": "string",
+     "unitPrice": "string",
+     "currency": "string",
+     "attributes": "object"
     },
     "evidence": [
      "openapi/_original/appdirect-companies-openapi-original.yml#POST /integration/v1/billing/usage",
@@ -26878,9 +27416,10 @@
      "POST collection"
     ],
     "properties": {
-     "daily": "array",
-     "summary": "object",
-     "yearMonth": "string",
+     "count": "integer",
+     "cu": "number",
+     "nodeType": "string",
+     "type": "string",
      "bucketStart": "string",
      "usageCount": "integer",
      "archived": "boolean",
@@ -26922,7 +27461,9 @@
      "code": "integer",
      "data": null,
      "message": "string",
-     "requestId": "string"
+     "requestId": "string",
+     "summary": "object",
+     "yearMonth": "string"
     },
     "evidence": [
      "openapi/_original/b3-b3os-workflow-openapi.json#GET /v1/organizations/{orgId}/cu/usage",
@@ -27044,8 +27585,16 @@
      "GET collection"
     ],
     "properties": {
-     "products": "array",
-     "aggregated": "object"
+     "name": "string",
+     "limits": "object",
+     "usage24hUsd": "string",
+     "usage24hCount": "string",
+     "usage7dUsd": "string",
+     "usage7dCount": "string",
+     "usage30dUsd": "string",
+     "usage30dCount": "string",
+     "usageCalendarMonthUsd": "string",
+     "usageCalendarMonthCount": "string"
     },
     "evidence": [
      "openapi/_original/deposit-api.json#GET /v1/deposit/usage"
@@ -27071,9 +27620,7 @@
      "note": "string",
      "resource_version": "integer",
      "updated_at": "integer",
-     "created_at": "integer",
-     "list": "array",
-     "next_offset": "string"
+     "created_at": "integer"
     },
     "evidence": [
      "openapi/_original/chargebee-openapi.json#GET /subscriptions/{subscription-id}/usages",
@@ -27133,10 +27680,9 @@
      "functionalAmount": "number",
      "functionalTaxAmount": "number",
      "triggerOn": "integer",
-     "rawUsagesTotal": "integer",
-     "totalFailed": "integer",
-     "totalDuplicates": "integer",
-     "entries": "array",
+     "rowNumber": "integer",
+     "failed": "boolean",
+     "failureReason": "string",
      "aliasId": "string",
      "subscriptionId": "string",
      "usageTime": "integer",
@@ -27367,8 +27913,6 @@
      "GET item"
     ],
     "properties": {
-     "content": "array",
-     "page": "object",
      "usage_id": "string",
      "payment_link_id": "string",
      "usage_status": "string",
@@ -27426,19 +27970,15 @@
      "PUT item"
     ],
     "properties": {
-     "content": "array",
-     "totalElements": "integer",
-     "totalPages": "integer",
-     "pageable": "object",
-     "status": "string",
-     "failedEvents": "array",
      "id": "string",
      "accountId": "string",
      "subscriptionId": "string",
      "usageTypeId": "string",
      "unitsConsumed": "number",
+     "ratedPrice": "number",
      "timestamp": "string",
-     "ratedPrice": "number"
+     "status": "string",
+     "failedEvents": "array"
     },
     "evidence": [
      "openapi/_original/monetizenow-openapi.json#GET /usage/events",
@@ -27507,8 +28047,9 @@
      "GET collection"
     ],
     "properties": {
-     "billable_metric": "object",
-     "usage": "array"
+     "quantity": "number",
+     "timeframe_start": "string",
+     "timeframe_end": "string"
     },
     "evidence": [
      "openapi/_original/orb-billing-openapi.yml#GET /subscriptions/{subscription_id}/usage"
@@ -27600,8 +28141,10 @@
      "customerId": "string",
      "recordValue": "string",
      "metadata": "object",
-     "offeringId": "string",
-     "usage": "array"
+     "value": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "metadataGroup": "object"
     },
     "evidence": [
      "openapi/_original/paigo-paigo-api-openapi.yml#GET /customers/{customerId}/usage",
@@ -34177,7 +34720,6 @@
     "niural",
     "nomos",
     "noosh",
-    "northmill",
     "notch-financial",
     "now-payments",
     "octane",
@@ -34349,6 +34891,7 @@
     "creem",
     "culqi",
     "curlec",
+    "dealhub",
     "digitail",
     "dodo-payments",
     "elastic-path",
@@ -34542,7 +35085,7 @@
     "mycarrier",
     "nabis",
     "neon-commerce",
-    "oracle-financials",
+    "openmeter",
     "orange-business",
     "orion-advisor-solutions",
     "overflow",
@@ -34563,6 +35106,7 @@
     "ready2order",
     "reloadly",
     "rentle",
+    "rhel",
     "ripple-labs",
     "roadsync",
     "romit",

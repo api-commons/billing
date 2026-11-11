@@ -8,6 +8,7 @@ concepts:
     - subscriptions
     properties:
       metadata: metadata
+      currency: currency
     core_coverage: 0.0
     evidence:
     - openapi/_original/greenhelix-net-a2a-commerce-gateway-openapi.yml#GET /v1/payments/subscriptions

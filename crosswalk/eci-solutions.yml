@@ -19,12 +19,12 @@ concepts:
       - referenceNumber
       currency: currencyCode
       line_items: lines
-      customer_id:
-      - customerId
-      - customer
       issued_at:
       - date
       - invoiceDate
+      customer_id:
+      - customerId
+      - customer
       total: amount
       description:
       - comment

@@ -6,17 +6,24 @@ concepts:
   invoice:
     path_segment:
     - invoices
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: InvoiceId
+      status: Status
+      number: Number
+      currency: Currency
+    core_coverage: 0.75
     evidence:
     - openapi/_original/flipdish-payments-openapi.json#GET /api/v1.0/{appId}/invoices
   subscription:
     path_segment:
     - subscriptions
     properties:
-      id: SubscriptionId
+      id:
+      - SubscriptionId
+      - Id
       status: Status
       canceled_at: CancellationDate
+      currency: Currency
       name: Name
     core_coverage: 0.667
     evidence:

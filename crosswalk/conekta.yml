@@ -33,7 +33,7 @@ concepts:
       billing_interval:
       - frequency
       - interval
-    core_coverage: 0.6
+    core_coverage: 0.667
     evidence:
     - openapi/_original/conekta-api-openapi.yml#DELETE /plans/{id}
     - openapi/_original/conekta-api-openapi.yml#GET /plans

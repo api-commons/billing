@@ -16,7 +16,7 @@ concepts:
       description: notes
       tax: vat_amount
       updated_at: updated_at
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/sibill-openapi-original.json#GET /api/v1/companies/{company_id}/documents/{document_id}/invoice
     - openapi/_original/sibill-openapi-original.json#POST /api/v1/companies/{company_id}/documents/invoice

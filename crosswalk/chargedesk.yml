@@ -13,6 +13,8 @@ concepts:
       status: status
       customer_id: customer_id
       metadata: metadata
+      currency: currency
+      items: items
     core_coverage: 0.667
     evidence:
     - openapi/_original/chargedesk-rest-api-openapi.yml#GET /subscriptions
@@ -30,10 +32,10 @@ concepts:
       is_active: status
       amount: amount
       currency: currency
-      metadata: metadata
       billing_interval: interval
+      metadata: metadata
       product_id: product_id
-    core_coverage: 0.8
+    core_coverage: 0.833
     evidence:
     - openapi/_original/chargedesk-rest-api-openapi.yml#GET /products
     - openapi/_original/chargedesk-rest-api-openapi.yml#GET /products/{product_id}

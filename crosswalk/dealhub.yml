@@ -12,14 +12,14 @@ concepts:
       number: invoiceNumber
       currency: currency
       line_items: invoiceItems
-      customer_id: accountId
       issued_at: invoiceDate
+      customer_id: accountId
       description:
       - note
       - description
       tax: taxTotal
       metadata: customFields
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/dealhub-subskribe-api-openapi.json#DELETE /invoices/{number}
     - openapi/_original/dealhub-subskribe-api-openapi.json#GET /invoices
@@ -56,13 +56,17 @@ concepts:
       - displayName
       description: description
       is_active: status
+      amount: price
       currency: currency
-      metadata: customFields
+      metadata:
+      - customFields
+      - attributes
       code:
       - externalId
       - sku
+      type: type
       product_id: productId
-    core_coverage: 0.8
+    core_coverage: 0.833
     evidence:
     - openapi/_original/dealhub-subskribe-api-openapi.json#DELETE /plans/{planId}
     - openapi/_original/dealhub-subskribe-api-openapi.json#DELETE /products/{id}
@@ -73,14 +77,14 @@ concepts:
     path_segment:
     - creditmemos
     properties:
-      status: status
       total: amount
+      status: status
       description: notes
       currency: currencyCode
       created_at: createdOn
       customer_id: accountId
       line_items: lineItems
-    core_coverage: 0.8
+    core_coverage: 0.75
     evidence:
     - openapi/_original/dealhub-subskribe-api-openapi.json#DELETE /creditmemos/{creditMemoNumber}
     - openapi/_original/dealhub-subskribe-api-openapi.json#GET /creditmemos

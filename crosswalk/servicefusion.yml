@@ -12,8 +12,9 @@ concepts:
       number: number
       created_at: created_at
       line_items: line_items
+      description: description
       amount_due: balance_due
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/servicefusion-openapi.yml#GET /invoices
     - openapi/_original/servicefusion-openapi.yml#GET /invoices/{id}

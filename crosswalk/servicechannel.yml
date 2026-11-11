@@ -13,14 +13,14 @@ concepts:
       - InvoiceNumber
       - Number
       currency: Currency
-      customer_id: SubscriberId
       issued_at: InvoiceDate
+      customer_id: SubscriberId
       total: InvoiceTotal
       description:
       - Description
       - Comments
       updated_at: UpdatedDate
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/servicechannel-service-automation-openapi-original.json#GET /invoices/{invoiceId}
     - openapi/_original/servicechannel-service-automation-openapi-original.json#GET /odata/invoices

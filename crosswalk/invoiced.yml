@@ -15,8 +15,8 @@ concepts:
       created_at: created_at
       currency: currency
       line_items: items
-      customer_id: customer
       issued_at: date
+      customer_id: customer
       description: notes
       tax: taxes
       updated_at: updated_at
@@ -42,6 +42,7 @@ concepts:
       updated_at: updated_at
       canceled_at: canceled_at
       started_at: start_date
+      items: addons
     core_coverage: 1.0
     evidence:
     - openapi/_original/invoiced-openapi.yml#DELETE /subscriptions/{id}
@@ -58,10 +59,10 @@ concepts:
       created_at: created_at
       amount: amount
       currency: currency
-      metadata: metadata
       billing_interval: interval
+      metadata: metadata
       updated_at: updated_at
-    core_coverage: 0.6
+    core_coverage: 0.667
     evidence:
     - openapi/_original/invoiced-openapi.yml#DELETE /plans/{id}
     - openapi/_original/invoiced-openapi.yml#GET /plans
@@ -84,7 +85,7 @@ concepts:
       date: date
       metadata: metadata
       items: items
-    core_coverage: 0.8
+    core_coverage: 0.875
     evidence:
     - openapi/_original/invoiced-openapi.yml#DELETE /credit_notes/{id}
     - openapi/_original/invoiced-openapi.yml#GET /credit_notes

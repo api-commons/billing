@@ -14,7 +14,7 @@ concepts:
       line_items: line_items
       issued_at: issue_date
       description: notes
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/causa-prima-scribo-openapi.json#GET /api/v1/invoices/{id}
     - openapi/_original/causa-prima-scribo-openapi.json#POST /api/v1/invoices

@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.765,
-      "x-commons-providers": 124,
+      "x-commons-share": 0.784,
+      "x-commons-providers": 127,
       "x-commons-spellings": [
         "id",
         "invoiceId",
@@ -18,27 +18,27 @@
         "Id",
         "guid",
         "_id",
-        "record_id"
+        "GUID"
       ]
     },
     "status": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.691,
-      "x-commons-providers": 112,
+      "x-commons-share": 0.698,
+      "x-commons-providers": 113,
       "x-commons-spellings": [
         "status",
         "state",
         "invoiceStatus",
-        "invoice_status",
-        "Status"
+        "Status",
+        "invoice_status"
       ]
     },
     "due_date": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.531,
-      "x-commons-providers": 86,
+      "x-commons-share": 0.543,
+      "x-commons-providers": 88,
       "x-commons-spellings": [
         "dueDate",
         "due_date",
@@ -49,25 +49,25 @@
     },
     "number": {
       "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.494,
-      "x-commons-providers": 80,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.506,
+      "x-commons-providers": 82,
       "x-commons-spellings": [
         "number",
         "invoiceNumber",
         "invoice_number",
         "referenceNumber",
+        "InvoiceNumber",
         "invoiceNo",
-        "invoice-number",
-        "DocumentNumber",
-        "reference_number"
+        "Number",
+        "invoice-number"
       ]
     },
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.457,
-      "x-commons-providers": 74,
+      "x-commons-share": 0.463,
+      "x-commons-providers": 75,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -83,8 +83,8 @@
     "currency": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.451,
-      "x-commons-providers": 73,
+      "x-commons-share": 0.457,
+      "x-commons-providers": 74,
       "x-commons-spellings": [
         "currency",
         "Currency",
@@ -95,8 +95,8 @@
     "line_items": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.451,
-      "x-commons-providers": 73,
+      "x-commons-share": 0.444,
+      "x-commons-providers": 72,
       "x-commons-spellings": [
         "items",
         "lineItems",
@@ -107,6 +107,23 @@
         "invoiceLines",
         "products"
       ]
+    },
+    "issued_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.432,
+      "x-commons-providers": 70,
+      "x-commons-spellings": [
+        "invoiceDate",
+        "invoice_date",
+        "date",
+        "issued_at",
+        "issue_date",
+        "issueDate",
+        "InvoiceDate",
+        "documentDate"
+      ],
+      "format": "date-time"
     },
     "customer_id": {
       "type": "string",
@@ -124,44 +141,27 @@
         "client_id"
       ]
     },
-    "issued_at": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.426,
-      "x-commons-providers": 69,
-      "x-commons-spellings": [
-        "invoiceDate",
-        "invoice_date",
-        "date",
-        "issued_at",
-        "issue_date",
-        "issueDate",
-        "InvoiceDate",
-        "documentDate"
-      ],
-      "format": "date-time"
-    },
     "total": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.395,
-      "x-commons-providers": 64,
+      "x-commons-share": 0.414,
+      "x-commons-providers": 67,
       "x-commons-spellings": [
         "amount",
         "totalAmount",
         "total_amount",
         "TotalAmount",
+        "Amount",
         "totalPrice",
         "grand_total",
-        "total_price",
-        "invoiceTotal"
+        "total_price"
       ]
     },
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.364,
-      "x-commons-providers": 59,
+      "x-commons-share": 0.383,
+      "x-commons-providers": 62,
       "x-commons-spellings": [
         "description",
         "notes",
@@ -169,8 +169,8 @@
         "comments",
         "note",
         "comment",
-        "Description",
-        "Comments"
+        "Comments",
+        "Notes"
       ]
     },
     "tax": {
@@ -198,9 +198,9 @@
         "updated_at",
         "updatedAt",
         "updatedDate",
-        "updated",
         "updatedTime",
         "date_modified",
+        "updated",
         "ModifiedDate",
         "updated-at"
       ],
@@ -225,8 +225,8 @@
     "metadata": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.21,
-      "x-commons-providers": 34,
+      "x-commons-share": 0.216,
+      "x-commons-providers": 35,
       "x-commons-spellings": [
         "metadata",
         "custom_fields",

@@ -10,6 +10,6 @@ concepts:
       id: id
       created_at: created_at
       updated_at: updated_at
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/openapi.yml#POST /invoice

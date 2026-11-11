@@ -9,7 +9,7 @@ concepts:
     properties:
       status: status
       line_items: items
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/float-financial-openapi.json#GET /v1/bills
     - openapi/_original/float-financial-openapi.json#GET /v1/bills/{bill_id}

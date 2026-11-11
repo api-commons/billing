@@ -12,7 +12,7 @@ concepts:
       due_date: dueDate
       line_items: lineItems
       tax: tax
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/nabis-platform-api-v1-openapi.json#GET /invoices
     - openapi/_original/nabis-platform-api-v2-openapi.yml#GET /v2/invoice

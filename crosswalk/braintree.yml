@@ -14,6 +14,7 @@ concepts:
       - plan_id
       - price
       updated_at: updated_at
+      items: add_ons
     core_coverage: 1.0
     evidence:
     - openapi/_original/braintree-subscriptions-openapi.yml#GET /subscriptions/{subscriptionId}
@@ -30,7 +31,7 @@ concepts:
       amount: price
       currency: currency_iso_code
       updated_at: updated_at
-    core_coverage: 0.8
+    core_coverage: 0.833
     evidence:
     - openapi/_original/braintree-subscriptions-openapi.yml#GET /plans
   coupon:

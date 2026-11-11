@@ -21,7 +21,7 @@ concepts:
     properties:
       id: id
       amount: price
-    core_coverage: 0.2
+    core_coverage: 0.333
     evidence:
     - openapi/_original/ordergroove-openapi.yml#GET /products/
     - openapi/_original/ordergroove-openapi.yml#GET /products/{id}/

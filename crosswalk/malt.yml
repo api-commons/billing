@@ -11,7 +11,7 @@ concepts:
       created_at: creationDate
       customer_id: customer
       tax: taxes
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/malt-exposed-apis-openapi.yml#GET /freelancer/invoices
     - openapi/_original/malt-exposed-apis-openapi.yml#GET /freelancer/invoices/{id}

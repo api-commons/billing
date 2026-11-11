@@ -19,6 +19,7 @@ concepts:
       created_at: created_at
       customer_id: customer_id
       plan_id: product_id
+      currency: currency
     core_coverage: 1.0
     evidence:
     - openapi/_original/polar-sh-openapi.yml#DELETE /subscriptions/{id}
@@ -33,9 +34,10 @@ concepts:
       name: name
       description: description
       created_at: created_at
+      amount: unit_amount
       metadata: metadata
       updated_at: modified_at
-    core_coverage: 0.8
+    core_coverage: 0.833
     evidence:
     - openapi/_original/polar-sh-openapi.yml#GET /products/
     - openapi/_original/polar-sh-openapi.yml#GET /products/{id}

@@ -9,7 +9,8 @@ concepts:
     properties:
       id: invoiceId
       due_date: dueDate
-    core_coverage: 0.667
+      total: amount
+    core_coverage: 0.5
     evidence:
     - openapi/_original/btg-pactual-banking-cards-openapi.yml#GET /{companyId}/banking/cards/invoices
     - openapi/_original/btg-pactual-banking-cards-openapi.yml#GET /{companyId}/banking/cards/invoices/{invoiceId}

@@ -45,7 +45,8 @@ concepts:
       description: description
       created_at: created
       amount: amount
-    core_coverage: 0.8
+      type: type
+    core_coverage: 0.833
     evidence:
     - openapi/_original/payrix-merchant-openapi.yml#DELETE /plans/{id}
     - openapi/_original/payrix-merchant-openapi.yml#GET /plans

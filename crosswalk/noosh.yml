@@ -19,7 +19,7 @@ concepts:
       description: comments
       tax: tax
       metadata: custom_fields
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/noosh-openapi.json#GET /v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}
     - openapi/_original/noosh-openapi.yml#GET /v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}

@@ -15,7 +15,7 @@ concepts:
       currency: currency
       issued_at: date
       total: amount
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/versapay-api-reference.json#GET /api/exports/invoice/{number_or_id}
     - openapi/_original/versapay-api-reference.json#POST /api/imports/invoice

@@ -11,7 +11,7 @@ concepts:
       currency: currency
       line_items: invoiceItems
       total: totalAmount
-    core_coverage: 0.0
+    core_coverage: 0.25
     evidence:
     - openapi/_original/socotra-openapi-original.json#GET /billing/{tenantLocator}/invoices/{locator}
     - openapi/_original/socotra-openapi-original.json#GET /document/{tenantLocator}/documents/invoices/{locator}

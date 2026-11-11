@@ -13,13 +13,13 @@ concepts:
       number: invoiceNumber
       created_at: createdTime
       currency: currency
-      customer_id: customerId
       issued_at: invoiceDate
+      customer_id: customerId
       total: amount
       description: description
       updated_at: updatedTime
       amount_due: amountDue
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/bill-openapi.yml#GET /bills
     - openapi/_original/bill-openapi.yml#GET /bills/{billId}

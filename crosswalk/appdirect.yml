@@ -65,7 +65,8 @@ concepts:
       name: name
       description: description
       updated_at: lastModified
-    core_coverage: 0.6
+      type: type
+    core_coverage: 0.5
     evidence:
     - openapi/_original/appdirect-companies-openapi-original.yml#GET /marketplace/v1/products/{applicationId}
     - openapi/_original/appdirect-companies-openapi-original.yml#GET /marketplace/v1/vendors/{vendorUuid}/products
@@ -94,8 +95,9 @@ concepts:
     path_segment:
     - usage
     properties:
-      customer_id: account
-    core_coverage: 0.0
+      quantity: quantity
+      description: description
+    core_coverage: 0.5
     evidence:
     - openapi/_original/appdirect-companies-openapi-original.yml#POST /integration/v1/billing/usage
     - openapi/_original/appdirect-companies-openapi-original.yml#POST /integration/v2/billing/usage

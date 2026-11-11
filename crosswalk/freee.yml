@@ -12,7 +12,7 @@ concepts:
       number: invoice_number
       issued_at: issue_date
       total: total_amount
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/freee-openapi.yml#GET /api/1/invoices
     - openapi/_original/freee-openapi.yml#GET /api/1/invoices/{id}

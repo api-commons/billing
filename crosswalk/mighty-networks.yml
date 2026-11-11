@@ -25,7 +25,7 @@ concepts:
       created_at: created_at
       is_active: status
       updated_at: updated_at
-    core_coverage: 1.0
+    core_coverage: 0.833
     evidence:
     - openapi/_original/mighty-networks-admin-api-openapi.json#DELETE /admin/v1/networks/{network_id}/plans/{id}/
     - openapi/_original/mighty-networks-admin-api-openapi.json#GET /admin/v1/networks/{network_id}/members/{member_id}/plans

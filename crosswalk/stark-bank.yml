@@ -9,7 +9,7 @@ concepts:
     properties:
       status: status
       total: amount
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/stark-bank-openapi-original.yml#GET /v2/invoice
     - openapi/_original/stark-bank-openapi-original.yml#GET /v2/invoice/{id}

@@ -29,10 +29,8 @@ concepts:
     path_segment:
     - prices
     properties:
-      plan_id:
-      - productId
-      - product
       id: id
+      plan_id: productId
       currency: currency
       created_at: createdDate
     core_coverage: 0.75

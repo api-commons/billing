@@ -10,7 +10,7 @@ concepts:
       id: id
       status: status
       tax: tax
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/tutorcruncher-openapi.yml#GET /invoices/
     - openapi/_original/tutorcruncher-openapi.yml#GET /invoices/{id}/

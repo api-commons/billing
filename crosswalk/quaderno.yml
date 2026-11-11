@@ -11,11 +11,11 @@ concepts:
       status: state
       number: number
       currency: currency
-      customer_id: contact_id
       issued_at: issue_date
+      customer_id: contact_id
       description: notes
       tax: taxes
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/quaderno-openapi.yml#DELETE /invoices/{id}.json
     - openapi/_original/quaderno-openapi.yml#GET /invoices.json

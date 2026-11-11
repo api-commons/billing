@@ -9,7 +9,7 @@ concepts:
     properties:
       id: id
       metadata: attributes
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/gingr-openapi.json#GET /v1/invoices
     - openapi/_original/gingr-openapi.json#GET /v1/invoices/{invoiceId}

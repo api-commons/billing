@@ -13,7 +13,7 @@ concepts:
       created_at: created_at
       customer_id: customer
       total: amount
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/pagarme-openapi.yml#DELETE /invoices/{invoice_id}
     - openapi/_original/pagarme-openapi.yml#GET /invoices
@@ -31,6 +31,7 @@ concepts:
       plan_id:
       - plan
       - plan_id
+      items: items
     core_coverage: 1.0
     evidence:
     - openapi/_original/pagarme-openapi.yml#DELETE /subscriptions/{subscription_id}
@@ -48,7 +49,7 @@ concepts:
       is_active: status
       currency: currency
       billing_interval: interval
-    core_coverage: 1.0
+    core_coverage: 0.833
     evidence:
     - openapi/_original/pagarme-openapi.yml#DELETE /plans/{plan_id}
     - openapi/_original/pagarme-openapi.yml#GET /plans

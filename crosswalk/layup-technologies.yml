@@ -16,7 +16,7 @@ concepts:
       created_at: createdAt
       total: totalAmount
       tax: vatAmount
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/layup-technologies-openapi-original.json#GET /v1/invoices
     - openapi/_original/layup-technologies-openapi-original.json#GET /v1/invoices/{id}

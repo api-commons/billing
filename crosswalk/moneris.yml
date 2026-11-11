@@ -24,7 +24,8 @@ concepts:
     path_segment:
     - plans
     properties:
+      id: planId
       amount: amount
-    core_coverage: 0.0
+    core_coverage: 0.333
     evidence:
     - openapi/_original/moneris-unified-api-openapi.json#POST /installments/plans

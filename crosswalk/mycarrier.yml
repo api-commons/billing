@@ -14,7 +14,7 @@ concepts:
       - invoiceNumber
       line_items: lineItems
       description: notes
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/mycarrier-freightaudit-api-openapi.json#DELETE /api/v3/invoices/{id}
     - openapi/_original/mycarrier-freightaudit-api-openapi.json#GET /api/FreightAudit/Invoice/{recordId}

@@ -13,10 +13,12 @@ concepts:
       currency: currency_code
       line_items: invoice_lines
       issued_at: invoice_date
-      total: total_amount
+      total:
+      - total_amount
+      - amount_total
       description: description
       updated_at: updated_at
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/payt-openapi-original.json#GET /v1/invoices
     - openapi/_original/payt-openapi-original.json#GET /v1/invoices/{id}

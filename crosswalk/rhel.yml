@@ -6,7 +6,11 @@ concepts:
   subscription:
     path_segment:
     - subscriptions
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      status: status
+      canceled_at: endDate
+      started_at: startDate
+    core_coverage: 0.667
     evidence:
     - openapi/_original/rhel-subscription-management-openapi.yml#GET /subscriptions

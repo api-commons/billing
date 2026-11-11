@@ -11,7 +11,7 @@ concepts:
       due_date: dueDate
       number: invoiceNumber
       total: amount
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/openapi.yml#GET /v1/invoices
     - openapi/_original/openapi.yml#GET /v1/invoices/{invoiceUid}

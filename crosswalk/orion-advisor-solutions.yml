@@ -13,7 +13,7 @@ concepts:
       created_at: createdDate
       customer_id: clientId
       amount_due: balanceDue
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Billing/Bills
     - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Billing/Bills/{key}

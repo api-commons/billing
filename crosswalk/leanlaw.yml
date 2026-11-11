@@ -10,10 +10,10 @@ concepts:
       id: invoiceId
       due_date: dueDate
       number: invoiceNumber
-      customer_id: clientId
       issued_at: invoiceDate
+      customer_id: clientId
       total: amount
       amount_due: balance
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/leanlaw-api-openapi.json#GET /v2/invoices

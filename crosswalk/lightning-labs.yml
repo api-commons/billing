@@ -13,7 +13,7 @@ concepts:
       - status
       created_at: creation_date
       description: memo
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/lightning-labs-openapi.json#DELETE /v1/invoices
     - openapi/_original/lightning-labs-openapi.json#GET /v1/invoice/{r_hash_str}

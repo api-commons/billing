@@ -13,15 +13,15 @@ concepts:
       due_date: due_date
       created_at: created_at
       currency: currency
-      customer_id: account
       issued_at:
       - invoice_date
       - issue_date
+      customer_id: account
       total: total_amount
       tax:
       - tax_amount
       - vat_amount
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/belvo-openapi.json#DELETE /api/bills/{id}/
     - openapi/_original/belvo-openapi.json#DELETE /api/cl/invoices/{id}/

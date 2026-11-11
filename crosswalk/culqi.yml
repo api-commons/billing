@@ -29,7 +29,7 @@ concepts:
       amount: amount
       currency: currency_code
       metadata: metadata
-    core_coverage: 0.6
+    core_coverage: 0.667
     evidence:
     - openapi/_original/culqi-openapi.yml#DELETE /plans/{id}
     - openapi/_original/culqi-openapi.yml#GET /plans

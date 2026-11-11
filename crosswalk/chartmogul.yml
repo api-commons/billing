@@ -12,7 +12,7 @@ concepts:
       currency: currency
       line_items: line_items
       issued_at: date
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/chartmogul-openapi.yml#DELETE /invoices/{uuid}
     - openapi/_original/chartmogul-openapi.yml#GET /customers/{uuid}/invoices
@@ -36,7 +36,7 @@ concepts:
       name: name
       billing_interval: interval_unit
       code: external_id
-    core_coverage: 0.4
+    core_coverage: 0.333
     evidence:
     - openapi/_original/chartmogul-openapi.yml#DELETE /plans/{uuid}
     - openapi/_original/chartmogul-openapi.yml#GET /plans

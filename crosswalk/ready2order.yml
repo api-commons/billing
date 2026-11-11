@@ -12,7 +12,7 @@ concepts:
       line_items: items
       customer_id: customer_id
       total: invoice_total
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/ready2order-openapi-original.json#GET /document/invoice
     - openapi/_original/ready2order-openapi-original.json#GET /document/invoice/{id}

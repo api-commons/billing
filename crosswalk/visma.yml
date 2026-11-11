@@ -11,12 +11,12 @@ concepts:
       due_date: dueDate
       number: referenceNumber
       line_items: invoiceLines
-      customer_id:
-      - customer
-      - account
       issued_at:
       - documentDate
       - date
+      customer_id:
+      - customer
+      - account
       total: amount
       description:
       - note
@@ -24,7 +24,7 @@ concepts:
       tax: vatAmount
       amount_due: balance
       metadata: metadata
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#GET /v1/customer/{customerNumber}/invoice
     - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#GET /v1/supplier/{supplierNumber}/invoice

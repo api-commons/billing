@@ -9,7 +9,7 @@ concepts:
     properties:
       id: id
       metadata: attributes
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/subscriptions.yaml#GET /v2/subscriptions/invoices
     - openapi/_original/subscriptions.yaml#GET /v2/subscriptions/invoices/{invoice_uuid}
@@ -24,7 +24,9 @@ concepts:
       plan_id: plan_id
       metadata: attributes
       started_at: started_at
+      currency: currency
       name: name
+      items: plans
     core_coverage: 0.333
     evidence:
     - openapi/_original/subscriptions.yaml#DELETE /v2/subscriptions/subscriptions/{subscription_uuid}
@@ -39,7 +41,8 @@ concepts:
     properties:
       id: id
       metadata: attributes
-    core_coverage: 0.2
+      type: type
+    core_coverage: 0.167
     evidence:
     - openapi/_original/catalog.yaml#GET /catalog/hierarchies/{hierarchy_id}/products
     - openapi/_original/catalog.yaml#GET /catalog/nodes/{node_id}/relationships/products
@@ -75,7 +78,7 @@ concepts:
       customer_id:
       - customer_id
       - account_id
-    core_coverage: 1.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/promotions-builder.yaml#GET /v2/rule-promotions/{promotionID}/codes/{code}/usages
     - openapi/_original/promotions-builder.yaml#GET /v2/rule-promotions/{promotionID}/usages

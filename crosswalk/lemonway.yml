@@ -21,6 +21,7 @@ concepts:
     properties:
       id: id
       description: description
-    core_coverage: 0.4
+      type: type
+    core_coverage: 0.333
     evidence:
     - openapi/_original/lemonway-directkit-api-2-0-openapi.yml#GET /v2/moneyins/buynowpaylater/plans
