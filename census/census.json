@@ -1,5 +1,23 @@
 {
  "cohort_size": 837,
+ "unreadable": [
+  {
+   "spec": "novopayment/openapi/_original/novopayment-issuer-tokenization-openapi.yml",
+   "error": "while scanning a block scalar"
+  },
+  {
+   "spec": "novopayment/openapi/_original/novopayment-issuer-tokenization.yaml",
+   "error": "while scanning a block scalar"
+  },
+  {
+   "spec": "novopayment/openapi/_original/novopayment-payment-authorizer-openapi.yml",
+   "error": "while scanning a block scalar"
+  },
+  {
+   "spec": "novopayment/openapi/_original/novopayment-payment-authorizer.yaml",
+   "error": "while scanning a block scalar"
+  }
+ ],
  "concepts": {
   "invoice": {
    "1fort": {
@@ -712,6 +730,7 @@
      "openapi/_original/bill-openapi.yml#PATCH /bills/{billId}",
      "openapi/_original/bill-openapi.yml#PATCH /invoices/{invoiceId}",
      "openapi/_original/bill-openapi.yml#POST /bills",
+     "openapi/_original/bill-openapi.yml#POST /bills/bulk",
      "openapi/_original/bill-openapi.yml#POST /invoices"
     ]
    },
@@ -2168,6 +2187,7 @@
      "DELETE item",
      "GET collection",
      "GET item",
+     "POST collection",
      "PUT item"
     ],
     "properties": {
@@ -2206,18 +2226,25 @@
      "functionalTaxTotal": "number",
      "functionalTotal": "number",
      "customFields": "object",
-     "billingContactId": "string"
+     "billingContactId": "string",
+     "name": "string",
+     "description": "string",
+     "targetDate": "integer",
+     "chargeInclusionOption": "string",
+     "isHistorical": "boolean"
     },
     "evidence": [
      "openapi/_original/dealhub-subskribe-api-openapi.json#DELETE /invoices/{number}",
      "openapi/_original/dealhub-subskribe-api-openapi.json#GET /invoices",
      "openapi/_original/dealhub-subskribe-api-openapi.json#GET /invoices/{number}",
      "openapi/_original/dealhub-subskribe-api-openapi.json#GET /rh/invoices",
+     "openapi/_original/dealhub-subskribe-api-openapi.json#POST /invoices/bulk",
      "openapi/_original/dealhub-subskribe-api-openapi.json#PUT /invoices/{number}",
      "openapi/_original/dealhub-subskribe-api-openapi.yml#DELETE /invoices/{number}",
      "openapi/_original/dealhub-subskribe-api-openapi.yml#GET /invoices",
      "openapi/_original/dealhub-subskribe-api-openapi.yml#GET /invoices/{number}",
      "openapi/_original/dealhub-subskribe-api-openapi.yml#GET /rh/invoices",
+     "openapi/_original/dealhub-subskribe-api-openapi.yml#POST /invoices/bulk",
      "openapi/_original/dealhub-subskribe-api-openapi.yml#PUT /invoices/{number}"
     ]
    },
@@ -8173,16 +8200,21 @@
      "clientLastName": [
       "string",
       "null"
-     ]
+     ],
+     "bulkInvoiceBatchId": "string",
+     "processingStrategy": "string",
+     "statistics": null
     },
     "evidence": [
      "openapi/_original/wingspan-payments-openapi-original.yml#DELETE /payments/invoice/{id}",
+     "openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/bulk/invoice/batch",
      "openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/client/invoice",
      "openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/client/invoice/{id}",
      "openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/invoice",
      "openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/invoice/{id}",
      "openapi/_original/wingspan-payments-openapi-original.yml#PATCH /payments/client/invoice/{id}",
      "openapi/_original/wingspan-payments-openapi-original.yml#PATCH /payments/invoice/{id}",
+     "openapi/_original/wingspan-payments-openapi-original.yml#POST /payments/bulk/invoice/batch",
      "openapi/_original/wingspan-payments-openapi-original.yml#POST /payments/client/invoice",
      "openapi/_original/wingspan-payments-openapi-original.yml#POST /payments/invoice"
     ]
@@ -8567,6 +8599,9 @@
      "PUT item"
     ],
     "properties": {
+     "invoices": "array",
+     "success": "boolean",
+     "useSingleTransaction": "boolean",
      "accountId": "string",
      "adjustmentAmount": "string",
      "amount": "string",
@@ -8629,7 +8664,6 @@
      "soldToSameAsBillTo": "boolean",
      "processId": "string",
      "reasons": "array",
-     "success": "boolean",
      "cancelledById": "string",
      "cancelledOn": "string",
      "comment": "string",
@@ -8644,6 +8678,7 @@
      "openapi/_original/zuora-v1-openapi.yml#DELETE /v1/invoices/{invoiceKey}",
      "openapi/_original/zuora-v1-openapi.yml#GET /v1/invoices/{invoiceKey}",
      "openapi/_original/zuora-v1-openapi.yml#POST /v1/invoices",
+     "openapi/_original/zuora-v1-openapi.yml#POST /v1/invoices/batch",
      "openapi/_original/zuora-v1-openapi.yml#PUT /v1/invoices",
      "openapi/_original/zuora-v1-openapi.yml#PUT /v1/invoices/{invoiceKey}"
     ]
@@ -11771,15 +11806,30 @@
      "subscriptions"
     ],
     "operations": [
-     "POST collection"
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
     ],
     "properties": {
      "requestId": "string",
      "customer": "object",
-     "account": "object"
+     "account": "object",
+     "id": "string",
+     "name": "string",
+     "subjectType": "string",
+     "subscriberId": "string",
+     "active": "boolean",
+     "specifications": "array"
     },
     "evidence": [
-     "openapi/_original/mastercard-automatic-billing-updater-api-openapi.yml#POST /subscriptions"
+     "openapi/_original/mastercard-automatic-billing-updater-api-openapi.yml#POST /subscriptions",
+     "openapi/_original/mastercard-commercial-event-notifications-openapi.yml#DELETE /subscriptions/{id}",
+     "openapi/_original/mastercard-commercial-event-notifications-openapi.yml#GET /subscriptions",
+     "openapi/_original/mastercard-commercial-event-notifications-openapi.yml#GET /subscriptions/{id}",
+     "openapi/_original/mastercard-commercial-event-notifications-openapi.yml#POST /subscriptions",
+     "openapi/_original/mastercard-commercial-event-notifications-openapi.yml#PUT /subscriptions/{id}"
     ]
    },
    "method-financial": {
@@ -11964,9 +12014,11 @@
      "openapi/_original/moesif-openapi.json#GET /search/~/companies/{id}/subscriptions",
      "openapi/_original/moesif-openapi.json#GET /search/~/subscriptions/{id}",
      "openapi/_original/moesif-openapi.json#POST /search/~/subscriptions",
+     "openapi/_original/moesif-openapi.json#POST /search/~/subscriptions/batch",
      "openapi/_original/moesif-openapi.yml#GET /search/~/companies/{id}/subscriptions",
      "openapi/_original/moesif-openapi.yml#GET /search/~/subscriptions/{id}",
-     "openapi/_original/moesif-openapi.yml#POST /search/~/subscriptions"
+     "openapi/_original/moesif-openapi.yml#POST /search/~/subscriptions",
+     "openapi/_original/moesif-openapi.yml#POST /search/~/subscriptions/batch"
     ]
    },
    "moneris": {
@@ -12825,6 +12877,9 @@
      "from": "string"
     },
     "evidence": [
+     "openapi/_original/paypal-billing-subscriptions-api-openapi.yml#GET /v1/billing/subscriptions/{id}",
+     "openapi/_original/paypal-billing-subscriptions-api-openapi.yml#PATCH /v1/billing/subscriptions/{id}",
+     "openapi/_original/paypal-billing-subscriptions-api-openapi.yml#POST /v1/billing/subscriptions",
      "openapi/_original/paypal-billing-subscriptions-openapi-original.yml#GET /v1/billing/subscriptions/{id}",
      "openapi/_original/paypal-billing-subscriptions-openapi-original.yml#PATCH /v1/billing/subscriptions/{id}",
      "openapi/_original/paypal-billing-subscriptions-openapi-original.yml#POST /v1/billing/subscriptions"
@@ -18192,6 +18247,36 @@
      "openapi/_original/marqeta-core-api-openapi.yml#PUT /policies/products/{token}"
     ]
    },
+   "mastercard": {
+    "segments": [
+     "plans"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "planId": "string",
+     "status": "string",
+     "offerTransactionId": "string",
+     "merchant": null,
+     "offerId": "string",
+     "planInstallmentInformation": null,
+     "providerId": "string",
+     "schedulePayments": "array",
+     "transaction": null,
+     "sensitiveData": "object",
+     "transactionOffers": "array",
+     "consumer": "object",
+     "rejectReasonCode": "string",
+     "rejectReasonDetail": "string",
+     "scheduledRepayments": "array"
+    },
+    "evidence": [
+     "openapi/_original/mastercard-installments-openapi.yml#GET /plans/{plan_id}",
+     "openapi/_original/mastercard-installments-openapi.yml#POST /plans"
+    ]
+   },
    "mavrck": {
     "segments": [
      "products"
@@ -19413,6 +19498,10 @@
      "home_url": "string"
     },
     "evidence": [
+     "openapi/_original/paypal-billing-subscriptions-api-openapi.yml#GET /v1/billing/plans",
+     "openapi/_original/paypal-billing-subscriptions-api-openapi.yml#GET /v1/billing/plans/{id}",
+     "openapi/_original/paypal-billing-subscriptions-api-openapi.yml#PATCH /v1/billing/plans/{id}",
+     "openapi/_original/paypal-billing-subscriptions-api-openapi.yml#POST /v1/billing/plans",
      "openapi/_original/paypal-billing-subscriptions-openapi-original.yml#GET /v1/billing/plans",
      "openapi/_original/paypal-billing-subscriptions-openapi-original.yml#GET /v1/billing/plans/{id}",
      "openapi/_original/paypal-billing-subscriptions-openapi-original.yml#PATCH /v1/billing/plans/{id}",
@@ -19689,6 +19778,7 @@
      "openapi/_original/ready2order-openapi-original.json#GET /products",
      "openapi/_original/ready2order-openapi-original.json#GET /products/{id}",
      "openapi/_original/ready2order-openapi-original.json#POST /products",
+     "openapi/_original/ready2order-openapi-original.json#POST /products/batch",
      "openapi/_original/ready2order-openapi-original.json#PUT /products/{id}"
     ]
    },
@@ -21282,6 +21372,7 @@
      "openapi/_original/virto-commerce-catalog-openapi.json#PATCH /api/catalog/products",
      "openapi/_original/virto-commerce-catalog-openapi.json#PATCH /api/catalog/products/{id}",
      "openapi/_original/virto-commerce-catalog-openapi.json#POST /api/catalog/products",
+     "openapi/_original/virto-commerce-catalog-openapi.json#POST /api/catalog/products/batch",
      "openapi/_original/virto-commerce-catalog-openapi.json#POST /api/catalog/search/products",
      "openapi/_original/virto-commerce-inventory-openapi.json#GET /api/inventory/products",
      "openapi/_original/virto-commerce-inventory-openapi.json#GET /api/inventory/products/{productId}",
@@ -22574,10 +22665,12 @@
      "fee": null,
      "usdt_per_ton": "string",
      "quoted_at": "string",
-     "valid_until": "string"
+     "valid_until": "string",
+     "quotes": "array"
     },
     "evidence": [
-     "openapi/_original/mystars-faas-openapi.json#GET /v1/pricing"
+     "openapi/_original/mystars-faas-openapi.json#GET /v1/pricing",
+     "openapi/_original/mystars-faas-openapi.json#GET /v1/pricing/batch"
     ]
    },
    "mystars-faas-fulfilment-api": {
@@ -22602,10 +22695,12 @@
      "fee": null,
      "usdt_per_ton": "string",
      "quoted_at": "string",
-     "valid_until": "string"
+     "valid_until": "string",
+     "quotes": "array"
     },
     "evidence": [
-     "openapi/_original/mystars-faas-fulfilment-api-openapi-original.json#GET /v1/pricing"
+     "openapi/_original/mystars-faas-fulfilment-api-openapi-original.json#GET /v1/pricing",
+     "openapi/_original/mystars-faas-fulfilment-api-openapi-original.json#GET /v1/pricing/batch"
     ]
    },
    "neon-commerce": {
@@ -22849,10 +22944,13 @@
     "evidence": [
      "openapi/_original/plateiq-catalog-api-openapi.yml#GET /catalog/prices",
      "openapi/_original/plateiq-catalog-api-openapi.yml#POST /catalog/prices",
+     "openapi/_original/plateiq-catalog-api-openapi.yml#POST /catalog/prices/bulk",
      "openapi/_original/plateiq-openapi.json#GET /catalog/prices",
      "openapi/_original/plateiq-openapi.json#POST /catalog/prices",
+     "openapi/_original/plateiq-openapi.json#POST /catalog/prices/bulk",
      "openapi/_original/plateiq-openapi.yaml#GET /catalog/prices",
-     "openapi/_original/plateiq-openapi.yaml#POST /catalog/prices"
+     "openapi/_original/plateiq-openapi.yaml#POST /catalog/prices",
+     "openapi/_original/plateiq-openapi.yaml#POST /catalog/prices/bulk"
     ]
    },
    "outdoorsy": {
@@ -23008,7 +23106,8 @@
     },
     "evidence": [
      "openapi/_original/qubiqle-openapi-original.json#GET /catalog/prices",
-     "openapi/_original/qubiqle-openapi-original.json#POST /catalog/prices"
+     "openapi/_original/qubiqle-openapi-original.json#POST /catalog/prices",
+     "openapi/_original/qubiqle-openapi-original.json#POST /catalog/prices/bulk"
     ]
    },
    "rentberry": {
@@ -24744,6 +24843,7 @@
      "GET collection",
      "GET item",
      "POST collection",
+     "PUT collection",
      "PUT item"
     ],
     "properties": {
@@ -24803,9 +24903,10 @@
      "charges": "array",
      "customRates": "array",
      "effectiveDate": "string",
+     "memos": "array",
+     "items": "array",
      "autoApplyToInvoiceUponPosting": "boolean",
      "invoiceId": "string",
-     "items": "array",
      "taxAutoCalculation": "boolean",
      "processId": "string",
      "reasons": "array"
@@ -24815,7 +24916,9 @@
      "openapi/_original/zuora-v1-openapi.yml#GET /v1/creditmemos",
      "openapi/_original/zuora-v1-openapi.yml#GET /v1/creditmemos/{creditMemoKey}",
      "openapi/_original/zuora-v1-openapi.yml#POST /v1/creditmemos",
+     "openapi/_original/zuora-v1-openapi.yml#POST /v1/creditmemos/bulk",
      "openapi/_original/zuora-v1-openapi.yml#POST /v1/invoices/{invoiceKey}/creditmemos",
+     "openapi/_original/zuora-v1-openapi.yml#PUT /v1/creditmemos/bulk",
      "openapi/_original/zuora-v1-openapi.yml#PUT /v1/creditmemos/{creditMemoKey}"
     ]
    }
@@ -27050,6 +27153,24 @@
      "openapi/_original/promotions-builder.yaml#GET /v2/rule-promotions/{promotionID}/usages"
     ]
    },
+   "fat-zebra": {
+    "segments": [
+     "usage_records"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "unit": "string",
+     "volume": "integer",
+     "tags": "array",
+     "period_from": "string",
+     "period_to": "string"
+    },
+    "evidence": [
+     "openapi/_original/fat-zebra-billing.json#POST /customers/{customer_id}/usage_records/batch"
+    ]
+   },
    "flipdish": {
     "segments": [
      "usage"
@@ -28829,6 +28950,7 @@
     "vicai",
     "virgin-money-uk",
     "virto-commerce",
+    "visa",
     "vivenu",
     "volt-io",
     "vopay",
@@ -29370,6 +29492,7 @@
     "kakao",
     "keap",
     "keycorp",
+    "klarna",
     "later",
     "layup-technologies",
     "lean-technologies",
@@ -31529,6 +31652,7 @@
     "macquarie-bank",
     "mamo",
     "mangopay",
+    "mastercard",
     "mavenlink",
     "mavrck",
     "memo-bank",
@@ -31904,6 +32028,7 @@
     "m3ter",
     "macquarie-bank",
     "majesco",
+    "mastercard",
     "mavrck",
     "momence",
     "monetizenow",
@@ -32167,6 +32292,7 @@
     "lean-technologies",
     "lexoffice",
     "lightspeed",
+    "mastercard",
     "memo-bank",
     "modulr",
     "moniepoint",
@@ -32219,6 +32345,7 @@
     "impala",
     "iugu",
     "ledger",
+    "mastercard",
     "mercury",
     "mono-africa",
     "mono-co",
@@ -33135,6 +33262,7 @@
     "mandateshield-com",
     "marginedge",
     "marqeta",
+    "mastercard",
     "mastercard-gateway-api",
     "mavrck",
     "memo-bank",
@@ -34082,6 +34210,7 @@
     "dodo-payments",
     "elastic-path",
     "etsy",
+    "fat-zebra",
     "fifth-third-bancorp",
     "float-financial",
     "fordefi",

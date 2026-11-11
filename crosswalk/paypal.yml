@@ -32,9 +32,11 @@ concepts:
       updated_at: update_time
     core_coverage: 1.0
     evidence:
+    - openapi/_original/paypal-billing-subscriptions-api-openapi.yml#GET /v1/billing/subscriptions/{id}
+    - openapi/_original/paypal-billing-subscriptions-api-openapi.yml#PATCH /v1/billing/subscriptions/{id}
+    - openapi/_original/paypal-billing-subscriptions-api-openapi.yml#POST /v1/billing/subscriptions
     - openapi/_original/paypal-billing-subscriptions-openapi-original.yml#GET /v1/billing/subscriptions/{id}
     - openapi/_original/paypal-billing-subscriptions-openapi-original.yml#PATCH /v1/billing/subscriptions/{id}
-    - openapi/_original/paypal-billing-subscriptions-openapi-original.yml#POST /v1/billing/subscriptions
   plan:
     path_segment:
     - plans
@@ -49,8 +51,8 @@ concepts:
       product_id: product_id
     core_coverage: 1.0
     evidence:
+    - openapi/_original/paypal-billing-subscriptions-api-openapi.yml#GET /v1/billing/plans
+    - openapi/_original/paypal-billing-subscriptions-api-openapi.yml#GET /v1/billing/plans/{id}
+    - openapi/_original/paypal-billing-subscriptions-api-openapi.yml#PATCH /v1/billing/plans/{id}
+    - openapi/_original/paypal-billing-subscriptions-api-openapi.yml#POST /v1/billing/plans
     - openapi/_original/paypal-billing-subscriptions-openapi-original.yml#GET /v1/billing/plans
-    - openapi/_original/paypal-billing-subscriptions-openapi-original.yml#GET /v1/billing/plans/{id}
-    - openapi/_original/paypal-billing-subscriptions-openapi-original.yml#PATCH /v1/billing/plans/{id}
-    - openapi/_original/paypal-billing-subscriptions-openapi-original.yml#POST /v1/billing/plans
-    - openapi/_original/paypal-catalog-products-openapi-original.yml#GET /v1/catalogs/products

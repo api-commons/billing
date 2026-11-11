@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/billing/main/schema/plan.json",
   "title": "Plan",
-  "description": "The common plan in Billing and Invoicing, distilled from 52 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common plan in Billing and Invoicing, distilled from 53 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.885,
-      "x-commons-providers": 46,
+      "x-commons-share": 0.887,
+      "x-commons-providers": 47,
       "x-commons-spellings": [
         "id",
         "planId",
@@ -22,7 +22,7 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.846,
+      "x-commons-share": 0.83,
       "x-commons-providers": 44,
       "x-commons-spellings": [
         "name",
@@ -35,7 +35,7 @@
     "description": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.654,
+      "x-commons-share": 0.642,
       "x-commons-providers": 34,
       "x-commons-spellings": [
         "description",
@@ -48,7 +48,7 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.635,
+      "x-commons-share": 0.623,
       "x-commons-providers": 33,
       "x-commons-spellings": [
         "created_at",
@@ -65,8 +65,8 @@
     "is_active": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 26,
+      "x-commons-share": 0.509,
+      "x-commons-providers": 27,
       "x-commons-spellings": [
         "status",
         "active",
@@ -77,7 +77,7 @@
     "amount": {
       "type": "integer",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.481,
+      "x-commons-share": 0.472,
       "x-commons-providers": 25,
       "x-commons-spellings": [
         "amount",
@@ -88,7 +88,7 @@
     "currency": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.423,
+      "x-commons-share": 0.415,
       "x-commons-providers": 22,
       "x-commons-spellings": [
         "currency",
@@ -99,7 +99,7 @@
     "billing_interval": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.327,
+      "x-commons-share": 0.321,
       "x-commons-providers": 17,
       "x-commons-spellings": [
         "interval",
@@ -113,7 +113,7 @@
     "metadata": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.327,
+      "x-commons-share": 0.321,
       "x-commons-providers": 17,
       "x-commons-spellings": [
         "metadata",
@@ -126,7 +126,7 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.308,
+      "x-commons-share": 0.302,
       "x-commons-providers": 16,
       "x-commons-spellings": [
         "updated_at",
@@ -143,7 +143,7 @@
     "code": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.288,
+      "x-commons-share": 0.283,
       "x-commons-providers": 15,
       "x-commons-spellings": [
         "sku",
@@ -157,7 +157,7 @@
     "product_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.25,
+      "x-commons-share": 0.245,
       "x-commons-providers": 13,
       "x-commons-spellings": [
         "productId",
@@ -171,7 +171,7 @@
   "x-commons": {
     "context": "billing",
     "concept": "plan",
-    "providers": 52,
+    "providers": 53,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

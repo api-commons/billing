@@ -7,9 +7,26 @@ concepts:
     path_segment:
     - subscriptions
     properties:
+      id: id
       customer_id:
       - customer
       - account
-    core_coverage: 0.0
+      - subscriberId
+      name: name
+    core_coverage: 0.333
     evidence:
     - openapi/_original/mastercard-automatic-billing-updater-api-openapi.yml#POST /subscriptions
+    - openapi/_original/mastercard-commercial-event-notifications-openapi.yml#DELETE /subscriptions/{id}
+    - openapi/_original/mastercard-commercial-event-notifications-openapi.yml#GET /subscriptions
+    - openapi/_original/mastercard-commercial-event-notifications-openapi.yml#GET /subscriptions/{id}
+    - openapi/_original/mastercard-commercial-event-notifications-openapi.yml#POST /subscriptions
+  plan:
+    path_segment:
+    - plans
+    properties:
+      id: planId
+      is_active: status
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/mastercard-installments-openapi.yml#GET /plans/{plan_id}
+    - openapi/_original/mastercard-installments-openapi.yml#POST /plans

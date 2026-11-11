@@ -18,8 +18,8 @@ providers.
 | --- | ---: | ---: | --- | --- |
 | invoice | 183 | 162 | id 76%, status 69%, due_date 53% | invoices 145, invoice 43, bills 21 |
 | invoice_line | 16 | 14 | description 71%, id 57%, quantity 57% | line-items 5, lines 5, lineitems 3, items 3 |
-| subscription | 137 | 123 | id 78%, status 63%, created_at 52% | subscriptions 124, subscription 22 |
-| plan | 57 | 52 | id 88%, name 85%, description 65%, created_at 64%, is_active 50% | plans 40, products 31, product 5, plan 4 |
+| subscription | 137 | 123 | id 79%, status 63%, created_at 52% | subscriptions 124, subscription 22 |
+| plan | 58 | 53 | id 89%, name 83%, description 64%, created_at 62%, is_active 51% | plans 41, products 31, product 5, plan 4 |
 | price | 16 | 14 | plan_id 64%, currency 57%, id 57%, pricing_model 50% | prices 12, price 3, pricing 2, item_prices 1 |
 | credit_note | 29 | 25 | id 68%, status 64%, total 64%, description 56%, currency 52% | credit-notes 11, creditnotes 6, credit_notes 5, creditmemos 4 |
 | coupon | 26 | 19 | code 90%, id 68%, created_at 58%, max_redemptions 58% | coupons 16, discounts 11, vouchers 2, coupon 2 |

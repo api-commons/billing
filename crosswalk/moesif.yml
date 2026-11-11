@@ -17,8 +17,8 @@ concepts:
     - openapi/_original/moesif-openapi.json#GET /search/~/companies/{id}/subscriptions
     - openapi/_original/moesif-openapi.json#GET /search/~/subscriptions/{id}
     - openapi/_original/moesif-openapi.json#POST /search/~/subscriptions
+    - openapi/_original/moesif-openapi.json#POST /search/~/subscriptions/batch
     - openapi/_original/moesif-openapi.yml#GET /search/~/companies/{id}/subscriptions
-    - openapi/_original/moesif-openapi.yml#GET /search/~/subscriptions/{id}
   plan:
     path_segment:
     - plans

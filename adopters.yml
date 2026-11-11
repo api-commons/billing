@@ -731,6 +731,7 @@ adopters:
   apis_io: https://apis.io/providers/mastercard/
   crosswalk: crosswalk/mastercard.yml
   concepts:
+  - plan
   - subscription
 - provider: mavenlink
   apis_io: https://apis.io/providers/mavenlink/

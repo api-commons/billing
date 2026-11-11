@@ -30,8 +30,8 @@ concepts:
     - openapi/_original/zuora-v1-openapi.yml#DELETE /v1/invoices/{invoiceKey}
     - openapi/_original/zuora-v1-openapi.yml#GET /v1/invoices/{invoiceKey}
     - openapi/_original/zuora-v1-openapi.yml#POST /v1/invoices
+    - openapi/_original/zuora-v1-openapi.yml#POST /v1/invoices/batch
     - openapi/_original/zuora-v1-openapi.yml#PUT /v1/invoices
-    - openapi/_original/zuora-v1-openapi.yml#PUT /v1/invoices/{invoiceKey}
   invoice_line:
     path_segment:
     - items
@@ -103,7 +103,7 @@ concepts:
     - openapi/_original/zuora-v1-openapi.yml#GET /v1/creditmemos
     - openapi/_original/zuora-v1-openapi.yml#GET /v1/creditmemos/{creditMemoKey}
     - openapi/_original/zuora-v1-openapi.yml#POST /v1/creditmemos
-    - openapi/_original/zuora-v1-openapi.yml#POST /v1/invoices/{invoiceKey}/creditmemos
+    - openapi/_original/zuora-v1-openapi.yml#POST /v1/creditmemos/bulk
   usage_record:
     path_segment:
     - usage

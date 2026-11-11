@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.78,
-      "x-commons-providers": 96,
+      "x-commons-share": 0.789,
+      "x-commons-providers": 97,
       "x-commons-spellings": [
         "id",
         "subscriptionId",
@@ -146,8 +146,8 @@
     "name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.203,
-      "x-commons-providers": 25,
+      "x-commons-share": 0.211,
+      "x-commons-providers": 26,
       "x-commons-spellings": [
         "name",
         "label",

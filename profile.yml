@@ -107,8 +107,8 @@ concepts:
       share: 0.842
       tier: core
     - operation: POST collection
-      providers: 120
-      share: 0.656
+      providers: 121
+      share: 0.661
       tier: core
     - operation: UPDATE item
       providers: 82
@@ -330,7 +330,7 @@ concepts:
       - additionalData
       - MetaData
       - AdditionalData
-    long_tail_count: 2468
+    long_tail_count: 2474
     long_tail_sample:
     - subtotal
     - paid_at
@@ -569,24 +569,24 @@ concepts:
     providers_with_readable_schema: 123
     operations:
     - operation: GET collection
-      providers: 113
-      share: 0.825
+      providers: 114
+      share: 0.832
       tier: core
     - operation: GET item
-      providers: 104
-      share: 0.759
+      providers: 105
+      share: 0.766
       tier: core
     - operation: POST collection
       providers: 98
       share: 0.715
       tier: core
     - operation: UPDATE item
-      providers: 69
-      share: 0.504
+      providers: 70
+      share: 0.511
       tier: core
     - operation: DELETE item
-      providers: 58
-      share: 0.423
+      providers: 59
+      share: 0.431
       tier: extended
     - operation: POST item
       providers: 12
@@ -603,8 +603,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 96
-      share: 0.78
+      providers: 97
+      share: 0.789
       type: string
       spellings:
       - id
@@ -719,15 +719,15 @@ concepts:
       - StartDate
     - name: name
       tier: extended
-      providers: 25
-      share: 0.203
+      providers: 26
+      share: 0.211
       type: string
       spellings:
       - name
       - label
       - Name
       - title
-    long_tail_count: 1070
+    long_tail_count: 1071
     long_tail_sample:
     - billing_interval
     - currency
@@ -745,12 +745,12 @@ concepts:
     - card_id
     - current_period_start
     - external_id
+    - active
     - auto_renew
     - cancel_at
     - source
     - subscription_type
     - trial_start
-    - active
     - company_id
     - content
     - created_by
@@ -771,48 +771,48 @@ concepts:
     - start_at
   plan:
     segments_seen:
-      plans: 40
+      plans: 41
       products: 31
       product: 5
       plan: 4
       item_families: 1
       packages: 1
-    providers_exposing: 57
-    providers_with_readable_schema: 52
+    providers_exposing: 58
+    providers_with_readable_schema: 53
     operations:
     - operation: GET collection
       providers: 55
-      share: 0.965
+      share: 0.948
       tier: core
     - operation: GET item
-      providers: 51
-      share: 0.895
+      providers: 52
+      share: 0.897
       tier: core
     - operation: POST collection
-      providers: 44
-      share: 0.772
+      providers: 45
+      share: 0.776
       tier: core
     - operation: UPDATE item
       providers: 36
-      share: 0.632
+      share: 0.621
       tier: core
     - operation: DELETE item
       providers: 27
-      share: 0.474
+      share: 0.466
       tier: extended
     - operation: POST item
       providers: 6
-      share: 0.105
+      share: 0.103
       tier: long-tail
     - operation: UPDATE collection
       providers: 1
-      share: 0.018
+      share: 0.017
       tier: long-tail
     properties:
     - name: id
       tier: core
-      providers: 46
-      share: 0.885
+      providers: 47
+      share: 0.887
       type: string
       spellings:
       - id
@@ -824,7 +824,7 @@ concepts:
     - name: name
       tier: core
       providers: 44
-      share: 0.846
+      share: 0.83
       type: string
       spellings:
       - name
@@ -835,7 +835,7 @@ concepts:
     - name: description
       tier: core
       providers: 34
-      share: 0.654
+      share: 0.642
       type: string
       spellings:
       - description
@@ -846,7 +846,7 @@ concepts:
     - name: created_at
       tier: core
       providers: 33
-      share: 0.635
+      share: 0.623
       type: string
       spellings:
       - created_at
@@ -859,8 +859,8 @@ concepts:
       - CreatedDate
     - name: is_active
       tier: core
-      providers: 26
-      share: 0.5
+      providers: 27
+      share: 0.509
       type: string
       spellings:
       - status
@@ -870,7 +870,7 @@ concepts:
     - name: amount
       tier: extended
       providers: 25
-      share: 0.481
+      share: 0.472
       type: integer
       spellings:
       - amount
@@ -879,7 +879,7 @@ concepts:
     - name: currency
       tier: extended
       providers: 22
-      share: 0.423
+      share: 0.415
       type: string
       spellings:
       - currency
@@ -888,7 +888,7 @@ concepts:
     - name: billing_interval
       tier: extended
       providers: 17
-      share: 0.327
+      share: 0.321
       type: string
       spellings:
       - interval
@@ -900,7 +900,7 @@ concepts:
     - name: metadata
       tier: extended
       providers: 17
-      share: 0.327
+      share: 0.321
       type: object
       spellings:
       - metadata
@@ -911,7 +911,7 @@ concepts:
     - name: updated_at
       tier: extended
       providers: 16
-      share: 0.308
+      share: 0.302
       type: string
       spellings:
       - updated_at
@@ -925,7 +925,7 @@ concepts:
     - name: code
       tier: extended
       providers: 15
-      share: 0.288
+      share: 0.283
       type: string
       spellings:
       - sku
@@ -937,12 +937,12 @@ concepts:
     - name: product_id
       tier: extended
       providers: 13
-      share: 0.25
+      share: 0.245
       type: string
       spellings:
       - productId
       - product_id
-    long_tail_count: 707
+    long_tail_count: 717
     long_tail_sample:
     - trial_period_days
     - type
@@ -975,15 +975,15 @@ concepts:
     - is_visible
     - item
     - list
+    - merchant
     - order_id
     - pageable
     - parent_id
     - pricing_model
     - product_category
+    - provider_id
     - quantity
     - size
-    - subscription_id
-    - tax_code
   price:
     segments_seen:
       prices: 12
@@ -1205,8 +1205,8 @@ concepts:
       share: 0.069
       tier: long-tail
     - operation: UPDATE collection
-      providers: 1
-      share: 0.034
+      providers: 2
+      share: 0.069
       tier: long-tail
     properties:
     - name: id
@@ -1356,7 +1356,7 @@ concepts:
       spellings:
       - lineItems
       - line_items
-    long_tail_count: 420
+    long_tail_count: 421
     long_tail_sample:
     - billing_address
     - address

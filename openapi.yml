@@ -88,7 +88,7 @@ paths:
       tags:
       - Invoices
       x-commons-tier: core
-      x-commons-share: 0.656
+      x-commons-share: 0.661
       responses:
         '200':
           description: OK
@@ -183,7 +183,7 @@ paths:
       tags:
       - Subscriptions
       x-commons-tier: core
-      x-commons-share: 0.825
+      x-commons-share: 0.832
       responses:
         '200':
           description: OK
@@ -229,7 +229,7 @@ paths:
       tags:
       - Subscriptions
       x-commons-tier: core
-      x-commons-share: 0.759
+      x-commons-share: 0.766
       responses:
         '200':
           description: OK
@@ -242,7 +242,7 @@ paths:
       tags:
       - Subscriptions
       x-commons-tier: core
-      x-commons-share: 0.504
+      x-commons-share: 0.511
       responses:
         '200':
           description: OK
@@ -260,7 +260,7 @@ paths:
       tags:
       - Subscriptions
       x-commons-tier: extended
-      x-commons-share: 0.423
+      x-commons-share: 0.431
       responses:
         '200':
           description: OK
@@ -274,7 +274,7 @@ paths:
       tags:
       - Plans
       x-commons-tier: core
-      x-commons-share: 0.965
+      x-commons-share: 0.948
       responses:
         '200':
           description: OK
@@ -299,7 +299,7 @@ paths:
       tags:
       - Plans
       x-commons-tier: core
-      x-commons-share: 0.772
+      x-commons-share: 0.776
       responses:
         '200':
           description: OK
@@ -320,7 +320,7 @@ paths:
       tags:
       - Plans
       x-commons-tier: core
-      x-commons-share: 0.895
+      x-commons-share: 0.897
       responses:
         '200':
           description: OK
@@ -333,7 +333,7 @@ paths:
       tags:
       - Plans
       x-commons-tier: core
-      x-commons-share: 0.632
+      x-commons-share: 0.621
       responses:
         '200':
           description: OK
@@ -351,7 +351,7 @@ paths:
       tags:
       - Plans
       x-commons-tier: extended
-      x-commons-share: 0.474
+      x-commons-share: 0.466
       responses:
         '200':
           description: OK

@@ -23,7 +23,7 @@ concepts:
     core_coverage: 1.0
     evidence:
     - openapi/_original/wingspan-payments-openapi-original.yml#DELETE /payments/invoice/{id}
+    - openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/bulk/invoice/batch
     - openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/client/invoice
     - openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/client/invoice/{id}
     - openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/invoice
-    - openapi/_original/wingspan-payments-openapi-original.yml#GET /payments/invoice/{id}
