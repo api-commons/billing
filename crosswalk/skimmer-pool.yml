@@ -1,7 +1,7 @@
 provider: skimmer-pool
 apis_io: https://apis.io/providers/skimmer-pool/
 context: billing
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   invoice:
     path_segment:

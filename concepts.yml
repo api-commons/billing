@@ -158,3 +158,11 @@ shared_specs:
                     monument-bank, santander-uk, secure-trust-bank, shawbrook-bank,
                     skipton-building-society, starling-bank, tsb-bank, virgin-money-uk, chase-uk,
                     coutts, cynergy-bank, hampden-and-co, investec, kroo, tandem-bank]
+
+workflows:
+  - id: subscribe-and-invoice
+    summary: Subscribe a customer to a plan and read the invoices it produces
+    steps:
+      - {op: getPlan, id: plan, path: {"{plan_id}": "$inputs.plan_id"}}
+      - {op: createSubscription, id: subscription, link: {plan_id: "$steps.plan.outputs.id"}}
+      - {op: listInvoices, id: invoices}

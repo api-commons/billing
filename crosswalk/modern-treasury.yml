@@ -1,7 +1,7 @@
 provider: modern-treasury
 apis_io: https://apis.io/providers/modern-treasury/
 context: billing
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   invoice:
     path_segment:

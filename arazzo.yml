@@ -1,0 +1,55 @@
+arazzo: 1.0.1
+info:
+  title: Billing and Invoicing workflows (API Commons)
+  version: 0.1.0-draft.20261111
+  summary: Reference workflows over the common Billing and Invoicing operations.
+  description: 'Reference compositions of the operations this context''s providers share. Not measured: every step
+    is a core- or extended-tier operation of the common OpenAPI, so the workflow runs against any provider that
+    implements those operations (see crosswalk/).'
+sourceDescriptions:
+- name: billing
+  url: ./openapi.yml
+  type: openapi
+workflows:
+- workflowId: subscribe-and-invoice
+  summary: Subscribe a customer to a plan and read the invoices it produces
+  description: Subscribe a customer to a plan and read the invoices it produces.
+  inputs:
+    type: object
+    required:
+    - plan_id
+    properties:
+      plan_id:
+        type: string
+  steps:
+  - stepId: plan
+    operationId: getPlan
+    description: Get a plan -- a core-tier operation (90% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    parameters:
+    - name: plan_id
+      in: path
+      value: $inputs.plan_id
+  - stepId: subscription
+    operationId: createSubscription
+    description: Create a subscription -- a core-tier operation (72% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    requestBody:
+      contentType: application/json
+      payload:
+        plan_id: $steps.plan.outputs.id
+  - stepId: invoices
+    operationId: listInvoices
+    description: List invoices -- a core-tier operation (84% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+  x-commons-tiers:
+  - core

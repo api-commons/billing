@@ -25,7 +25,7 @@ providers.
 | coupon | 27 | 19 | code 90%, id 68%, created_at 58%, max_redemptions 58% | coupons 16, discounts 12, vouchers 2, coupon 2 |
 | usage_record | 22 | 19 | id 58%, quantity 58% | usage 15, usages 4, events 1, usage_records 1 |
 
-Cohort: 837 providers with harvested OpenAPI, 270 crosswalks. Of the providers exposing a invoice: 66% create, 84% list, 85% fetch, 45% update, 29% delete. Generated 2026-11-10 by build.py.
+Cohort: 837 providers with harvested OpenAPI, 270 crosswalks. Of the providers exposing a invoice: 66% create, 84% list, 85% fetch, 45% update, 29% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The
