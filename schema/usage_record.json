@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/billing/main/schema/usage_record.json",
   "title": "Usage Record",
-  "description": "The common usage_record in Billing and Invoicing, distilled from 17 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common usage_record in Billing and Invoicing, distilled from 19 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.529,
-      "x-commons-providers": 9,
+      "x-commons-share": 0.579,
+      "x-commons-providers": 11,
       "x-commons-spellings": [
         "id",
         "usageRecordId",
@@ -18,8 +18,8 @@
     },
     "quantity": {
       "type": "integer",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.529,
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.474,
       "x-commons-providers": 9,
       "x-commons-spellings": [
         "quantity",
@@ -31,8 +31,8 @@
     "subscription_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.412,
-      "x-commons-providers": 7,
+      "x-commons-share": 0.421,
+      "x-commons-providers": 8,
       "x-commons-spellings": [
         "subscriptionId",
         "subscription_id",
@@ -41,10 +41,37 @@
         "SubscriptionId"
       ]
     },
+    "customer_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.368,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "customerId",
+        "customer_id",
+        "account",
+        "customer",
+        "account_id",
+        "accountId",
+        "AccountId"
+      ]
+    },
+    "timestamp": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.368,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "timestamp",
+        "usage_date",
+        "usageDate",
+        "recordedAt"
+      ]
+    },
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.353,
+      "x-commons-share": 0.316,
       "x-commons-providers": 6,
       "x-commons-spellings": [
         "created_at",
@@ -58,7 +85,7 @@
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.353,
+      "x-commons-share": 0.316,
       "x-commons-providers": 6,
       "x-commons-spellings": [
         "description",
@@ -66,35 +93,10 @@
         "Description"
       ]
     },
-    "timestamp": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.353,
-      "x-commons-providers": 6,
-      "x-commons-spellings": [
-        "timestamp",
-        "usage_date",
-        "usageDate",
-        "recordedAt"
-      ]
-    },
-    "customer_id": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.294,
-      "x-commons-providers": 5,
-      "x-commons-spellings": [
-        "customerId",
-        "account",
-        "customer",
-        "customer_id",
-        "AccountId"
-      ]
-    },
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.235,
+      "x-commons-share": 0.211,
       "x-commons-providers": 4,
       "x-commons-spellings": [
         "updated_at",
@@ -111,7 +113,7 @@
   "x-commons": {
     "context": "billing",
     "concept": "usage_record",
-    "providers": 17,
+    "providers": 19,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

@@ -431,7 +431,12 @@ adopters:
   apis_io: https://apis.io/providers/elastic-path/
   crosswalk: crosswalk/elastic-path.yml
   concepts:
+  - coupon
   - invoice
+  - plan
+  - price
+  - subscription
+  - usage_record
 - provider: emburse
   apis_io: https://apis.io/providers/emburse/
   crosswalk: crosswalk/emburse.yml
@@ -519,6 +524,11 @@ adopters:
 - provider: freee
   apis_io: https://apis.io/providers/freee/
   crosswalk: crosswalk/freee.yml
+  concepts:
+  - invoice
+- provider: freshbooks
+  apis_io: https://apis.io/providers/freshbooks/
+  crosswalk: crosswalk/freshbooks.yml
   concepts:
   - invoice
 - provider: gerencianet
@@ -790,6 +800,7 @@ adopters:
   - invoice
   - plan
   - subscription
+  - usage_record
 - provider: monite
   apis_io: https://apis.io/providers/monite/
   crosswalk: crosswalk/monite.yml

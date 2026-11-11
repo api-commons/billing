@@ -80,14 +80,17 @@ concepts:
     - openapi/_original/vtex-catalog-openapi-original.yml#GET /api/catalog/pvt/collection/{collectionId}/products
   price:
     path_segment:
-    - price
     - prices
-    properties: {}
-    core_coverage: 0.0
+    - price
+    properties:
+      plan_id: itemId
+    core_coverage: 0.25
     evidence:
     - openapi/_original/vtex-checkout-openapi-original.yml#PUT /api/checkout/pub/orderForm/{orderFormId}/items/{itemIndex}/price
     - openapi/_original/vtex-marketplace-openapi-original.yml#POST /notificator/{sellerId}/changenotification/{skuId}/price
     - openapi/_original/vtex-pricing-hub-openapi-original.yml#POST /api/pricing-hub/prices
+    - openapi/_original/vtex-pricing-openapi-original.yml#DELETE /pricing/prices/{itemId}
+    - openapi/_original/vtex-pricing-openapi-original.yml#GET /pricing/prices/{itemId}
   coupon:
     path_segment:
     - coupons

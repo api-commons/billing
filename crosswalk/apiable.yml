@@ -47,6 +47,6 @@ concepts:
       quantity: quantity
       subscription_id: subscriptionId
       timestamp: timestamp
-    core_coverage: 0.5
+    core_coverage: 0.0
     evidence:
     - openapi/_original/apiable-platform-api-openapi.json#POST /api/subscriptions/usage

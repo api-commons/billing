@@ -58,8 +58,8 @@ concepts:
       created_at: created_at
       amount: amount
       currency: currency
-      billing_interval: interval
       metadata: metadata
+      billing_interval: interval
       updated_at: updated_at
     core_coverage: 0.6
     evidence:

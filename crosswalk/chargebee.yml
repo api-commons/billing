@@ -56,10 +56,10 @@ concepts:
       is_active: status
       amount: price
       currency: currency_code
-      billing_interval: period
       metadata:
       - meta_data
       - metadata
+      billing_interval: period
       updated_at: updated_at
       code: sku
     core_coverage: 1.0
@@ -74,12 +74,12 @@ concepts:
     - item_prices
     properties:
       plan_id: item_id
-      currency: currency_code
       id: id
+      currency: currency_code
       pricing_model: pricing_model
+      metadata: metadata
       billing_interval: period
       created_at: created_at
-      metadata: metadata
       name: name
       status: status
       tiers: tiers
@@ -148,9 +148,9 @@ concepts:
       id: id
       quantity: quantity
       subscription_id: subscription_id
+      timestamp: usage_date
       created_at: created_at
       description: note
-      timestamp: usage_date
       updated_at: updated_at
     core_coverage: 1.0
     evidence:

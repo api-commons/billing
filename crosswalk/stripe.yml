@@ -77,8 +77,8 @@ concepts:
       is_active: active
       amount: amount
       currency: currency
-      billing_interval: interval
       metadata: metadata
+      billing_interval: interval
     core_coverage: 0.8
     evidence:
     - openapi/_original/climate-openapi-original.yml#GET /v1/climate/products
@@ -91,15 +91,15 @@ concepts:
     - prices
     properties:
       plan_id: product
-      currency: currency
       id: id
+      currency: currency
       pricing_model:
       - billing_scheme
       - tiers_mode
       - type
+      metadata: metadata
       billing_interval: recurring
       created_at: created
-      metadata: metadata
       amount: unit_amount
       tax_behavior: tax_behavior
       tiers: tiers

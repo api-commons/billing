@@ -43,12 +43,12 @@ concepts:
     - prices
     properties:
       plan_id: plan_id
-      currency: currency
       id: id
+      currency: currency
       pricing_model: pricing_model
+      metadata: metadata
       billing_interval: period
       created_at: created_at
-      metadata: metadata
       name: name
       status: status
       tax_behavior: tax_behavior

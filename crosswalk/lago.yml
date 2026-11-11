@@ -48,8 +48,8 @@ concepts:
       name: name
       description: description
       created_at: created_at
-      billing_interval: interval
       metadata: metadata
+      billing_interval: interval
       code: code
     core_coverage: 0.6
     evidence:
@@ -103,6 +103,6 @@ concepts:
     - usage
     properties:
       quantity: units
-    core_coverage: 0.5
+    core_coverage: 0.0
     evidence:
     - openapi/_original/lago-openapi.yml#GET /analytics/usage

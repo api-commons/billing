@@ -21,6 +21,6 @@ concepts:
     evidence:
     - openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/documents/contracts/invoices
     - openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/documents/contracts/invoices/{invoice_id}
+    - openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/invoices/documents/contracts/invoices
+    - openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/invoices/documents/contracts/invoices/{invoice_id}
     - openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/public/invoices/{invoice_id}
-    - openapi/_original/hevn-inc-openapi-original.json#POST /api/v1/documents/contracts/invoices
-    - openapi/_original/hevn-inc-openapi-original.json#PUT /api/v1/documents/contracts/invoices/{invoice_id}

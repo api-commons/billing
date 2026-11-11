@@ -2768,6 +2768,24 @@
      "openapi/_original/freee-openapi.yml#GET /api/1/invoices/{id}"
     ]
    },
+   "freshbooks": {
+    "segments": [
+     "invoices"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/freshbooks-openapi.yml#GET /accounting/account/{accountId}/invoices/invoices",
+     "openapi/_original/freshbooks-openapi.yml#GET /accounting/account/{accountId}/invoices/invoices/{invoiceId}",
+     "openapi/_original/freshbooks-openapi.yml#POST /accounting/account/{accountId}/invoices/invoices",
+     "openapi/_original/freshbooks-openapi.yml#PUT /accounting/account/{accountId}/invoices/invoices/{invoiceId}"
+    ]
+   },
    "gingr": {
     "segments": [
      "invoices"
@@ -2938,9 +2956,13 @@
     "evidence": [
      "openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/documents/contracts/invoices",
      "openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/documents/contracts/invoices/{invoice_id}",
+     "openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/invoices/documents/contracts/invoices",
+     "openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/invoices/documents/contracts/invoices/{invoice_id}",
      "openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/public/invoices/{invoice_id}",
      "openapi/_original/hevn-inc-openapi-original.json#POST /api/v1/documents/contracts/invoices",
-     "openapi/_original/hevn-inc-openapi-original.json#PUT /api/v1/documents/contracts/invoices/{invoice_id}"
+     "openapi/_original/hevn-inc-openapi-original.json#POST /api/v1/invoices/documents/contracts/invoices",
+     "openapi/_original/hevn-inc-openapi-original.json#PUT /api/v1/documents/contracts/invoices/{invoice_id}",
+     "openapi/_original/hevn-inc-openapi-original.json#PUT /api/v1/invoices/documents/contracts/invoices/{invoice_id}"
     ]
    },
    "hipay": {
@@ -10992,6 +11014,57 @@
      "openapi/_original/drippay-openapi-original.json#GET /v1/subscriptions/{id}",
      "openapi/_original/drippay-openapi-original.json#PATCH /v1/subscriptions/{id}",
      "openapi/_original/drippay-openapi-original.json#POST /v1/subscriptions"
+    ]
+   },
+   "elastic-path": {
+    "segments": [
+     "subscriptions"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "attributes": "object",
+     "relationships": null,
+     "meta": "object",
+     "external_ref": "string",
+     "account_id": "string",
+     "address_id": "string",
+     "offering_external_ref": "string",
+     "offering_id": "string",
+     "plan_id": "string",
+     "pricing_option_id": "string",
+     "currency": "string",
+     "payment_authority": "object",
+     "manual_payments": "boolean",
+     "name": "string",
+     "email": "string",
+     "pending": "boolean",
+     "first_invoice_paid": "boolean",
+     "started_at": "string",
+     "override_first_period_end_date": "string",
+     "offering": "object",
+     "features": "array",
+     "plans": "array",
+     "pricing_options": "array",
+     "configured_features": "object",
+     "pricing_option_associations": "object",
+     "selected_plan": "string",
+     "selected_pricing_option": "string",
+     "order": "object"
+    },
+    "evidence": [
+     "openapi/_original/subscriptions.yaml#DELETE /v2/subscriptions/subscriptions/{subscription_uuid}",
+     "openapi/_original/subscriptions.yaml#GET /v2/subscriptions/subscriptions",
+     "openapi/_original/subscriptions.yaml#GET /v2/subscriptions/subscriptions/{subscription_uuid}",
+     "openapi/_original/subscriptions.yaml#POST /v2/subscriptions/subscriptions",
+     "openapi/_original/subscriptions.yaml#PUT /v2/subscriptions/subscriptions/{subscription_uuid}"
     ]
    },
    "emburse": {
@@ -20878,7 +20951,8 @@
    },
    "temenos": {
     "segments": [
-     "packages"
+     "packages",
+     "products"
     ],
     "operations": [
      "DELETE item",
@@ -20907,7 +20981,8 @@
      "openapi/_original/temenos-journey-manager-openapi.yml#DELETE /packages/{packageId}",
      "openapi/_original/temenos-journey-manager-openapi.yml#GET /packages",
      "openapi/_original/temenos-journey-manager-openapi.yml#GET /packages/{packageId}",
-     "openapi/_original/temenos-journey-manager-openapi.yml#POST /packages"
+     "openapi/_original/temenos-journey-manager-openapi.yml#POST /packages",
+     "openapi/_original/temenos-transact-openapi.yml#GET /product/products"
     ]
    },
    "thrivecart": {
@@ -23416,6 +23491,7 @@
      "prices"
     ],
     "operations": [
+     "DELETE collection",
      "GET collection",
      "PATCH item",
      "PUT collection"
@@ -23445,6 +23521,7 @@
      "from": "string"
     },
     "evidence": [
+     "openapi/_original/virto-commerce-pricing-openapi.json#DELETE /api/pricing/products/prices",
      "openapi/_original/virto-commerce-pricing-openapi.json#GET /api/products/{productId}/prices",
      "openapi/_original/virto-commerce-pricing-openapi.json#PATCH /api/products/prices/{id}",
      "openapi/_original/virto-commerce-pricing-openapi.json#PUT /api/products/prices",
@@ -23478,12 +23555,15 @@
    },
    "vtex": {
     "segments": [
-     "price",
-     "prices"
+     "prices",
+     "price"
     ],
     "operations": [
+     "DELETE item",
+     "GET item",
      "POST collection",
-     "PUT collection"
+     "PUT collection",
+     "PUT item"
     ],
     "properties": {
      "orderFormId": "string",
@@ -23532,12 +23612,19 @@
      "UtmMedium": "string",
      "UtmCampaign": "string",
      "UtmInternalCampaign": "string",
-     "email": "string"
+     "email": "string",
+     "itemId": "string",
+     "markup": "integer",
+     "basePrice": "integer",
+     "fixedPrices": "array"
     },
     "evidence": [
      "openapi/_original/vtex-checkout-openapi-original.yml#PUT /api/checkout/pub/orderForm/{orderFormId}/items/{itemIndex}/price",
      "openapi/_original/vtex-marketplace-openapi-original.yml#POST /notificator/{sellerId}/changenotification/{skuId}/price",
-     "openapi/_original/vtex-pricing-hub-openapi-original.yml#POST /api/pricing-hub/prices"
+     "openapi/_original/vtex-pricing-hub-openapi-original.yml#POST /api/pricing-hub/prices",
+     "openapi/_original/vtex-pricing-openapi-original.yml#DELETE /pricing/prices/{itemId}",
+     "openapi/_original/vtex-pricing-openapi-original.yml#GET /pricing/prices/{itemId}",
+     "openapi/_original/vtex-pricing-openapi-original.yml#PUT /pricing/prices/{itemId}"
     ]
    }
   },
@@ -24974,6 +25061,32 @@
      "openapi/_original/aghanim-openapi-original.json#PATCH /v1/coupons",
      "openapi/_original/aghanim-openapi-original.json#POST /v1/coupons",
      "openapi/_original/aghanim-openapi-original.json#PUT /v1/coupons/{coupon_id}"
+    ]
+   },
+   "appcharge": {
+    "segments": [
+     "coupon"
+    ],
+    "operations": [
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "active": "boolean",
+     "discountPercentage": "number",
+     "maxRedemptionsPerCustomer": "integer",
+     "expiredBy": "string",
+     "startsAt": "string",
+     "supportedOfferExternalIds": "array",
+     "firstTimePurchase": "boolean",
+     "allowedPlayers": "array"
+    },
+    "evidence": [
+     "openapi/_original/appcharge-openapi.yml#GET /coupons/coupon/{couponName}",
+     "openapi/_original/appcharge-openapi.yml#PATCH /coupons/coupon/{couponName}",
+     "openapi/_original/appcharge-openapi.yml#POST /coupons/coupon"
     ]
    },
    "appdirect": {
@@ -27301,6 +27414,36 @@
     },
     "evidence": [
      "openapi/_original/metronome-openapi.json#POST /v1/usage"
+    ]
+   },
+   "monetizenow": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "content": "array",
+     "totalElements": "integer",
+     "totalPages": "integer",
+     "pageable": "object",
+     "status": "string",
+     "failedEvents": "array",
+     "id": "string",
+     "accountId": "string",
+     "subscriptionId": "string",
+     "usageTypeId": "string",
+     "unitsConsumed": "number",
+     "timestamp": "string",
+     "ratedPrice": "number"
+    },
+    "evidence": [
+     "openapi/_original/monetizenow-openapi.json#GET /usage/events",
+     "openapi/_original/monetizenow-openapi.json#POST /usage/events",
+     "openapi/_original/monetizenow-openapi.json#PUT /usage/events/{id}"
     ]
    },
    "mtn-group": {

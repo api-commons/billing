@@ -31,8 +31,8 @@ concepts:
       created_at: created
       amount: amount
       currency: currency
-      billing_interval: interval
       metadata: metadata
+      billing_interval: interval
     core_coverage: 0.6
     evidence:
     - openapi/_original/shift4-api-openapi.yml#GET /plans

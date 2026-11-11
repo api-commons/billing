@@ -2,47 +2,48 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/billing/main/schema/price.json",
   "title": "Price",
-  "description": "The common price in Billing and Invoicing, distilled from 14 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common price in Billing and Invoicing, distilled from 15 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "plan_id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.643,
-      "x-commons-providers": 9,
+      "x-commons-share": 0.667,
+      "x-commons-providers": 10,
       "x-commons-spellings": [
         "productId",
         "item_id",
         "product",
         "plan_id",
-        "product_id"
+        "product_id",
+        "itemId"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.6,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "id",
+        "priceId"
       ]
     },
     "currency": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.571,
+      "x-commons-share": 0.533,
       "x-commons-providers": 8,
       "x-commons-spellings": [
         "currency",
         "currency_code"
       ]
     },
-    "id": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.571,
-      "x-commons-providers": 8,
-      "x-commons-spellings": [
-        "id",
-        "priceId"
-      ]
-    },
     "pricing_model": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 7,
+      "x-commons-share": 0.533,
+      "x-commons-providers": 8,
       "x-commons-spellings": [
         "type",
         "pricing_model",
@@ -51,10 +52,20 @@
         "tiers_mode"
       ]
     },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "metadata",
+        "attributes"
+      ]
+    },
     "billing_interval": {
       "type": "integer",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.357,
+      "x-commons-share": 0.333,
       "x-commons-providers": 5,
       "x-commons-spellings": [
         "period",
@@ -64,7 +75,7 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.357,
+      "x-commons-share": 0.333,
       "x-commons-providers": 5,
       "x-commons-spellings": [
         "created_at",
@@ -73,20 +84,10 @@
       ],
       "format": "date-time"
     },
-    "metadata": {
-      "type": "object",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.357,
-      "x-commons-providers": 5,
-      "x-commons-spellings": [
-        "metadata",
-        "attributes"
-      ]
-    },
     "name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.286,
+      "x-commons-share": 0.267,
       "x-commons-providers": 4,
       "x-commons-spellings": [
         "name"
@@ -95,7 +96,7 @@
     "amount": {
       "type": "integer",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.214,
+      "x-commons-share": 0.2,
       "x-commons-providers": 3,
       "x-commons-spellings": [
         "unitAmount",
@@ -106,7 +107,7 @@
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.214,
+      "x-commons-share": 0.2,
       "x-commons-providers": 3,
       "x-commons-spellings": [
         "status"
@@ -115,7 +116,7 @@
     "tax_behavior": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.214,
+      "x-commons-share": 0.2,
       "x-commons-providers": 3,
       "x-commons-spellings": [
         "tax_behavior",
@@ -125,7 +126,7 @@
     "tiers": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.214,
+      "x-commons-share": 0.2,
       "x-commons-providers": 3,
       "x-commons-spellings": [
         "tiers"
@@ -138,7 +139,7 @@
   "x-commons": {
     "context": "billing",
     "concept": "price",
-    "providers": 14,
+    "providers": 15,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

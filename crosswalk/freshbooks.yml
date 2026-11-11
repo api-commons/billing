@@ -1,0 +1,15 @@
+provider: freshbooks
+apis_io: https://apis.io/providers/freshbooks/
+context: billing
+generated: '2026-11-10'
+concepts:
+  invoice:
+    path_segment:
+    - invoices
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/freshbooks-openapi.yml#GET /accounting/account/{accountId}/invoices/invoices
+    - openapi/_original/freshbooks-openapi.yml#GET /accounting/account/{accountId}/invoices/invoices/{invoiceId}
+    - openapi/_original/freshbooks-openapi.yml#POST /accounting/account/{accountId}/invoices/invoices
+    - openapi/_original/freshbooks-openapi.yml#PUT /accounting/account/{accountId}/invoices/invoices/{invoiceId}

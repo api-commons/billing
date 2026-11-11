@@ -71,8 +71,8 @@ concepts:
     - prices
     properties:
       plan_id: item_id
-      currency: currency
       id: id
+      currency: currency
       created_at: created_at
       name: name
     core_coverage: 0.75

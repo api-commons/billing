@@ -32,11 +32,12 @@ concepts:
       plan_id:
       - productId
       - product
-      currency: currency
       id: id
+      currency: currency
       created_at: createdDate
     core_coverage: 0.75
     evidence:
+    - openapi/_original/virto-commerce-pricing-openapi.json#DELETE /api/pricing/products/prices
     - openapi/_original/virto-commerce-pricing-openapi.json#GET /api/products/{productId}/prices
     - openapi/_original/virto-commerce-pricing-openapi.json#PATCH /api/products/prices/{id}
     - openapi/_original/virto-commerce-pricing-openapi.json#PUT /api/products/prices

@@ -113,9 +113,9 @@ concepts:
       - id
       quantity: Quantity
       subscription_id: SubscriptionId
+      customer_id: AccountId
       created_at: CreatedDate
       description: Description
-      customer_id: AccountId
       updated_at: UpdatedDate
     core_coverage: 1.0
     evidence:

@@ -30,8 +30,8 @@ concepts:
       is_active: status
       amount: amount
       currency: currency
-      billing_interval: interval
       metadata: metadata
+      billing_interval: interval
       product_id: product_id
     core_coverage: 0.8
     evidence:

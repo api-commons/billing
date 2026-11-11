@@ -15,3 +15,67 @@ concepts:
     - openapi/_original/subscriptions.yaml#GET /v2/subscriptions/invoices/{invoice_uuid}
     - openapi/_original/subscriptions.yaml#GET /v2/subscriptions/subscriptions/{subscription_uuid}/invoices
     - openapi/_original/subscriptions.yaml#GET /v2/subscriptions/subscriptions/{subscription_uuid}/invoices/{invoice_uuid}
+  subscription:
+    path_segment:
+    - subscriptions
+    properties:
+      id: id
+      customer_id: account_id
+      plan_id: plan_id
+      metadata: attributes
+      started_at: started_at
+      name: name
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/subscriptions.yaml#DELETE /v2/subscriptions/subscriptions/{subscription_uuid}
+    - openapi/_original/subscriptions.yaml#GET /v2/subscriptions/subscriptions
+    - openapi/_original/subscriptions.yaml#GET /v2/subscriptions/subscriptions/{subscription_uuid}
+    - openapi/_original/subscriptions.yaml#POST /v2/subscriptions/subscriptions
+    - openapi/_original/subscriptions.yaml#PUT /v2/subscriptions/subscriptions/{subscription_uuid}
+  plan:
+    path_segment:
+    - products
+    - plans
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/catalog.yaml#GET /catalog/hierarchies/{hierarchy_id}/products
+    - openapi/_original/catalog.yaml#GET /catalog/nodes/{node_id}/relationships/products
+    - openapi/_original/catalog.yaml#GET /catalog/products
+    - openapi/_original/catalog.yaml#GET /catalog/products/{product_id}
+    - openapi/_original/catalog.yaml#GET /catalogs/{catalog_id}/releases/{release_id}/hierarchies/{hierarchy_id}/products
+  price:
+    path_segment:
+    - prices
+    properties:
+      id: id
+      pricing_model: type
+      metadata: attributes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/pricebooks.yaml#DELETE /pcm/pricebooks/{pricebookID}/prices/{priceID}
+    - openapi/_original/pricebooks.yaml#GET /pcm/pricebooks/prices
+    - openapi/_original/pricebooks.yaml#GET /pcm/pricebooks/{pricebookID}/prices
+    - openapi/_original/pricebooks.yaml#GET /pcm/pricebooks/{pricebookID}/prices/{priceID}
+    - openapi/_original/pricebooks.yaml#POST /pcm/pricebooks/{pricebookID}/prices
+  coupon:
+    path_segment:
+    - discounts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/carts.yaml#DELETE /v2/carts/{cartID}/discounts/{promoCode}
+  usage_record:
+    path_segment:
+    - usages
+    properties:
+      id: id
+      customer_id:
+      - customer_id
+      - account_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/promotions-builder.yaml#GET /v2/rule-promotions/{promotionID}/codes/{code}/usages
+    - openapi/_original/promotions-builder.yaml#GET /v2/rule-promotions/{promotionID}/usages
