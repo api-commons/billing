@@ -1,7 +1,7 @@
 provider: rillet
 apis_io: https://apis.io/providers/rillet/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -13,8 +13,8 @@ concepts:
       due_date: due_date
       number: invoice_number
       line_items: items
-      issued_at: invoice_date
       customer_id: customer_id
+      issued_at: invoice_date
       total: amount
       description:
       - memo
@@ -34,11 +34,11 @@ concepts:
     properties:
       id: id
       status: status
-      description: description
       customer_id: customer_id
+      description: description
       updated_at: updated_at
       items: items
-    core_coverage: 0.625
+    core_coverage: 0.571
     evidence:
     - openapi/_original/rillet-accounting-api-openapi.json#DELETE /credit-memos/{credit_memo_id}
     - openapi/_original/rillet-accounting-api-openapi.json#GET /credit-memos

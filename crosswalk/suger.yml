@@ -1,7 +1,7 @@
 provider: suger
 apis_io: https://apis.io/providers/suger/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:

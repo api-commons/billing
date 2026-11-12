@@ -1,7 +1,7 @@
 provider: metronome
 apis_io: https://apis.io/providers/metronome/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -11,8 +11,8 @@ concepts:
       status: status
       created_at: created_at
       line_items: line_items
-      issued_at: issued_at
       customer_id: customer_id
+      issued_at: issued_at
       metadata: custom_fields
     core_coverage: 0.5
     evidence:

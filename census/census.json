@@ -1,23 +1,6 @@
 {
  "cohort_size": 837,
- "unreadable": [
-  {
-   "spec": "novopayment/openapi/_original/novopayment-issuer-tokenization-openapi.yml",
-   "error": "while scanning a block scalar"
-  },
-  {
-   "spec": "novopayment/openapi/_original/novopayment-issuer-tokenization.yaml",
-   "error": "while scanning a block scalar"
-  },
-  {
-   "spec": "novopayment/openapi/_original/novopayment-payment-authorizer-openapi.yml",
-   "error": "while scanning a block scalar"
-  },
-  {
-   "spec": "novopayment/openapi/_original/novopayment-payment-authorizer.yaml",
-   "error": "while scanning a block scalar"
-  }
- ],
+ "unreadable": [],
  "concepts": {
   "invoice": {
    "1fort": {
@@ -3976,6 +3959,126 @@
      "openapi/_original/mavenlink-openapi.yml#PUT /invoices/{id}"
     ]
    },
+   "maxio": {
+    "segments": [
+     "invoices"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "finished_at": [
+      "string",
+      "null"
+     ],
+     "row_count": [
+      "integer",
+      "null"
+     ],
+     "created_at": [
+      "string",
+      "null"
+     ],
+     "completed": "string",
+     "uid": "string",
+     "site_id": "integer",
+     "customer_id": "integer",
+     "subscription_id": "integer",
+     "number": "string",
+     "sequence_number": "integer",
+     "transaction_time": "string",
+     "updated_at": "string",
+     "issue_date": "string",
+     "due_date": "string",
+     "paid_date": [
+      "string",
+      "null"
+     ],
+     "status": null,
+     "role": "string",
+     "parent_invoice_id": [
+      "integer",
+      "null"
+     ],
+     "collection_method": null,
+     "payment_instructions": "string",
+     "currency": "string",
+     "consolidation_level": null,
+     "parent_invoice_uid": [
+      "string",
+      "null"
+     ],
+     "subscription_group_id": [
+      "integer",
+      "null"
+     ],
+     "parent_invoice_number": [
+      "integer",
+      "null"
+     ],
+     "group_primary_subscription_id": [
+      "integer",
+      "null"
+     ],
+     "product_name": "string",
+     "product_family_name": "string",
+     "seller": null,
+     "customer": null,
+     "payer": "object",
+     "recipient_emails": "array",
+     "net_terms": "integer",
+     "memo": "string",
+     "billing_address": null,
+     "shipping_address": null,
+     "subtotal_amount": "string",
+     "discount_amount": "string",
+     "tax_amount": "string",
+     "total_amount": "string",
+     "credit_amount": "string",
+     "debit_amount": "string",
+     "refund_amount": "string",
+     "paid_amount": "string",
+     "due_amount": "string",
+     "line_items": "array",
+     "discounts": "array",
+     "taxes": "array",
+     "credits": "array",
+     "debits": "array",
+     "refunds": "array",
+     "payments": "array",
+     "custom_fields": "array",
+     "display_settings": "object",
+     "avatax_details": "object",
+     "public_url": "string",
+     "previous_balance_data": "object",
+     "public_url_expires_on": "string",
+     "branding_theme_id": [
+      "integer",
+      "null"
+     ],
+     "seller_address": null,
+     "coupons": "array"
+    },
+    "evidence": [
+     "openapi/_original/maxio-advanced-billing-openapi.yml#DELETE /subscriptions/{subscription_id}/invoices/{uid}.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /api_exports/invoices/{batch_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /invoices.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /invoices/{uid}.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#POST /api_exports/invoices.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#POST /subscriptions/{subscription_id}/invoices.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#PUT /subscriptions/{subscription_id}/invoices/{uid}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#DELETE /subscriptions/{subscription_id}/invoices/{uid}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /api_exports/invoices/{batch_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /invoices.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /invoices/{uid}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#POST /api_exports/invoices.json"
+    ]
+   },
    "mercoa": {
     "segments": [
      "invoice",
@@ -4675,33 +4778,65 @@
     "operations": [
      "GET collection",
      "GET item",
-     "POST collection"
+     "POST collection",
+     "PUT item"
     ],
     "properties": {
      "id": "string",
      "invoice_number": "string",
      "status": "string",
      "customer": "object",
-     "subscription": "object",
-     "currency": "string",
-     "total": "string",
-     "subtotal": "string",
+     "subscription": null,
+     "metadata": "object",
+     "voided_at": null,
+     "paid_at": null,
+     "issued_at": null,
+     "scheduled_issue_at": null,
+     "auto_collection": "object",
+     "issue_failed_at": null,
+     "sync_failed_at": null,
+     "payment_failed_at": null,
+     "payment_started_at": null,
      "amount_due": "string",
-     "due_date": "string",
-     "issued_at": "string",
-     "hosted_invoice_url": "string",
-     "line_items": "array",
      "created_at": "string",
-     "customer_id": "string",
-     "external_customer_id": "string",
+     "currency": "string",
+     "due_date": null,
+     "service_period_start": null,
+     "service_period_end": null,
+     "invoice_pdf": null,
+     "total": "string",
+     "customer_balance_transactions": "array",
+     "invoice_source": "string",
+     "shipping_address": null,
+     "billing_address": null,
+     "hosted_invoice_url": null,
+     "will_auto_issue": "boolean",
+     "eligible_to_issue_at": null,
+     "customer_tax_id": null,
+     "memo": null,
+     "credit_notes": "array",
+     "payment_received_at": null,
+     "payment_attempts": "array",
+     "discount": null,
+     "discounts": "array",
+     "minimum": null,
+     "minimum_amount": null,
+     "maximum": null,
+     "maximum_amount": null,
+     "line_items": "array",
+     "hidden_line_item_count": "integer",
+     "subtotal": "string",
      "invoice_date": "string",
-     "net_terms": "integer",
-     "memo": "string"
+     "customer_id": null,
+     "external_customer_id": null,
+     "net_terms": null
     },
     "evidence": [
-     "openapi/_original/orb-billing-openapi.yml#GET /invoices",
-     "openapi/_original/orb-billing-openapi.yml#GET /invoices/{invoice_id}",
-     "openapi/_original/orb-billing-openapi.yml#POST /invoices"
+     "openapi/_original/orb-billing-openapi.json#GET /credit_blocks/{block_id}/invoices",
+     "openapi/_original/orb-billing-openapi.json#GET /invoices",
+     "openapi/_original/orb-billing-openapi.json#GET /invoices/{invoice_id}",
+     "openapi/_original/orb-billing-openapi.json#POST /invoices",
+     "openapi/_original/orb-billing-openapi.json#PUT /invoices/{invoice_id}"
     ]
    },
    "ordway": {
@@ -6008,6 +6143,90 @@
      "openapi/_original/ready2order-openapi-original.json#GET /document/invoice",
      "openapi/_original/ready2order-openapi-original.json#GET /document/invoice/{id}",
      "openapi/_original/ready2order-openapi-original.json#POST /document/invoice"
+    ]
+   },
+   "recurly": {
+    "segments": [
+     "invoices"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "uuid": "string",
+     "object": "string",
+     "type": "string",
+     "origin": "string",
+     "state": "string",
+     "account": "object",
+     "billing_info_id": "string",
+     "subscription_ids": "array",
+     "previous_invoice_id": "string",
+     "number": "string",
+     "collection_method": "string",
+     "po_number": "string",
+     "net_terms": "integer",
+     "net_terms_type": "string",
+     "address": "object",
+     "shipping_address": "object",
+     "currency": "string",
+     "discount": "number",
+     "coupon_redemptions": "array",
+     "subtotal": "number",
+     "subtotal_after_discount": "number",
+     "tax": "number",
+     "reference_only_currency_conversion": "object",
+     "total": "number",
+     "refundable_amount": "number",
+     "paid": "number",
+     "balance": "number",
+     "tax_info": "object",
+     "used_tax_service": "boolean",
+     "vat_number": "string",
+     "vat_reverse_charge_notes": "string",
+     "terms_and_conditions": "string",
+     "customer_notes": "string",
+     "line_items": "array",
+     "has_more_line_items": "boolean",
+     "transactions": "array",
+     "credit_payments": "array",
+     "created_at": "string",
+     "updated_at": "string",
+     "due_at": "string",
+     "closed_at": "string",
+     "dunning_campaign_id": "string",
+     "dunning_events_sent": "integer",
+     "final_dunning_event": "boolean",
+     "business_entity_id": "string",
+     "custom_fields": "array",
+     "charge_invoice": "object",
+     "credit_invoices": "array",
+     "verification_transactions": "array",
+     "business_entity_code": "string",
+     "charge_customer_notes": "string",
+     "credit_customer_notes": "string",
+     "credit_application_policy": "object",
+     "vertex_transaction_type": "string",
+     "transaction_descriptor_suffix": "string",
+     "gateway_code": "string"
+    },
+    "evidence": [
+     "openapi/_original/recurly-openapi.yml#GET /accounts/{account_id}/invoices",
+     "openapi/_original/recurly-openapi.yml#GET /business_entities/{business_entity_id}/invoices",
+     "openapi/_original/recurly-openapi.yml#GET /invoices",
+     "openapi/_original/recurly-openapi.yml#GET /invoices/{invoice_id}",
+     "openapi/_original/recurly-openapi.yml#GET /subscriptions/{subscription_id}/invoices",
+     "openapi/_original/recurly-openapi.yml#POST /accounts/{account_id}/invoices",
+     "openapi/_original/recurly-openapi.yml#PUT /invoices/{invoice_id}",
+     "openapi/_original/recurly-recover-api.yaml#GET /accounts/{account_id}/invoices",
+     "openapi/_original/recurly-recover-api.yaml#GET /invoices",
+     "openapi/_original/recurly-recover-api.yaml#GET /invoices/{invoice_id}",
+     "openapi/_original/recurly-recover-openapi.yml#GET /accounts/{account_id}/invoices",
+     "openapi/_original/recurly-recover-openapi.yml#GET /invoices"
     ]
    },
    "resolve": {
@@ -9165,6 +9384,82 @@
      "openapi/_original/perk-travelperk-api-v1-openapi.yml#GET /invoices/lines"
     ]
    },
+   "recurly": {
+    "segments": [
+     "line_items"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "object": "string",
+     "uuid": "string",
+     "type": "string",
+     "item_code": "string",
+     "item_id": "string",
+     "external_sku": "string",
+     "revenue_schedule_type": "string",
+     "state": "string",
+     "legacy_category": "string",
+     "account": "object",
+     "bill_for_account_id": "string",
+     "subscription_id": "string",
+     "plan_id": "string",
+     "plan_code": "string",
+     "add_on_id": "string",
+     "add_on_code": "string",
+     "invoice_id": "string",
+     "invoice_number": "string",
+     "previous_line_item_id": "string",
+     "original_line_item_invoice_id": "string",
+     "origin": "string",
+     "accounting_code": "string",
+     "product_code": "string",
+     "credit_reason_code": "string",
+     "currency": "string",
+     "amount": "number",
+     "description": "string",
+     "quantity": "integer",
+     "quantity_decimal": "string",
+     "unit_amount": "number",
+     "unit_amount_decimal": "string",
+     "tax_inclusive": "boolean",
+     "subtotal": "number",
+     "discount": "number",
+     "discounts": "array",
+     "liability_gl_account_code": "string",
+     "revenue_gl_account_code": "string",
+     "performance_obligation_id": "string",
+     "tax": "number",
+     "taxable": "boolean",
+     "tax_exempt": "boolean",
+     "avalara_transaction_type": "integer",
+     "avalara_service_type": "integer",
+     "vertex_transaction_type": "string",
+     "tax_code": "string",
+     "harmonized_system_code": "string",
+     "tax_info": "object",
+     "origin_tax_address_source": "string",
+     "destination_tax_address_source": "string",
+     "proration_rate": "number",
+     "refund": "boolean",
+     "refunded_quantity": "integer",
+     "refunded_quantity_decimal": "string",
+     "credit_applied": "number",
+     "shipping_address": "object",
+     "start_date": "string",
+     "end_date": "string",
+     "custom_fields": "array",
+     "created_at": "string",
+     "updated_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/recurly-openapi.yml#GET /invoices/{invoice_id}/line_items",
+     "openapi/_original/recurly-v3-v2019-10-10-api.yaml#GET /sites/{site_id}/invoices/{invoice_id}/line_items",
+     "openapi/_original/recurly-v3-v2021-02-25-api.yaml#GET /invoices/{invoice_id}/line_items"
+    ]
+   },
    "solvimon": {
     "segments": [
      "lines"
@@ -12256,6 +12551,239 @@
      "openapi/_original/mastercard-commercial-event-notifications-openapi.yml#PUT /subscriptions/{id}"
     ]
    },
+   "maxio": {
+    "segments": [
+     "subscriptions"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "finished_at": [
+      "string",
+      "null"
+     ],
+     "row_count": [
+      "integer",
+      "null"
+     ],
+     "created_at": [
+      "string",
+      "null"
+     ],
+     "completed": "string",
+     "state": null,
+     "balance_in_cents": "integer",
+     "total_revenue_in_cents": "integer",
+     "product_price_in_cents": "integer",
+     "product_version_number": "integer",
+     "current_period_ends_at": [
+      "string",
+      "null"
+     ],
+     "next_assessment_at": [
+      "string",
+      "null"
+     ],
+     "trial_started_at": [
+      "string",
+      "null"
+     ],
+     "trial_ended_at": [
+      "string",
+      "null"
+     ],
+     "activated_at": [
+      "string",
+      "null"
+     ],
+     "expires_at": [
+      "string",
+      "null"
+     ],
+     "updated_at": "string",
+     "cancellation_message": [
+      "string",
+      "null"
+     ],
+     "cancellation_method": null,
+     "cancel_at_end_of_period": [
+      "boolean",
+      "null"
+     ],
+     "canceled_at": [
+      "string",
+      "null"
+     ],
+     "current_period_started_at": [
+      "string",
+      "null"
+     ],
+     "previous_state": null,
+     "signup_payment_id": "integer",
+     "signup_revenue": "string",
+     "delayed_cancel_at": [
+      "string",
+      "null"
+     ],
+     "coupon_code": [
+      "string",
+      "null"
+     ],
+     "snap_day": [
+      "string",
+      "null"
+     ],
+     "payment_collection_method": null,
+     "customer": "object",
+     "product": "object",
+     "credit_card": null,
+     "group": null,
+     "bank_account": "object",
+     "payment_type": [
+      "string",
+      "null"
+     ],
+     "referral_code": [
+      "string",
+      "null"
+     ],
+     "next_product_id": [
+      "integer",
+      "null"
+     ],
+     "next_product_handle": [
+      "string",
+      "null"
+     ],
+     "coupon_use_count": [
+      "integer",
+      "null"
+     ],
+     "coupon_uses_allowed": [
+      "integer",
+      "null"
+     ],
+     "reason_code": [
+      "string",
+      "null"
+     ],
+     "automatically_resume_at": [
+      "string",
+      "null"
+     ],
+     "coupon_codes": "array",
+     "offer_id": [
+      "integer",
+      "null"
+     ],
+     "payer_id": [
+      "integer",
+      "null"
+     ],
+     "current_billing_amount_in_cents": "integer",
+     "product_price_point_id": "integer",
+     "product_price_point_type": null,
+     "next_product_price_point_id": [
+      "integer",
+      "null"
+     ],
+     "net_terms": [
+      "integer",
+      "null"
+     ],
+     "stored_credential_transaction_id": [
+      "integer",
+      "null"
+     ],
+     "reference": [
+      "string",
+      "null"
+     ],
+     "on_hold_at": [
+      "string",
+      "null"
+     ],
+     "prepaid_dunning": "boolean",
+     "coupons": "array",
+     "dunning_communication_delay_enabled": "boolean",
+     "dunning_communication_delay_time_zone": [
+      "string",
+      "null"
+     ],
+     "receives_invoice_emails": [
+      "boolean",
+      "null"
+     ],
+     "locale": [
+      "string",
+      "null"
+     ],
+     "currency": "string",
+     "scheduled_cancellation_at": [
+      "string",
+      "null"
+     ],
+     "credit_balance_in_cents": "integer",
+     "prepayment_balance_in_cents": "integer",
+     "prepaid_configuration": null,
+     "self_service_page_token": "string",
+     "product_handle": "string",
+     "product_id": "integer",
+     "product_price_point_handle": "string",
+     "custom_price": null,
+     "customer_id": "integer",
+     "branding_theme_id": [
+      "integer",
+      "null"
+     ],
+     "next_billing_at": "string",
+     "initial_billing_at": "string",
+     "defer_signup": "boolean",
+     "sales_rep_id": "integer",
+     "payment_profile_id": "integer",
+     "customer_attributes": "object",
+     "payment_profile_attributes": null,
+     "credit_card_attributes": null,
+     "bank_account_attributes": "object",
+     "components": "array",
+     "calendar_billing": null,
+     "metafields": "object",
+     "customer_reference": "string",
+     "ref": "string",
+     "expiration_tracks_next_billing_change": "string",
+     "agreement_terms": "string",
+     "authorizer_first_name": "string",
+     "authorizer_last_name": "string",
+     "calendar_billing_first_charge": "string",
+     "product_change_delayed": "boolean",
+     "previous_billing_at": "string",
+     "import_mrr": "boolean",
+     "agreement_acceptance": null,
+     "ach_agreement": null,
+     "skip_billing_manifest_taxes": "boolean",
+     "refund_prepayment_account_balance": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/maxio-advanced-billing-openapi.yml#DELETE /subscriptions/{subscription_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /api_exports/subscriptions/{batch_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /customers/{customer_id}/subscriptions.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /subscriptions.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /subscriptions/{subscription_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#POST /api_exports/subscriptions.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#POST /subscriptions.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#PUT /subscriptions/{subscription_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#DELETE /subscriptions/{subscription_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /api_exports/subscriptions/{batch_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /customers/{customer_id}/subscriptions.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /subscriptions.json"
+    ]
+   },
    "method-financial": {
     "segments": [
      "subscriptions"
@@ -12831,28 +13359,66 @@
      "PUT item"
     ],
     "properties": {
+     "metadata": "object",
      "id": "string",
      "customer": "object",
-     "plan": "object",
-     "status": "string",
+     "plan": null,
+     "name": "string",
      "start_date": "string",
-     "end_date": "string",
-     "current_billing_period_start_date": "string",
-     "current_billing_period_end_date": "string",
-     "net_terms": "integer",
-     "auto_collection": "boolean",
-     "metadata": "object",
+     "end_date": null,
      "created_at": "string",
-     "customer_id": "string",
-     "external_customer_id": "string",
-     "plan_id": "string",
-     "external_plan_id": "string"
+     "current_billing_period_start_date": null,
+     "current_billing_period_end_date": null,
+     "status": "string",
+     "trial_info": "object",
+     "active_plan_phase_order": null,
+     "fixed_fee_quantity_schedule": "array",
+     "default_invoice_memo": null,
+     "auto_collection": null,
+     "auto_issuance": null,
+     "net_terms": "integer",
+     "redeemed_coupon": null,
+     "billing_cycle_day": "integer",
+     "billing_cycle_anchor_configuration": "object",
+     "invoicing_threshold": null,
+     "price_intervals": "array",
+     "adjustment_intervals": "array",
+     "discount_intervals": "array",
+     "minimum_intervals": "array",
+     "maximum_intervals": "array",
+     "pending_subscription_change": null,
+     "changed_resources": null,
+     "usage_customer_ids": null,
+     "filter": null,
+     "plan_id": null,
+     "external_plan_id": null,
+     "price_overrides": null,
+     "per_credit_overage_amount": null,
+     "credits_overage_rate": null,
+     "trial_duration_days": null,
+     "coupon_redemption_code": null,
+     "initial_phase_order": null,
+     "add_prices": null,
+     "remove_prices": null,
+     "replace_prices": null,
+     "add_adjustments": null,
+     "remove_adjustments": null,
+     "replace_adjustments": null,
+     "customer_id": null,
+     "external_customer_id": null,
+     "currency": null,
+     "plan_version_number": null,
+     "external_marketplace": null,
+     "external_marketplace_reporting_id": null,
+     "aws_region": null,
+     "align_billing_with_subscription_start_date": "boolean"
     },
     "evidence": [
-     "openapi/_original/orb-billing-openapi.yml#GET /subscriptions",
-     "openapi/_original/orb-billing-openapi.yml#GET /subscriptions/{subscription_id}",
-     "openapi/_original/orb-billing-openapi.yml#POST /subscriptions",
-     "openapi/_original/orb-billing-openapi.yml#PUT /subscriptions/{subscription_id}"
+     "openapi/_original/orb-billing-openapi.json#GET /coupons/{coupon_id}/subscriptions",
+     "openapi/_original/orb-billing-openapi.json#GET /subscriptions",
+     "openapi/_original/orb-billing-openapi.json#GET /subscriptions/{subscription_id}",
+     "openapi/_original/orb-billing-openapi.json#POST /subscriptions",
+     "openapi/_original/orb-billing-openapi.json#PUT /subscriptions/{subscription_id}"
     ]
    },
    "ordergroove": {
@@ -13600,6 +14166,166 @@
      "openapi/_original/recharge-payments-openapi.yml#GET /subscriptions/{id}",
      "openapi/_original/recharge-payments-openapi.yml#POST /subscriptions",
      "openapi/_original/recharge-payments-openapi.yml#PUT /subscriptions/{id}"
+    ]
+   },
+   "recurly": {
+    "segments": [
+     "subscriptions"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "friendlyId": "string",
+     "externalId": "string",
+     "subscriber": "object",
+     "purchaseDate": "string",
+     "trialEndsAt": "string",
+     "cancelDate": "string",
+     "cancelReason": "string",
+     "pausedAtDate": "string",
+     "pauseLimitSettings": "object",
+     "nextDeliveryDate": "string",
+     "nextBillingDate": "string",
+     "status": "string",
+     "deliveryCadenceCount": "number",
+     "deliveryCadenceUnit": "string",
+     "billingCadenceCount": "number",
+     "billingCadenceUnit": "string",
+     "isPrepaid": "boolean",
+     "isMembership": "boolean",
+     "currencyCode": "string",
+     "deliveryFirstName": "string",
+     "deliveryLastName": "string",
+     "deliveryAddress1": "string",
+     "deliveryAddress2": "string",
+     "deliveryCountry": "string",
+     "deliveryProvince": "string",
+     "deliveryCity": "string",
+     "deliveryZip": "string",
+     "deliveryShippingOption": "string",
+     "deliveryPrice": "number",
+     "deliveryPhone": "string",
+     "deliveryCompany": "string",
+     "billingFirstName": "string",
+     "billingLastName": "string",
+     "billingAddress1": "string",
+     "billingAddress2": "string",
+     "billingCountry": "string",
+     "billingProvince": "string",
+     "billingCity": "string",
+     "billingZip": "string",
+     "paymentMethodExternalId": "string",
+     "paymentMethodType": "string",
+     "paymentMethodLast4Digits": "string",
+     "paymentMethodExpiryMonth": "string",
+     "paymentMethodExpiryYear": "string",
+     "paymentMethodBrand": "string",
+     "paymentMethodEmail": "string",
+     "paymentMethodName": "string",
+     "lines": "array",
+     "upcomingOrders": "array",
+     "customAttributes": "array",
+     "gift": null,
+     "recipient": null,
+     "discountCodes": "array",
+     "dunningInstances": "array",
+     "subscriberId": "string",
+     "subscriptionOfferId": "string",
+     "deliveryCountryCode": "string",
+     "deliveryProvinceCode": "string",
+     "discountCode": "string",
+     "object": "string",
+     "uuid": "string",
+     "account": "object",
+     "plan": "object",
+     "state": "string",
+     "shipping": "object",
+     "coupon_redemptions": "array",
+     "pending_change": "object",
+     "current_period_started_at": "string",
+     "current_period_ends_at": "string",
+     "current_term_started_at": "string",
+     "current_term_ends_at": "string",
+     "trial_started_at": "string",
+     "trial_ends_at": "string",
+     "remaining_billing_cycles": "integer",
+     "total_billing_cycles": "integer",
+     "renewal_billing_cycles": "integer",
+     "auto_renew": "boolean",
+     "ramp_intervals": "array",
+     "paused_at": "string",
+     "remaining_pause_cycles": "integer",
+     "resume_at": "string",
+     "currency": "string",
+     "revenue_schedule_type": "string",
+     "unit_amount": "number",
+     "tax_inclusive": "boolean",
+     "quantity": "integer",
+     "add_ons": "array",
+     "add_ons_total": "number",
+     "subtotal": "number",
+     "tax": "number",
+     "tax_info": "object",
+     "price_segment_id": "string",
+     "total": "number",
+     "collection_method": "string",
+     "po_number": "string",
+     "net_terms": "integer",
+     "net_terms_type": "string",
+     "credit_application_policy": "object",
+     "terms_and_conditions": "string",
+     "customer_notes": "string",
+     "expiration_reason": "string",
+     "custom_fields": "array",
+     "created_at": "string",
+     "updated_at": "string",
+     "activated_at": "string",
+     "canceled_at": "string",
+     "expires_at": "string",
+     "bank_account_authorized_at": "string",
+     "gateway_code": "string",
+     "billing_info_id": "string",
+     "active_invoice_id": "string",
+     "business_entity_id": "string",
+     "started_with_gift": "boolean",
+     "converted_at": "string",
+     "action_result": "object",
+     "plan_code": "string",
+     "plan_id": "string",
+     "business_entity_code": "string",
+     "coupon_codes": "array",
+     "starts_at": "string",
+     "next_bill_date": "string",
+     "credit_customer_notes": "string",
+     "vat_reverse_charge_notes": "string",
+     "transaction_type": "string",
+     "gift_card_redemption_code": "string",
+     "bulk": "boolean",
+     "proration_settings": "object",
+     "transaction_descriptor_suffix": "string",
+     "coupon_code": "string"
+    },
+    "evidence": [
+     "openapi/_original/recurly-commerce-api.json#GET /api/v1/subscribers/{id}/subscriptions",
+     "openapi/_original/recurly-commerce-api.json#GET /api/v1/subscriptions",
+     "openapi/_original/recurly-commerce-api.json#GET /api/v1/subscriptions/{id}",
+     "openapi/_original/recurly-commerce-api.json#POST /api/v1/subscriptions",
+     "openapi/_original/recurly-commerce-openapi.yml#GET /api/v1/subscribers/{id}/subscriptions",
+     "openapi/_original/recurly-commerce-openapi.yml#GET /api/v1/subscriptions",
+     "openapi/_original/recurly-commerce-openapi.yml#GET /api/v1/subscriptions/{id}",
+     "openapi/_original/recurly-commerce-openapi.yml#POST /api/v1/subscriptions",
+     "openapi/_original/recurly-openapi.yml#DELETE /subscriptions/{subscription_id}",
+     "openapi/_original/recurly-openapi.yml#GET /accounts/{account_id}/subscriptions",
+     "openapi/_original/recurly-openapi.yml#GET /subscriptions",
+     "openapi/_original/recurly-openapi.yml#GET /subscriptions/{subscription_id}"
     ]
    },
    "red-hat-satellite": {
@@ -18786,6 +19512,129 @@
      "openapi/_original/mavrck-openapi.json#GET /v1/products"
     ]
    },
+   "maxio": {
+    "segments": [
+     "products"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "handle": [
+      "string",
+      "null"
+     ],
+     "description": [
+      "string",
+      "null"
+     ],
+     "accounting_code": [
+      "string",
+      "null"
+     ],
+     "request_credit_card": "boolean",
+     "expiration_interval": [
+      "integer",
+      "null"
+     ],
+     "expiration_interval_unit": null,
+     "created_at": "string",
+     "updated_at": "string",
+     "price_in_cents": "integer",
+     "interval": "integer",
+     "interval_unit": null,
+     "initial_charge_in_cents": [
+      "integer",
+      "null"
+     ],
+     "trial_price_in_cents": [
+      "integer",
+      "null"
+     ],
+     "trial_interval": [
+      "integer",
+      "null"
+     ],
+     "trial_interval_unit": null,
+     "archived_at": [
+      "string",
+      "null"
+     ],
+     "require_credit_card": "boolean",
+     "return_params": [
+      "string",
+      "null"
+     ],
+     "taxable": "boolean",
+     "update_return_url": [
+      "string",
+      "null"
+     ],
+     "initial_charge_after_trial": [
+      "boolean",
+      "null"
+     ],
+     "version_number": "integer",
+     "update_return_params": [
+      "string",
+      "null"
+     ],
+     "product_family": "object",
+     "public_signup_pages": "array",
+     "product_price_point_name": "string",
+     "request_billing_address": "boolean",
+     "require_billing_address": "boolean",
+     "require_shipping_address": "boolean",
+     "tax_code": [
+      "string",
+      "null"
+     ],
+     "default_product_price_point_id": "integer",
+     "use_site_exchange_rate": [
+      "boolean",
+      "null"
+     ],
+     "item_category": [
+      "string",
+      "null"
+     ],
+     "product_price_point_id": "integer",
+     "product_price_point_handle": [
+      "string",
+      "null"
+     ],
+     "unspsc_code": [
+      "string",
+      "null"
+     ],
+     "features": [
+      "array",
+      "null"
+     ],
+     "trial_type": null,
+     "auto_create_signup_page": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/maxio-advanced-billing-openapi.yml#DELETE /products/{product_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /product_families/{product_family_id}/products.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /products.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /products/{product_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#POST /product_families/{product_family_id}/products.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#PUT /products/{product_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#DELETE /products/{product_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /product_families/{product_family_id}/products.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /products.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /products/{product_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#POST /product_families/{product_family_id}/products.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#PUT /products/{product_id}.json"
+    ]
+   },
    "method-financial": {
     "segments": [
      "products"
@@ -19360,28 +20209,36 @@
      "PUT item"
     ],
     "properties": {
+     "metadata": "object",
      "id": "string",
-     "external_plan_id": "string",
      "name": "string",
      "description": "string",
-     "status": "string",
-     "currency": "string",
-     "net_terms": "integer",
-     "prices": "array",
+     "maximum_amount": null,
+     "minimum_amount": null,
      "created_at": "string",
-     "item_id": "string",
-     "cadence": "string",
-     "model_type": "string",
-     "billable_metric_id": "string",
-     "unit_config": "object",
-     "external_price_id": "string",
-     "metadata": "object"
+     "status": "string",
+     "maximum": null,
+     "minimum": null,
+     "discount": null,
+     "product": "object",
+     "version": "integer",
+     "trial_config": "object",
+     "plan_phases": null,
+     "base_plan": null,
+     "base_plan_id": null,
+     "external_plan_id": null,
+     "currency": "string",
+     "invoicing_currency": "string",
+     "net_terms": null,
+     "default_invoice_memo": null,
+     "prices": "array",
+     "adjustments": "array"
     },
     "evidence": [
-     "openapi/_original/orb-billing-openapi.yml#GET /plans",
-     "openapi/_original/orb-billing-openapi.yml#GET /plans/{plan_id}",
-     "openapi/_original/orb-billing-openapi.yml#POST /plans",
-     "openapi/_original/orb-billing-openapi.yml#PUT /plans/{plan_id}"
+     "openapi/_original/orb-billing-openapi.json#GET /plans",
+     "openapi/_original/orb-billing-openapi.json#GET /plans/{plan_id}",
+     "openapi/_original/orb-billing-openapi.json#POST /plans",
+     "openapi/_original/orb-billing-openapi.json#PUT /plans/{plan_id}"
     ]
    },
    "ordergroove": {
@@ -19459,6 +20316,7 @@
      "DELETE item",
      "GET collection",
      "GET item",
+     "POST collection",
      "POST item",
      "PUT item"
     ],
@@ -19522,8 +20380,27 @@
      "isin": "string",
      "inceptionDate": "string",
      "shortTermDiscountObligation": "boolean",
+     "productCurrencyId": "integer",
+     "currencyCode": "string",
      "isAdvisorProduct": "boolean",
      "advisorPrefix": "string",
+     "accountIds": "string",
+     "holdingIds": "string",
+     "assetIds": "string",
+     "assetIdList": "array",
+     "offeringIds": "string",
+     "activityTypes": "string",
+     "fromDate": "string",
+     "toDate": "string",
+     "afterCreatedAt": "string",
+     "beforeCreatedAt": "string",
+     "afterCompletedAt": "string",
+     "beforeCompletedAt": "string",
+     "valueAsOfFrom": "string",
+     "valueAsOfTo": "string",
+     "newOnly": "boolean",
+     "limit": "integer",
+     "offset": "integer",
      "glidePathId": "integer",
      "isTaxGlidePathIncluded": "boolean",
      "simulationCount": "integer",
@@ -19685,7 +20562,7 @@
      "openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Global/DownloadSymbols/Product/{productId}",
      "openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Global/Products",
      "openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Global/Products/{key}",
-     "openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Integrations/Instream/Clients/{key}/Plans"
+     "openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Integrations/DataTransmissionService/{vendorCode}/offerings/product"
     ]
    },
    "paddle": {
@@ -20377,6 +21254,84 @@
      "openapi/_original/recharge-payments-openapi.yml#GET /products/{id}",
      "openapi/_original/recharge-payments-openapi.yml#POST /products",
      "openapi/_original/recharge-payments-openapi.yml#PUT /products/{id}"
+    ]
+   },
+   "recurly": {
+    "segments": [
+     "plans",
+     "products"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "externalId": "string",
+     "status": "string",
+     "imageUrl": "string",
+     "productTitle": "string",
+     "description": "string",
+     "variants": null,
+     "subscriptionOffer": "object",
+     "object": "string",
+     "code": "string",
+     "name": "string",
+     "state": "string",
+     "pricing_model": "string",
+     "currencies": "array",
+     "ramp_intervals": "array",
+     "setup_fees": "array",
+     "interval_unit": "string",
+     "interval_length": "integer",
+     "accounting_code": "string",
+     "revenue_schedule_type": "string",
+     "liability_gl_account_id": "string",
+     "revenue_gl_account_id": "string",
+     "performance_obligation_id": "string",
+     "setup_fee_accounting_code": "string",
+     "setup_fee_revenue_schedule_type": "string",
+     "setup_fee_liability_gl_account_id": "string",
+     "setup_fee_revenue_gl_account_id": "string",
+     "setup_fee_performance_obligation_id": "string",
+     "trial_unit": "string",
+     "trial_length": "integer",
+     "trial_requires_billing_info": "boolean",
+     "total_billing_cycles": "integer",
+     "auto_renew": "boolean",
+     "custom_fields": "array",
+     "avalara_transaction_type": "integer",
+     "avalara_service_type": "integer",
+     "tax_code": "string",
+     "harmonized_system_code": "string",
+     "tax_exempt": "boolean",
+     "vertex_transaction_type": "string",
+     "hosted_pages": "object",
+     "allow_any_item_on_subscriptions": "boolean",
+     "dunning_campaign_id": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "deleted_at": "string",
+     "add_ons": "array"
+    },
+    "evidence": [
+     "openapi/_original/recurly-commerce-api.json#GET /api/v1/products",
+     "openapi/_original/recurly-commerce-openapi.yml#GET /api/v1/products",
+     "openapi/_original/recurly-openapi.yml#DELETE /plans/{plan_id}",
+     "openapi/_original/recurly-openapi.yml#GET /plans",
+     "openapi/_original/recurly-openapi.yml#GET /plans/{plan_id}",
+     "openapi/_original/recurly-openapi.yml#POST /plans",
+     "openapi/_original/recurly-openapi.yml#PUT /plans/{plan_id}",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#DELETE /plans/{plan_code}",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#GET /plans",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#GET /plans/{plan_code}",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#POST /plans",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#PUT /plans/{plan_code}"
     ]
    },
    "reloadly": {
@@ -23405,26 +24360,54 @@
     "operations": [
      "GET collection",
      "GET item",
-     "POST collection"
+     "POST collection",
+     "PUT item"
     ],
     "properties": {
-     "id": "string",
-     "external_price_id": "string",
-     "name": "string",
-     "price_type": "string",
      "model_type": "string",
-     "cadence": "string",
-     "currency": "string",
-     "item": "object",
      "unit_config": "object",
+     "metadata": "object",
+     "id": "string",
+     "name": "string",
+     "external_price_id": null,
+     "replaces_price_id": null,
+     "price_type": "string",
      "created_at": "string",
+     "cadence": "string",
+     "billing_mode": "string",
+     "billing_cycle_configuration": "object",
+     "invoicing_cycle_configuration": null,
+     "billable_metric": null,
+     "dimensional_price_configuration": null,
+     "fixed_price_quantity": null,
+     "plan_phase_order": null,
+     "currency": "string",
+     "conversion_rate": null,
+     "conversion_rate_config": null,
+     "item": "object",
+     "credit_allocation": null,
+     "composite_price_filters": null,
+     "invoice_grouping_key": null,
+     "license_type": null,
+     "discount": null,
+     "minimum": null,
+     "minimum_amount": null,
+     "maximum": null,
+     "maximum_amount": null,
+     "dimension_values": "array",
+     "amounts": "array",
+     "license_type_id": null,
+     "billable_metric_id": null,
      "item_id": "string",
-     "billable_metric_id": "string"
+     "billed_in_advance": null
     },
     "evidence": [
-     "openapi/_original/orb-billing-openapi.yml#GET /prices",
-     "openapi/_original/orb-billing-openapi.yml#GET /prices/{price_id}",
-     "openapi/_original/orb-billing-openapi.yml#POST /prices"
+     "openapi/_original/orb-billing-openapi.json#GET /dimensional_price_groups/{dimensional_price_group_id}/prices",
+     "openapi/_original/orb-billing-openapi.json#GET /prices",
+     "openapi/_original/orb-billing-openapi.json#GET /prices/{price_id}",
+     "openapi/_original/orb-billing-openapi.json#POST /dimensional_price_groups/{dimensional_price_group_id}/prices",
+     "openapi/_original/orb-billing-openapi.json#POST /prices",
+     "openapi/_original/orb-billing-openapi.json#PUT /prices/{price_id}"
     ]
    },
    "orion-advisor-solutions": {
@@ -23435,9 +24418,12 @@
     "operations": [
      "GET collection",
      "GET item",
-     "POST collection"
+     "POST collection",
+     "PUT collection"
     ],
     "properties": {
+     "prices": "array",
+     "notes": "string",
      "productId": "integer",
      "priceDate": "string",
      "navPrice": "number",
@@ -23486,7 +24472,8 @@
      "openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Global/Products/Prices",
      "openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Portfolio/Assets/{key}/Price",
      "openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Portfolio/Assets/{key}/Price/{asOfDate}",
-     "openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#POST /v1/Global/Products/Prices"
+     "openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#POST /v1/Global/Products/Prices",
+     "openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#PUT /v1/Confirm/Recon/AgentActionReview/SecurityCreation/{reviewId}/Prices"
     ]
    },
    "ottimate": {
@@ -23713,6 +24700,35 @@
      "openapi/_original/qubiqle-openapi-original.json#GET /catalog/prices",
      "openapi/_original/qubiqle-openapi-original.json#POST /catalog/prices",
      "openapi/_original/qubiqle-openapi-original.json#POST /catalog/prices/bulk"
+    ]
+   },
+   "recurly": {
+    "segments": [
+     "price"
+    ],
+    "operations": [
+     "PATCH collection"
+    ],
+    "properties": {
+     "id": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "externalId": "string",
+     "subscriptionId": "string",
+     "variant": "object",
+     "quantity": "number",
+     "currentPrice": "number",
+     "subscriptionOfferOptionId": "string",
+     "sellingPlanId": "string",
+     "productFulfillmentTypeRestriction": "string",
+     "schedule": null,
+     "customAttributes": "array",
+     "bundleItems": "array",
+     "deletedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/recurly-commerce-api.json#PATCH /api/v1/subscriptionLines/{id}/price",
+     "openapi/_original/recurly-commerce-openapi.yml#PATCH /api/v1/subscriptionLines/{id}/price"
     ]
    },
    "rentberry": {
@@ -24944,6 +25960,52 @@
      "openapi/_original/light-openapi-original.json#POST /v1/credit-notes"
     ]
    },
+   "maxio": {
+    "segments": [
+     "credit_notes"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "uid": "string",
+     "site_id": "integer",
+     "customer_id": "integer",
+     "subscription_id": "integer",
+     "number": "string",
+     "sequence_number": "integer",
+     "issue_date": "string",
+     "applied_date": "string",
+     "status": null,
+     "currency": "string",
+     "memo": "string",
+     "seller": null,
+     "customer": null,
+     "billing_address": null,
+     "shipping_address": null,
+     "subtotal_amount": "string",
+     "discount_amount": "string",
+     "tax_amount": "string",
+     "total_amount": "string",
+     "applied_amount": "string",
+     "remaining_amount": "string",
+     "line_items": "array",
+     "discounts": "array",
+     "taxes": "array",
+     "applications": "array",
+     "refunds": "array",
+     "origin_invoices": "array"
+    },
+    "evidence": [
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /credit_notes.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /credit_notes/{uid}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /credit_notes.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /credit_notes/{uid}.json",
+     "openapi/_original/maxio-advanced-billing-openapi3json.json#GET /credit_notes.json",
+     "openapi/_original/maxio-advanced-billing-openapi3json.json#GET /credit_notes/{uid}.json"
+    ]
+   },
    "monetizenow": {
     "segments": [
      "creditnotes"
@@ -25082,6 +26144,43 @@
      "openapi/_original/mvmnt-openapi-original.yml#GET /credit-memos/{id}",
      "openapi/_original/mvmnt-openapi-original.yml#PATCH /credit-memos/{id}",
      "openapi/_original/mvmnt-openapi-original.yml#POST /credit-memos"
+    ]
+   },
+   "orb-billing": {
+    "segments": [
+     "credit_notes"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "created_at": "string",
+     "voided_at": null,
+     "credit_note_number": "string",
+     "invoice_id": "string",
+     "memo": null,
+     "reason": null,
+     "type": "string",
+     "subtotal": "string",
+     "total": "string",
+     "customer": "object",
+     "credit_note_pdf": null,
+     "minimum_amount_refunded": null,
+     "discounts": "array",
+     "maximum_amount_adjustment": null,
+     "line_items": "array",
+     "invoice_line_item_id": "string",
+     "amount": "string",
+     "start_date": null,
+     "end_date": null
+    },
+    "evidence": [
+     "openapi/_original/orb-billing-openapi.json#GET /credit_notes",
+     "openapi/_original/orb-billing-openapi.json#GET /credit_notes/{credit_note_id}",
+     "openapi/_original/orb-billing-openapi.json#POST /credit_notes"
     ]
    },
    "resolve": {
@@ -26429,6 +27528,101 @@
      "openapi/_original/lightspeed-k-series-openapi.yml#GET /o/op/1/menu/discounts"
     ]
    },
+   "maxio": {
+    "segments": [
+     "coupons"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "code": "string",
+     "description": "string",
+     "amount": [
+      "number",
+      "null"
+     ],
+     "amount_in_cents": [
+      "integer",
+      "null"
+     ],
+     "product_family_id": "integer",
+     "product_family_name": [
+      "string",
+      "null"
+     ],
+     "start_date": "string",
+     "end_date": [
+      "string",
+      "null"
+     ],
+     "percentage": [
+      "string",
+      "null"
+     ],
+     "recurring": "boolean",
+     "recurring_scheme": "string",
+     "duration_period_count": [
+      "integer",
+      "null"
+     ],
+     "duration_interval": [
+      "integer",
+      "null"
+     ],
+     "duration_interval_unit": [
+      "string",
+      "null"
+     ],
+     "duration_interval_span": [
+      "string",
+      "null"
+     ],
+     "allow_negative_balance": "boolean",
+     "archived_at": [
+      "string",
+      "null"
+     ],
+     "conversion_limit": [
+      "string",
+      "null"
+     ],
+     "stackable": "boolean",
+     "compounding_strategy": null,
+     "use_site_exchange_rate": "boolean",
+     "created_at": "string",
+     "updated_at": "string",
+     "discount_type": "string",
+     "exclude_mid_period_allocations": "boolean",
+     "apply_on_cancel_at_end_of_period": "boolean",
+     "apply_on_subscription_expiration": "boolean",
+     "coupon_restrictions": "array",
+     "currency_prices": "array",
+     "coupon": "object",
+     "restricted_products": "object",
+     "restricted_components": "object"
+    },
+    "evidence": [
+     "openapi/_original/maxio-advanced-billing-openapi.yml#DELETE /product_families/{product_family_id}/coupons/{coupon_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /coupons.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /product_families/{product_family_id}/coupons.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /product_families/{product_family_id}/coupons/{coupon_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#POST /product_families/{product_family_id}/coupons.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#PUT /product_families/{product_family_id}/coupons/{coupon_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#DELETE /product_families/{product_family_id}/coupons/{coupon_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /coupons.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /product_families/{product_family_id}/coupons.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /product_families/{product_family_id}/coupons/{coupon_id}.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#POST /product_families/{product_family_id}/coupons.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#PUT /product_families/{product_family_id}/coupons/{coupon_id}.json"
+    ]
+   },
    "northmill": {
     "segments": [
      "vouchers"
@@ -26523,20 +27717,22 @@
     ],
     "operations": [
      "GET collection",
+     "GET item",
      "POST collection"
     ],
     "properties": {
      "id": "string",
      "redemption_code": "string",
-     "discount": "object",
+     "discount": null,
      "times_redeemed": "integer",
-     "max_redemptions": "integer",
-     "duration_in_months": "integer",
-     "archived_at": "string"
+     "duration_in_months": null,
+     "max_redemptions": null,
+     "archived_at": null
     },
     "evidence": [
-     "openapi/_original/orb-billing-openapi.yml#GET /coupons",
-     "openapi/_original/orb-billing-openapi.yml#POST /coupons"
+     "openapi/_original/orb-billing-openapi.json#GET /coupons",
+     "openapi/_original/orb-billing-openapi.json#GET /coupons/{coupon_id}",
+     "openapi/_original/orb-billing-openapi.json#POST /coupons"
     ]
    },
    "ordway": {
@@ -26754,6 +27950,78 @@
      "openapi/_original/recharge-payments-openapi.yml#GET /discounts/{id}",
      "openapi/_original/recharge-payments-openapi.yml#POST /discounts",
      "openapi/_original/recharge-payments-openapi.yml#PUT /discounts/{id}"
+    ]
+   },
+   "recurly": {
+    "segments": [
+     "coupons"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "object": "string",
+     "code": "string",
+     "name": "string",
+     "state": "string",
+     "max_redemptions": "integer",
+     "max_redemptions_per_account": "integer",
+     "unique_coupon_codes_count": "integer",
+     "unique_code_template": "string",
+     "unique_coupon_code": "object",
+     "duration": "string",
+     "temporal_amount": "integer",
+     "temporal_unit": "string",
+     "free_trial_unit": "string",
+     "free_trial_amount": "integer",
+     "applies_to_all_plans": "boolean",
+     "applies_to_all_items": "boolean",
+     "applies_to_non_plan_charges": "boolean",
+     "plans": "array",
+     "items": "array",
+     "redemption_resource": "string",
+     "discount": "object",
+     "coupon_type": "string",
+     "hosted_page_description": "string",
+     "invoice_description": "string",
+     "redeem_by": "string",
+     "redeem_by_interval_unit": "string",
+     "redeem_by_interval_amount": "integer",
+     "created_at": "string",
+     "updated_at": "string",
+     "expired_at": "string",
+     "hosted_description": "string",
+     "redeem_by_date": "string",
+     "discount_type": "string",
+     "discount_percent": "integer",
+     "currencies": "array",
+     "plan_codes": "array",
+     "item_codes": "array",
+     "plans_names": "array",
+     "bulk_coupon_id": "string",
+     "bulk_coupon_code": "string",
+     "redeemed_at": "string",
+     "discount_application_mode": "string",
+     "discount_periods": "integer"
+    },
+    "evidence": [
+     "openapi/_original/recurly-openapi.yml#DELETE /coupons/{coupon_id}",
+     "openapi/_original/recurly-openapi.yml#GET /coupons",
+     "openapi/_original/recurly-openapi.yml#GET /coupons/{coupon_id}",
+     "openapi/_original/recurly-openapi.yml#POST /coupons",
+     "openapi/_original/recurly-openapi.yml#PUT /coupons/{coupon_id}",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#DELETE /coupons/{coupon_code}",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#GET /coupons",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#GET /coupons/{coupon_code}",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#POST /coupons",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#PUT /coupons/{coupon_code}",
+     "openapi/_original/recurly-v3-v2019-10-10-api.yaml#DELETE /sites/{site_id}/coupons/{coupon_id}",
+     "openapi/_original/recurly-v3-v2019-10-10-api.yaml#GET /sites/{site_id}/coupons"
     ]
    },
    "reloadly": {
@@ -27935,6 +29203,64 @@
      "openapi/_original/lean-technologies-payment-links-openapi.yml#GET /payment-links/v1/{payment_link_id}/usages/{usage_id}"
     ]
    },
+   "maxio": {
+    "segments": [
+     "usage",
+     "usages"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "signups": "integer",
+     "savings": [
+      "integer",
+      "null"
+     ],
+     "savings_in_cents": [
+      "integer",
+      "null"
+     ],
+     "revenue": [
+      "integer",
+      "null"
+     ],
+     "revenue_in_cents": "integer",
+     "memo": [
+      "string",
+      "null"
+     ],
+     "created_at": "string",
+     "price_point_id": "integer",
+     "quantity": null,
+     "overage_quantity": "integer",
+     "component_id": "integer",
+     "component_handle": "string",
+     "subscription_id": "integer",
+     "billing_schedule": null,
+     "custom_price": null,
+     "wallet_templates": "array",
+     "price_point_overrides": "array",
+     "active_wallets": "object"
+    },
+    "evidence": [
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /product_families/{product_family_id}/coupons/{coupon_id}/usage.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /subscriptions/{subscription_id_or_reference}/components/{component_id}/usages.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#GET /wallet_products/{id}/usage.json",
+     "openapi/_original/maxio-advanced-billing-openapi.yml#POST /subscriptions/{subscription_id_or_reference}/components/{component_id}/usages.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /product_families/{product_family_id}/coupons/{coupon_id}/usage.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /subscriptions/{subscription_id_or_reference}/components/{component_id}/usages.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#GET /wallet_products/{id}/usage.json",
+     "openapi/_original/maxio-advanced-billing-openapi31json.json#POST /subscriptions/{subscription_id_or_reference}/components/{component_id}/usages.json",
+     "openapi/_original/maxio-advanced-billing-openapi3json.json#GET /product_families/{product_family_id}/coupons/{coupon_id}/usage.json",
+     "openapi/_original/maxio-advanced-billing-openapi3json.json#GET /subscriptions/{subscription_id_or_reference}/components/{component_id}/usages.json",
+     "openapi/_original/maxio-advanced-billing-openapi3json.json#GET /wallet_products/{id}/usage.json",
+     "openapi/_original/maxio-advanced-billing-openapi3json.json#POST /subscriptions/{subscription_id_or_reference}/components/{component_id}/usages.json"
+    ]
+   },
    "metronome": {
     "segments": [
      "usage"
@@ -28047,12 +29373,27 @@
      "GET collection"
     ],
     "properties": {
+     "license_id": null,
+     "subscription_id": "string",
+     "license_type_id": "string",
+     "external_license_id": null,
+     "start_date": "string",
+     "end_date": "string",
+     "allocated_credits": "number",
+     "consumed_credits": "number",
+     "remaining_credits": "number",
+     "pricing_unit": "string",
+     "allocation_eligible_credits": null,
+     "shared_pool_credits": null,
      "quantity": "number",
      "timeframe_start": "string",
      "timeframe_end": "string"
     },
     "evidence": [
-     "openapi/_original/orb-billing-openapi.yml#GET /subscriptions/{subscription_id}/usage"
+     "openapi/_original/orb-billing-openapi.json#GET /licenses/external_licenses/{external_license_id}/usage",
+     "openapi/_original/orb-billing-openapi.json#GET /licenses/usage",
+     "openapi/_original/orb-billing-openapi.json#GET /licenses/{license_id}/usage",
+     "openapi/_original/orb-billing-openapi.json#GET /subscriptions/{subscription_id}/usage"
     ]
    },
    "ordway": {
@@ -28171,6 +29512,51 @@
     },
     "evidence": [
      "openapi/_original/payhip-openapi.yml#PUT /license/usage"
+    ]
+   },
+   "recurly": {
+    "segments": [
+     "usage"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "object": "string",
+     "merchant_tag": "string",
+     "amount": "number",
+     "usage_type": "string",
+     "tier_type": "string",
+     "tiers": "array",
+     "percentage_tiers": "array",
+     "measured_unit_id": "string",
+     "recording_timestamp": "string",
+     "usage_timestamp": "string",
+     "usage_percentage": "number",
+     "unit_amount": "number",
+     "unit_amount_decimal": "string",
+     "billed_at": "string",
+     "created_at": "string",
+     "updated_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/recurly-openapi.yml#DELETE /usage/{usage_id}",
+     "openapi/_original/recurly-openapi.yml#GET /subscriptions/{subscription_id}/add_ons/{add_on_id}/usage",
+     "openapi/_original/recurly-openapi.yml#GET /usage/{usage_id}",
+     "openapi/_original/recurly-openapi.yml#POST /subscriptions/{subscription_id}/add_ons/{add_on_id}/usage",
+     "openapi/_original/recurly-openapi.yml#PUT /usage/{usage_id}",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#DELETE /subscriptions/{subscription_uuid}/add_ons/{add_on_code}/usage/{usage_id}",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#GET /subscriptions/{subscription_uuid}/add_ons/{add_on_code}/usage",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#GET /subscriptions/{subscription_uuid}/add_ons/{add_on_code}/usage/{usage_id}",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#POST /subscriptions/{subscription_uuid}/add_ons/{add_on_code}/usage",
+     "openapi/_original/recurly-v2-v2.29-api.yaml#PUT /subscriptions/{subscription_uuid}/add_ons/{add_on_code}/usage/{usage_id}",
+     "openapi/_original/recurly-v3-v2019-10-10-api.yaml#DELETE /sites/{site_id}/usage/{usage_id}",
+     "openapi/_original/recurly-v3-v2019-10-10-api.yaml#GET /sites/{site_id}/subscriptions/{subscription_id}/add_ons/{add_on_id}/usage"
     ]
    },
    "rillet": {
@@ -28390,7 +29776,6 @@
     "allowance",
     "alphaus",
     "amazon",
-    "amazon-data-exchange",
     "amcs-group",
     "amdocs",
     "anchor-x402",
@@ -28464,6 +29849,7 @@
     "btcpay",
     "btg-pactual",
     "bud-co",
+    "buildertrend",
     "buildxact",
     "bunq",
     "bvnk",
@@ -28647,7 +30033,6 @@
     "goodlord",
     "goodstack",
     "goody",
-    "google-play",
     "gorilladesk",
     "gov-uk-pay",
     "gr4vy",
@@ -28772,6 +30157,7 @@
     "mastercard-gateway-api",
     "mavenlink",
     "mavrck",
+    "maxio",
     "memo-bank",
     "mercado-pago",
     "mercoa",
@@ -28937,6 +30323,7 @@
     "ready2order",
     "receeve",
     "recharge-payments",
+    "recurly",
     "red-hat-satellite",
     "reloadly",
     "remitian",
@@ -29181,7 +30568,6 @@
     "allica-bank",
     "allowance",
     "alphaus",
-    "amazon-data-exchange",
     "amcs-group",
     "ansa",
     "apexxfintech",
@@ -29476,6 +30862,7 @@
     "orange",
     "orange-business",
     "origami-risk",
+    "orion-advisor-solutions",
     "orum",
     "ottimate",
     "outdoorsy",
@@ -29795,6 +31182,7 @@
     "mamo",
     "mavenlink",
     "mavrck",
+    "maxio",
     "memo-bank",
     "mercado-pago",
     "method-financial",
@@ -29840,6 +31228,7 @@
     "ready2order",
     "receeve",
     "recharge-payments",
+    "recurly",
     "red-hat-satellite",
     "rentberry",
     "resolve",
@@ -30029,6 +31418,7 @@
     "noosh",
     "nopan",
     "northmill",
+    "novopayment",
     "okra-africa",
     "ontraport",
     "optum",
@@ -30051,6 +31441,7 @@
     "practicepanther",
     "przelewy24",
     "ready2order",
+    "recurly",
     "rentle",
     "revelator",
     "safello",
@@ -30217,6 +31608,7 @@
     "przelewy24",
     "raiffeisen-ru",
     "ravelin",
+    "recurly",
     "rentberry",
     "rhel",
     "ripple-labs",
@@ -30271,7 +31663,6 @@
    "PascalCase": [
     "aeropay",
     "agicap",
-    "amazon-billing-and-cost-management",
     "amcs-group",
     "blackbaud",
     "btcpay",
@@ -30356,7 +31747,6 @@
     "algovoi-co-uk",
     "alphaus",
     "amazon",
-    "amazon-data-exchange",
     "amcs-group",
     "amdocs",
     "anchor-x402",
@@ -30417,6 +31807,7 @@
     "btcpay",
     "btg-pactual",
     "bud-co",
+    "buildertrend",
     "bvnk",
     "bybe",
     "cacheflow",
@@ -30651,6 +32042,7 @@
     "mastercard",
     "mavenlink",
     "mavrck",
+    "maxio",
     "memo-bank",
     "mercado-pago",
     "mercury",
@@ -30772,6 +32164,7 @@
     "ready2order",
     "receeve",
     "recharge-payments",
+    "recurly",
     "red-hat-satellite",
     "reloadly",
     "remitian",
@@ -30957,7 +32350,6 @@
     "allica-bank",
     "alphaus",
     "amazon",
-    "amazon-data-exchange",
     "amcs-group",
     "amdocs",
     "ansa",
@@ -30996,6 +32388,7 @@
     "brushfire",
     "btcpay",
     "btg-pactual",
+    "buildertrend",
     "bvnk",
     "c-hoare-and-co",
     "cacheflow",
@@ -31220,6 +32613,7 @@
     "raiffeisen-ru",
     "ready2order",
     "receeve",
+    "recurly",
     "reloadly",
     "remitian",
     "rentahuman",
@@ -31510,6 +32904,7 @@
     "mastercard",
     "mavenlink",
     "mavrck",
+    "maxio",
     "memo-bank",
     "mercado-pago",
     "method-financial",
@@ -31574,6 +32969,7 @@
     "reachware-inc",
     "ready2order",
     "recharge-payments",
+    "recurly",
     "red-hat-satellite",
     "resolve",
     "revenuecat",
@@ -31742,6 +33138,7 @@
     "lightspeed",
     "m3ter",
     "mavrck",
+    "maxio",
     "method-financial",
     "methodfi",
     "microsoft-azure-cost-management",
@@ -31756,6 +33153,7 @@
     "opply",
     "optum",
     "orange-business",
+    "orb-billing",
     "ordway",
     "orion-advisor-solutions",
     "outdoorsy",
@@ -31931,6 +33329,7 @@
     "bridge",
     "btcpay",
     "btg-pactual",
+    "buildertrend",
     "bybe",
     "cadana",
     "campfire",
@@ -32108,6 +33507,7 @@
     "ready2order",
     "receeve",
     "recharge-payments",
+    "recurly",
     "remitian",
     "rentahuman",
     "rentberry",
@@ -32341,6 +33741,7 @@
     "mastercard",
     "mavenlink",
     "mavrck",
+    "maxio",
     "memo-bank",
     "method-financial",
     "methodfi",
@@ -32392,6 +33793,7 @@
     "raiffeisen-ru",
     "ready2order",
     "receeve",
+    "recurly",
     "red-hat-satellite",
     "reloadly",
     "rentberry",
@@ -32801,6 +34203,7 @@
     "bold-commerce",
     "bridge",
     "btg-pactual",
+    "buildertrend",
     "cadana",
     "campfire",
     "cash-app",
@@ -32850,6 +34253,7 @@
     "podium",
     "primer",
     "procuros",
+    "recurly",
     "revolut",
     "rillet",
     "scvd-store",
@@ -32916,6 +34320,7 @@
     "mamo",
     "mangopay",
     "mavenlink",
+    "maxio",
     "mighty-networks",
     "modern-treasury",
     "mtn-group",
@@ -32926,6 +34331,7 @@
     "pin-payments",
     "procuros",
     "r2",
+    "recurly",
     "red-hat-satellite",
     "rhel",
     "runa",
@@ -33256,7 +34662,6 @@
     "paystack"
    ],
    "max_results": [
-    "amazon-data-exchange",
     "blackbaud",
     "moov",
     "mtn-group",
@@ -33326,6 +34731,7 @@
     "btcpay",
     "btg-pactual",
     "bud-co",
+    "buildertrend",
     "bvnk",
     "bybe",
     "cacheflow",
@@ -33436,7 +34842,6 @@
     "goodlord",
     "goodstack",
     "goody",
-    "google-play",
     "gr4vy",
     "greenhelix-net",
     "guntab",
@@ -33508,6 +34913,7 @@
     "mastercard-gateway-api",
     "mavenlink",
     "mavrck",
+    "maxio",
     "memo-bank",
     "mercado-pago",
     "mercury",
@@ -33550,6 +34956,7 @@
     "opply",
     "optum",
     "orange-business",
+    "orb-billing",
     "ordergroove",
     "ordway",
     "orion-advisor-solutions",
@@ -33604,6 +35011,7 @@
     "razorpay",
     "ready2order",
     "recharge-payments",
+    "recurly",
     "red-hat-satellite",
     "reloadly",
     "rentahuman",
@@ -33757,7 +35165,6 @@
     "alliance-data-systems",
     "alphaus",
     "amazon",
-    "amazon-data-exchange",
     "amcs-group",
     "amdocs",
     "ansa",
@@ -33803,6 +35210,7 @@
     "brushfire",
     "btcpay",
     "btg-pactual",
+    "buildertrend",
     "buildxact",
     "bunq",
     "bvnk",
@@ -33890,7 +35298,6 @@
     "gofundme",
     "goodlord",
     "goodstack",
-    "google-play",
     "gorilladesk",
     "gov-uk-pay",
     "grapes-finance",
@@ -34288,6 +35695,7 @@
     "marqeta",
     "mastercard",
     "mavenlink",
+    "maxio",
     "mercado-pago",
     "method-financial",
     "methodfi",
@@ -34338,6 +35746,7 @@
     "r2",
     "raiffeisen-ru",
     "rainforest",
+    "recurly",
     "red-hat-satellite",
     "rentberry",
     "resolve",
@@ -34422,7 +35831,6 @@
    ],
    "PascalCase": [
     "allica-bank",
-    "amazon-data-exchange",
     "aza-finance",
     "bank-of-ireland-uk",
     "bank-of-scotland",
@@ -34693,6 +36101,7 @@
     "mastercard",
     "mavenlink",
     "mavrck",
+    "maxio",
     "mesh",
     "mesh-connect",
     "method-financial",
@@ -34765,6 +36174,7 @@
     "raiffeisen-ru",
     "ready2order",
     "recharge-payments",
+    "recurly",
     "red-hat-satellite",
     "reloadly",
     "rentle",
@@ -34924,6 +36334,7 @@
     "mamo",
     "marqeta",
     "mavenlink",
+    "maxio",
     "method-financial",
     "methodfi",
     "metronome",
@@ -34962,6 +36373,7 @@
     "qubiqle",
     "ready2order",
     "recharge-payments",
+    "recurly",
     "red-hat-satellite",
     "resolve",
     "revenuecat",
@@ -35104,6 +36516,7 @@
     "practicepanther",
     "raiffeisen-ru",
     "ready2order",
+    "recurly",
     "reloadly",
     "rentle",
     "rhel",

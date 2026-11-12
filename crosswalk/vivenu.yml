@@ -1,7 +1,7 @@
 provider: vivenu
 apis_io: https://apis.io/providers/vivenu/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -31,8 +31,8 @@ concepts:
       metadata: attributes
       canceled_at: canceledAt
       currency: currency
-      name: name
       items: items
+      name: name
     core_coverage: 0.667
     evidence:
     - openapi/_original/vivenu-openapi-original.json#GET /api/customers/me/subscriptions
@@ -72,11 +72,11 @@ concepts:
       id: _id
       total: amount
       currency: currency
-      created_at: createdAt
       customer_id: customerId
+      created_at: createdAt
       updated_at: updatedAt
       items: items
-    core_coverage: 0.75
+    core_coverage: 0.714
     evidence:
     - openapi/_original/vivenu-openapi-original.json#GET /api/credit-notes
   coupon:
@@ -90,7 +90,7 @@ concepts:
       created_at: createdAt
       amount_off: amount
       updated_at: updatedAt
-    core_coverage: 0.75
+    core_coverage: 0.6
     evidence:
     - openapi/_original/vivenu-openapi-original.json#GET /api/coupon/{id}
     - openapi/_original/vivenu-openapi-original.json#GET /api/stats/discounts

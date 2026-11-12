@@ -16,16 +16,16 @@ providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| invoice | 184 | 162 | id 78%, status 70%, due_date 54%, number 51% | invoices 146, invoice 43, bills 21 |
-| invoice_line | 16 | 14 | description 86%, id 71%, quantity 71% | line-items 5, lines 5, lineitems 3, items 3 |
-| subscription | 138 | 124 | id 82%, status 64%, created_at 53% | subscriptions 125, subscription 22 |
-| plan | 59 | 54 | id 91%, name 85%, description 65%, created_at 61%, is_active 52%, amount 50% | plans 42, products 32, product 5, plan 4 |
-| price | 17 | 15 | id 60%, plan_id 60%, currency 53%, pricing_model 53% | prices 13, price 3, pricing 2, item_prices 1 |
-| credit_note | 29 | 25 | id 72%, total 68%, status 64%, description 60%, currency 56%, created_at 52%, customer_id 52%, updated_at 52% | credit-notes 11, creditnotes 6, credit_notes 5, creditmemos 4 |
-| coupon | 27 | 19 | code 90%, id 68%, created_at 58%, max_redemptions 58% | coupons 16, discounts 12, vouchers 2, coupon 2 |
-| usage_record | 22 | 19 | id 58%, quantity 58% | usage 15, usages 4, events 1, usage_records 1 |
+| invoice | 186 | 164 | id 79%, status 70%, due_date 55%, number 51% | invoices 148, invoice 43, bills 21 |
+| invoice_line | 17 | 15 | description 87%, id 73%, quantity 73% | line-items 5, lines 5, lineitems 3, items 3 |
+| subscription | 140 | 126 | id 82%, status 64%, created_at 54% | subscriptions 127, subscription 22 |
+| plan | 61 | 56 | id 91%, name 86%, description 66%, created_at 62%, is_active 52%, amount 50% | plans 43, products 34, product 5, plan 4 |
+| price | 18 | 16 | id 62%, plan_id 56%, currency 50%, pricing_model 50% | prices 13, price 4, pricing 2, item_prices 1 |
+| credit_note | 31 | 27 | id 70%, total 70%, status 63%, currency 56%, customer_id 56%, description 56%, created_at 52% | credit-notes 11, credit_notes 7, creditnotes 6, creditmemos 4 |
+| coupon | 29 | 21 | code 90%, id 71%, created_at 62%, max_redemptions 57%, expires_at 52% | coupons 18, discounts 12, vouchers 2, coupon 2 |
+| usage_record | 24 | 21 | id 62%, quantity 62% | usage 17, usages 5, events 1, usage_records 1 |
 
-Cohort: 837 providers with harvested OpenAPI, 270 crosswalks. Of the providers exposing a invoice: 66% create, 84% list, 85% fetch, 45% update, 29% delete. Generated 2026-11-11 by build.py.
+Cohort: 837 providers with harvested OpenAPI, 272 crosswalks. Of the providers exposing a invoice: 67% create, 84% list, 85% fetch, 46% update, 29% delete. Generated 2026-11-12 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

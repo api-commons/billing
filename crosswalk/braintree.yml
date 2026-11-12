@@ -1,7 +1,7 @@
 provider: braintree
 apis_io: https://apis.io/providers/braintree/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   subscription:
     path_segment:
@@ -44,6 +44,6 @@ concepts:
       amount_off: amount
       updated_at: updated_at
       description: description
-    core_coverage: 0.75
+    core_coverage: 0.6
     evidence:
     - openapi/_original/braintree-subscriptions-openapi.yml#GET /discounts

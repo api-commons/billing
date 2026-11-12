@@ -1,7 +1,7 @@
 provider: hitpay
 apis_io: https://apis.io/providers/hitpay/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -13,10 +13,10 @@ concepts:
       created_at: created_at
       currency: currency
       line_items: products
-      issued_at: invoice_date
       customer_id:
       - customer
       - customer_id
+      issued_at: invoice_date
       total: amount
       updated_at: updated_at
     core_coverage: 0.75

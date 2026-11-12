@@ -1,7 +1,7 @@
 provider: monetizenow
 apis_io: https://apis.io/providers/monetizenow/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -62,15 +62,15 @@ concepts:
       id: id
       total: amount
       status: status
-      description: description
       currency: currency
       customer_id: accountId
+      description: description
       reason: type
       invoice_id:
       - invoiceId
       - invoice
       metadata: customFields
-    core_coverage: 0.75
+    core_coverage: 0.857
     evidence:
     - openapi/_original/monetizenow-openapi.json#GET /api/accounts/{accountId}/creditNotes
     - openapi/_original/monetizenow-openapi.json#GET /api/creditNotes/{creditNoteId}

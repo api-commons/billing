@@ -1,7 +1,7 @@
 provider: clio
 apis_io: https://apis.io/providers/clio/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -35,7 +35,7 @@ concepts:
       updated_at: updated_at
       date: date
       voided_at: voided_at
-    core_coverage: 0.625
+    core_coverage: 0.571
     evidence:
     - openapi/_original/clio-openapi.json#GET /credit_memos.json
     - openapi/_original/clio-openapi.json#GET /credit_memos/{id}.json

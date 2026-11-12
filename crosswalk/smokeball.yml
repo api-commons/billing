@@ -1,7 +1,7 @@
 provider: smokeball
 apis_io: https://apis.io/providers/smokeball/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -44,8 +44,8 @@ concepts:
     - usages
     properties:
       id: id
-      description: description
       created_at: createdDate
+      description: description
       updated_at: updatedDate
     core_coverage: 0.5
     evidence:

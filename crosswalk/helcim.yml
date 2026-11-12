@@ -1,7 +1,7 @@
 provider: helcim
 apis_io: https://apis.io/providers/helcim/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -13,8 +13,8 @@ concepts:
       created_at: dateCreated
       currency: currency
       line_items: lineItems
-      issued_at: dateIssued
       customer_id: customerId
+      issued_at: dateIssued
       total: amount
       description: notes
       tax: tax

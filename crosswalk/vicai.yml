@@ -1,7 +1,7 @@
 provider: vicai
 apis_io: https://apis.io/providers/vicai/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -43,6 +43,7 @@ concepts:
       unit_price: unitPrice
       amount: amount
       number: number
+      tax_code: taxCode
     core_coverage: 0.333
     evidence:
     - openapi/_original/vicai-openapi-original.json#GET /v0/invoices/{id}/lineItems

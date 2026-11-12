@@ -1,7 +1,7 @@
 provider: billingengine
 apis_io: https://apis.io/providers/billingengine/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -12,10 +12,10 @@ concepts:
       number: number
       currency: currency
       line_items: items
-      issued_at: date
       customer_id:
       - customer
       - customer_id
+      issued_at: date
       tax: tax_amount
     core_coverage: 0.75
     evidence:

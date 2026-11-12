@@ -1,7 +1,7 @@
 provider: flipdish
 apis_io: https://apis.io/providers/flipdish/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -42,7 +42,7 @@ concepts:
       status: Status
       currency: Currency
       description: Description
-    core_coverage: 0.5
+    core_coverage: 0.6
     evidence:
     - openapi/_original/flipdish-marketing-openapi.json#GET /api/v1.0/vouchers/{voucherId}
     - openapi/_original/flipdish-marketing-openapi.json#POST /api/v1.0/vouchers/{appId}

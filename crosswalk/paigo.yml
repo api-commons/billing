@@ -1,7 +1,7 @@
 provider: paigo
 apis_io: https://apis.io/providers/paigo/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -14,8 +14,8 @@ concepts:
       line_items:
       - lineItems
       - items
-      issued_at: invoiceDate
       customer_id: customerId
+      issued_at: invoiceDate
       tax: taxAmount
     core_coverage: 0.5
     evidence:

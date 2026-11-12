@@ -1,7 +1,7 @@
 provider: alphaus
 apis_io: https://apis.io/providers/alphaus/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   subscription:
     path_segment:
@@ -14,8 +14,7 @@ concepts:
   price:
     path_segment:
     - pricing
-    properties:
-      unit: unit
+    properties: {}
     core_coverage: 0.0
     evidence:
     - openapi/_original/alphaus-blueapi-openapi-original.json#POST /v0/{vendor}/pricing

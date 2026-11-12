@@ -1,7 +1,7 @@
 provider: servicechannel
 apis_io: https://apis.io/providers/servicechannel/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -13,8 +13,8 @@ concepts:
       - InvoiceNumber
       - Number
       currency: Currency
-      issued_at: InvoiceDate
       customer_id: SubscriberId
+      issued_at: InvoiceDate
       total: InvoiceTotal
       description:
       - Description

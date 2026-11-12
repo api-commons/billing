@@ -1,7 +1,7 @@
 provider: paid
 apis_io: https://apis.io/providers/paid/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -13,10 +13,10 @@ concepts:
       number: displayNumber
       created_at: createdAt
       currency: currency
-      issued_at: issueDate
       customer_id:
       - customerId
       - customer
+      issued_at: issueDate
       total: invoiceTotal
       tax:
       - tax

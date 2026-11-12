@@ -1,7 +1,7 @@
 provider: alayacare
 apis_io: https://apis.io/providers/alayacare/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -11,8 +11,8 @@ concepts:
       status: status
       number: invoice_number
       line_items: invoice_items
-      issued_at: invoice_date
       customer_id: client_id
+      issued_at: invoice_date
       tax: taxes
       updated_at: updated_at
       amount_due: balance

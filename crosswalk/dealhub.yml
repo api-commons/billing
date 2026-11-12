@@ -1,7 +1,7 @@
 provider: dealhub
 apis_io: https://apis.io/providers/dealhub/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -12,8 +12,8 @@ concepts:
       number: invoiceNumber
       currency: currency
       line_items: invoiceItems
-      issued_at: invoiceDate
       customer_id: accountId
+      issued_at: invoiceDate
       description:
       - note
       - description
@@ -79,12 +79,12 @@ concepts:
     properties:
       total: amount
       status: status
-      description: notes
       currency: currencyCode
-      created_at: createdOn
       customer_id: accountId
+      description: notes
+      created_at: createdOn
       line_items: lineItems
-    core_coverage: 0.75
+    core_coverage: 0.857
     evidence:
     - openapi/_original/dealhub-subskribe-api-openapi.json#DELETE /creditmemos/{creditMemoNumber}
     - openapi/_original/dealhub-subskribe-api-openapi.json#GET /creditmemos
@@ -99,7 +99,7 @@ concepts:
       amount_off: discountAmount
       percent_off: percent
       status: status
-    core_coverage: 0.25
+    core_coverage: 0.2
     evidence:
     - openapi/_original/dealhub-subskribe-api-openapi.json#DELETE /discounts/{id}
     - openapi/_original/dealhub-subskribe-api-openapi.json#GET /discounts

@@ -1,7 +1,7 @@
 provider: syntage
 apis_io: https://apis.io/providers/syntage/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -52,7 +52,7 @@ concepts:
       created_at: createdAt
       updated_at: updatedAt
       reason: '@type'
-    core_coverage: 0.5
+    core_coverage: 0.429
     evidence:
     - openapi/_original/syntage-openapi-original.yml#GET /entities/{entityId}/invoices/credit-notes
     - openapi/_original/syntage-openapi-original.yml#GET /invoices/credit-notes

@@ -1,7 +1,7 @@
 provider: mvmnt
 apis_io: https://apis.io/providers/mvmnt/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -13,8 +13,8 @@ concepts:
       due_date: dueDate
       created_at: createdAt
       currency: currency
-      issued_at: invoiceDate
       customer_id: customer
+      issued_at: invoiceDate
       total: amount
       updated_at: updatedAt
     core_coverage: 0.75
@@ -31,12 +31,12 @@ concepts:
       id: id
       total: amount
       status: status
-      description: notes
       currency: currency
-      created_at: createdAt
       customer_id:
       - customer
       - customerId
+      description: notes
+      created_at: createdAt
       updated_at: updatedAt
       voided_at: voidedAt
     core_coverage: 1.0

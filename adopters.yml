@@ -1,5 +1,5 @@
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 adopters:
 - provider: 1fort
   apis_io: https://apis.io/providers/1fort/
@@ -748,6 +748,16 @@ adopters:
   crosswalk: crosswalk/mavenlink.yml
   concepts:
   - invoice
+- provider: maxio
+  apis_io: https://apis.io/providers/maxio/
+  crosswalk: crosswalk/maxio.yml
+  concepts:
+  - coupon
+  - credit_note
+  - invoice
+  - plan
+  - subscription
+  - usage_record
 - provider: mercoa
   apis_io: https://apis.io/providers/mercoa/
   crosswalk: crosswalk/mercoa.yml
@@ -910,6 +920,7 @@ adopters:
   crosswalk: crosswalk/orb-billing.yml
   concepts:
   - coupon
+  - credit_note
   - invoice
   - plan
   - price
@@ -1139,6 +1150,17 @@ adopters:
   - coupon
   - plan
   - subscription
+- provider: recurly
+  apis_io: https://apis.io/providers/recurly/
+  crosswalk: crosswalk/recurly.yml
+  concepts:
+  - coupon
+  - invoice
+  - invoice_line
+  - plan
+  - price
+  - subscription
+  - usage_record
 - provider: red-hat-satellite
   apis_io: https://apis.io/providers/red-hat-satellite/
   crosswalk: crosswalk/red-hat-satellite.yml

@@ -1,7 +1,7 @@
 provider: lexoffice
 apis_io: https://apis.io/providers/lexoffice/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -25,7 +25,7 @@ concepts:
       created_at: createdDate
       updated_at: updatedDate
       line_items: lineItems
-    core_coverage: 0.375
+    core_coverage: 0.286
     evidence:
     - openapi/_original/lexoffice-openapi.yml#GET /credit-notes/{id}
     - openapi/_original/lexoffice-openapi.yml#POST /credit-notes

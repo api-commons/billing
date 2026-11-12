@@ -1,7 +1,7 @@
 provider: resolve
 apis_io: https://apis.io/providers/resolve/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -37,7 +37,7 @@ concepts:
       reason: reason_code
       invoice_id: invoice_id
       voided_at: voided_at
-    core_coverage: 0.5
+    core_coverage: 0.571
     evidence:
     - openapi/_original/resolve-merchant-api-openapi.yaml#GET /credit-notes
     - openapi/_original/resolve-merchant-api-openapi.yaml#GET /credit-notes/{credit_note_id}

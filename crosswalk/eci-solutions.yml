@@ -1,7 +1,7 @@
 provider: eci-solutions
 apis_io: https://apis.io/providers/eci-solutions/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -19,12 +19,12 @@ concepts:
       - referenceNumber
       currency: currencyCode
       line_items: lines
-      issued_at:
-      - date
-      - invoiceDate
       customer_id:
       - customerId
       - customer
+      issued_at:
+      - date
+      - invoiceDate
       total: amount
       description:
       - comment

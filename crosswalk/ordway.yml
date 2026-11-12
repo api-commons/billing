@@ -1,7 +1,7 @@
 provider: ordway
 apis_io: https://apis.io/providers/ordway/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -12,8 +12,8 @@ concepts:
       due_date: due_date
       created_at: created_date
       currency: currency
-      issued_at: invoice_date
       customer_id: customer_id
+      issued_at: invoice_date
       description:
       - notes
       - description
@@ -35,8 +35,8 @@ concepts:
       created_at: created_date
       customer_id: customer_id
       plan_id: product_id
-      metadata: custom_fields
       updated_at: updated_date
+      metadata: custom_fields
       canceled_at: cancellation_date
       currency: currency
     core_coverage: 1.0
@@ -90,8 +90,8 @@ concepts:
     properties:
       quantity: quantity
       subscription_id: subscription_id
-      description: description
       created_at: created_date
+      description: description
       customer_id: customer_id
       updated_at: updated_date
     core_coverage: 0.5

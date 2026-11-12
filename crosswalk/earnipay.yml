@@ -1,7 +1,7 @@
 provider: earnipay
 apis_io: https://apis.io/providers/earnipay/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -9,8 +9,8 @@ concepts:
     properties:
       due_date: dueDate
       line_items: items
-      issued_at: issueDate
       customer_id: customerId
+      issued_at: issueDate
       description: notes
     core_coverage: 0.25
     evidence:

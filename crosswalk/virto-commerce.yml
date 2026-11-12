@@ -1,7 +1,7 @@
 provider: virto-commerce
 apis_io: https://apis.io/providers/virto-commerce/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -49,7 +49,7 @@ concepts:
       created_at: createdDate
       expires_at: expirationDate
       updated_at: modifiedDate
-    core_coverage: 0.75
+    core_coverage: 0.8
     evidence:
     - openapi/_original/virto-commerce-cart-openapi.json#DELETE /api/carts/{cartId}/coupons/{couponCode}
     - openapi/_original/virto-commerce-cart-openapi.json#POST /api/carts/{cartId}/coupons/{couponCode}

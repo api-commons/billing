@@ -1,7 +1,7 @@
 provider: creem
 apis_io: https://apis.io/providers/creem/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   subscription:
     path_segment:
@@ -51,7 +51,7 @@ concepts:
       type: type
       currency: currency
       duration: duration
-    core_coverage: 0.75
+    core_coverage: 0.8
     evidence:
     - openapi/_original/creem-openapi.yml#GET /discounts
     - openapi/_original/creem-openapi.yml#POST /discounts

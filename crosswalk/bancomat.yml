@@ -1,7 +1,7 @@
 provider: bancomat
 apis_io: https://apis.io/providers/bancomat/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -33,7 +33,7 @@ concepts:
       invoice_id: invoice
       date: date
       items: items
-    core_coverage: 0.25
+    core_coverage: 0.286
     evidence:
     - openapi/_original/bancomat-flowpay-api-v2-openapi.json#DELETE /creditNotes/{fingerprint}
     - openapi/_original/bancomat-flowpay-api-v2-openapi.json#GET /creditNotes

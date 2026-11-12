@@ -1,7 +1,7 @@
 provider: paddle
 apis_io: https://apis.io/providers/paddle/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -48,8 +48,6 @@ concepts:
       id: id
       plan_id: product_id
       pricing_model: type
-      amount: unit_price
-      status: status
     core_coverage: 0.75
     evidence:
     - openapi/_original/paddle-openapi.yml#GET /prices

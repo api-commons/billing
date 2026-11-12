@@ -1,7 +1,7 @@
 context: billing
 name: Billing and Invoicing
-generated: '2026-11-11'
-version: 0.1.0-draft.20261111
+generated: '2026-11-12'
+version: 0.1.0-draft.20261112
 status: draft
 cohort:
   tags:
@@ -92,35 +92,35 @@ shared_specs:
 concepts:
   invoice:
     segments_seen:
-      invoices: 146
+      invoices: 148
       invoice: 43
       bills: 21
-    providers_exposing: 184
-    providers_with_readable_schema: 162
+    providers_exposing: 186
+    providers_with_readable_schema: 164
     operations:
     - operation: GET item
-      providers: 156
-      share: 0.848
+      providers: 158
+      share: 0.849
       tier: core
     - operation: GET collection
-      providers: 155
-      share: 0.842
+      providers: 157
+      share: 0.844
       tier: core
     - operation: POST collection
-      providers: 122
-      share: 0.663
+      providers: 124
+      share: 0.667
       tier: core
     - operation: UPDATE item
-      providers: 83
-      share: 0.451
+      providers: 86
+      share: 0.462
       tier: extended
     - operation: DELETE item
-      providers: 53
-      share: 0.288
+      providers: 54
+      share: 0.29
       tier: extended
     - operation: UPDATE collection
       providers: 11
-      share: 0.06
+      share: 0.059
       tier: long-tail
     - operation: POST item
       providers: 8
@@ -133,8 +133,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 127
-      share: 0.784
+      providers: 129
+      share: 0.787
       type: string
       spellings:
       - id
@@ -147,8 +147,8 @@ concepts:
       - GUID
     - name: status
       tier: core
-      providers: 113
-      share: 0.698
+      providers: 115
+      share: 0.701
       type: string
       spellings:
       - status
@@ -158,8 +158,8 @@ concepts:
       - invoice_status
     - name: due_date
       tier: core
-      providers: 88
-      share: 0.543
+      providers: 90
+      share: 0.549
       type: string
       spellings:
       - dueDate
@@ -169,8 +169,8 @@ concepts:
       - payment_due_date
     - name: number
       tier: core
-      providers: 82
-      share: 0.506
+      providers: 84
+      share: 0.512
       type: string
       spellings:
       - number
@@ -183,8 +183,8 @@ concepts:
       - invoice-number
     - name: created_at
       tier: extended
-      providers: 75
-      share: 0.463
+      providers: 77
+      share: 0.47
       type: string
       spellings:
       - created_at
@@ -197,8 +197,8 @@ concepts:
       - created_date
     - name: currency
       tier: extended
-      providers: 74
-      share: 0.457
+      providers: 76
+      share: 0.463
       type: string
       spellings:
       - currency
@@ -207,8 +207,8 @@ concepts:
       - currency_code
     - name: line_items
       tier: extended
-      providers: 72
-      share: 0.444
+      providers: 74
+      share: 0.451
       type: array
       spellings:
       - items
@@ -219,38 +219,38 @@ concepts:
       - invoice_items
       - invoiceLines
       - products
-    - name: issued_at
-      tier: extended
-      providers: 70
-      share: 0.432
-      type: string
-      spellings:
-      - invoiceDate
-      - invoice_date
-      - date
-      - issued_at
-      - issue_date
-      - issueDate
-      - InvoiceDate
-      - documentDate
     - name: customer_id
       tier: extended
-      providers: 69
-      share: 0.426
+      providers: 71
+      share: 0.433
       type: string
       spellings:
       - customer
       - customer_id
       - customerId
       - accountId
-      - clientId
       - account
+      - clientId
       - contact_id
       - client_id
+    - name: issued_at
+      tier: extended
+      providers: 71
+      share: 0.433
+      type: string
+      spellings:
+      - invoiceDate
+      - invoice_date
+      - date
+      - issue_date
+      - issued_at
+      - issueDate
+      - InvoiceDate
+      - documentDate
     - name: total
       tier: extended
-      providers: 67
-      share: 0.414
+      providers: 68
+      share: 0.415
       type: number
       spellings:
       - amount
@@ -263,8 +263,8 @@ concepts:
       - total_price
     - name: description
       tier: extended
-      providers: 62
-      share: 0.383
+      providers: 63
+      share: 0.384
       type: string
       spellings:
       - description
@@ -277,8 +277,8 @@ concepts:
       - Notes
     - name: tax
       tier: extended
-      providers: 47
-      share: 0.29
+      providers: 49
+      share: 0.299
       type: number
       spellings:
       - tax
@@ -291,8 +291,8 @@ concepts:
       - totalTax
     - name: updated_at
       tier: extended
-      providers: 46
-      share: 0.284
+      providers: 48
+      share: 0.293
       type: string
       spellings:
       - updated_at
@@ -305,22 +305,22 @@ concepts:
       - updated-at
     - name: amount_due
       tier: extended
-      providers: 37
-      share: 0.228
+      providers: 39
+      share: 0.238
       type: number
       spellings:
       - balance
       - amount_due
       - amountDue
-      - amount_remaining
       - due_amount
+      - amount_remaining
       - Balance
       - balance_due
       - balanceDue
     - name: metadata
       tier: extended
-      providers: 35
-      share: 0.216
+      providers: 38
+      share: 0.232
       type: object
       spellings:
       - metadata
@@ -330,14 +330,14 @@ concepts:
       - additionalData
       - MetaData
       - AdditionalData
-    long_tail_count: 2548
+    long_tail_count: 2615
     long_tail_sample:
     - subtotal
     - paid_at
     - type
     - amount_paid
-    - name
     - discount
+    - name
     - payments
     - pdf_url
     - payment_method
@@ -355,61 +355,62 @@ concepts:
     - version
     - attachments
     - customer_name
-    - start_date
-    - invoice_url
     - po_number
+    - start_date
+    - billing_address
+    - discount_amount
+    - discounts
+    - invoice_url
+    - paid
     - reference
+    - shipping_address
     - source
     - tags
     - terms
     - user_id
+    - address
     - category
     - client
-    - discount_amount
-    - paid
     - sent_at
-    - address
-    - billing_address
-    - company_id
-    - delivery_date
   invoice_line:
     segments_seen:
       line-items: 5
       lines: 5
       lineitems: 3
       items: 3
-    providers_exposing: 16
-    providers_with_readable_schema: 14
+      line_items: 1
+    providers_exposing: 17
+    providers_with_readable_schema: 15
     operations:
     - operation: GET collection
-      providers: 10
-      share: 0.625
+      providers: 11
+      share: 0.647
       tier: core
     - operation: POST collection
       providers: 7
-      share: 0.438
+      share: 0.412
       tier: extended
     - operation: DELETE item
       providers: 4
-      share: 0.25
+      share: 0.235
       tier: extended
     - operation: GET item
       providers: 4
-      share: 0.25
+      share: 0.235
       tier: extended
     - operation: UPDATE item
       providers: 3
-      share: 0.188
+      share: 0.176
       tier: long-tail
     - operation: POST item
       providers: 1
-      share: 0.062
+      share: 0.059
       tier: long-tail
     properties:
     - name: description
       tier: core
-      providers: 12
-      share: 0.857
+      providers: 13
+      share: 0.867
       type: string
       spellings:
       - description
@@ -418,64 +419,66 @@ concepts:
       - comment
     - name: id
       tier: core
-      providers: 10
-      share: 0.714
+      providers: 11
+      share: 0.733
       type: string
       spellings:
       - id
+      - uuid
       - '@id'
     - name: quantity
       tier: core
-      providers: 10
-      share: 0.714
+      providers: 11
+      share: 0.733
       type: number
       spellings:
       - quantity
     - name: unit_price
       tier: extended
-      providers: 6
-      share: 0.429
+      providers: 7
+      share: 0.467
       type: number
       spellings:
       - unitPrice
+      - unit_amount
       - unitAmount
       - unit_price
     - name: type
       tier: extended
-      providers: 5
-      share: 0.357
+      providers: 6
+      share: 0.4
       type: string
       spellings:
       - type
       - '@type'
     - name: amount
       tier: extended
-      providers: 4
-      share: 0.286
-      type: integer
+      providers: 5
+      share: 0.333
+      type: number
       spellings:
       - amount
       - totalAmount
     - name: created_at
       tier: extended
-      providers: 4
-      share: 0.286
+      providers: 5
+      share: 0.333
       type: string
       spellings:
       - createdAt
       - created_at
     - name: currency
       tier: extended
-      providers: 4
-      share: 0.286
+      providers: 5
+      share: 0.333
       type: string
       spellings:
       - currency
       - currencyCode
     - name: metadata
       tier: extended
-      providers: 4
-      share: 0.286
+      providers: 5
+      share: 0.333
       type: array
       spellings:
       - custom_fields
@@ -484,23 +487,56 @@ concepts:
       - customFields
     - name: updated_at
       tier: extended
-      providers: 4
-      share: 0.286
+      providers: 5
+      share: 0.333
       type: string
       spellings:
       - updatedAt
       - updated_at
+    - name: price_id
+      tier: extended
+      providers: 4
+      share: 0.267
+      type: number
+      spellings:
+      - price
+      - plan_id
+    - name: tax
+      tier: extended
+      providers: 4
+      share: 0.267
+      type: number
+      spellings:
+      - tax
     - name: balance
       tier: extended
       providers: 3
-      share: 0.214
+      share: 0.2
       type: number
       spellings:
       - balance
+    - name: customer_id
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: string
+      spellings:
+      - clientId
+      - account
+      - customer_id
+      - customer_reference
+      - customer
+    - name: discount
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: number
+      spellings:
+      - discount
     - name: due_date
       tier: extended
       providers: 3
-      share: 0.214
+      share: 0.2
       type: string
       spellings:
       - due_date
@@ -508,68 +544,89 @@ concepts:
     - name: item_type
       tier: extended
       providers: 3
-      share: 0.214
+      share: 0.2
       type: string
       spellings:
       - itemType
     - name: number
       tier: extended
       providers: 3
-      share: 0.214
+      share: 0.2
       type: string
       spellings:
       - number
-    - name: price_id
+    - name: product_id
       tier: extended
       providers: 3
-      share: 0.214
-      type: number
+      share: 0.2
+      type: string
       spellings:
-      - price
+      - productId
+      - item_id
+      - product
     - name: purchase_order_number
       tier: extended
       providers: 3
-      share: 0.214
+      share: 0.2
       type: string
       spellings:
       - purchaseOrderNumber
       - purchase_order_number
-    - name: tax
+    - name: status
       tier: extended
       providers: 3
-      share: 0.214
-      type: number
+      share: 0.2
+      type: string
       spellings:
-      - tax
+      - status
+      - state
+    - name: subscription_id
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: string
+      spellings:
+      - subscriptionId
+      - subscription_id
+    - name: tax_code
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: string
+      spellings:
+      - taxCode
+      - tax_code
     - name: tax_rate
       tier: extended
       providers: 3
-      share: 0.214
+      share: 0.2
       type: number
       spellings:
       - taxRate
-    long_tail_count: 254
+    long_tail_count: 282
     long_tail_sample:
+    - accounting_code
     - charge_type
     - company_id
-    - customer_id
     - delivery_date
-    - discount
     - discount_amount
+    - discounts
+    - end_date
+    - invoice_id
+    - invoice_number
     - name
     - paid
     - payment_status
-    - product_id
     - product_name
     - sku
-    - status
-    - subscription_id
+    - start_date
+    - subtotal
     - tax_amount
-    - tax_code
     - unit_of_measure
     - vat
-    - accounting_code
     - accrual
+    - add_on_code
+    - add_on_id
     - added_by
     - adjustment_liability_accounting_code
     - adjustment_revenue_accounting_code
@@ -584,46 +641,44 @@ concepts:
     - approval_status
     - auto_rescues
     - available_to_credit_amount
+    - avalara_service_type
+    - avalara_transaction_type
     - balance_amount
-    - bill_from
-    - billable
-    - billed_by_pax8
-    - billing_currency
-    - billing_entity
+    - bill_for_account_id
   subscription:
     segments_seen:
-      subscriptions: 125
+      subscriptions: 127
       subscription: 22
-    providers_exposing: 138
-    providers_with_readable_schema: 124
+    providers_exposing: 140
+    providers_with_readable_schema: 126
     operations:
     - operation: GET collection
-      providers: 115
-      share: 0.833
+      providers: 117
+      share: 0.836
       tier: core
     - operation: GET item
-      providers: 106
-      share: 0.768
+      providers: 108
+      share: 0.771
       tier: core
     - operation: POST collection
-      providers: 99
-      share: 0.717
+      providers: 101
+      share: 0.721
       tier: core
     - operation: UPDATE item
-      providers: 71
-      share: 0.514
+      providers: 73
+      share: 0.521
       tier: core
     - operation: DELETE item
-      providers: 60
-      share: 0.435
+      providers: 62
+      share: 0.443
       tier: extended
     - operation: POST item
       providers: 12
-      share: 0.087
+      share: 0.086
       tier: long-tail
     - operation: UPDATE collection
       providers: 7
-      share: 0.051
+      share: 0.05
       tier: long-tail
     - operation: DELETE collection
       providers: 6
@@ -632,8 +687,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 101
-      share: 0.815
+      providers: 103
+      share: 0.817
       type: string
       spellings:
       - id
@@ -646,8 +701,8 @@ concepts:
       - _id
     - name: status
       tier: core
-      providers: 79
-      share: 0.637
+      providers: 81
+      share: 0.643
       type: string
       spellings:
       - status
@@ -656,8 +711,8 @@ concepts:
       - Status
     - name: created_at
       tier: core
-      providers: 66
-      share: 0.532
+      providers: 68
+      share: 0.54
       type: string
       spellings:
       - created_at
@@ -670,8 +725,8 @@ concepts:
       - dateCreated
     - name: customer_id
       tier: extended
-      providers: 56
-      share: 0.452
+      providers: 58
+      share: 0.46
       type: string
       spellings:
       - customer_id
@@ -684,8 +739,8 @@ concepts:
       - client_id
     - name: plan_id
       tier: extended
-      providers: 43
-      share: 0.347
+      providers: 45
+      share: 0.357
       type: string
       spellings:
       - plan
@@ -694,23 +749,12 @@ concepts:
       - planId
       - price
       - productId
-      - planCode
       - plan_code
-    - name: metadata
-      tier: extended
-      providers: 38
-      share: 0.306
-      type: object
-      spellings:
-      - metadata
-      - attributes
-      - custom_fields
-      - customFields
-      - meta_data
+      - planCode
     - name: updated_at
       tier: extended
-      providers: 38
-      share: 0.306
+      providers: 40
+      share: 0.317
       type: string
       spellings:
       - updated_at
@@ -721,93 +765,105 @@ concepts:
       - lastUpdated
       - updated_date
       - LastUpdated
+    - name: metadata
+      tier: extended
+      providers: 39
+      share: 0.31
+      type: object
+      spellings:
+      - metadata
+      - attributes
+      - custom_fields
+      - customFields
+      - meta_data
     - name: canceled_at
       tier: extended
-      providers: 36
-      share: 0.29
+      providers: 38
+      share: 0.302
       type: string
       spellings:
       - endDate
+      - canceled_at
       - canceledAt
       - end_date
-      - canceled_at
       - cancelled_at
       - ended_at
       - endedAt
       - cancelledAt
     - name: started_at
       tier: extended
-      providers: 36
-      share: 0.29
+      providers: 38
+      share: 0.302
       type: string
       spellings:
       - start_date
       - startDate
-      - started_at
       - activated_at
-      - start
+      - started_at
       - starts_at
+      - start
       - startsAt
       - StartDate
     - name: currency
       tier: extended
-      providers: 26
-      share: 0.21
+      providers: 29
+      share: 0.23
       type: string
       spellings:
       - currency
       - currencyCode
       - currency_code
       - Currency
+    - name: items
+      tier: extended
+      providers: 27
+      share: 0.214
+      type: array
+      spellings:
+      - items
+      - addons
+      - add_ons
+      - plans
+      - components
+      - subscription_items
+      - subscriptionItems
+      - addOns
     - name: name
       tier: extended
-      providers: 26
-      share: 0.21
+      providers: 27
+      share: 0.214
       type: string
       spellings:
       - name
       - label
       - Name
       - title
-    - name: items
-      tier: extended
-      providers: 25
-      share: 0.202
-      type: array
-      spellings:
-      - items
-      - addons
-      - plans
-      - add_ons
-      - subscription_items
-      - components
-      - subscriptionItems
-      - addOns
-    long_tail_count: 1183
+    long_tail_count: 1365
     long_tail_sample:
     - billing_interval
     - description
-    - amount
     - quantity
+    - amount
     - current_period_end
     - type
-    - email
     - trial_end
+    - current_period_start
+    - email
     - payment_method
     - version
-    - current_period_start
     - cancel_at_period_end
     - card_id
     - external_id
+    - auto_renew
     - source
     - trial_start
-    - auto_renew
     - cancel_at
     - created_by
     - product_name
     - callback_url
     - company_id
     - deleted
+    - expires_at
     - payment_method_id
     - subscription_type
     - active
@@ -820,59 +876,58 @@ concepts:
     - idempotency_key
     - location_id
     - mrr
+    - offer_id
     - plan_name
+    - product
     - return_url
-    - secret
-    - start_at
-    - total_amount
   plan:
     segments_seen:
-      plans: 42
-      products: 32
+      plans: 43
+      products: 34
       product: 5
       plan: 4
       item_families: 1
       packages: 1
-    providers_exposing: 59
-    providers_with_readable_schema: 54
+    providers_exposing: 61
+    providers_with_readable_schema: 56
     operations:
     - operation: GET collection
-      providers: 56
-      share: 0.949
+      providers: 58
+      share: 0.951
       tier: core
     - operation: GET item
-      providers: 53
-      share: 0.898
+      providers: 55
+      share: 0.902
       tier: core
     - operation: POST collection
-      providers: 46
-      share: 0.78
+      providers: 49
+      share: 0.803
       tier: core
     - operation: UPDATE item
-      providers: 37
-      share: 0.627
+      providers: 39
+      share: 0.639
       tier: core
     - operation: DELETE item
-      providers: 28
-      share: 0.475
+      providers: 30
+      share: 0.492
       tier: extended
     - operation: POST item
       providers: 6
-      share: 0.102
+      share: 0.098
       tier: long-tail
     - operation: UPDATE collection
       providers: 2
-      share: 0.034
+      share: 0.033
       tier: long-tail
     - operation: DELETE collection
       providers: 1
-      share: 0.017
+      share: 0.016
       tier: long-tail
     properties:
     - name: id
       tier: core
-      providers: 49
-      share: 0.907
+      providers: 51
+      share: 0.911
       type: string
       spellings:
       - id
@@ -883,8 +938,8 @@ concepts:
       - _id
     - name: name
       tier: core
-      providers: 46
-      share: 0.852
+      providers: 48
+      share: 0.857
       type: string
       spellings:
       - name
@@ -894,8 +949,8 @@ concepts:
       - Title
     - name: description
       tier: core
-      providers: 35
-      share: 0.648
+      providers: 37
+      share: 0.661
       type: string
       spellings:
       - description
@@ -905,8 +960,8 @@ concepts:
       - memo
     - name: created_at
       tier: core
-      providers: 33
-      share: 0.611
+      providers: 35
+      share: 0.625
       type: string
       spellings:
       - created_at
@@ -919,8 +974,8 @@ concepts:
       - CreatedDate
     - name: is_active
       tier: core
-      providers: 28
-      share: 0.519
+      providers: 29
+      share: 0.518
       type: string
       spellings:
       - status
@@ -929,50 +984,52 @@ concepts:
       - IsActive
     - name: amount
       tier: core
-      providers: 27
+      providers: 28
       share: 0.5
       type: integer
       spellings:
       - amount
       - price
       - unitAmount
+      - price_in_cents
       - unit_amount
     - name: currency
       tier: extended
-      providers: 22
-      share: 0.407
+      providers: 23
+      share: 0.411
       type: string
       spellings:
       - currency
       - currency_code
       - currency_iso_code
+      - currencyCode
     - name: billing_interval
       tier: extended
-      providers: 19
-      share: 0.352
+      providers: 21
+      share: 0.375
       type: string
       spellings:
       - interval
       - period
-      - frequency
       - interval_unit
+      - frequency
       - billing_period
       - billingCycle
     - name: metadata
       tier: extended
-      providers: 18
-      share: 0.333
+      providers: 19
+      share: 0.339
       type: object
       spellings:
       - metadata
       - attributes
       - customFields
-      - meta_data
       - custom_fields
+      - meta_data
     - name: updated_at
       tier: extended
-      providers: 16
-      share: 0.296
+      providers: 18
+      share: 0.321
       type: string
       spellings:
       - updated_at
@@ -985,20 +1042,21 @@ concepts:
       - modifiedAt
     - name: code
       tier: extended
-      providers: 15
-      share: 0.278
+      providers: 17
+      share: 0.304
       type: string
       spellings:
       - sku
-      - slug
       - externalId
+      - slug
       - code
       - external_id
+      - handle
       - SKU
     - name: type
       tier: extended
       providers: 13
-      share: 0.241
+      share: 0.232
       type: string
       spellings:
       - type
@@ -1006,30 +1064,38 @@ concepts:
     - name: product_id
       tier: extended
       providers: 12
-      share: 0.222
+      share: 0.214
       type: string
       spellings:
       - product_id
       - productId
       - ProductId
-    long_tail_count: 769
+    long_tail_count: 846
     long_tail_sample:
     - trial_period_days
     - interval_count
     - deleted
     - product_type
+    - features
     - prices
     - product_name
     - customer_id
-    - features
+    - image_url
+    - tax_code
+    - accounting_code
     - billing_cycles
     - billing_frequency
     - created_by
-    - image_url
     - items
+    - pricing_model
     - provider
     - tax_category
+    - taxable
     - action
+    - add_ons
+    - archived_at
+    - avalara_service_type
+    - avalara_transaction_type
     - billing_scheme
     - billing_type
     - canceled_at
@@ -1044,62 +1110,54 @@ concepts:
     - is_recurring
     - is_visible
     - item
-    - item_id
+    - limit
     - merchant
-    - order_id
-    - parent_id
-    - plan_name
-    - pricing_model
-    - product_category
-    - product_category_id
-    - provider_id
-    - quantity
   price:
     segments_seen:
       prices: 13
-      price: 3
+      price: 4
       pricing: 2
       item_prices: 1
-    providers_exposing: 17
-    providers_with_readable_schema: 15
+    providers_exposing: 18
+    providers_with_readable_schema: 16
     operations:
     - operation: GET collection
       providers: 14
-      share: 0.824
+      share: 0.778
       tier: core
     - operation: GET item
       providers: 10
-      share: 0.588
+      share: 0.556
       tier: core
     - operation: POST collection
       providers: 10
-      share: 0.588
+      share: 0.556
       tier: core
     - operation: UPDATE item
-      providers: 6
-      share: 0.353
+      providers: 7
+      share: 0.389
       tier: extended
     - operation: DELETE item
       providers: 4
-      share: 0.235
+      share: 0.222
+      tier: extended
+    - operation: UPDATE collection
+      providers: 4
+      share: 0.222
       tier: extended
     - operation: DELETE collection
       providers: 2
-      share: 0.118
+      share: 0.111
       tier: long-tail
     - operation: POST item
       providers: 2
-      share: 0.118
-      tier: long-tail
-    - operation: UPDATE collection
-      providers: 2
-      share: 0.118
+      share: 0.111
       tier: long-tail
     properties:
     - name: id
       tier: core
-      providers: 9
-      share: 0.6
+      providers: 10
+      share: 0.625
       type: string
       spellings:
       - id
@@ -1107,7 +1165,7 @@ concepts:
     - name: plan_id
       tier: core
       providers: 9
-      share: 0.6
+      share: 0.562
       type: string
       spellings:
       - productId
@@ -1118,7 +1176,7 @@ concepts:
     - name: currency
       tier: core
       providers: 8
-      share: 0.533
+      share: 0.5
       type: string
       spellings:
       - currency
@@ -1126,7 +1184,7 @@ concepts:
     - name: pricing_model
       tier: core
       providers: 8
-      share: 0.533
+      share: 0.5
       type: string
       spellings:
       - type
@@ -1136,88 +1194,58 @@ concepts:
       - tiers_mode
     - name: metadata
       tier: extended
-      providers: 6
-      share: 0.4
+      providers: 7
+      share: 0.438
       type: object
       spellings:
       - metadata
       - attributes
+    - name: created_at
+      tier: extended
+      providers: 6
+      share: 0.375
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+      - createdDate
     - name: billing_interval
       tier: extended
       providers: 5
-      share: 0.333
+      share: 0.312
       type: integer
       spellings:
       - period
       - recurring
-    - name: created_at
-      tier: extended
-      providers: 5
-      share: 0.333
-      type: string
-      spellings:
-      - created_at
-      - created
-      - createdDate
     - name: name
       tier: extended
       providers: 4
-      share: 0.267
+      share: 0.25
       type: string
       spellings:
       - name
-    - name: amount
-      tier: extended
-      providers: 3
-      share: 0.2
-      type: integer
-      spellings:
-      - unitAmount
-      - unit_price
-      - unit_amount
-    - name: status
-      tier: extended
-      providers: 3
-      share: 0.2
-      type: string
-      spellings:
-      - status
-    - name: tax_behavior
-      tier: extended
-      providers: 3
-      share: 0.2
-      type: string
-      spellings:
-      - tax_behavior
-      - taxBehavior
-    - name: tiers
-      tier: extended
-      providers: 3
-      share: 0.2
-      type: array
-      spellings:
-      - tiers
-    - name: unit
-      tier: extended
-      providers: 3
-      share: 0.2
-      type: string
-      spellings:
-      - unit
-    long_tail_count: 186
+    long_tail_count: 225
     long_tail_sample:
-    - active
+    - amount
     - description
+    - status
+    - tax_behavior
+    - tiers
+    - unit
+    - updated_at
+    - active
     - items
     - lookup_key
     - min_quantity
     - price_in_decimal
+    - quantity
     - transform_quantity
     - trial_period
     - unit_amount_decimal
-    - updated_at
     - accounting_detail
     - allow_manual_price
+    - amounts
     - archivable
     - archived
     - archived_at
@@ -1227,69 +1255,62 @@ concepts:
     - available_addresses
     - bid
     - bid_quantity
+    - billable_metric
     - billable_metric_id
+    - billed_in_advance
     - billing_cycle
+    - billing_cycle_configuration
     - billing_cycles
+    - billing_mode
     - billing_term
+    - bundle_items
     - business_entity_id
     - cadence
     - can_edit_data
-    - change_from_last_close
-    - change_from_last_market_close
-    - change_from_market_close
-    - change_from_market_open
-    - change_from_open
-    - change_from_prev
-    - change_from_previous
-    - channel
-    - client_preferences_data
-    - client_profile_data
-    - columns
-    - commercial_condition_data
   credit_note:
     segments_seen:
       credit-notes: 11
+      credit_notes: 7
       creditnotes: 6
-      credit_notes: 5
       creditmemos: 4
       credit-memos: 2
       credit_memos: 1
-    providers_exposing: 29
-    providers_with_readable_schema: 25
+    providers_exposing: 31
+    providers_with_readable_schema: 27
     operations:
     - operation: GET collection
-      providers: 25
-      share: 0.862
+      providers: 27
+      share: 0.871
       tier: core
     - operation: GET item
-      providers: 25
-      share: 0.862
+      providers: 27
+      share: 0.871
       tier: core
     - operation: POST collection
-      providers: 22
-      share: 0.759
+      providers: 23
+      share: 0.742
       tier: core
     - operation: UPDATE item
       providers: 11
-      share: 0.379
+      share: 0.355
       tier: extended
     - operation: DELETE item
       providers: 10
-      share: 0.345
+      share: 0.323
       tier: extended
     - operation: POST item
       providers: 2
-      share: 0.069
+      share: 0.065
       tier: long-tail
     - operation: UPDATE collection
       providers: 2
-      share: 0.069
+      share: 0.065
       tier: long-tail
     properties:
     - name: id
       tier: core
-      providers: 18
-      share: 0.72
+      providers: 19
+      share: 0.704
       type: string
       spellings:
       - id
@@ -1299,44 +1320,55 @@ concepts:
       - _id
     - name: total
       tier: core
-      providers: 17
-      share: 0.68
+      providers: 19
+      share: 0.704
       type: number
       spellings:
       - amount
       - totalAmount
       - Amount
+      - total_amount
     - name: status
       tier: core
-      providers: 16
-      share: 0.64
+      providers: 17
+      share: 0.63
       type: string
       spellings:
       - status
       - state
+    - name: currency
+      tier: core
+      providers: 15
+      share: 0.556
+      type: string
+      spellings:
+      - currency
+      - currency_code
+      - currencyCode
+    - name: customer_id
+      tier: core
+      providers: 15
+      share: 0.556
+      type: string
+      spellings:
+      - customer
+      - customer_id
+      - accountId
+      - customerId
     - name: description
       tier: core
       providers: 15
-      share: 0.6
+      share: 0.556
       type: string
       spellings:
       - description
       - notes
       - Notes
       - comment
-    - name: currency
-      tier: core
-      providers: 14
-      share: 0.56
-      type: string
-      spellings:
-      - currency
-      - currency_code
-      - currencyCode
     - name: created_at
       tier: core
-      providers: 13
-      share: 0.52
+      providers: 14
+      share: 0.519
       type: string
       spellings:
       - created_at
@@ -1344,51 +1376,42 @@ concepts:
       - createdDate
       - createdOn
       - created
-    - name: customer_id
-      tier: core
+    - name: number
+      tier: extended
       providers: 13
-      share: 0.52
+      share: 0.481
       type: string
       spellings:
-      - customer
-      - customer_id
-      - accountId
-      - customerId
+      - number
+      - documentNumber
+      - CreditNoteNumber
+      - credit_note_number
     - name: updated_at
-      tier: core
+      tier: extended
       providers: 13
-      share: 0.52
+      share: 0.481
       type: string
       spellings:
       - updated_at
       - updatedAt
       - updatedDate
       - date_modified
-    - name: number
-      tier: extended
-      providers: 11
-      share: 0.44
-      type: string
-      spellings:
-      - number
-      - documentNumber
-      - CreditNoteNumber
     - name: reason
       tier: extended
-      providers: 10
-      share: 0.4
+      providers: 12
+      share: 0.444
       type: string
       spellings:
       - type
       - reason
-      - reason_code
       - memo
+      - reason_code
       - '@type'
       - reasonCode
     - name: invoice_id
       tier: extended
-      providers: 9
-      share: 0.36
+      providers: 10
+      share: 0.37
       type: string
       spellings:
       - invoice
@@ -1398,132 +1421,132 @@ concepts:
     - name: date
       tier: extended
       providers: 7
-      share: 0.28
+      share: 0.259
       type: string
       spellings:
       - date
+    - name: line_items
+      tier: extended
+      providers: 7
+      share: 0.259
+      type: array
+      spellings:
+      - lineItems
+      - line_items
     - name: metadata
       tier: extended
       providers: 7
-      share: 0.28
+      share: 0.259
       type: object
       spellings:
       - metadata
       - customFields
       - custom_fields
-    - name: items
-      tier: extended
-      providers: 6
-      share: 0.24
-      type: array
-      spellings:
-      - items
     - name: voided_at
       tier: extended
-      providers: 6
-      share: 0.24
+      providers: 7
+      share: 0.259
       type: string
       spellings:
       - voided_at
       - voidedAt
-    - name: line_items
+    - name: items
       tier: extended
-      providers: 5
-      share: 0.2
+      providers: 6
+      share: 0.222
       type: array
       spellings:
-      - lineItems
-      - line_items
-    long_tail_count: 426
+      - items
+    long_tail_count: 439
     long_tail_sample:
     - billing_address
-    - address
     - applications
     - applied_amount
+    - shipping_address
+    - subtotal
+    - tax_amount
+    - address
     - created_by
     - credit_memo_date
     - credit_memo_number
+    - discount_amount
+    - discounts
     - exchange_rate
     - lines
     - name
-    - shipping_address
     - source
-    - subtotal
-    - tax_amount
     - allocations
     - balance
     - credit_note
     - currency_rate
     - customer_ref
     - discount
-    - discount_amount
     - document_date
+    - end_date
     - invoice_number
     - language
     - posted_date
     - price
     - quantity
     - reference
+    - remaining_amount
+    - start_date
     - sub_total
+    - subscription_id
     - subsidiary_id
     - tax
+    - taxes
     - void_reason
     - account_number
     - account_ref
-    - account_summary
-    - account_type
-    - accounting_period_list_item
-    - activity
-    - added_by
-    - address_line1
   coupon:
     segments_seen:
-      coupons: 16
+      coupons: 18
       discounts: 12
       vouchers: 2
       coupon: 2
       promotion-codes: 1
       promotion_codes: 1
-    providers_exposing: 27
-    providers_with_readable_schema: 19
+    providers_exposing: 29
+    providers_with_readable_schema: 21
     operations:
     - operation: GET collection
-      providers: 23
-      share: 0.852
+      providers: 25
+      share: 0.862
       tier: core
     - operation: GET item
-      providers: 19
-      share: 0.704
+      providers: 22
+      share: 0.759
       tier: core
     - operation: POST collection
-      providers: 18
-      share: 0.667
+      providers: 20
+      share: 0.69
       tier: core
     - operation: DELETE item
-      providers: 14
-      share: 0.519
+      providers: 16
+      share: 0.552
       tier: core
     - operation: UPDATE item
-      providers: 10
-      share: 0.37
+      providers: 12
+      share: 0.414
       tier: extended
     - operation: POST item
       providers: 5
-      share: 0.185
+      share: 0.172
       tier: long-tail
     - operation: DELETE collection
       providers: 1
-      share: 0.037
+      share: 0.034
       tier: long-tail
     - operation: UPDATE collection
       providers: 1
-      share: 0.037
+      share: 0.034
       tier: long-tail
     properties:
     - name: code
       tier: core
-      providers: 17
-      share: 0.895
+      providers: 19
+      share: 0.905
       type: string
       spellings:
       - code
@@ -1533,8 +1556,8 @@ concepts:
       - Code
     - name: id
       tier: core
-      providers: 13
-      share: 0.684
+      providers: 15
+      share: 0.714
       type: string
       spellings:
       - id
@@ -1543,8 +1566,8 @@ concepts:
       - _id
     - name: created_at
       tier: core
-      providers: 11
-      share: 0.579
+      providers: 13
+      share: 0.619
       type: string
       spellings:
       - created_at
@@ -1557,8 +1580,8 @@ concepts:
       - created
     - name: max_redemptions
       tier: core
-      providers: 11
-      share: 0.579
+      providers: 12
+      share: 0.571
       type: integer
       spellings:
       - max_redemptions
@@ -1567,22 +1590,23 @@ concepts:
       - max_uses
       - MaxRedemptions
     - name: expires_at
-      tier: extended
-      providers: 9
-      share: 0.474
+      tier: core
+      providers: 11
+      share: 0.524
       type: string
       spellings:
       - expires_at
       - expirationDate
+      - redeem_by
       - valid_till
       - expiry_date
       - ExpiryDate
+      - end_date
       - expiration_date
-      - redeem_by
     - name: amount_off
       tier: extended
-      providers: 8
-      share: 0.421
+      providers: 9
+      share: 0.429
       type: integer
       spellings:
       - amount
@@ -1591,8 +1615,8 @@ concepts:
       - amount_off
     - name: updated_at
       tier: extended
-      providers: 7
-      share: 0.368
+      providers: 9
+      share: 0.429
       type: string
       spellings:
       - updated_at
@@ -1603,8 +1627,8 @@ concepts:
       - modifiedDate
     - name: percent_off
       tier: extended
-      providers: 6
-      share: 0.316
+      providers: 8
+      share: 0.381
       type: number
       spellings:
       - percentage
@@ -1614,23 +1638,32 @@ concepts:
       - percent_off
     - name: status
       tier: extended
-      providers: 6
-      share: 0.316
+      providers: 7
+      share: 0.333
       type: string
       spellings:
       - status
       - Status
+      - state
+    - name: discount_type
+      tier: extended
+      providers: 6
+      share: 0.286
+      type: string
+      spellings:
+      - discount_type
+      - discountType
     - name: type
       tier: extended
       providers: 6
-      share: 0.316
+      share: 0.286
       type: string
       spellings:
       - type
     - name: currency
       tier: extended
       providers: 5
-      share: 0.263
+      share: 0.238
       type: string
       spellings:
       - currency
@@ -1638,111 +1671,103 @@ concepts:
       - Currency
     - name: description
       tier: extended
-      providers: 4
-      share: 0.211
+      providers: 5
+      share: 0.238
       type: string
       spellings:
       - description
       - Description
-    - name: discount_type
-      tier: extended
-      providers: 4
-      share: 0.211
-      type: string
-      spellings:
-      - discount_type
-      - discountType
     - name: duration
       tier: extended
-      providers: 4
-      share: 0.211
+      providers: 5
+      share: 0.238
       type: string
       spellings:
       - duration
       - duration_in_months
       - duration_type
       - apply_till
-    long_tail_count: 244
+    long_tail_count: 293
     long_tail_sample:
     - applies_to
-    - customer_id
-    - discount_value
-    - active
     - archived_at
     - coupon_type
+    - customer_id
+    - discount_value
+    - items
+    - start_date
+    - active
     - created_by
     - deleted
-    - items
+    - discount
     - metadata
+    - plan_codes
     - promotion_id
     - redemptions
     - restricted_to
-    - start_date
     - times_redeemed
     - addon_constraint
     - addon_ids
     - allow_manual_price
+    - allow_negative_balance
     - amount_cents
     - amount_currency
+    - amount_in_cents
     - applicable_item_ids
     - application_id
     - application_name
     - application_uuid
     - applied_count
+    - applies_to_all_items
+    - applies_to_all_plans
+    - applies_to_non_plan_charges
     - apply_discount_on
     - apply_on
+    - apply_on_cancel_at_end_of_period
+    - apply_on_subscription_expiration
     - auto_apply
     - available_accounts
     - available_addresses
     - average_order_size
-    - balance
-    - base_partner_share_percentage
-    - billable_metric_codes
-    - billing_address
-    - billing_cycles
-    - bonus_fixed
-    - bonus_percent
-    - business_id
-    - can_edit_data
   usage_record:
     segments_seen:
-      usage: 15
-      usages: 4
+      usage: 17
+      usages: 5
       events: 1
       usage_records: 1
       usage-records: 1
-    providers_exposing: 22
-    providers_with_readable_schema: 19
+    providers_exposing: 24
+    providers_with_readable_schema: 21
     operations:
     - operation: GET collection
-      providers: 14
-      share: 0.636
+      providers: 16
+      share: 0.667
       tier: core
     - operation: POST collection
-      providers: 13
-      share: 0.591
+      providers: 15
+      share: 0.625
       tier: core
     - operation: GET item
-      providers: 7
-      share: 0.318
+      providers: 8
+      share: 0.333
       tier: extended
     - operation: UPDATE item
-      providers: 4
-      share: 0.182
-      tier: long-tail
+      providers: 5
+      share: 0.208
+      tier: extended
     - operation: DELETE item
-      providers: 3
-      share: 0.136
+      providers: 4
+      share: 0.167
       tier: long-tail
     - operation: POST item
       providers: 1
-      share: 0.045
+      share: 0.042
       tier: long-tail
     properties:
     - name: id
       tier: core
-      providers: 11
-      share: 0.579
+      providers: 13
+      share: 0.619
       type: string
       spellings:
       - id
@@ -1750,18 +1775,18 @@ concepts:
       - Id
     - name: quantity
       tier: core
-      providers: 11
-      share: 0.579
+      providers: 13
+      share: 0.619
       type: number
       spellings:
       - quantity
-      - units
       - amount
+      - units
       - Quantity
     - name: subscription_id
       tier: extended
-      providers: 8
-      share: 0.421
+      providers: 10
+      share: 0.476
       type: string
       spellings:
       - subscriptionId
@@ -1769,29 +1794,10 @@ concepts:
       - subscription_item
       - subscriptionItemId
       - SubscriptionId
-    - name: description
-      tier: extended
-      providers: 7
-      share: 0.368
-      type: string
-      spellings:
-      - description
-      - note
-      - Description
-    - name: timestamp
-      tier: extended
-      providers: 7
-      share: 0.368
-      type: string
-      spellings:
-      - timestamp
-      - usage_date
-      - usageDate
-      - recordedAt
     - name: created_at
       tier: extended
-      providers: 6
-      share: 0.316
+      providers: 8
+      share: 0.381
       type: string
       spellings:
       - created_at
@@ -1799,10 +1805,30 @@ concepts:
       - created_date
       - createdDate
       - CreatedDate
+    - name: description
+      tier: extended
+      providers: 8
+      share: 0.381
+      type: string
+      spellings:
+      - description
+      - note
+      - memo
+      - Description
+    - name: timestamp
+      tier: extended
+      providers: 7
+      share: 0.333
+      type: string
+      spellings:
+      - timestamp
+      - usage_date
+      - usageDate
+      - recordedAt
     - name: customer_id
       tier: extended
       providers: 6
-      share: 0.316
+      share: 0.286
       type: string
       spellings:
       - customerId
@@ -1813,53 +1839,53 @@ concepts:
       - AccountId
     - name: updated_at
       tier: extended
-      providers: 4
-      share: 0.211
+      providers: 5
+      share: 0.238
       type: string
       spellings:
       - updated_at
       - updated_date
       - updatedDate
       - UpdatedDate
-    long_tail_count: 173
+    long_tail_count: 206
     long_tail_sample:
     - charge_id
     - metadata
     - metric
     - currency
+    - end_date
     - idempotency_key
+    - name
     - order_id
+    - pricing_unit
+    - start_date
     - updated_by
+    - usage_type
     - account_number
     - action
     - action_name
+    - active_wallets
     - aggregate_sum
     - alias_id
+    - allocated_credits
+    - allocation_eligible_credits
     - amount_cents
     - amount_currency
     - anonymized
     - attempt_number
     - attribute_references
     - auto_promoted
+    - billed_at
+    - billing_schedule
     - charge
     - charge_number
     - check_import_status
     - code_id
     - company_id
+    - component_handle
+    - component_id
+    - consumed_credits
     - contract
     - contract_product_bundle
     - created_by
     - created_by_id
-    - custom_unit
-    - customer_email
-    - date
-    - date_range
-    - date_ranges
-    - default_payment_method_id
-    - department
-    - discount_amount
-    - drawdown_quantity_remaining
-    - drawdown_quantity_used
-    - duration
-    - end_at
-    - end_date

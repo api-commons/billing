@@ -1,7 +1,7 @@
 provider: sap-brim-billing-and-revenue-innovation-management
 apis_io: https://apis.io/providers/sap-brim-billing-and-revenue-innovation-management/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   subscription:
     path_segment:
@@ -12,8 +12,8 @@ concepts:
       created_at: createdAt
       customer_id: customerId
       plan_id: planId
-      metadata: metadata
       updated_at: modifiedAt
+      metadata: metadata
       canceled_at:
       - endDate
       - cancellationDate

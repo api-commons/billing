@@ -1,7 +1,7 @@
 provider: chargebee
 apis_io: https://apis.io/providers/chargebee/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -13,8 +13,8 @@ concepts:
       created_at: created_at
       currency: currency_code
       line_items: line_items
-      issued_at: date
       customer_id: customer_id
+      issued_at: date
       description: notes
       tax:
       - tax
@@ -41,8 +41,8 @@ concepts:
       - customer
       - customer_id
       plan_id: plan_id
-      metadata: meta_data
       updated_at: updated_at
+      metadata: meta_data
       canceled_at: cancelled_at
       started_at:
       - start_date
@@ -94,11 +94,9 @@ concepts:
       currency: currency_code
       pricing_model: pricing_model
       metadata: metadata
-      billing_interval: period
       created_at: created_at
+      billing_interval: period
       name: name
-      status: status
-      tiers: tiers
     core_coverage: 1.0
     evidence:
     - openapi/_original/chargebee-openapi.json#GET /item_prices
@@ -112,10 +110,10 @@ concepts:
     properties:
       id: id
       status: status
-      description: notes
       currency: currency_code
-      created_at: created_at
       customer_id: customer_id
+      description: notes
+      created_at: created_at
       updated_at: updated_at
       reason:
       - type
@@ -124,9 +122,9 @@ concepts:
       - reference_invoice_id
       - invoice
       date: date
-      voided_at: voided_at
       line_items: line_items
-    core_coverage: 0.875
+      voided_at: voided_at
+    core_coverage: 0.857
     evidence:
     - openapi/_original/chargebee-openapi.json#GET /credit_notes
     - openapi/_original/chargebee-openapi.json#GET /credit_notes/{credit-note-id}
@@ -153,9 +151,9 @@ concepts:
       - percentage
       - discount_percentage
       status: status
+      discount_type: discount_type
       type: type
       currency: currency_code
-      discount_type: discount_type
       duration:
       - duration_type
       - apply_till
@@ -173,9 +171,9 @@ concepts:
       id: id
       quantity: quantity
       subscription_id: subscription_id
+      created_at: created_at
       description: note
       timestamp: usage_date
-      created_at: created_at
       updated_at: updated_at
     core_coverage: 1.0
     evidence:

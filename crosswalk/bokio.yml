@@ -1,7 +1,7 @@
 provider: bokio
 apis_io: https://apis.io/providers/bokio/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -45,9 +45,9 @@ concepts:
       total: totalAmount
       status: status
       currency: currency
-      metadata: metadata
       line_items: lineItems
-    core_coverage: 0.5
+      metadata: metadata
+    core_coverage: 0.571
     evidence:
     - openapi/_original/bokio-company-api-openapi.yml#DELETE /companies/{companyId}/credit-notes/{creditNoteId}
     - openapi/_original/bokio-company-api-openapi.yml#GET /companies/{companyId}/credit-notes

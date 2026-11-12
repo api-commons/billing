@@ -1,7 +1,7 @@
 provider: payabli
 apis_io: https://apis.io/providers/payabli/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -19,10 +19,10 @@ concepts:
       - createdAt
       - CreatedAt
       line_items: items
-      issued_at: invoiceDate
       customer_id:
       - customerId
       - Customer
+      issued_at: invoiceDate
       total: TotalAmount
       description:
       - notes

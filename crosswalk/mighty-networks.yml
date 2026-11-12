@@ -1,7 +1,7 @@
 provider: mighty-networks
 apis_io: https://apis.io/providers/mighty-networks/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   subscription:
     path_segment:

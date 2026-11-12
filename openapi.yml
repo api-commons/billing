@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Billing and Invoicing (API Commons)
-  version: 0.1.0-draft.20261111
+  version: 0.1.0-draft.20261112
   description: 'The common Billing and Invoicing interface, distilled from the harvested OpenAPI of 837 providers
     in the APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
     so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
@@ -18,7 +18,7 @@ paths:
       tags:
       - Invoices
       x-commons-tier: core
-      x-commons-share: 0.848
+      x-commons-share: 0.849
       responses:
         '200':
           description: OK
@@ -32,7 +32,7 @@ paths:
       tags:
       - Invoices
       x-commons-tier: extended
-      x-commons-share: 0.451
+      x-commons-share: 0.462
       responses:
         '200':
           description: OK
@@ -50,7 +50,7 @@ paths:
       tags:
       - Invoices
       x-commons-tier: extended
-      x-commons-share: 0.288
+      x-commons-share: 0.29
       responses:
         '200':
           description: OK
@@ -64,7 +64,7 @@ paths:
       tags:
       - Invoices
       x-commons-tier: core
-      x-commons-share: 0.842
+      x-commons-share: 0.844
       responses:
         '200':
           description: OK
@@ -88,7 +88,7 @@ paths:
       tags:
       - Invoices
       x-commons-tier: core
-      x-commons-share: 0.663
+      x-commons-share: 0.667
       responses:
         '200':
           description: OK
@@ -109,7 +109,7 @@ paths:
       tags:
       - Invoice Lines
       x-commons-tier: core
-      x-commons-share: 0.625
+      x-commons-share: 0.647
       responses:
         '200':
           description: OK
@@ -134,7 +134,7 @@ paths:
       tags:
       - Invoice Lines
       x-commons-tier: extended
-      x-commons-share: 0.438
+      x-commons-share: 0.412
       responses:
         '200':
           description: OK
@@ -156,7 +156,7 @@ paths:
       tags:
       - Invoice Lines
       x-commons-tier: extended
-      x-commons-share: 0.25
+      x-commons-share: 0.235
       responses:
         '200':
           description: OK
@@ -169,7 +169,7 @@ paths:
       tags:
       - Invoice Lines
       x-commons-tier: extended
-      x-commons-share: 0.25
+      x-commons-share: 0.235
       responses:
         '200':
           description: OK
@@ -183,7 +183,7 @@ paths:
       tags:
       - Subscriptions
       x-commons-tier: core
-      x-commons-share: 0.833
+      x-commons-share: 0.836
       responses:
         '200':
           description: OK
@@ -208,7 +208,7 @@ paths:
       tags:
       - Subscriptions
       x-commons-tier: core
-      x-commons-share: 0.717
+      x-commons-share: 0.721
       responses:
         '200':
           description: OK
@@ -229,7 +229,7 @@ paths:
       tags:
       - Subscriptions
       x-commons-tier: core
-      x-commons-share: 0.768
+      x-commons-share: 0.771
       responses:
         '200':
           description: OK
@@ -242,7 +242,7 @@ paths:
       tags:
       - Subscriptions
       x-commons-tier: core
-      x-commons-share: 0.514
+      x-commons-share: 0.521
       responses:
         '200':
           description: OK
@@ -260,7 +260,7 @@ paths:
       tags:
       - Subscriptions
       x-commons-tier: extended
-      x-commons-share: 0.435
+      x-commons-share: 0.443
       responses:
         '200':
           description: OK
@@ -274,7 +274,7 @@ paths:
       tags:
       - Plans
       x-commons-tier: core
-      x-commons-share: 0.949
+      x-commons-share: 0.951
       responses:
         '200':
           description: OK
@@ -299,7 +299,7 @@ paths:
       tags:
       - Plans
       x-commons-tier: core
-      x-commons-share: 0.78
+      x-commons-share: 0.803
       responses:
         '200':
           description: OK
@@ -320,7 +320,7 @@ paths:
       tags:
       - Plans
       x-commons-tier: core
-      x-commons-share: 0.898
+      x-commons-share: 0.902
       responses:
         '200':
           description: OK
@@ -333,7 +333,7 @@ paths:
       tags:
       - Plans
       x-commons-tier: core
-      x-commons-share: 0.627
+      x-commons-share: 0.639
       responses:
         '200':
           description: OK
@@ -351,7 +351,7 @@ paths:
       tags:
       - Plans
       x-commons-tier: extended
-      x-commons-share: 0.475
+      x-commons-share: 0.492
       responses:
         '200':
           description: OK
@@ -365,7 +365,7 @@ paths:
       tags:
       - Prices
       x-commons-tier: core
-      x-commons-share: 0.824
+      x-commons-share: 0.778
       responses:
         '200':
           description: OK
@@ -390,7 +390,7 @@ paths:
       tags:
       - Prices
       x-commons-tier: core
-      x-commons-share: 0.588
+      x-commons-share: 0.556
       responses:
         '200':
           description: OK
@@ -411,7 +411,7 @@ paths:
       tags:
       - Prices
       x-commons-tier: core
-      x-commons-share: 0.588
+      x-commons-share: 0.556
       responses:
         '200':
           description: OK
@@ -424,7 +424,7 @@ paths:
       tags:
       - Prices
       x-commons-tier: extended
-      x-commons-share: 0.353
+      x-commons-share: 0.389
       responses:
         '200':
           description: OK
@@ -442,7 +442,7 @@ paths:
       tags:
       - Prices
       x-commons-tier: extended
-      x-commons-share: 0.235
+      x-commons-share: 0.222
       responses:
         '200':
           description: OK
@@ -456,7 +456,7 @@ paths:
       tags:
       - Credit Notes
       x-commons-tier: core
-      x-commons-share: 0.862
+      x-commons-share: 0.871
       responses:
         '200':
           description: OK
@@ -481,7 +481,7 @@ paths:
       tags:
       - Credit Notes
       x-commons-tier: core
-      x-commons-share: 0.759
+      x-commons-share: 0.742
       responses:
         '200':
           description: OK
@@ -502,7 +502,7 @@ paths:
       tags:
       - Credit Notes
       x-commons-tier: core
-      x-commons-share: 0.862
+      x-commons-share: 0.871
       responses:
         '200':
           description: OK
@@ -515,7 +515,7 @@ paths:
       tags:
       - Credit Notes
       x-commons-tier: extended
-      x-commons-share: 0.379
+      x-commons-share: 0.355
       responses:
         '200':
           description: OK
@@ -533,7 +533,7 @@ paths:
       tags:
       - Credit Notes
       x-commons-tier: extended
-      x-commons-share: 0.345
+      x-commons-share: 0.323
       responses:
         '200':
           description: OK
@@ -547,7 +547,7 @@ paths:
       tags:
       - Coupons
       x-commons-tier: core
-      x-commons-share: 0.852
+      x-commons-share: 0.862
       responses:
         '200':
           description: OK
@@ -572,7 +572,7 @@ paths:
       tags:
       - Coupons
       x-commons-tier: core
-      x-commons-share: 0.667
+      x-commons-share: 0.69
       responses:
         '200':
           description: OK
@@ -593,7 +593,7 @@ paths:
       tags:
       - Coupons
       x-commons-tier: core
-      x-commons-share: 0.704
+      x-commons-share: 0.759
       responses:
         '200':
           description: OK
@@ -606,7 +606,7 @@ paths:
       tags:
       - Coupons
       x-commons-tier: core
-      x-commons-share: 0.519
+      x-commons-share: 0.552
       responses:
         '200':
           description: OK
@@ -619,7 +619,7 @@ paths:
       tags:
       - Coupons
       x-commons-tier: extended
-      x-commons-share: 0.37
+      x-commons-share: 0.414
       responses:
         '200':
           description: OK
@@ -638,7 +638,7 @@ paths:
       tags:
       - Usage Records
       x-commons-tier: core
-      x-commons-share: 0.636
+      x-commons-share: 0.667
       responses:
         '200':
           description: OK
@@ -663,7 +663,7 @@ paths:
       tags:
       - Usage Records
       x-commons-tier: core
-      x-commons-share: 0.591
+      x-commons-share: 0.625
       responses:
         '200':
           description: OK
@@ -684,13 +684,31 @@ paths:
       tags:
       - Usage Records
       x-commons-tier: extended
-      x-commons-share: 0.318
+      x-commons-share: 0.333
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema: *id008
+    patch:
+      operationId: updateUsageRecord
+      summary: Update an usage record
+      tags:
+      - Usage Records
+      x-commons-tier: extended
+      x-commons-share: 0.208
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id008
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id008
 components:
   schemas:
     Invoice:

@@ -1,7 +1,7 @@
 provider: dodo-payments
 apis_io: https://apis.io/providers/dodo-payments/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -54,7 +54,7 @@ concepts:
       expires_at: expires_at
       amount_off: amount
       type: type
-    core_coverage: 0.75
+    core_coverage: 0.8
     evidence:
     - openapi/_original/dodo-payments-openapi.yml#DELETE /discounts/{discount_id}
     - openapi/_original/dodo-payments-openapi.yml#GET /discounts

@@ -1,7 +1,7 @@
 provider: orion-advisor-solutions
 apis_io: https://apis.io/providers/orion-advisor-solutions/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -47,6 +47,7 @@ concepts:
       - isActive
       - status
       amount: price
+      currency: currencyCode
       code: externalId
       product_id: productId
     core_coverage: 1.0
@@ -69,3 +70,4 @@ concepts:
     - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Portfolio/Assets/{key}/Price
     - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#GET /v1/Portfolio/Assets/{key}/Price/{asOfDate}
     - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#POST /v1/Global/Products/Prices
+    - openapi/_original/orion-advisor-solutions-orion-connect-openapi.json#PUT /v1/Confirm/Recon/AgentActionReview/SecurityCreation/{reviewId}/Prices

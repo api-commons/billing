@@ -1,7 +1,7 @@
 provider: amcs-group
 apis_io: https://apis.io/providers/amcs-group/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -37,7 +37,7 @@ concepts:
       status: status
       description: Notes
       number: CreditNoteNumber
-    core_coverage: 0.5
+    core_coverage: 0.571
     evidence:
     - openapi/_original/amcs-group-erp-openapi-original.json#GET /accounting/creditNotes
     - openapi/_original/amcs-group-erp-openapi-original.json#GET /accounting/creditNotes/{guid}

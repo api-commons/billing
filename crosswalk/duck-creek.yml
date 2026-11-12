@@ -1,7 +1,7 @@
 provider: duck-creek
 apis_io: https://apis.io/providers/duck-creek/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -10,8 +10,8 @@ concepts:
       id: invoiceId
       status: status
       due_date: dueDate
-      issued_at: invoiceDate
       customer_id: accountId
+      issued_at: invoiceDate
       total: amount
     core_coverage: 0.75
     evidence:

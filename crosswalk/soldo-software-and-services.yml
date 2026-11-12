@@ -1,7 +1,7 @@
 provider: soldo-software-and-services
 apis_io: https://apis.io/providers/soldo-software-and-services/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   subscription:
     path_segment:
@@ -10,8 +10,8 @@ concepts:
       id: id
       status: status
       created_at: creation_date
-      name: name
       items: items
+      name: name
     core_coverage: 1.0
     evidence:
     - openapi/_original/soldo-software-and-services-business-api-openapi.json#DELETE /business/v2/subscriptions/{subscriptionId}

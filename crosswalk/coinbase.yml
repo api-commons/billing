@@ -1,7 +1,7 @@
 provider: coinbase
 apis_io: https://apis.io/providers/coinbase/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -22,8 +22,8 @@ concepts:
     properties:
       id: subscriptionId
       created_at: createdAt
-      metadata: metadata
       updated_at: updatedAt
+      metadata: metadata
     core_coverage: 0.667
     evidence:
     - openapi/_original/coinbase-openapi.yml#DELETE /v2/data/webhooks/subscriptions/{subscriptionId}

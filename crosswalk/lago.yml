@@ -1,7 +1,7 @@
 provider: lago
 apis_io: https://apis.io/providers/lago/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -64,19 +64,19 @@ concepts:
     - credit_notes
     properties:
       status: state
-      description: description
       currency: currency
-      created_at: created_at
       customer_id: customer
-      updated_at: updated_at
+      description: description
+      created_at: created_at
       number: number
+      updated_at: updated_at
       reason:
       - reason
       - type
       invoice_id: invoice_id
       metadata: metadata
       items: items
-    core_coverage: 0.75
+    core_coverage: 0.714
     evidence:
     - openapi/_original/lago-openapi.yml#GET /credit_notes
     - openapi/_original/lago-openapi.yml#GET /credit_notes/{lago_id}
@@ -92,7 +92,7 @@ concepts:
       - code
       created_at: created_at
       description: description
-    core_coverage: 0.5
+    core_coverage: 0.4
     evidence:
     - openapi/_original/lago-openapi.yml#DELETE /coupons/{code}
     - openapi/_original/lago-openapi.yml#GET /coupons

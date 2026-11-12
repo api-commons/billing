@@ -1,7 +1,7 @@
 provider: nomos
 apis_io: https://apis.io/providers/nomos/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -10,8 +10,8 @@ concepts:
       id: id
       status: status
       number: invoice_number
-      issued_at: issued_at
       customer_id: customer
+      issued_at: issued_at
     core_coverage: 0.75
     evidence:
     - openapi/_original/nomos-openapi-original.json#GET /invoices
@@ -25,8 +25,8 @@ concepts:
       created_at: created_at
       customer_id: customer
       plan_id: plan
-      metadata: metadata
       updated_at: updated_at
+      metadata: metadata
     core_coverage: 1.0
     evidence:
     - openapi/_original/nomos-openapi-original.json#GET /subscriptions
@@ -55,7 +55,6 @@ concepts:
     properties:
       currency: currency
       billing_interval: period
-      unit: unit
     core_coverage: 0.25
     evidence:
     - openapi/_original/nomos-openapi-original.json#GET /subscriptions/{id}/prices

@@ -1,7 +1,7 @@
 provider: invoiced
 apis_io: https://apis.io/providers/invoiced/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -15,8 +15,8 @@ concepts:
       created_at: created_at
       currency: currency
       line_items: items
-      issued_at: date
       customer_id: customer
+      issued_at: date
       description: notes
       tax: taxes
       updated_at: updated_at
@@ -38,8 +38,8 @@ concepts:
       created_at: created_at
       customer_id: customer
       plan_id: plan
-      metadata: metadata
       updated_at: updated_at
+      metadata: metadata
       canceled_at: canceled_at
       started_at: start_date
       items: addons
@@ -75,17 +75,17 @@ concepts:
     properties:
       id: id
       status: status
-      description: notes
       currency: currency
-      created_at: created_at
       customer_id: customer
-      updated_at: updated_at
+      description: notes
+      created_at: created_at
       number: number
+      updated_at: updated_at
       invoice_id: invoice
       date: date
       metadata: metadata
       items: items
-    core_coverage: 0.875
+    core_coverage: 0.857
     evidence:
     - openapi/_original/invoiced-openapi.yml#DELETE /credit_notes/{id}
     - openapi/_original/invoiced-openapi.yml#GET /credit_notes

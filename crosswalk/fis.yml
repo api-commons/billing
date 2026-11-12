@@ -1,7 +1,7 @@
 provider: fis
 apis_io: https://apis.io/providers/fis/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -32,10 +32,10 @@ concepts:
       id: id
       total: totalAmount
       status: status
-      description: description
       currency: currency
+      description: description
       reason: memo
-    core_coverage: 0.625
+    core_coverage: 0.714
     evidence:
     - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /bills/creditNotes
     - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /invoices/creditNotes

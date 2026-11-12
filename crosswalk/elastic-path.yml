@@ -1,7 +1,7 @@
 provider: elastic-path
 apis_io: https://apis.io/providers/elastic-path/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -25,8 +25,8 @@ concepts:
       metadata: attributes
       started_at: started_at
       currency: currency
-      name: name
       items: plans
+      name: name
     core_coverage: 0.333
     evidence:
     - openapi/_original/subscriptions.yaml#DELETE /v2/subscriptions/subscriptions/{subscription_uuid}

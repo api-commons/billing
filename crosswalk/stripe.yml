@@ -1,7 +1,7 @@
 provider: stripe
 apis_io: https://apis.io/providers/stripe/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -101,11 +101,8 @@ concepts:
       - tiers_mode
       - type
       metadata: metadata
-      billing_interval: recurring
       created_at: created
-      amount: unit_amount
-      tax_behavior: tax_behavior
-      tiers: tiers
+      billing_interval: recurring
     core_coverage: 1.0
     evidence:
     - openapi/_original/prices-openapi-original.yml#GET /v1/prices
@@ -120,8 +117,8 @@ concepts:
       total: amount
       status: status
       currency: currency
-      created_at: created
       customer_id: customer
+      created_at: created
       number: number
       reason:
       - memo
@@ -130,7 +127,7 @@ concepts:
       invoice_id: invoice
       metadata: metadata
       voided_at: voided_at
-    core_coverage: 0.75
+    core_coverage: 0.857
     evidence:
     - openapi/_original/credit-notes-openapi-original.yml#GET /v1/credit_notes
     - openapi/_original/credit-notes-openapi-original.yml#GET /v1/credit_notes/{id}

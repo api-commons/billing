@@ -1,7 +1,7 @@
 provider: zuora
 apis_io: https://apis.io/providers/zuora/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -16,8 +16,8 @@ concepts:
       created_at: createdDate
       currency: currency
       line_items: invoiceItems
-      issued_at: invoiceDate
       customer_id: accountId
+      issued_at: invoiceDate
       total: amount
       description:
       - comments
@@ -44,6 +44,8 @@ concepts:
       balance: balance
       item_type: itemType
       purchase_order_number: purchaseOrderNumber
+      subscription_id: subscriptionId
+      tax_code: taxCode
     core_coverage: 1.0
     evidence:
     - openapi/_original/zuora-v1-openapi.yml#GET /v1/invoices/{invoiceKey}/items
@@ -58,8 +60,8 @@ concepts:
       status: status
       created_at: createdDate
       customer_id: accountId
-      metadata: customFields
       updated_at: updatedDate
+      metadata: customFields
       currency: currency
     core_coverage: 1.0
     evidence:
@@ -100,12 +102,12 @@ concepts:
       id: id
       total: amount
       status: status
-      description: comment
       currency: currency
-      created_at: createdDate
       customer_id: accountId
-      updated_at: updatedDate
+      description: comment
+      created_at: createdDate
       number: number
+      updated_at: updatedDate
       reason: reasonCode
       invoice_id: invoiceId
       items: items
@@ -125,8 +127,8 @@ concepts:
       - id
       quantity: Quantity
       subscription_id: SubscriptionId
-      description: Description
       created_at: CreatedDate
+      description: Description
       customer_id: AccountId
       updated_at: UpdatedDate
     core_coverage: 1.0

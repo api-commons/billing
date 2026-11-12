@@ -1,7 +1,7 @@
 provider: leanlaw
 apis_io: https://apis.io/providers/leanlaw/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -10,8 +10,8 @@ concepts:
       id: invoiceId
       due_date: dueDate
       number: invoiceNumber
-      issued_at: invoiceDate
       customer_id: clientId
+      issued_at: invoiceDate
       total: amount
       amount_due: balance
     core_coverage: 0.75

@@ -1,7 +1,7 @@
 provider: recharge-payments
 apis_io: https://apis.io/providers/recharge-payments/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   subscription:
     path_segment:
@@ -41,7 +41,7 @@ concepts:
       code: code
       id: id
       status: status
-    core_coverage: 0.5
+    core_coverage: 0.4
     evidence:
     - openapi/_original/recharge-payments-openapi.yml#DELETE /discounts/{id}
     - openapi/_original/recharge-payments-openapi.yml#GET /discounts

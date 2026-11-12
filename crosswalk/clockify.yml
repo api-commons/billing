@@ -1,7 +1,7 @@
 provider: clockify
 apis_io: https://apis.io/providers/clockify/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -39,11 +39,14 @@ concepts:
       unit_price: unitPrice
       amount: amount
       currency: currency
+      tax: tax
       balance: balance
+      customer_id: clientId
+      discount: discount
       due_date: dueDate
       item_type: itemType
       number: number
-      tax: tax
+      status: status
     core_coverage: 1.0
     evidence:
     - openapi/_original/clockify-openapi.json#DELETE /v1/workspaces/{workspaceId}/invoices/{invoiceId}/items/{order}

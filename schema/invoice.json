@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/billing/main/schema/invoice.json",
   "title": "Invoice",
-  "description": "The common invoice in Billing and Invoicing, distilled from 162 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common invoice in Billing and Invoicing, distilled from 164 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.784,
-      "x-commons-providers": 127,
+      "x-commons-share": 0.787,
+      "x-commons-providers": 129,
       "x-commons-spellings": [
         "id",
         "invoiceId",
@@ -24,8 +24,8 @@
     "status": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.698,
-      "x-commons-providers": 113,
+      "x-commons-share": 0.701,
+      "x-commons-providers": 115,
       "x-commons-spellings": [
         "status",
         "state",
@@ -37,8 +37,8 @@
     "due_date": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.543,
-      "x-commons-providers": 88,
+      "x-commons-share": 0.549,
+      "x-commons-providers": 90,
       "x-commons-spellings": [
         "dueDate",
         "due_date",
@@ -50,8 +50,8 @@
     "number": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.506,
-      "x-commons-providers": 82,
+      "x-commons-share": 0.512,
+      "x-commons-providers": 84,
       "x-commons-spellings": [
         "number",
         "invoiceNumber",
@@ -66,8 +66,8 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.463,
-      "x-commons-providers": 75,
+      "x-commons-share": 0.47,
+      "x-commons-providers": 77,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -83,8 +83,8 @@
     "currency": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.457,
-      "x-commons-providers": 74,
+      "x-commons-share": 0.463,
+      "x-commons-providers": 76,
       "x-commons-spellings": [
         "currency",
         "Currency",
@@ -95,8 +95,8 @@
     "line_items": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.444,
-      "x-commons-providers": 72,
+      "x-commons-share": 0.451,
+      "x-commons-providers": 74,
       "x-commons-spellings": [
         "items",
         "lineItems",
@@ -108,44 +108,44 @@
         "products"
       ]
     },
+    "customer_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.433,
+      "x-commons-providers": 71,
+      "x-commons-spellings": [
+        "customer",
+        "customer_id",
+        "customerId",
+        "accountId",
+        "account",
+        "clientId",
+        "contact_id",
+        "client_id"
+      ]
+    },
     "issued_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.432,
-      "x-commons-providers": 70,
+      "x-commons-share": 0.433,
+      "x-commons-providers": 71,
       "x-commons-spellings": [
         "invoiceDate",
         "invoice_date",
         "date",
-        "issued_at",
         "issue_date",
+        "issued_at",
         "issueDate",
         "InvoiceDate",
         "documentDate"
       ],
       "format": "date-time"
     },
-    "customer_id": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.426,
-      "x-commons-providers": 69,
-      "x-commons-spellings": [
-        "customer",
-        "customer_id",
-        "customerId",
-        "accountId",
-        "clientId",
-        "account",
-        "contact_id",
-        "client_id"
-      ]
-    },
     "total": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.414,
-      "x-commons-providers": 67,
+      "x-commons-share": 0.415,
+      "x-commons-providers": 68,
       "x-commons-spellings": [
         "amount",
         "totalAmount",
@@ -160,8 +160,8 @@
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.383,
-      "x-commons-providers": 62,
+      "x-commons-share": 0.384,
+      "x-commons-providers": 63,
       "x-commons-spellings": [
         "description",
         "notes",
@@ -176,8 +176,8 @@
     "tax": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.29,
-      "x-commons-providers": 47,
+      "x-commons-share": 0.299,
+      "x-commons-providers": 49,
       "x-commons-spellings": [
         "tax",
         "taxAmount",
@@ -192,8 +192,8 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.284,
-      "x-commons-providers": 46,
+      "x-commons-share": 0.293,
+      "x-commons-providers": 48,
       "x-commons-spellings": [
         "updated_at",
         "updatedAt",
@@ -209,14 +209,14 @@
     "amount_due": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.228,
-      "x-commons-providers": 37,
+      "x-commons-share": 0.238,
+      "x-commons-providers": 39,
       "x-commons-spellings": [
         "balance",
         "amount_due",
         "amountDue",
-        "amount_remaining",
         "due_amount",
+        "amount_remaining",
         "Balance",
         "balance_due",
         "balanceDue"
@@ -225,8 +225,8 @@
     "metadata": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.216,
-      "x-commons-providers": 35,
+      "x-commons-share": 0.232,
+      "x-commons-providers": 38,
       "x-commons-spellings": [
         "metadata",
         "custom_fields",
@@ -244,9 +244,9 @@
   "x-commons": {
     "context": "billing",
     "concept": "invoice",
-    "providers": 162,
-    "generated": "2026-11-11",
-    "version": "0.1.0-draft.20261111",
+    "providers": 164,
+    "generated": "2026-11-12",
+    "version": "0.1.0-draft.20261112",
     "status": "draft"
   }
 }

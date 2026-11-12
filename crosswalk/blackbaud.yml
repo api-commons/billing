@@ -1,7 +1,7 @@
 provider: blackbaud
 apis_io: https://apis.io/providers/blackbaud/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -14,8 +14,8 @@ concepts:
       status: status
       due_date: due_date
       number: invoice_number
-      issued_at: invoice_date
       customer_id: client_id
+      issued_at: invoice_date
       total: amount
       description: description
       tax: tax_amount
@@ -64,11 +64,11 @@ concepts:
       total: amount
       status: status
       description: description
-      updated_at: date_modified
       number: number
+      updated_at: date_modified
       date: date
       metadata: custom_fields
-    core_coverage: 0.625
+    core_coverage: 0.571
     evidence:
     - openapi/_original/blackbaud-accounts-payable-api-openapi.yml#DELETE /creditmemos/{credit_memo_id}
     - openapi/_original/blackbaud-accounts-payable-api-openapi.yml#GET /creditmemos

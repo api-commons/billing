@@ -1,7 +1,7 @@
 provider: togai
 apis_io: https://apis.io/providers/togai/
 context: billing
-generated: '2026-11-11'
+generated: '2026-11-12'
 concepts:
   invoice:
     path_segment:
@@ -11,10 +11,10 @@ concepts:
       status: status
       due_date: dueDate
       line_items: lineItems
-      issued_at: invoiceDate
       customer_id:
       - customerId
       - accountId
+      issued_at: invoiceDate
       total: totalAmount
       description: description
       updated_at: updatedAt
